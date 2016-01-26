@@ -20,7 +20,7 @@ Welcome to contribute more items which you find this list is missing.
 1. [_.contains](#_.contains)
 
 
-##_.each
+## _.each
 
 Iterates over a list of elements, yielding each in turn to an iteratee function.
 
@@ -43,7 +43,7 @@ Iterates over a list of elements, yielding each in turn to an iteratee function.
 --- | --- | --- | --- | --- |
   ✔  | 1.5 ✔ |  9 ✔  |  ✔  |  ✔  |   
 
-##_.map
+## _.map
 
 Translate all items in an array or object to new array of items.
 
@@ -70,7 +70,7 @@ Translate all items in an array or object to new array of items.
 --- | --- | --- | --- | --- |
   ✔  | 1.5 ✔ |  9 ✔  |  ✔  |  ✔  |  
 
-##_.every
+## _.every
 
 Tests whether all elements in the array pass the test implemented by the provided function.
 
@@ -102,7 +102,7 @@ Tests whether all elements in the array pass the test implemented by the provide
 --- | --- | --- | --- | --- |
   ✔  | 1.5 ✔ |  9 ✔  |  ✔  |  ✔  |  
 
-##_.some
+## _.some
 
 Tests whether some element in the array passes the test implemented by the provided function.
  
@@ -134,7 +134,7 @@ Tests whether some element in the array passes the test implemented by the provi
 --- | --- | --- | --- | --- |
   ✔  | 1.5 ✔ |  9 ✔  |  ✔  |  ✔  |  
 
-##_.reduce
+## _.reduce
 
 Applies a function against an accumulator and each value of the array (from left-to-right) to reduce it to a single value.
 
@@ -162,7 +162,7 @@ Applies a function against an accumulator and each value of the array (from left
 --- | --- | --- | --- | --- |
   ✔  | 3.0 ✔ |  9 ✔  |  10.5  |  4.0  |  
 
-##_.reduceRight
+## _.reduceRight
 
 This method is like _.reduce except that it iterates over elements of collection from right to left.
 
@@ -190,7 +190,7 @@ This method is like _.reduce except that it iterates over elements of collection
 --- | --- | --- | --- | --- |
   ✔  | 3.0 ✔ |  9 ✔  |  10.5  |  4.0  |  
 
-##_.filter
+## _.filter
 
 Creates a new array with all elements that pass the test implemented by the provided function.
 
@@ -219,7 +219,7 @@ Creates a new array with all elements that pass the test implemented by the prov
 --- | --- | --- | --- | --- |
   ✔  | 1.5 ✔ |  9 ✔  |  ✔  |  ✔  |  
 
-##_.find
+## _.find
 
 Returns a value in the array, if an element in the array satisfies the provided testing function. Otherwise undefined is returned.
 
@@ -250,7 +250,7 @@ Returns a value in the array, if an element in the array satisfies the provided 
 --- | --- | --- | --- | --- |
   45.0  | 25.0 ✔ |  Not supported  |  Not supported |  7.1  |  
 
-##_.findIndex
+## _.findIndex
 
 Returns an index in the array, if an element in the array satisfies the provided testing function. Otherwise -1 is returned.
 
@@ -283,7 +283,7 @@ Returns an index in the array, if an element in the array satisfies the provided
 --- | --- | --- | --- | --- |
   45.0  | 25.0 ✔ |  Not supported  |  Not supported |  7.1  |  
 
-##_.indexOf
+## _.indexOf
 
 Returns the first index at which a given element can be found in the array, or -1 if it is not present.
 
@@ -306,7 +306,7 @@ Returns the first index at which a given element can be found in the array, or -
 --- | --- | --- | --- | --- |
   ✔  | 1.5 ✔ |  9 ✔  |  ✔  |  ✔  |  
 
-##_.lastIndexOf
+## _.lastIndexOf
 
 Returns the index of the last occurrence of value in the array, or -1 if value is not present.
 
@@ -329,7 +329,7 @@ Returns the index of the last occurrence of value in the array, or -1 if value i
 --- | --- | --- | --- | --- |
   ✔  |  ✔ |  9 ✔  |  ✔  |  ✔  |  
 
-##_.contains
+## _.contains
 
 Checks if value is in collection. 
 

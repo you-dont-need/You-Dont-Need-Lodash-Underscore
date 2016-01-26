@@ -6,18 +6,18 @@ Welcome to contribute more items which you find this list is missing.
 
 ## Quick Link
 
-1. [_.each](#_.each)
-1. [_.map](#_.map)
-1. [_.every](#_.every)
-1. [_.some](#_.every)
-1. [_.reduce](#_.reduce)
-1. [_.reduceRight](#_.reduceRight)
-1. [_.filter](#_.filter)
-1. [_.find](#_.find)
-1. [_.findIndex](#_.find)
-1. [_.indexOf](#_.indexOf)
-1. [_.lastIndexOf](#_.lastIndexOf)
-1. [_.contains](#_.contains)
+1. [_.each](#_each)
+1. [_.map](#_map)
+1. [_.every](#_every)
+1. [_.some](#_every)
+1. [_.reduce](#_reduce)
+1. [_.reduceRight](#_reduceRight)
+1. [_.filter](#_filter)
+1. [_.find](#_find)
+1. [_.findIndex](#_find)
+1. [_.indexOf](#_indexOf)
+1. [_.lastIndexOf](#_lastIndexOf)
+1. [_.contains](#_contains)
 
 
 ## _.each

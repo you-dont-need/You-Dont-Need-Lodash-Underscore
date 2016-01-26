@@ -19,7 +19,7 @@ Welcome to contribute more items which you find this list is missing.
 1. [_.findIndex](#_find)
 1. [_.indexOf](#_indexOf)
 1. [_.lastIndexOf](#_lastIndexOf)
-1. [_.contains](#_contains)
+1. [_.includes](#_includes)
 1. [_.keys](#_keys)
 
 
@@ -326,13 +326,13 @@ Returns the index of the last occurrence of value in the array, or -1 if value i
 --- | --- | --- | --- | --- |
   ✔  |  ✔ |  9 ✔  |  ✔  |  ✔  |  
 
-## _.contains
+## _.includes
 
 Checks if value is in collection. 
 
   ```js
   var array = [1, 2, 3];
-  // Underscore/Lodash
+  // Underscore/Lodash - also called with _.contains
   _.includes(array, 1);
   // → true
 

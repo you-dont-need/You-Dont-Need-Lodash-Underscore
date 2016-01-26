@@ -2,11 +2,6 @@
   "name": "you-dont-need-lodash-underscore",
   "version": "1.0.0",
   "description": "Lists of methods which you can use natively",
-  "scripts": {
-  },
-  "dependencies": {},
-  "devDependencies": {
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/cht8687/You-Dont-Need-Lodash-Underscore.git"

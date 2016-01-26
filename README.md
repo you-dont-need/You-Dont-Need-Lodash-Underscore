@@ -173,7 +173,7 @@ This method is like _.reduce except that it iterates over elements of collection
 
   // Native
   var array = [0, 1, 2, 3, 4];
-  var result = array.reduce(function (previousValue, currentValue, currentIndex, array) {
+  var result = array.reduceRight(function (previousValue, currentValue, currentIndex, array) {
     return previousValue - currentValue;
   });
   console.log(result);

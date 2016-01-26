@@ -53,7 +53,7 @@ Translate all items in an array or object to new array of items.
   ```js
   // Underscore/Lodash
   var array1 = [1, 2, 3];
-  var array2 = _.map(array, function(value, index) {
+  var array2 = _.map(array1, function(value, index) {
     return value*2;
   });
   console.log(array2);
@@ -61,7 +61,7 @@ Translate all items in an array or object to new array of items.
 
   // Native
   var array1 = [1, 2, 3];
-  var array2 = array.map(function(value, index) {
+  var array2 = array1.map(function(value, index) {
     return value*2;
   });
   console.log(array2);

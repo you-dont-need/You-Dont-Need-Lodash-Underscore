@@ -1,4 +1,4 @@
-## You Don't Need Lodash/Underscore [![Build Status](https://travis-ci.org/cht8687/You-Dont-Need-Lodash-Underscore.svg)](https://travis-ci.org/cht8687/You-Dont-Need-Lodash-Underscore)
+## You Don't Need Lodash/Underscore 
 
 Lodash and Underscore are great modern Javascript utility libraries, and they are widely used by Front-end developers. However, when you are targeting modern browers, you may find out that there are many methods which are already being supported natively thanks to ECMAScript5 [ES5] and ESCMAScript2015 [ES6]. Native implematations are simply faster and more convenient which can make code clearer.
 

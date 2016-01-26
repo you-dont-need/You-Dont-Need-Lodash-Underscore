@@ -18,6 +18,7 @@ Welcome to contribute more items which you find this list is missing.
 1. [_.indexOf](#_indexOf)
 1. [_.lastIndexOf](#_lastIndexOf)
 1. [_.contains](#_contains)
+1. [_.keys](#_keys)
 
 
 ## _.each
@@ -344,6 +345,25 @@ Checks if value is in collection.
 --- | --- | --- | --- | --- |
   47✔  | 43 ✔ |  Not supported  |  34 |  9  |  
 
+## _.keys
+
+Retrieve all the names of the object's own enumerable properties.
+
+  ```js
+  var result = _.keys({one: 1, two: 2, three: 3});
+  console.log(result);
+  // output: ["one", "two", "three"]
+
+  // Native
+  var result2 = Object.keys({one: 1, two: 2, three: 3});
+  console.log(result2); 
+  // output: ["one", "two", "three"]
+  ```
+### Browser Support
+
+![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
+--- | --- | --- | --- | --- |
+  5✔  | 4.0 ✔ |  9  |  12 |  5  |  
 
 ## Reference
 

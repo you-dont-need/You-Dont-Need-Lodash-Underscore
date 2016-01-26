@@ -1,0 +1,24 @@
+{
+  "name": "You-Dont-Need-Lodash-Underscore",
+  "version": "1.0.0",
+  "description": "Lists of methods which you can use natively",
+  "scripts": {
+  },
+  "dependencies": {},
+  "devDependencies": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cht8687/You-Dont-Need-Lodash-Underscore.git"
+  },
+  "keywords": [
+    "underscore",
+    "lodash"
+  ],
+  "author": "Robert Chang <cht8687@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cht8687/You-Dont-Need-Lodash-Underscore/issues"
+  },
+  "homepage": "https://github.com/cht8687/You-Dont-Need-Lodash-Underscore.git"
+}

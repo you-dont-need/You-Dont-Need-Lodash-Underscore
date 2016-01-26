@@ -236,7 +236,7 @@ Returns a value in the array, if an element in the array satisfies the provided 
     { 'user': 'pebbles', 'age': 1,  'active': true }
   ];
 
-  var result = users.find(function(o) { return o.age < 40; });
+  users.find(function(o) { return o.age < 40; });
   // output: object for 'barney'
   ```
 ### Browser Support

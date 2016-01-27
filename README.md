@@ -398,6 +398,7 @@ Return the number of values in the collection.
 Inspired by: 
 
 * [You-Dont-Need-jQuery](https://github.com/oneuijs/You-Dont-Need-jQuery)
+* [Rui's blog](http://ktei.github.io/2016/01/07/some-general-js-tips-1.html)
 
 # License
 

@@ -113,7 +113,7 @@ Tests whether some element in the array passes the test implemented by the provi
     return element >=10;
   }
   var array = [10, 9, 8];
-  var result = _.every(array, isLargerThanTen);
+  var result = _.some(array, isLargerThanTen);
   console.log(result);
   // output: true
 

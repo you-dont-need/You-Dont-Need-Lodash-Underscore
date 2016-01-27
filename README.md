@@ -20,6 +20,7 @@ You are welcome to contribute with more items provided below.
 1. [_.lastIndexOf](#_lastindexof)
 1. [_.includes](#_includes)
 1. [_.keys](#_keys)
+1. [_.size](#_size)
 
 
 ## _.each
@@ -359,6 +360,26 @@ Retrieve all the names of the object's own enumerable properties.
   var result2 = Object.keys({one: 1, two: 2, three: 3});
   console.log(result2); 
   // output: ["one", "two", "three"]
+  ```
+### Browser Support
+
+![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
+--- | --- | --- | --- | --- |
+  5✔  | 4.0 ✔ |  9  |  12 |  5  |  
+
+## _.size
+
+Return the number of values in the collection.
+
+  ```js
+  var result = _.size({one: 1, two: 2, three: 3});
+  console.log(result);
+  // output: 3
+
+  // Native
+  var result2 = Object.keys({one: 1, two: 2, three: 3}).length;
+  console.log(result2); 
+  // output: 3
   ```
 ### Browser Support
 

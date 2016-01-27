@@ -1,12 +1,11 @@
-## You Don't (may not) Need Lodash/Underscore 
+## You don't (may not) need Lodash/Underscore 
 
-Lodash and Underscore are great modern Javascript utility libraries, and they are widely used by Front-end developers. However, when you are targeting modern browsers, you may find out that there are many methods which are already being supported natively thanks to ECMAScript5 [ES5] and ESCMAScript2015 [ES6]. If you want to make your project less dependencies and you know your target browser clearly,
+Lodash and Underscore are great modern JavaScript utility libraries, and they are widely used by Front-end developers. However, when you are targeting modern browsers, you may find out that there are many methods which are already being supported natively thanks to ECMAScript5 [ES5] and ESCMAScript2015 [ES6]. If you want to make your project less dependencies and you know your target browser clearly,
 then you may not need Lodash/Underscore.
 
-Welcome to contribute more items which you find this list is missing.
+You are welcome to contribute with more items provided below.
 
-
-## Quick Link
+## Quick links
 
 1. [_.each](#_each)
 1. [_.map](#_map)

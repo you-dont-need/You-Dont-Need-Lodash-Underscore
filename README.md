@@ -22,7 +22,7 @@ You are welcome to contribute with more items provided below.
 1. [_.keys](#_keys)
 1. [_.size](#_size)
 1. [_.isNaN](#_isnan)
-
+1. [_.reverse](#_reverse) *Lodash only
 
 ## _.each
 
@@ -408,6 +408,27 @@ Checks if value is NaN.
 ![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
 --- | --- | --- | --- | --- |
   ✔  |  ✔ |  ✔ |  ✔ |  ✔  |  
+
+## _.reverse *Lodash only
+
+Reverses array so that the first element becomes the last, the second element becomes the second to last, and so on. 
+
+  ```js
+  // Lodash
+  var array = [1, 2, 3];
+  console.log(_.reverse(array));
+  // output: [3, 2, 1]
+
+  // Native
+  var array = [1, 2, 3];
+  console.log(array.reverse());
+  // output: [3, 2, 1]
+  ```
+### Browser Support
+
+![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
+--- | --- | --- | --- | --- |
+  1.0✔  |  1.0✔ |  5.5✔ |  ✔ |  ✔  |  
 
 ## Reference
 

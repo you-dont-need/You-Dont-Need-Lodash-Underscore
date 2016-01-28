@@ -46,6 +46,8 @@ Iterates over a list of elements, yielding each in turn to an iteratee function.
 --- | --- | --- | --- | --- |
   ✔  | 1.5 ✔ |  9 ✔  |  ✔  |  ✔  |   
 
+**[⬆ back to top](#Quick links)**
+
 ## _.map
 
 Translate all items in an array or object to new array of items.
@@ -72,6 +74,8 @@ Translate all items in an array or object to new array of items.
 ![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
 --- | --- | --- | --- | --- |
   ✔  | 1.5 ✔ |  9 ✔  |  ✔  |  ✔  |  
+
+**[⬆ back to top](#Quick links)**
 
 ## _.every
 
@@ -103,6 +107,8 @@ Tests whether all elements in the array pass the test implemented by the provide
 --- | --- | --- | --- | --- |
   ✔  | 1.5 ✔ |  9 ✔  |  ✔  |  ✔  |  
 
+**[⬆ back to top](#Quick links)**
+
 ## _.some
 
 Tests whether some element in the array passes the test implemented by the provided function.
@@ -133,6 +139,8 @@ Tests whether some element in the array passes the test implemented by the provi
 --- | --- | --- | --- | --- |
   ✔  | 1.5 ✔ |  9 ✔  |  ✔  |  ✔  |  
 
+**[⬆ back to top](#Quick links)**
+
 ## _.reduce
 
 Applies a function against an accumulator and each value of the array (from left-to-right) to reduce it to a single value.
@@ -160,6 +168,8 @@ Applies a function against an accumulator and each value of the array (from left
 --- | --- | --- | --- | --- |
   ✔  | 3.0 ✔ |  9 ✔  |  10.5  |  4.0  |  
 
+**[⬆ back to top](#Quick links)**
+
 ## _.reduceRight
 
 This method is like _.reduce except that it iterates over elements of collection from right to left.
@@ -186,6 +196,8 @@ This method is like _.reduce except that it iterates over elements of collection
 ![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
 --- | --- | --- | --- | --- |
   ✔  | 3.0 ✔ |  9 ✔  |  10.5  |  4.0  |  
+
+**[⬆ back to top](#Quick links)**
 
 ## _.filter
 
@@ -215,6 +227,8 @@ Creates a new array with all elements that pass the test implemented by the prov
 ![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
 --- | --- | --- | --- | --- |
   ✔  | 1.5 ✔ |  9 ✔  |  ✔  |  ✔  |  
+
+**[⬆ back to top](#Quick links)**
 
 ## _.find
 
@@ -246,6 +260,8 @@ Returns a value in the array, if an element in the array satisfies the provided 
 ![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
 --- | --- | --- | --- | --- |
   45.0  | 25.0 ✔ |  Not supported  |  Not supported |  7.1  |  
+
+**[⬆ back to top](#Quick links)**
 
 ## _.findIndex
 
@@ -280,6 +296,8 @@ Returns an index in the array, if an element in the array satisfies the provided
 --- | --- | --- | --- | --- |
   45.0  | 25.0 ✔ |  Not supported  |  Not supported |  7.1  |  
 
+**[⬆ back to top](#Quick links)**
+
 ## _.indexOf
 
 Returns the first index at which a given element can be found in the array, or -1 if it is not present.
@@ -302,6 +320,8 @@ Returns the first index at which a given element can be found in the array, or -
 ![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
 --- | --- | --- | --- | --- |
   ✔  | 1.5 ✔ |  9 ✔  |  ✔  |  ✔  |  
+
+**[⬆ back to top](#Quick links)**
 
 ## _.lastIndexOf
 
@@ -326,6 +346,8 @@ Returns the index of the last occurrence of value in the array, or -1 if value i
 --- | --- | --- | --- | --- |
   ✔  |  ✔ |  9 ✔  |  ✔  |  ✔  |  
 
+**[⬆ back to top](#Quick links)**
+
 ## _.includes
 
 Checks if value is in collection. 
@@ -346,6 +368,8 @@ Checks if value is in collection.
 ![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
 --- | --- | --- | --- | --- |
   47✔  | 43 ✔ |  Not supported  |  34 |  9  |  
+
+**[⬆ back to top](#Quick links)**
 
 ## _.keys
 
@@ -368,6 +392,8 @@ Retrieve all the names of the object's own enumerable properties.
 --- | --- | --- | --- | --- |
   5✔  | 4.0 ✔ |  9  |  12 |  5  |  
 
+**[⬆ back to top](#Quick links)**
+
 ## _.size
 
 Return the number of values in the collection.
@@ -389,6 +415,8 @@ Return the number of values in the collection.
 --- | --- | --- | --- | --- |
   5✔  | 4.0 ✔ |  9  |  12 |  5  |  
 
+**[⬆ back to top](#Quick links)**
+
 ## _.isNaN
 
 Checks if value is NaN. 
@@ -407,6 +435,8 @@ Checks if value is NaN.
 ![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
 --- | --- | --- | --- | --- |
   ✔  |  ✔ |  ✔ |  ✔ |  ✔  |  
+
+**[⬆ back to top](#Quick links)**
 
 ## _.reverse
 :heavy_exclamation_mark:`Lodash only`
@@ -428,6 +458,8 @@ Reverses array so that the first element becomes the last, the second element be
 ![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
 --- | --- | --- | --- | --- |
   1.0✔  |  1.0✔ |  5.5✔ |  ✔ |  ✔  |  
+
+**[⬆ back to top](#Quick links)**
 
 ## Reference
 

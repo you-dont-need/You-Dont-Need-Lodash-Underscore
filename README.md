@@ -21,7 +21,7 @@ You are welcome to contribute with more items provided below.
 1. [_.keys](#_keys)
 1. [_.size](#_size)
 1. [_.isNaN](#_isnan)
-1. [_.reverse](#_reverse) *Lodash only
+1. [_.reverse](#_reverse) 
 
 ## _.each
 
@@ -408,8 +408,8 @@ Checks if value is NaN.
 --- | --- | --- | --- | --- |
   ✔  |  ✔ |  ✔ |  ✔ |  ✔  |  
 
-## _.reverse *Lodash only
-
+## _.reverse
+:heavy_exclamation_mark:`Lodash only`
 Reverses array so that the first element becomes the last, the second element becomes the second to last, and so on. 
 
   ```js

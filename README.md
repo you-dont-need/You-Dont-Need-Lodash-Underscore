@@ -46,7 +46,7 @@ Iterates over a list of elements, yielding each in turn to an iteratee function.
 --- | --- | --- | --- | --- |
   ✔  | 1.5 ✔ |  9 ✔  |  ✔  |  ✔  |   
 
-**[⬆ back to top](#Quick-links)**
+**[⬆ back to top](#quick-links)**
 
 ## _.map
 
@@ -75,7 +75,7 @@ Translate all items in an array or object to new array of items.
 --- | --- | --- | --- | --- |
   ✔  | 1.5 ✔ |  9 ✔  |  ✔  |  ✔  |  
 
-**[⬆ back to top](#Quick-links)**
+**[⬆ back to top](#quick-links)**
 
 ## _.every
 
@@ -107,7 +107,7 @@ Tests whether all elements in the array pass the test implemented by the provide
 --- | --- | --- | --- | --- |
   ✔  | 1.5 ✔ |  9 ✔  |  ✔  |  ✔  |  
 
-**[⬆ back to top](#Quick-links)**
+**[⬆ back to top](#quick-links)**
 
 ## _.some
 
@@ -139,7 +139,7 @@ Tests whether some element in the array passes the test implemented by the provi
 --- | --- | --- | --- | --- |
   ✔  | 1.5 ✔ |  9 ✔  |  ✔  |  ✔  |  
 
-**[⬆ back to top](#Quick-links)**
+**[⬆ back to top](#quick-links)**
 
 ## _.reduce
 
@@ -168,7 +168,7 @@ Applies a function against an accumulator and each value of the array (from left
 --- | --- | --- | --- | --- |
   ✔  | 3.0 ✔ |  9 ✔  |  10.5  |  4.0  |  
 
-**[⬆ back to top](#Quick-links)**
+**[⬆ back to top](#quick-links)**
 
 ## _.reduceRight
 
@@ -197,7 +197,7 @@ This method is like _.reduce except that it iterates over elements of collection
 --- | --- | --- | --- | --- |
   ✔  | 3.0 ✔ |  9 ✔  |  10.5  |  4.0  |  
 
-**[⬆ back to top](#Quick-links)**
+**[⬆ back to top](#quick-links)**
 
 ## _.filter
 
@@ -228,7 +228,7 @@ Creates a new array with all elements that pass the test implemented by the prov
 --- | --- | --- | --- | --- |
   ✔  | 1.5 ✔ |  9 ✔  |  ✔  |  ✔  |  
 
-**[⬆ back to top](#Quick-links)**
+**[⬆ back to top](#quick-links)**
 
 ## _.find
 
@@ -261,7 +261,7 @@ Returns a value in the array, if an element in the array satisfies the provided 
 --- | --- | --- | --- | --- |
   45.0  | 25.0 ✔ |  Not supported  |  Not supported |  7.1  |  
 
-**[⬆ back to top](#Quick-links)**
+**[⬆ back to top](#quick-links)**
 
 ## _.findIndex
 
@@ -296,7 +296,7 @@ Returns an index in the array, if an element in the array satisfies the provided
 --- | --- | --- | --- | --- |
   45.0  | 25.0 ✔ |  Not supported  |  Not supported |  7.1  |  
 
-**[⬆ back to top](#Quick-links)**
+**[⬆ back to top](#quick-links)**
 
 ## _.indexOf
 
@@ -321,7 +321,7 @@ Returns the first index at which a given element can be found in the array, or -
 --- | --- | --- | --- | --- |
   ✔  | 1.5 ✔ |  9 ✔  |  ✔  |  ✔  |  
 
-**[⬆ back to top](#Quick-links)**
+**[⬆ back to top](#quick-links)**
 
 ## _.lastIndexOf
 
@@ -346,7 +346,7 @@ Returns the index of the last occurrence of value in the array, or -1 if value i
 --- | --- | --- | --- | --- |
   ✔  |  ✔ |  9 ✔  |  ✔  |  ✔  |  
 
-**[⬆ back to top](#Quick-links)**
+**[⬆ back to top](#quick-links)**
 
 ## _.includes
 
@@ -369,7 +369,7 @@ Checks if value is in collection.
 --- | --- | --- | --- | --- |
   47✔  | 43 ✔ |  Not supported  |  34 |  9  |  
 
-**[⬆ back to top](#Quick-links)**
+**[⬆ back to top](#quick-links)**
 
 ## _.keys
 
@@ -392,7 +392,7 @@ Retrieve all the names of the object's own enumerable properties.
 --- | --- | --- | --- | --- |
   5✔  | 4.0 ✔ |  9  |  12 |  5  |  
 
-**[⬆ back to top](#Quick-links)**
+**[⬆ back to top](#quick-links)**
 
 ## _.size
 
@@ -415,7 +415,7 @@ Return the number of values in the collection.
 --- | --- | --- | --- | --- |
   5✔  | 4.0 ✔ |  9  |  12 |  5  |  
 
-**[⬆ back to top](#Quick-links)**
+**[⬆ back to top](#quick-links)**
 
 ## _.isNaN
 
@@ -436,7 +436,7 @@ Checks if value is NaN.
 --- | --- | --- | --- | --- |
   ✔  |  ✔ |  ✔ |  ✔ |  ✔  |  
 
-**[⬆ back to top](#Quick-links)**
+**[⬆ back to top](#quick-links)**
 
 ## _.reverse
 :heavy_exclamation_mark:`Lodash only`
@@ -459,7 +459,7 @@ Reverses array so that the first element becomes the last, the second element be
 --- | --- | --- | --- | --- |
   1.0✔  |  1.0✔ |  5.5✔ |  ✔ |  ✔  |  
 
-**[⬆ back to top](#Quick-links)**
+**[⬆ back to top](#quick-links)**
 
 ## Reference
 

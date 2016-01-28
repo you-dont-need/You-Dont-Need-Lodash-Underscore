@@ -21,6 +21,7 @@ You are welcome to contribute with more items provided below.
 1. [_.includes](#_includes)
 1. [_.keys](#_keys)
 1. [_.size](#_size)
+1. [_.isNaN](#_isNaN)
 
 
 ## _.each
@@ -352,6 +353,7 @@ Checks if value is in collection.
 Retrieve all the names of the object's own enumerable properties.
 
   ```js
+  // Underscore/Lodash 
   var result = _.keys({one: 1, two: 2, three: 3});
   console.log(result);
   // output: ["one", "two", "three"]
@@ -372,6 +374,7 @@ Retrieve all the names of the object's own enumerable properties.
 Return the number of values in the collection.
 
   ```js
+  // Underscore/Lodash
   var result = _.size({one: 1, two: 2, three: 3});
   console.log(result);
   // output: 3
@@ -386,6 +389,25 @@ Return the number of values in the collection.
 ![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
 --- | --- | --- | --- | --- |
   5✔  | 4.0 ✔ |  9  |  12 |  5  |  
+
+## _.isNaN
+
+Checks if value is NaN. 
+
+  ```js
+  // Underscore/Lodash
+  console.log(_.isNaN(NaN));
+  // output: true
+
+  // Native
+  console.log(isNaN(NaN));
+  // output: true
+  ```
+### Browser Support
+
+![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
+--- | --- | --- | --- | --- |
+  ✔  |  ✔ |  ✔ |  ✔ |  ✔  |  
 
 ## Reference
 

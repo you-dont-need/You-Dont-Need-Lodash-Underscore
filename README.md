@@ -21,7 +21,7 @@ You are welcome to contribute with more items provided below.
 1. [_.includes](#_includes)
 1. [_.keys](#_keys)
 1. [_.size](#_size)
-1. [_.isNaN](#_isNaN)
+1. [_.isNaN](#_isnan)
 
 
 ## _.each

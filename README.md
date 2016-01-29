@@ -466,11 +466,11 @@ Reverses array so that the first element becomes the last, the second element be
 **[⬆ back to top](#quick-links)**
 
 ## _.join
-
+:heavy_exclamation_mark:`Lodash only`
 Joins a list of elements in an array with a given separator.
 
   ```js
-  // Underscore/Lodash
+  // Lodash
   var result = _.join(['one', 'two', 'three'], '--');
   console.log(result);
   // output: 'one--two--three'
@@ -489,11 +489,11 @@ Joins a list of elements in an array with a given separator.
 **[⬆ back to top](#quick-links)**
 
 ## _.toUpper
-
+:heavy_exclamation_mark:`Lodash only`
 Uppercase a given string.
 
   ```js
-  // Underscore/Lodash
+  // Lodash
   var result = _.toUpper('foobar');
   console.log(result);
   // output: 'FOOBAR'
@@ -512,11 +512,11 @@ Uppercase a given string.
 **[⬆ back to top](#quick-links)**
 
 ## _.toLower
-
+:heavy_exclamation_mark:`Lodash only`
 Lowercase a given string.
 
   ```js
-  // Underscore/Lodash
+  // Lodash
   var result = _.toLower('FOOBAR');
   console.log(result);
   // output: 'foobar'
@@ -535,11 +535,11 @@ Lowercase a given string.
 **[⬆ back to top](#quick-links)**
 
 ## _.trim
-
+:heavy_exclamation_mark:`Lodash only`
 Removes leading and trailing whitespace characters from string.
 
   ```js
-  // Underscore/Lodash
+  // Lodash
   var result = _.trim(' abc ');
   console.log(result);
   // output: 'abc'
@@ -553,7 +553,7 @@ Removes leading and trailing whitespace characters from string.
 
 ![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
 --- | --- | --- | --- | --- |
-  10.0✔  |  3.5✔ |  9.0✔  |  10.5✔ |  5.0✔  |  
+  5.0✔  |  3.5✔ |  9.0✔  |  10.5✔ |  5.0✔  |  
 
 **[⬆ back to top](#quick-links)**
 

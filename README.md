@@ -22,6 +22,7 @@ You are welcome to contribute with more items provided below.
 1. [_.size](#_size)
 1. [_.isNaN](#_isnan)
 1. [_.reverse](#_reverse) 
+1. [_.after](#_after) 
 
 ## _.each
 
@@ -467,14 +468,21 @@ Creates a version of the function that will only be run after first being called
 
   ```js
   // Underscore/Lodash
+  var notes = ['profile', 'settings'];
   var renderNotes = _.after(notes.length, render);
-  _.each(notes, function(note) {
-    note.asyncSave({success: renderNotes});
+  notes.forEach(function(note) {
+    console.log(note);
+    renderNotes();
   });
-  // output: true
 
   // Native
-  console.log(isNaN(NaN));
+  var notes = ['profile', 'settings'];
+  notes.forEach(function(note, index) {
+    console.log(note);
+    if (notes.length === (index + 1)) {
+     render();
+    }
+  });
   // output: true
   ```
 ### Browser Support

@@ -434,6 +434,12 @@ Checks if value is NaN.
   console.log(isNaN(NaN));
   // output: true
   ```
+
+Voice from the Lodash author:
+
+>[Lodash's `_.isNaN` is equiv to ES6 `Number.isNaN` which is different than the global `isNaN`.](https://github.com/cht8687/You-Dont-Need-Lodash-Underscore/commit/b8559a603dccaaa2449b5a68a2d8325cf1fb29cd#)  
+>--- jdalton
+
 ### Browser Support
 
 ![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
@@ -457,6 +463,13 @@ Reverses array so that the first element becomes the last, the second element be
   console.log(array.reverse());
   // output: [3, 2, 1]
   ```
+
+Voice from the Lodash author:
+
+>[Lodash's `_.reverse` just calls `Array#reverse` and enables composition like `_.map(arrays, _.reverse).`
+It's exposed on _ because previously, like Underscore, it was only exposed in the chaining syntax.](https://github.com/cht8687/You-Dont-Need-Lodash-Underscore/commit/22c4bcf2be48dd415d2b073759805562e520b615#)  
+>--- jdalton
+
 ### Browser Support
 
 ![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)

@@ -17,7 +17,7 @@ You are welcome to contribute with more items provided below.
 1. [_.findIndex](#_find)
 1. [_.indexOf](#_indexof)
 1. [_.lastIndexOf](#_lastindexof)
-1. [_.includes](#_includes)
+1. [_.includes/_.contains](#_.includes/_.contains)
 1. [_.keys](#_keys)
 1. [_.size](#_size)
 1. [_.isNaN](#_isnan)
@@ -352,7 +352,7 @@ Returns the index of the last occurrence of value in the array, or -1 if value i
 
 **[⬆ back to top](#quick-links)**
 
-## _.includes
+## _.includes/_.contains
 
 Checks if value is in collection. 
 

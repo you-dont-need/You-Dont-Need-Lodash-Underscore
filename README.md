@@ -461,6 +461,29 @@ Reverses array so that the first element becomes the last, the second element be
 
 **[⬆ back to top](#quick-links)**
 
+## _.after
+
+Creates a version of the function that will only be run after first being called count times. Useful for grouping asynchronous responses, where you want to be sure that all the async calls have finished, before proceeding.
+
+  ```js
+  // Underscore/Lodash
+  var renderNotes = _.after(notes.length, render);
+  _.each(notes, function(note) {
+    note.asyncSave({success: renderNotes});
+  });
+  // output: true
+
+  // Native
+  console.log(isNaN(NaN));
+  // output: true
+  ```
+### Browser Support
+
+![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
+--- | --- | --- | --- | --- |
+  ✔  |  ✔ |  ✔ |  ✔ |  ✔  |  
+
+**[⬆ back to top](#quick-links)**
 ## Reference
 
 * [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference) 

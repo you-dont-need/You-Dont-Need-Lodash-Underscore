@@ -433,11 +433,11 @@ Checks if value is NaN.
   // Native
   console.log(isNaN(NaN));
   // output: true
-  ```
+
   // ES6
   console.log(Number.isNaN(NaN));
   // output: true
-
+  ```
 MDN:
 >In comparison to the global `isNaN()` function, `Number.isNaN()` doesn't suffer the problem of forcefully converting the parameter to a number. This means it is now safe to pass values that would normally convert to `NaN`, but aren't actually the same value as `NaN`. This also means that only values of the type number, that are also `NaN`, return true. [Number.isNaN()](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN)
 

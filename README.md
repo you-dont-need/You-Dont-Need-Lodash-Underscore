@@ -21,7 +21,11 @@ You are welcome to contribute with more items provided below.
 1. [_.keys](#_keys)
 1. [_.size](#_size)
 1. [_.isNaN](#_isnan)
-1. [_.reverse](#_reverse) 
+1. [_.reverse](#_reverse)
+1. [_.join](#_join)
+1. [_.toUpper](#_toupper)
+1. [_.toLower](#_tolower)
+1. [_.trim](#_trim)
 
 ## _.each
 
@@ -458,6 +462,98 @@ Reverses array so that the first element becomes the last, the second element be
 ![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
 --- | --- | --- | --- | --- |
   1.0✔  |  1.0✔ |  5.5✔ |  ✔ |  ✔  |  
+
+**[⬆ back to top](#quick-links)**
+
+## _.join
+:heavy_exclamation_mark:`Lodash only`
+Joins a list of elements in an array with a given separator.
+
+  ```js
+  // Lodash
+  var result = _.join(['one', 'two', 'three'], '--');
+  console.log(result);
+  // output: 'one--two--three'
+
+  // Native
+  var result = ['one', 'two', 'three'].join('--');
+  console.log(result)
+  // output: 'one--two--three'
+  ```
+### Browser Support
+
+![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
+--- | --- | --- | --- | --- |
+  1.0✔  |  1.0✔ |  5.5✔  |  ✔ |  ✔  |  
+
+**[⬆ back to top](#quick-links)**
+
+## _.toUpper
+:heavy_exclamation_mark:`Lodash only`
+Uppercase a given string.
+
+  ```js
+  // Lodash
+  var result = _.toUpper('foobar');
+  console.log(result);
+  // output: 'FOOBAR'
+
+  // Native
+  var result = 'foobar'.toUpperCase();
+  console.log(result);
+  // output: 'FOOBAR'
+  ```
+### Browser Support
+
+![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
+--- | --- | --- | --- | --- |
+  ✔  |  ✔ |  ✔  |  ✔ |  ✔  |  
+
+**[⬆ back to top](#quick-links)**
+
+## _.toLower
+:heavy_exclamation_mark:`Lodash only`
+Lowercase a given string.
+
+  ```js
+  // Lodash
+  var result = _.toLower('FOOBAR');
+  console.log(result);
+  // output: 'foobar'
+
+  // Native
+  var result = 'FOOBAR'.toLowerCase();
+  console.log(result);
+  // output: 'foobar'
+  ```
+### Browser Support
+
+![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
+--- | --- | --- | --- | --- |
+  ✔  |  ✔ |  ✔  |  ✔ |  ✔  |  
+
+**[⬆ back to top](#quick-links)**
+
+## _.trim
+:heavy_exclamation_mark:`Lodash only`
+Removes leading and trailing whitespace characters from string.
+
+  ```js
+  // Lodash
+  var result = _.trim(' abc ');
+  console.log(result);
+  // output: 'abc'
+
+  // Native
+  var result = ' abc '.trim();
+  console.log(result);
+  // output: 'abc'
+  ```
+### Browser Support
+
+![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
+--- | --- | --- | --- | --- |
+  5.0✔  |  3.5✔ |  9.0✔  |  10.5✔ |  5.0✔  |  
 
 **[⬆ back to top](#quick-links)**
 

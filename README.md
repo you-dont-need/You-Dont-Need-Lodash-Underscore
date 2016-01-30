@@ -18,7 +18,7 @@ You are welcome to contribute with more items provided below.
 >Tero Parviainen, Author of [build-your-own-angular](http://teropa.info/build-your-own-angular)
 
 >[I'll admit, I've been guilty of overusing #lodash. Excellent resource.](https://twitter.com/therebelrobot/status/692907269512642561)  
->therebelrobot,Maker of web things, Facilitator for Node.js/io.js
+>therebelrobot, Maker of web things, Facilitator for Node.js/io.js
 
 
 ## Quick links

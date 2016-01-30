@@ -6,6 +6,21 @@ You are welcome to contribute with more items provided below.
 
 **Please note that, the examples used below are just showing you the native alternative of performing certain tasks. For some of the functions, Lodash provides you more options than native built-ins. This list is not a 1:1 comparison.
 
+## Voice of developers
+
+>Make use of native JavaScript object and array utilities before going big.
+-[cody lindley](https://twitter.com/codylindley/status/692356631007342593) Author of [jQuery Cookbook](http://shop.oreilly.com/product/9780596159788.do),[JavaScript Enlightenment](http://shop.oreilly.com/product/0636920027713.do)
+
+>You probably don't need Lodash. Nice List of JavaScript methods which you can use natively. 
+-[Daniel Lamb](https://twitter.com/daniellmb/status/692200768556916740) Computer Scientist, Technical Reviewer of [Secrets of the JavaScript Ninja](https://www.manning.com/books/secrets-of-the-javascript-ninja-second-edition), [Functional Programming in JavaScript](https://www.manning.com/books/functional-programming-in-javascript) 
+
+>I guess not, but I want it. 
+-[Tero Parviainen](https://twitter.com/teropa/status/692280179666898944) Author of [build-your-own-angular](http://teropa.info/build-your-own-angular)
+
+>I'll admit, I've been guilty of overusing #lodash. Excellent resource.
+-[therebelrobot](https://twitter.com/therebelrobot/status/692907269512642561) Maker of web things, Facilitator for Node.js/io.js
+
+
 ## Quick links
 
 1. [_.each](#_each)

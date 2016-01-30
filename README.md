@@ -4,7 +4,7 @@ Lodash and Underscore are great modern JavaScript utility libraries, and they ar
 
 You are welcome to contribute with more items provided below.
 
-**Please note that, the examples used below are just showing you the native alternative of performing certain tasks. For some of the functions, Lodash provides you more options than native built-ins. This list is not a 1:1 comparison.
+**Please note that, the examples used below are just showing you the native alternative of performing certain tasks. For some of the functions, Lodash provides you more options than native built-ins. This list is not a 1:1 comparison.**
 
 ## Voice of developers
 

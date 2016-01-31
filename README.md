@@ -1,4 +1,4 @@
-## You don't (may not) need Lodash/Underscore 
+## You don't (may not) need Lodash/Underscore [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/cht8687/You-Dont-Need-Lodash-Underscore)
 
 Lodash and Underscore are great modern JavaScript utility libraries, and they are widely used by Front-end developers. However, when you are targeting modern browsers, you may find out that there are many methods which are already supported natively thanks to ECMAScript5 [ES5] and ESCMAScript2015 [ES6]. If you want your project to require fewer dependencies, and you know your target browser clearly, then you may not need Lodash/Underscore.
 
@@ -21,6 +21,10 @@ You are welcome to contribute with more items provided below.
 
 >[I'll admit, I've been guilty of overusing #lodash. Excellent resource.](https://twitter.com/therebelrobot/status/692907269512642561)  
 >therebelrobot, Maker of web things, Facilitator for Node.js/io.js
+
+## Voice of Lodash creator
+
+
 
 
 ## Quick links

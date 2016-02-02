@@ -22,10 +22,6 @@ You are welcome to contribute with more items provided below.
 >[I'll admit, I've been guilty of overusing #lodash. Excellent resource.](https://twitter.com/therebelrobot/status/692907269512642561)  
 >therebelrobot, Maker of web things, Facilitator for Node.js/io.js
 
-## Voice of Lodash creator
-
-
-
 
 ## Quick links
 

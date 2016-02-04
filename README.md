@@ -45,6 +45,7 @@ You are welcome to contribute with more items provided below.
 1. [_.toUpper](#_toupper)
 1. [_.toLower](#_tolower)
 1. [_.trim](#_trim)
+1. [_.repeat](#_repeat)
 
 ## _.each
 
@@ -598,6 +599,29 @@ Removes leading and trailing whitespace characters from string.
 ![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
 --- | --- | --- | --- | --- |
   5.0✔  |  3.5✔ |  9.0✔  |  10.5✔ |  5.0✔  |  
+
+**[⬆ back to top](#quick-links)**
+
+
+## _.repeat
+:heavy_exclamation_mark:`Lodash only`
+Repeats the given string n times.
+
+  ```js
+  // Lodash
+  var result = _.repeat('abc', 2);
+  // output: 'abcabc'
+
+  // Native
+  var result = 'abc'.repeat(2);
+  console.log(result);
+  // output: 'abcabc'
+  ```
+### Browser Support
+
+![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
+--- | --- | --- | --- | --- |
+  41✔  |  24✔ |  Not supported  |  Not supported |  9  |  
 
 **[⬆ back to top](#quick-links)**
 

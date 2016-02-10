@@ -46,6 +46,7 @@ You are welcome to contribute with more items provided below.
 1. [_.toLower](#_tolower)
 1. [_.trim](#_trim)
 1. [_.repeat](#_repeat)
+1. [_.after](#_after)
 
 ## _.each
 
@@ -602,7 +603,6 @@ Removes leading and trailing whitespace characters from string.
 
 **[⬆ back to top](#quick-links)**
 
-
 ## _.repeat
 :heavy_exclamation_mark:`Lodash only`
 Repeats the given string n times.
@@ -624,6 +624,35 @@ Repeats the given string n times.
   41✔  |  24✔ |  Not supported  |  Not supported |  9  |  
 
 **[⬆ back to top](#quick-links)**
+
+## _.after
+:heavy_exclamation_mark:`Note this is an alternative implementation`
+Creates a version of the function that will only be run after first being called count times. Useful for grouping asynchronous responses, where you want to be sure that all the async calls have finished, before proceeding.
+ 
+ ```js
+var notes = ['profile', 'settings'];
+ // Underscore/Lodash
+var renderNotes = _.after(notes.length, render);
+    notes.forEach(function(note) {
+    console.log(note);
+    renderNotes();
+});
+ 
+  // Native
+notes.forEach(function(note, index) {
+  console.log(note);
+  if (notes.length === (index + 1)) {
+    render();
+  }
+});
+```
+### Browser Support
+ 
+ ![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
+ --- | --- | --- | --- | --- |
+   ✔  |  ✔ |  ✔ |  ✔ |  ✔  |  
+ 
+ **[⬆ back to top](#quick-links)**
 
 ## Reference
 

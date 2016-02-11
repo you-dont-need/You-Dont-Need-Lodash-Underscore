@@ -361,9 +361,9 @@ Returns the index of the last occurrence of value in the array, or -1 if value i
 
   // Native
   var array = [2, 9, 9, 4, 3, 6];
-  var result = array.lastIndexOf(2);    
+  var result = array.lastIndexOf(9);    
   console.log(result); 
-  // output: 0
+  // output: 2
   ```
 ### Browser Support
 

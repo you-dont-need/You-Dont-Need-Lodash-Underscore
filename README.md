@@ -54,15 +54,15 @@ Iterates over a list of elements, yielding each in turn to an iteratee function.
 
   ```js
   // Underscore/Lodash
-  _.each([1, 2, 3], function(value, index) {
-    console.log(value);
-  });
+  _.each([1, 2, 3], function (value, index) {
+    console.log(value)
+  })
   // output: 1 2 3
 
   // Native
-  [1, 2, 3].forEach(function(value, index) {
-    console.log(value);
-  });
+  [1, 2, 3].forEach(function (value, index) {
+    console.log(value)
+  })
   // output: 1 2 3
   ```
 ### Browser Support
@@ -79,19 +79,19 @@ Translate all items in an array or object to new array of items.
 
   ```js
   // Underscore/Lodash
-  var array1 = [1, 2, 3];
-  var array2 = _.map(array1, function(value, index) {
-    return value*2;
-  });
-  console.log(array2);
+  var array1 = [1, 2, 3]
+  var array2 = _.map(array1, function (value, index) {
+    return value * 2
+  })
+  console.log(array2)
   // output: [2, 4, 6]
 
   // Native
-  var array1 = [1, 2, 3];
-  var array2 = array1.map(function(value, index) {
-    return value*2;
-  });
-  console.log(array2);
+  var array1 = [1, 2, 3]
+  var array2 = array1.map(function (value, index) {
+    return value * 2
+  })
+  console.log(array2)
   // output: [2, 4, 6]
   ```
 ### Browser Support
@@ -108,22 +108,22 @@ Tests whether all elements in the array pass the test implemented by the provide
 
   ```js
   // Underscore/Lodash
-  function isLargerThanTen(element, index, array) {
-    return element >=10;
+  function isLargerThanTen (element, index, array) {
+    return element >= 10
   }
-  var array = [10, 20, 30];
-  var result = _.every(array, isLargerThanTen);
-  console.log(result);
+  var array = [10, 20, 30]
+  var result = _.every(array, isLargerThanTen)
+  console.log(result)
   // output: true
 
   // Native
-  function isLargerThanTen(element, index, array) {
-    return element >=10;
+  function isLargerThanTen (element, index, array) {
+    return element >= 10
   }
 
-  var array = [10, 20, 30];
-  var result = array.every(isLargerThanTen);
-  console.log(result);
+  var array = [10, 20, 30]
+  var result = array.every(isLargerThanTen)
+  console.log(result)
   // output: true
   ```
 ### Browser Support
@@ -140,22 +140,22 @@ Tests whether some element in the array passes the test implemented by the provi
  
   ```js
   // Underscore/Lodash
-  function isLargerThanTen(element, index, array) {
-    return element >=10;
+  function isLargerThanTen (element, index, array) {
+    return element >= 10
   }
-  var array = [10, 9, 8];
-  var result = _.some(array, isLargerThanTen);
-  console.log(result);
+  var array = [10, 9, 8]
+  var result = _.some(array, isLargerThanTen)
+  console.log(result)
   // output: true
 
   // Native
-  function isLargerThanTen(element, index, array) {
-    return element >=10;
+  function isLargerThanTen (element, index, array) {
+    return element >= 10
   }
 
-  var array = [10, 9, 8];
-  var result = array.some(isLargerThanTen);
-  console.log(result);
+  var array = [10, 9, 8]
+  var result = array.some(isLargerThanTen)
+  console.log(result)
   // output: true
   ```
 ### Browser Support
@@ -172,19 +172,19 @@ Applies a function against an accumulator and each value of the array (from left
 
   ```js
   // Underscore/Lodash
-  var array = [0, 1, 2, 3, 4];
+  var array = [0, 1, 2, 3, 4]
   var result = _.reduce(array, function (previousValue, currentValue, currentIndex, array) {
-    return previousValue + currentValue;
-  });
-  console.log(result);
+    return previousValue + currentValue
+  })
+  console.log(result)
   // output: 10
 
   // Native
-  var array = [0, 1, 2, 3, 4];
+  var array = [0, 1, 2, 3, 4]
   var result = array.reduce(function (previousValue, currentValue, currentIndex, array) {
-    return previousValue + currentValue;
-  });
-  console.log(result);
+    return previousValue + currentValue
+  })
+  console.log(result)
   // output: 10
   ```
 ### Browser Support
@@ -201,19 +201,19 @@ This method is like _.reduce except that it iterates over elements of collection
 
   ```js
   // Underscore/Lodash
-  var array = [0, 1, 2, 3, 4];
+  var array = [0, 1, 2, 3, 4]
   var result = _.reduceRight(array, function (previousValue, currentValue, currentIndex, array) {
-    return previousValue - currentValue;
-  });
-  console.log(result);
+    return previousValue - currentValue
+  })
+  console.log(result)
   // output: -2
 
   // Native
-  var array = [0, 1, 2, 3, 4];
+  var array = [0, 1, 2, 3, 4]
   var result = array.reduceRight(function (previousValue, currentValue, currentIndex, array) {
-    return previousValue - currentValue;
-  });
-  console.log(result);
+    return previousValue - currentValue
+  })
+  console.log(result)
   // output: -2
   ```
 ### Browser Support
@@ -230,21 +230,21 @@ Creates a new array with all elements that pass the test implemented by the prov
 
   ```js
   // Underscore/Lodash
-  function isBigEnough(value) {
-    return value >= 10;
-  } 
-  var array = [12, 5, 8, 130, 44];
-  var filtered = _.filter(array, isBigEnough);
-  console.log(filtered);
+  function isBigEnough (value) {
+    return value >= 10
+  }
+  var array = [12, 5, 8, 130, 44]
+  var filtered = _.filter(array, isBigEnough)
+  console.log(filtered)
   // output: [12, 130, 44]
 
   // Native
-  function isBigEnough(value) {
-    return value >= 10;
-  } 
-  var array = [12, 5, 8, 130, 44];
-  var filtered = array.filter(isBigEnough);
-  console.log(filtered);
+  function isBigEnough (value) {
+    return value >= 10
+  }
+  var array = [12, 5, 8, 130, 44]
+  var filtered = array.filter(isBigEnough)
+  console.log(filtered)
   // output: [12, 130, 44]
   ```
 ### Browser Support
@@ -265,9 +265,9 @@ Returns a value in the array, if an element in the array satisfies the provided 
     { 'user': 'barney',  'age': 36, 'active': true },
     { 'user': 'fred',    'age': 40, 'active': false },
     { 'user': 'pebbles', 'age': 1,  'active': true }
-  ];
+  ]
 
-  _.find(users, function(o) { return o.age < 40; });
+  _.find(users, function (o) { return o.age < 40; })
   // output: object for 'barney'
 
   // Native
@@ -275,9 +275,9 @@ Returns a value in the array, if an element in the array satisfies the provided 
     { 'user': 'barney',  'age': 36, 'active': true },
     { 'user': 'fred',    'age': 40, 'active': false },
     { 'user': 'pebbles', 'age': 1,  'active': true }
-  ];
+  ]
 
-  users.find(function(o) { return o.age < 40; });
+  users.find(function (o) { return o.age < 40; })
   // output: object for 'barney'
   ```
 ### Browser Support
@@ -298,10 +298,10 @@ Returns an index in the array, if an element in the array satisfies the provided
     { 'user': 'barney',  'age': 36, 'active': true },
     { 'user': 'fred',    'age': 40, 'active': false },
     { 'user': 'pebbles', 'age': 1,  'active': true }
-  ];
+  ]
 
-  var index =  _.findIndex(users, function(o) { return o.age >= 40; });
-  console.log(index);
+  var index = _.findIndex(users, function (o) { return o.age >= 40; })
+  console.log(index)
   // output: 1
 
   // Native
@@ -309,10 +309,10 @@ Returns an index in the array, if an element in the array satisfies the provided
     { 'user': 'barney',  'age': 36, 'active': true },
     { 'user': 'fred',    'age': 40, 'active': false },
     { 'user': 'pebbles', 'age': 1,  'active': true }
-  ];
+  ]
 
-  var index =  users.findIndex(function(o) { return o.age >= 40; });
-  console.log(index);
+  var index = users.findIndex(function (o) { return o.age >= 40; })
+  console.log(index)
   // output: 1
   ```
 ### Browser Support
@@ -329,15 +329,15 @@ Returns the first index at which a given element can be found in the array, or -
 
   ```js
   // Underscore/Lodash
-  var array = [2, 9, 9];
-  var result = _.indexOf(array, 2);    
-  console.log(result); 
+  var array = [2, 9, 9]
+  var result = _.indexOf(array, 2)
+  console.log(result)
   // output: 0
 
   // Native
-  var array = [2, 9, 9];
-  var result = array.indexOf(2);    
-  console.log(result); 
+  var array = [2, 9, 9]
+  var result = array.indexOf(2)
+  console.log(result)
   // output: 0
   ```
 ### Browser Support
@@ -354,15 +354,15 @@ Returns the index of the last occurrence of value in the array, or -1 if value i
 
   ```js
   // Underscore/Lodash
-  var array = [2, 9, 9, 4, 3, 6];
-  var result = _.lastIndexOf(array, 9);    
-  console.log(result); 
+  var array = [2, 9, 9, 4, 3, 6]
+  var result = _.lastIndexOf(array, 9)
+  console.log(result)
   // output: 2
 
   // Native
-  var array = [2, 9, 9, 4, 3, 6];
-  var result = array.lastIndexOf(9);    
-  console.log(result); 
+  var array = [2, 9, 9, 4, 3, 6]
+  var result = array.lastIndexOf(9)
+  console.log(result)
   // output: 2
   ```
 ### Browser Support
@@ -378,14 +378,14 @@ Returns the index of the last occurrence of value in the array, or -1 if value i
 Checks if value is in collection. 
 
   ```js
-  var array = [1, 2, 3];
+  var array = [1, 2, 3]
   // Underscore/Lodash - also called with _.contains
-  _.includes(array, 1);
+  _.includes(array, 1)
   // → true
 
   // Native
-  var array = [1, 2, 3];
-  array.includes(1);
+  var array = [1, 2, 3]
+  array.includes(1)
   // → true
   ```
 ### Browser Support
@@ -402,13 +402,13 @@ Retrieve all the names of the object's own enumerable properties.
 
   ```js
   // Underscore/Lodash 
-  var result = _.keys({one: 1, two: 2, three: 3});
-  console.log(result);
+  var result = _.keys({one: 1, two: 2, three: 3})
+  console.log(result)
   // output: ["one", "two", "three"]
 
   // Native
-  var result2 = Object.keys({one: 1, two: 2, three: 3});
-  console.log(result2); 
+  var result2 = Object.keys({one: 1, two: 2, three: 3})
+  console.log(result2)
   // output: ["one", "two", "three"]
   ```
 ### Browser Support
@@ -425,13 +425,13 @@ Return the number of values in the collection.
 
   ```js
   // Underscore/Lodash
-  var result = _.size({one: 1, two: 2, three: 3});
-  console.log(result);
+  var result = _.size({one: 1, two: 2, three: 3})
+  console.log(result)
   // output: 3
 
   // Native
-  var result2 = Object.keys({one: 1, two: 2, three: 3}).length;
-  console.log(result2); 
+  var result2 = Object.keys({one: 1, two: 2, three: 3}).length
+  console.log(result2)
   // output: 3
   ```
 ### Browser Support
@@ -448,15 +448,15 @@ Checks if value is NaN.
 
   ```js
   // Underscore/Lodash
-  console.log(_.isNaN(NaN));
+  console.log(_.isNaN(NaN))
   // output: true
 
   // Native
-  console.log(isNaN(NaN));
+  console.log(isNaN(NaN))
   // output: true
 
   // ES6
-  console.log(Number.isNaN(NaN));
+  console.log(Number.isNaN(NaN))
   // output: true
   ```
 MDN:
@@ -487,13 +487,13 @@ Reverses array so that the first element becomes the last, the second element be
 
   ```js
   // Lodash
-  var array = [1, 2, 3];
-  console.log(_.reverse(array));
+  var array = [1, 2, 3]
+  console.log(_.reverse(array))
   // output: [3, 2, 1]
 
   // Native
-  var array = [1, 2, 3];
-  console.log(array.reverse());
+  var array = [1, 2, 3]
+  console.log(array.reverse())
   // output: [3, 2, 1]
   ```
 
@@ -517,12 +517,12 @@ Joins a list of elements in an array with a given separator.
 
   ```js
   // Lodash
-  var result = _.join(['one', 'two', 'three'], '--');
-  console.log(result);
+  var result = _.join(['one', 'two', 'three'], '--')
+  console.log(result)
   // output: 'one--two--three'
 
   // Native
-  var result = ['one', 'two', 'three'].join('--');
+  var result = ['one', 'two', 'three'].join('--')
   console.log(result)
   // output: 'one--two--three'
   ```
@@ -540,13 +540,13 @@ Uppercase a given string.
 
   ```js
   // Lodash
-  var result = _.toUpper('foobar');
-  console.log(result);
+  var result = _.toUpper('foobar')
+  console.log(result)
   // output: 'FOOBAR'
 
   // Native
-  var result = 'foobar'.toUpperCase();
-  console.log(result);
+  var result = 'foobar'.toUpperCase()
+  console.log(result)
   // output: 'FOOBAR'
   ```
 ### Browser Support
@@ -563,13 +563,13 @@ Lowercase a given string.
 
   ```js
   // Lodash
-  var result = _.toLower('FOOBAR');
-  console.log(result);
+  var result = _.toLower('FOOBAR')
+  console.log(result)
   // output: 'foobar'
 
   // Native
-  var result = 'FOOBAR'.toLowerCase();
-  console.log(result);
+  var result = 'FOOBAR'.toLowerCase()
+  console.log(result)
   // output: 'foobar'
   ```
 ### Browser Support
@@ -586,13 +586,13 @@ Removes leading and trailing whitespace characters from string.
 
   ```js
   // Lodash
-  var result = _.trim(' abc ');
-  console.log(result);
+  var result = _.trim(' abc ')
+  console.log(result)
   // output: 'abc'
 
   // Native
-  var result = ' abc '.trim();
-  console.log(result);
+  var result = ' abc '.trim()
+  console.log(result)
   // output: 'abc'
   ```
 ### Browser Support
@@ -609,12 +609,12 @@ Repeats the given string n times.
 
   ```js
   // Lodash
-  var result = _.repeat('abc', 2);
+  var result = _.repeat('abc', 2)
   // output: 'abcabc'
 
   // Native
-  var result = 'abc'.repeat(2);
-  console.log(result);
+  var result = 'abc'.repeat(2)
+  console.log(result)
   // output: 'abcabc'
   ```
 ### Browser Support
@@ -630,22 +630,22 @@ Repeats the given string n times.
 Creates a version of the function that will only be run after first being called count times. Useful for grouping asynchronous responses, where you want to be sure that all the async calls have finished, before proceeding.
  
  ```js
-var notes = ['profile', 'settings'];
- // Underscore/Lodash
-var renderNotes = _.after(notes.length, render);
-    notes.forEach(function(note) {
-    console.log(note);
-    renderNotes();
-});
- 
+  var notes = ['profile', 'settings']
+  // Underscore/Lodash
+  var renderNotes = _.after(notes.length, render)
+  notes.forEach(function (note) {
+    console.log(note)
+    renderNotes()
+  })
+
   // Native
-notes.forEach(function(note, index) {
-  console.log(note);
-  if (notes.length === (index + 1)) {
-    render();
-  }
-});
-```
+  notes.forEach(function (note, index) {
+    console.log(note)
+    if (notes.length === (index + 1)) {
+      render()
+    }
+  })
+  ```
 ### Browser Support
  
  ![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)

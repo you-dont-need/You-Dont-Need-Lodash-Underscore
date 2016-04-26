@@ -47,6 +47,7 @@ You are welcome to contribute with more items provided below.
 1. [_.trim](#_trim)
 1. [_.repeat](#_repeat)
 1. [_.after](#_after)
+1. [_.assign](#_assign)
 
 ## _.each
 
@@ -651,6 +652,42 @@ Creates a version of the function that will only be run after first being called
  ![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
  --- | --- | --- | --- | --- |
    ✔  |  ✔ |  ✔ |  ✔ |  ✔  |  
+ 
+ ## _.assign
+The method is used to copy the values of all enumerable own properties from one or more source objects to a target object.
+
+  ```js
+  // Underscore/Lodash
+  function Foo() {
+    this.c = 3;
+  }
+  function Bar() {
+    this.e = 5;
+  }
+  Foo.prototype.d = 4;
+  Bar.prototype.f = 6;
+  var result = _.assign(new Foo, new Bar);
+  console.log(result);
+  // output: { 'c': 3, 'e': 5 }
+
+  // Native
+  function Foo() {
+    this.c = 3;
+  }
+  function Bar() {
+    this.e = 5;
+  }
+  Foo.prototype.d = 4;
+  Bar.prototype.f = 6;
+  var result = Object.assign(new Foo, new Bar);
+  console.log(result);
+  // output: { 'c': 3, 'e': 5 }
+  ```
+### Browser Support
+
+![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
+--- | --- | --- | --- | --- |
+  45✔  |  34✔ |  No support  |  32✔ |  9✔  |  
  
  **[⬆ back to top](#quick-links)**
 

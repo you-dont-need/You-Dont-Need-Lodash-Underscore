@@ -653,11 +653,13 @@ Creates a version of the function that will only be run after first being called
  --- | --- | --- | --- | --- |
    ✔  |  ✔ |  ✔ |  ✔ |  ✔  |  
  
- ## _.assign
+## _.assign
+
 The method is used to copy the values of all enumerable own properties from one or more source objects to a target object.
 
   ```js
-  // Underscore/Lodash
+  // Underscore: _.extendOwn
+  // Lodash
   function Foo() {
     this.c = 3;
   }

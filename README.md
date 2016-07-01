@@ -1,6 +1,6 @@
 ## You don't (may not) need Lodash/Underscore [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/cht8687/You-Dont-Need-Lodash-Underscore)
 
-Lodash and Underscore are great modern JavaScript utility libraries, and they are widely used by Front-end developers. However, when you are targeting modern browsers, you may find out that there are many methods which are already supported natively thanks to ECMAScript5 [ES5] and ECMAScript2015 [ES6]. If you want your project to require fewer dependencies, and you know your target browser clearly, then you may not need Lodash/Underscore.
+Lodash and Underscore are great modern JavaScript utility libraries, and they are widely used by Front-end developers. However, when you are targeting modern browsers, you may find out that there are many methods which are already supported natively thanks to ECMAScript5 [ES5] and ESCMAScript2015 [ES6]. If you want your project to require fewer dependencies, and you know your target browser clearly, then you may not need Lodash/Underscore.
 
 You are welcome to contribute with more items provided below.
 
@@ -10,253 +10,70 @@ You are welcome to contribute with more items provided below.
 
 ## Voice of developers
 
->[Make use of native JavaScript object and array utilities before going big.](https://twitter.com/codylindley/status/692356631007342593)  
+>[Make use of native JavaScript object and array utilities before going big.](https://twitter.com/codylindley/status/692356631007342593)
 >Cody lindley, Author of [jQuery Cookbook](http://shop.oreilly.com/product/9780596159788.do),[JavaScript Enlightenment](http://shop.oreilly.com/product/0636920027713.do)
 
->[You probably don't need Lodash. Nice List of JavaScript methods which you can use natively.](https://twitter.com/daniellmb/status/692200768556916740)  
->Daniel Lamb, Computer Scientist, Technical Reviewer of [Secrets of the JavaScript Ninja](https://www.manning.com/books/secrets-of-the-javascript-ninja-second-edition), [Functional Programming in JavaScript](https://www.manning.com/books/functional-programming-in-javascript) 
+>[You probably don't need Lodash. Nice List of JavaScript methods which you can use natively.](https://twitter.com/daniellmb/status/692200768556916740)
+>Daniel Lamb, Computer Scientist, Technical Reviewer of [Secrets of the JavaScript Ninja](https://www.manning.com/books/secrets-of-the-javascript-ninja-second-edition), [Functional Programming in JavaScript](https://www.manning.com/books/functional-programming-in-javascript)
 
->[I guess not, but I want it.](https://twitter.com/teropa/status/692280179666898944)  
+>[I guess not, but I want it.](https://twitter.com/teropa/status/692280179666898944)
 >Tero Parviainen, Author of [build-your-own-angular](http://teropa.info/build-your-own-angular)
 
->[I'll admit, I've been guilty of overusing #lodash. Excellent resource.](https://twitter.com/therebelrobot/status/692907269512642561)  
+>[I'll admit, I've been guilty of overusing #lodash. Excellent resource.](https://twitter.com/therebelrobot/status/692907269512642561)
 >therebelrobot, Maker of web things, Facilitator for Node.js/io.js
 
 
 ## Quick links
 
+**[Array](#array)**
+
+1. [_.find](#_find)
+1. [_.findIndex](#_find)
+1. [_.indexOf](#_indexof)
+1. [_.join](#_join)
+1. [_.lastIndexOf](#_lastindexof)
+1. [_.reverse](#_reverse)
+
+**[Collection*](#collection*)**
+
+*:heavy_exclamation_mark:<b>Important:</b> Note that the native equivalents are array methods,
+and will not work with objects. If this functionality is needed,
+then Lodash/Underscore is the better option.*
+
 1. [_.each](#_each)
-1. [_.map](#_map)
 1. [_.every](#_every)
-1. [_.some](#_some)
+1. [_.filter](#_filter)
+1. [_.includes](#_includes)
+1. [_.map](#_map)
 1. [_.reduce](#_reduce)
 1. [_.reduceRight](#_reduceright)
-1. [_.filter](#_filter)
-1. [_.find](#_find)
-1. [_.findIndex](#_findindex)
-1. [_.indexOf](#_indexof)
-1. [_.lastIndexOf](#_lastindexof)
-1. [_.includes](#_includes)
-1. [_.keys](#_keys)
 1. [_.size](#_size)
-1. [_.isNaN](#_isnan)
-1. [_.reverse](#_reverse)
-1. [_.join](#_join)
-1. [_.toUpper](#_toupper)
-1. [_.toLower](#_tolower)
-1. [_.trim](#_trim)
-1. [_.repeat](#_repeat)
+1. [_.some](#_some)
+
+**[Function](#function)**
+
 1. [_.after](#_after)
+
+**[Lang](#lang)**
+
+1. [_.isNaN](#_isnan)
+
+**[Object](#object)**
+
 1. [_.assign](#_assign)
+1. [_.keys](#_keys)
 
-## _.each
+**[String](#string)**
 
-Iterates over a list of elements, yielding each in turn to an iteratee function.
+1. [_.repeat](#_repeat)
+1. [_.toLower](#_tolower)
+1. [_.toUpper](#_toupper)
+1. [_.trim](#_trim)
 
-  ```js
-  // Underscore/Lodash
-  _.each([1, 2, 3], function (value, index) {
-    console.log(value)
-  })
-  // output: 1 2 3
 
-  // Native
-  [1, 2, 3].forEach(function (value, index) {
-    console.log(value)
-  })
-  // output: 1 2 3
-  ```
-### Browser Support
+## Array
 
-![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
---- | --- | --- | --- | --- |
-  ✔  | 1.5 ✔ |  9 ✔  |  ✔  |  ✔  |   
-
-**[⬆ back to top](#quick-links)**
-
-## _.map
-
-Translate all items in an array or object to new array of items.
-
-  ```js
-  // Underscore/Lodash
-  var array1 = [1, 2, 3]
-  var array2 = _.map(array1, function (value, index) {
-    return value * 2
-  })
-  console.log(array2)
-  // output: [2, 4, 6]
-
-  // Native
-  var array1 = [1, 2, 3]
-  var array2 = array1.map(function (value, index) {
-    return value * 2
-  })
-  console.log(array2)
-  // output: [2, 4, 6]
-  ```
-### Browser Support
-
-![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
---- | --- | --- | --- | --- |
-  ✔  | 1.5 ✔ |  9 ✔  |  ✔  |  ✔  |  
-
-**[⬆ back to top](#quick-links)**
-
-## _.every
-
-Tests whether all elements in the array pass the test implemented by the provided function.
-
-  ```js
-  // Underscore/Lodash
-  function isLargerThanTen (element, index, array) {
-    return element >= 10
-  }
-  var array = [10, 20, 30]
-  var result = _.every(array, isLargerThanTen)
-  console.log(result)
-  // output: true
-
-  // Native
-  function isLargerThanTen (element, index, array) {
-    return element >= 10
-  }
-
-  var array = [10, 20, 30]
-  var result = array.every(isLargerThanTen)
-  console.log(result)
-  // output: true
-  ```
-### Browser Support
-
-![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
---- | --- | --- | --- | --- |
-  ✔  | 1.5 ✔ |  9 ✔  |  ✔  |  ✔  |  
-
-**[⬆ back to top](#quick-links)**
-
-## _.some
-
-Tests whether some element in the array passes the test implemented by the provided function.
- 
-  ```js
-  // Underscore/Lodash
-  function isLargerThanTen (element, index, array) {
-    return element >= 10
-  }
-  var array = [10, 9, 8]
-  var result = _.some(array, isLargerThanTen)
-  console.log(result)
-  // output: true
-
-  // Native
-  function isLargerThanTen (element, index, array) {
-    return element >= 10
-  }
-
-  var array = [10, 9, 8]
-  var result = array.some(isLargerThanTen)
-  console.log(result)
-  // output: true
-  ```
-### Browser Support
-
-![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
---- | --- | --- | --- | --- |
-  ✔  | 1.5 ✔ |  9 ✔  |  ✔  |  ✔  |  
-
-**[⬆ back to top](#quick-links)**
-
-## _.reduce
-
-Applies a function against an accumulator and each value of the array (from left-to-right) to reduce it to a single value.
-
-  ```js
-  // Underscore/Lodash
-  var array = [0, 1, 2, 3, 4]
-  var result = _.reduce(array, function (previousValue, currentValue, currentIndex, array) {
-    return previousValue + currentValue
-  })
-  console.log(result)
-  // output: 10
-
-  // Native
-  var array = [0, 1, 2, 3, 4]
-  var result = array.reduce(function (previousValue, currentValue, currentIndex, array) {
-    return previousValue + currentValue
-  })
-  console.log(result)
-  // output: 10
-  ```
-### Browser Support
-
-![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
---- | --- | --- | --- | --- |
-  ✔  | 3.0 ✔ |  9 ✔  |  10.5  |  4.0  |  
-
-**[⬆ back to top](#quick-links)**
-
-## _.reduceRight
-
-This method is like _.reduce except that it iterates over elements of collection from right to left.
-
-  ```js
-  // Underscore/Lodash
-  var array = [0, 1, 2, 3, 4]
-  var result = _.reduceRight(array, function (previousValue, currentValue, currentIndex, array) {
-    return previousValue - currentValue
-  })
-  console.log(result)
-  // output: -2
-
-  // Native
-  var array = [0, 1, 2, 3, 4]
-  var result = array.reduceRight(function (previousValue, currentValue, currentIndex, array) {
-    return previousValue - currentValue
-  })
-  console.log(result)
-  // output: -2
-  ```
-### Browser Support
-
-![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
---- | --- | --- | --- | --- |
-  ✔  | 3.0 ✔ |  9 ✔  |  10.5  |  4.0  |  
-
-**[⬆ back to top](#quick-links)**
-
-## _.filter
-
-Creates a new array with all elements that pass the test implemented by the provided function.
-
-  ```js
-  // Underscore/Lodash
-  function isBigEnough (value) {
-    return value >= 10
-  }
-  var array = [12, 5, 8, 130, 44]
-  var filtered = _.filter(array, isBigEnough)
-  console.log(filtered)
-  // output: [12, 130, 44]
-
-  // Native
-  function isBigEnough (value) {
-    return value >= 10
-  }
-  var array = [12, 5, 8, 130, 44]
-  var filtered = array.filter(isBigEnough)
-  console.log(filtered)
-  // output: [12, 130, 44]
-  ```
-### Browser Support
-
-![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
---- | --- | --- | --- | --- |
-  ✔  | 1.5 ✔ |  9 ✔  |  ✔  |  ✔  |  
-
-**[⬆ back to top](#quick-links)**
-
-## _.find
+### _.find
 
 Returns a value in the array, if an element in the array satisfies the provided testing function. Otherwise undefined is returned.
 
@@ -285,11 +102,11 @@ Returns a value in the array, if an element in the array satisfies the provided 
 
 ![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
 --- | --- | --- | --- | --- |
-  45.0  | 25.0 ✔ |  Not supported  |  Not supported |  7.1  |  
+  45.0  | 25.0 ✔ |  Not supported  |  Not supported |  7.1  |
 
 **[⬆ back to top](#quick-links)**
 
-## _.findIndex
+### _.findIndex
 
 Returns an index in the array, if an element in the array satisfies the provided testing function. Otherwise -1 is returned.
 
@@ -320,11 +137,11 @@ Returns an index in the array, if an element in the array satisfies the provided
 
 ![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
 --- | --- | --- | --- | --- |
-  45.0  | 25.0 ✔ |  Not supported  |  Not supported |  7.1  |  
+  45.0  | 25.0 ✔ |  Not supported  |  Not supported |  7.1  |
 
 **[⬆ back to top](#quick-links)**
 
-## _.indexOf
+### _.indexOf
 
 Returns the first index at which a given element can be found in the array, or -1 if it is not present.
 
@@ -345,11 +162,34 @@ Returns the first index at which a given element can be found in the array, or -
 
 ![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
 --- | --- | --- | --- | --- |
-  ✔  | 1.5 ✔ |  9 ✔  |  ✔  |  ✔  |  
+  ✔  | 1.5 ✔ |  9 ✔  |  ✔  |  ✔  |
 
 **[⬆ back to top](#quick-links)**
 
-## _.lastIndexOf
+### _.join
+:heavy_exclamation_mark:`Lodash only`
+Joins a list of elements in an array with a given separator.
+
+  ```js
+  // Lodash
+  var result = _.join(['one', 'two', 'three'], '--')
+  console.log(result)
+  // output: 'one--two--three'
+
+  // Native
+  var result = ['one', 'two', 'three'].join('--')
+  console.log(result)
+  // output: 'one--two--three'
+  ```
+### Browser Support
+
+![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
+--- | --- | --- | --- | --- |
+  1.0✔  |  1.0✔ |  5.5✔  |  ✔ |  ✔  |
+
+**[⬆ back to top](#quick-links)**
+
+### _.lastIndexOf
 
 Returns the index of the last occurrence of value in the array, or -1 if value is not present.
 
@@ -370,13 +210,138 @@ Returns the index of the last occurrence of value in the array, or -1 if value i
 
 ![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
 --- | --- | --- | --- | --- |
-  ✔  |  ✔ |  9 ✔  |  ✔  |  ✔  |  
+  ✔  |  ✔ |  9 ✔  |  ✔  |  ✔  |
 
 **[⬆ back to top](#quick-links)**
 
-## _.includes
+### _.reverse
+:heavy_exclamation_mark:`Lodash only`
+Reverses array so that the first element becomes the last, the second element becomes the second to last, and so on.
 
-Checks if value is in collection. 
+  ```js
+  // Lodash
+  var array = [1, 2, 3]
+  console.log(_.reverse(array))
+  // output: [3, 2, 1]
+
+  // Native
+  var array = [1, 2, 3]
+  console.log(array.reverse())
+  // output: [3, 2, 1]
+  ```
+
+Voice from the Lodash author:
+
+>Lodash's `_.reverse` just calls `Array#reverse` and enables composition like `_.map(arrays, _.reverse).`
+It's exposed on _ because previously, like `Underscore`, it was only exposed in the chaining syntax.
+>--- [jdalton](https://github.com/cht8687/You-Dont-Need-Lodash-Underscore/commit/22c4bcf2be48dd415d2b073759805562e520b615#)
+
+### Browser Support
+
+![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
+--- | --- | --- | --- | --- |
+  1.0✔  |  1.0✔ |  5.5✔ |  ✔ |  ✔  |
+
+**[⬆ back to top](#quick-links)**
+
+
+## Collection*
+
+*:heavy_exclamation_mark:<b>Important:</b> Note that the native equivalents are array methods,
+and will not work with objects. If this functionality is needed,
+then Lodash/Underscore is the better option.*
+
+### _.each
+
+Iterates over a list of elements, yielding each in turn to an iteratee function.
+
+  ```js
+  // Underscore/Lodash
+  _.each([1, 2, 3], function (value, index) {
+    console.log(value)
+  })
+  // output: 1 2 3
+
+  // Native
+  [1, 2, 3].forEach(function (value, index) {
+    console.log(value)
+  })
+  // output: 1 2 3
+  ```
+### Browser Support
+
+![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
+--- | --- | --- | --- | --- |
+  ✔  | 1.5 ✔ |  9 ✔  |  ✔  |  ✔  |
+
+**[⬆ back to top](#quick-links)**
+
+### _.every
+
+Tests whether all elements in the array pass the test implemented by the provided function.
+
+  ```js
+  // Underscore/Lodash
+  function isLargerThanTen (element, index, array) {
+    return element >= 10
+  }
+  var array = [10, 20, 30]
+  var result = _.every(array, isLargerThanTen)
+  console.log(result)
+  // output: true
+
+  // Native
+  function isLargerThanTen (element, index, array) {
+    return element >= 10
+  }
+
+  var array = [10, 20, 30]
+  var result = array.every(isLargerThanTen)
+  console.log(result)
+  // output: true
+  ```
+### Browser Support
+
+![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
+--- | --- | --- | --- | --- |
+  ✔  | 1.5 ✔ |  9 ✔  |  ✔  |  ✔  |
+
+**[⬆ back to top](#quick-links)**
+
+### _.filter
+
+Creates a new array with all elements that pass the test implemented by the provided function.
+
+  ```js
+  // Underscore/Lodash
+  function isBigEnough (value) {
+    return value >= 10
+  }
+  var array = [12, 5, 8, 130, 44]
+  var filtered = _.filter(array, isBigEnough)
+  console.log(filtered)
+  // output: [12, 130, 44]
+
+  // Native
+  function isBigEnough (value) {
+    return value >= 10
+  }
+  var array = [12, 5, 8, 130, 44]
+  var filtered = array.filter(isBigEnough)
+  console.log(filtered)
+  // output: [12, 130, 44]
+  ```
+### Browser Support
+
+![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
+--- | --- | --- | --- | --- |
+  ✔  | 1.5 ✔ |  9 ✔  |  ✔  |  ✔  |
+
+**[⬆ back to top](#quick-links)**
+
+### _.includes
+
+Checks if value is in collection.
 
   ```js
   var array = [1, 2, 3]
@@ -393,34 +358,98 @@ Checks if value is in collection.
 
 ![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
 --- | --- | --- | --- | --- |
-  47✔  | 43 ✔ |  Not supported  |  34 |  9  |  
+  47✔  | 43 ✔ |  Not supported  |  34 |  9  |
 
 **[⬆ back to top](#quick-links)**
 
-## _.keys
+### _.map
 
-Retrieve all the names of the object's own enumerable properties.
+Translate all items in an array or object to new array of items.
 
   ```js
-  // Underscore/Lodash 
-  var result = _.keys({one: 1, two: 2, three: 3})
-  console.log(result)
-  // output: ["one", "two", "three"]
+  // Underscore/Lodash
+  var array1 = [1, 2, 3]
+  var array2 = _.map(array1, function (value, index) {
+    return value * 2
+  })
+  console.log(array2)
+  // output: [2, 4, 6]
 
   // Native
-  var result2 = Object.keys({one: 1, two: 2, three: 3})
-  console.log(result2)
-  // output: ["one", "two", "three"]
+  var array1 = [1, 2, 3]
+  var array2 = array1.map(function (value, index) {
+    return value * 2
+  })
+  console.log(array2)
+  // output: [2, 4, 6]
   ```
 ### Browser Support
 
 ![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
 --- | --- | --- | --- | --- |
-  5✔  | 4.0 ✔ |  9  |  12 |  5  |  
+  ✔  | 1.5 ✔ |  9 ✔  |  ✔  |  ✔  |
 
 **[⬆ back to top](#quick-links)**
 
-## _.size
+### _.reduce
+
+Applies a function against an accumulator and each value of the array (from left-to-right) to reduce it to a single value.
+
+  ```js
+  // Underscore/Lodash
+  var array = [0, 1, 2, 3, 4]
+  var result = _.reduce(array, function (previousValue, currentValue, currentIndex, array) {
+    return previousValue + currentValue
+  })
+  console.log(result)
+  // output: 10
+
+  // Native
+  var array = [0, 1, 2, 3, 4]
+  var result = array.reduce(function (previousValue, currentValue, currentIndex, array) {
+    return previousValue + currentValue
+  })
+  console.log(result)
+  // output: 10
+  ```
+### Browser Support
+
+![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
+--- | --- | --- | --- | --- |
+  ✔  | 3.0 ✔ |  9 ✔  |  10.5  |  4.0  |
+
+**[⬆ back to top](#quick-links)**
+
+### _.reduceRight
+
+This method is like _.reduce except that it iterates over elements of collection from right to left.
+
+  ```js
+  // Underscore/Lodash
+  var array = [0, 1, 2, 3, 4]
+  var result = _.reduceRight(array, function (previousValue, currentValue, currentIndex, array) {
+    return previousValue - currentValue
+  })
+  console.log(result)
+  // output: -2
+
+  // Native
+  var array = [0, 1, 2, 3, 4]
+  var result = array.reduceRight(function (previousValue, currentValue, currentIndex, array) {
+    return previousValue - currentValue
+  })
+  console.log(result)
+  // output: -2
+  ```
+### Browser Support
+
+![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
+--- | --- | --- | --- | --- |
+  ✔  | 3.0 ✔ |  9 ✔  |  10.5  |  4.0  |
+
+**[⬆ back to top](#quick-links)**
+
+### _.size
 
 Return the number of values in the collection.
 
@@ -439,13 +468,80 @@ Return the number of values in the collection.
 
 ![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
 --- | --- | --- | --- | --- |
-  5✔  | 4.0 ✔ |  9  |  12 |  5  |  
+  5✔  | 4.0 ✔ |  9  |  12 |  5  |
 
 **[⬆ back to top](#quick-links)**
 
-## _.isNaN
+### _.some
 
-Checks if value is NaN. 
+Tests whether some element in the array passes the test implemented by the provided function.
+
+  ```js
+  // Underscore/Lodash
+  function isLargerThanTen (element, index, array) {
+    return element >= 10
+  }
+  var array = [10, 9, 8]
+  var result = _.some(array, isLargerThanTen)
+  console.log(result)
+  // output: true
+
+  // Native
+  function isLargerThanTen (element, index, array) {
+    return element >= 10
+  }
+
+  var array = [10, 9, 8]
+  var result = array.some(isLargerThanTen)
+  console.log(result)
+  // output: true
+  ```
+### Browser Support
+
+![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
+--- | --- | --- | --- | --- |
+  ✔  | 1.5 ✔ |  9 ✔  |  ✔  |  ✔  |
+
+**[⬆ back to top](#quick-links)**
+
+
+## Function
+
+### _.after
+:heavy_exclamation_mark:`Note this is an alternative implementation`
+Creates a version of the function that will only be run after first being called count times. Useful for grouping asynchronous responses, where you want to be sure that all the async calls have finished, before proceeding.
+
+ ```js
+  var notes = ['profile', 'settings']
+  // Underscore/Lodash
+  var renderNotes = _.after(notes.length, render)
+  notes.forEach(function (note) {
+    console.log(note)
+    renderNotes()
+  })
+
+  // Native
+  notes.forEach(function (note, index) {
+    console.log(note)
+    if (notes.length === (index + 1)) {
+      render()
+    }
+  })
+  ```
+### Browser Support
+
+ ![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
+ --- | --- | --- | --- | --- |
+   ✔  |  ✔ |  ✔ |  ✔ |  ✔  |
+
+ **[⬆ back to top](#quick-links)**
+
+
+## Lang
+
+### _.isNaN
+
+Checks if value is NaN.
 
   ```js
   // Underscore/Lodash
@@ -465,195 +561,27 @@ MDN:
 
 Voice from the Lodash author:
 
->Lodash's `_.isNaN` is equiv to ES6 `Number.isNaN` which is different than the global `isNaN`.  
+>Lodash's `_.isNaN` is equiv to ES6 `Number.isNaN` which is different than the global `isNaN`.
 >--- [jdalton](https://github.com/cht8687/You-Dont-Need-Lodash-Underscore/commit/b8559a603dccaaa2449b5a68a2d8325cf1fb29cd#)
 
 ### Browser Support for `isNaN`
 
 ![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
 --- | --- | --- | --- | --- |
-  ✔  |  ✔ |  ✔ |  ✔ |  ✔  |  
+  ✔  |  ✔ |  ✔ |  ✔ |  ✔  |
 
 ### Browser Support for `Number.isNaN`
 
 ![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
 --- | --- | --- | --- | --- |
-  25  | 15 |  Not supported |  ✔ |  9  |  
+  25  | 15 |  Not supported |  ✔ |  9  |
 
 **[⬆ back to top](#quick-links)**
 
-## _.reverse
-:heavy_exclamation_mark:`Lodash only`
-Reverses array so that the first element becomes the last, the second element becomes the second to last, and so on. 
 
-  ```js
-  // Lodash
-  var array = [1, 2, 3]
-  console.log(_.reverse(array))
-  // output: [3, 2, 1]
+## Object
 
-  // Native
-  var array = [1, 2, 3]
-  console.log(array.reverse())
-  // output: [3, 2, 1]
-  ```
-
-Voice from the Lodash author:
-
->Lodash's `_.reverse` just calls `Array#reverse` and enables composition like `_.map(arrays, _.reverse).`
-It's exposed on _ because previously, like `Underscore`, it was only exposed in the chaining syntax.
->--- [jdalton](https://github.com/cht8687/You-Dont-Need-Lodash-Underscore/commit/22c4bcf2be48dd415d2b073759805562e520b615#)  
-
-### Browser Support
-
-![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
---- | --- | --- | --- | --- |
-  1.0✔  |  1.0✔ |  5.5✔ |  ✔ |  ✔  |  
-
-**[⬆ back to top](#quick-links)**
-
-## _.join
-:heavy_exclamation_mark:`Lodash only`
-Joins a list of elements in an array with a given separator.
-
-  ```js
-  // Lodash
-  var result = _.join(['one', 'two', 'three'], '--')
-  console.log(result)
-  // output: 'one--two--three'
-
-  // Native
-  var result = ['one', 'two', 'three'].join('--')
-  console.log(result)
-  // output: 'one--two--three'
-  ```
-### Browser Support
-
-![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
---- | --- | --- | --- | --- |
-  1.0✔  |  1.0✔ |  5.5✔  |  ✔ |  ✔  |  
-
-**[⬆ back to top](#quick-links)**
-
-## _.toUpper
-:heavy_exclamation_mark:`Lodash only`
-Uppercase a given string.
-
-  ```js
-  // Lodash
-  var result = _.toUpper('foobar')
-  console.log(result)
-  // output: 'FOOBAR'
-
-  // Native
-  var result = 'foobar'.toUpperCase()
-  console.log(result)
-  // output: 'FOOBAR'
-  ```
-### Browser Support
-
-![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
---- | --- | --- | --- | --- |
-  ✔  |  ✔ |  ✔  |  ✔ |  ✔  |  
-
-**[⬆ back to top](#quick-links)**
-
-## _.toLower
-:heavy_exclamation_mark:`Lodash only`
-Lowercase a given string.
-
-  ```js
-  // Lodash
-  var result = _.toLower('FOOBAR')
-  console.log(result)
-  // output: 'foobar'
-
-  // Native
-  var result = 'FOOBAR'.toLowerCase()
-  console.log(result)
-  // output: 'foobar'
-  ```
-### Browser Support
-
-![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
---- | --- | --- | --- | --- |
-  ✔  |  ✔ |  ✔  |  ✔ |  ✔  |  
-
-**[⬆ back to top](#quick-links)**
-
-## _.trim
-:heavy_exclamation_mark:`Lodash only`
-Removes leading and trailing whitespace characters from string.
-
-  ```js
-  // Lodash
-  var result = _.trim(' abc ')
-  console.log(result)
-  // output: 'abc'
-
-  // Native
-  var result = ' abc '.trim()
-  console.log(result)
-  // output: 'abc'
-  ```
-### Browser Support
-
-![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
---- | --- | --- | --- | --- |
-  5.0✔  |  3.5✔ |  9.0✔  |  10.5✔ |  5.0✔  |  
-
-**[⬆ back to top](#quick-links)**
-
-## _.repeat
-:heavy_exclamation_mark:`Lodash only`
-Repeats the given string n times.
-
-  ```js
-  // Lodash
-  var result = _.repeat('abc', 2)
-  // output: 'abcabc'
-
-  // Native
-  var result = 'abc'.repeat(2)
-  console.log(result)
-  // output: 'abcabc'
-  ```
-### Browser Support
-
-![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
---- | --- | --- | --- | --- |
-  41✔  |  24✔ |  Not supported  |  Not supported |  9  |  
-
-**[⬆ back to top](#quick-links)**
-
-## _.after
-:heavy_exclamation_mark:`Note this is an alternative implementation`
-Creates a version of the function that will only be run after first being called count times. Useful for grouping asynchronous responses, where you want to be sure that all the async calls have finished, before proceeding.
- 
- ```js
-  var notes = ['profile', 'settings']
-  // Underscore/Lodash
-  var renderNotes = _.after(notes.length, render)
-  notes.forEach(function (note) {
-    console.log(note)
-    renderNotes()
-  })
-
-  // Native
-  notes.forEach(function (note, index) {
-    console.log(note)
-    if (notes.length === (index + 1)) {
-      render()
-    }
-  })
-  ```
-### Browser Support
- 
- ![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
- --- | --- | --- | --- | --- |
-   ✔  |  ✔ |  ✔ |  ✔ |  ✔  |  
- 
-## _.assign
+### _.assign
 
 The method is used to copy the values of all enumerable own properties from one or more source objects to a target object.
 
@@ -689,9 +617,126 @@ The method is used to copy the values of all enumerable own properties from one 
 
 ![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
 --- | --- | --- | --- | --- |
-  45✔  |  34✔ |  No support  |  32✔ |  9✔  |  
- 
+  45✔  |  34✔ |  No support  |  32✔ |  9✔  |
+
  **[⬆ back to top](#quick-links)**
+
+### _.keys
+
+Retrieve all the names of the object's own enumerable properties.
+
+  ```js
+  // Underscore/Lodash
+  var result = _.keys({one: 1, two: 2, three: 3})
+  console.log(result)
+  // output: ["one", "two", "three"]
+
+  // Native
+  var result2 = Object.keys({one: 1, two: 2, three: 3})
+  console.log(result2)
+  // output: ["one", "two", "three"]
+  ```
+### Browser Support
+
+![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
+--- | --- | --- | --- | --- |
+  5✔  | 4.0 ✔ |  9  |  12 |  5  |
+
+**[⬆ back to top](#quick-links)**
+
+
+## String
+
+### _.repeat
+:heavy_exclamation_mark:`Lodash only`
+Repeats the given string n times.
+
+  ```js
+  // Lodash
+  var result = _.repeat('abc', 2)
+  // output: 'abcabc'
+
+  // Native
+  var result = 'abc'.repeat(2)
+  console.log(result)
+  // output: 'abcabc'
+  ```
+### Browser Support
+
+![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
+--- | --- | --- | --- | --- |
+  41✔  |  24✔ |  Not supported  |  Not supported |  9  |
+
+**[⬆ back to top](#quick-links)**
+
+### _.toLower
+:heavy_exclamation_mark:`Lodash only`
+Lowercase a given string.
+
+  ```js
+  // Lodash
+  var result = _.toLower('FOOBAR')
+  console.log(result)
+  // output: 'foobar'
+
+  // Native
+  var result = 'FOOBAR'.toLowerCase()
+  console.log(result)
+  // output: 'foobar'
+  ```
+### Browser Support
+
+![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
+--- | --- | --- | --- | --- |
+  ✔  |  ✔ |  ✔  |  ✔ |  ✔  |
+
+**[⬆ back to top](#quick-links)**
+
+### _.toUpper
+:heavy_exclamation_mark:`Lodash only`
+Uppercase a given string.
+
+  ```js
+  // Lodash
+  var result = _.toUpper('foobar')
+  console.log(result)
+  // output: 'FOOBAR'
+
+  // Native
+  var result = 'foobar'.toUpperCase()
+  console.log(result)
+  // output: 'FOOBAR'
+  ```
+### Browser Support
+
+![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
+--- | --- | --- | --- | --- |
+  ✔  |  ✔ |  ✔  |  ✔ |  ✔  |
+
+**[⬆ back to top](#quick-links)**
+
+### _.trim
+:heavy_exclamation_mark:`Lodash only`
+Removes leading and trailing whitespace characters from string.
+
+  ```js
+  // Lodash
+  var result = _.trim(' abc ')
+  console.log(result)
+  // output: 'abc'
+
+  // Native
+  var result = ' abc '.trim()
+  console.log(result)
+  // output: 'abc'
+  ```
+### Browser Support
+
+![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
+--- | --- | --- | --- | --- |
+  5.0✔  |  3.5✔ |  9.0✔  |  10.5✔ |  5.0✔  |
+
+**[⬆ back to top](#quick-links)**
 
 ## Reference
 

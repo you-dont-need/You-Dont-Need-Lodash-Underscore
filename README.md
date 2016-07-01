@@ -27,6 +27,7 @@ You are welcome to contribute with more items provided below.
 
 **[Array](#array)**
 
+1. [_.concat](#_concat)
 1. [_.find](#_find)
 1. [_.findIndex](#_find)
 1. [_.indexOf](#_indexof)
@@ -72,6 +73,33 @@ then Lodash/Underscore is the better option.*
 
 
 ## Array
+
+### _.concat
+
+Creates a new array concatenating array with any additional arrays and/or values.
+
+  ```js
+  // Underscore/Lodash
+  var array = [1]
+  var other = _.concat(array, 2, [3], [[4]])
+
+  console.log(other)
+  // output: [1, 2, 3, [4]]
+
+  // Native
+  var array = [1]
+  var other = array.concat(2, [3], [[4]])
+
+  console.log(other)
+  // output: [1, 2, 3, [4]]
+  ```
+### Browser Support
+
+![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
+--- | --- | --- | --- | --- |
+1.0  ✔  | 1.0 ✔ |  5.5 ✔  |  ✔  |  ✔  |
+
+**[⬆ back to top](#quick-links)**
 
 ### _.find
 

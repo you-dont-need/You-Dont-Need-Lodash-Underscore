@@ -10,17 +10,24 @@ You are welcome to contribute with more items provided below.
 
 ## Voice of developers
 
->[Make use of native JavaScript object and array utilities before going big.](https://twitter.com/codylindley/status/692356631007342593)
->Cody lindley, Author of [jQuery Cookbook](http://shop.oreilly.com/product/9780596159788.do),[JavaScript Enlightenment](http://shop.oreilly.com/product/0636920027713.do)
+> [Make use of native JavaScript object and array utilities before going big.](https://twitter.com/codylindley/status/692356631007342593)
 
->[You probably don't need Lodash. Nice List of JavaScript methods which you can use natively.](https://twitter.com/daniellmb/status/692200768556916740)
->Daniel Lamb, Computer Scientist, Technical Reviewer of [Secrets of the JavaScript Ninja](https://www.manning.com/books/secrets-of-the-javascript-ninja-second-edition), [Functional Programming in JavaScript](https://www.manning.com/books/functional-programming-in-javascript)
+> &mdash;<cite>Cody Lindley, Author of [jQuery Cookbook](http://shop.oreilly.com/product/9780596159788.do) and [JavaScript Enlightenment](http://shop.oreilly.com/product/0636920027713.do)</cite>
 
->[I guess not, but I want it.](https://twitter.com/teropa/status/692280179666898944)
->Tero Parviainen, Author of [build-your-own-angular](http://teropa.info/build-your-own-angular)
+<!-- -->
+> [You probably don't need Lodash. Nice List of JavaScript methods which you can use natively.](https://twitter.com/daniellmb/status/692200768556916740)
 
->[I'll admit, I've been guilty of overusing #lodash. Excellent resource.](https://twitter.com/therebelrobot/status/692907269512642561)
->therebelrobot, Maker of web things, Facilitator for Node.js/io.js
+> &mdash;<cite>Daniel Lamb, Computer Scientist, Technical Reviewer of [Secrets of the JavaScript Ninja](https://www.manning.com/books/secrets-of-the-javascript-ninja-second-edition) and [Functional Programming in JavaScript](https://www.manning.com/books/functional-programming-in-javascript)</cite>
+
+<!-- -->
+> [I guess not, but I want it.](https://twitter.com/teropa/status/692280179666898944)
+
+> &mdash;<cite>Tero Parviainen, Author of [build-your-own-angular](http://teropa.info/build-your-own-angular)</cite>
+
+<!-- -->
+> [I'll admit, I've been guilty of overusing #lodash. Excellent resource.](https://twitter.com/therebelrobot/status/692907269512642561)
+
+> &mdash;<cite>@therebelrobot, Maker of web things, Facilitator for Node.js/io.js</cite>
 
 
 ## Quick links

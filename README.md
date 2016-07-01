@@ -33,7 +33,7 @@ You are welcome to contribute with more items provided below.
 1. [_.reduceRight](#_reduceright)
 1. [_.filter](#_filter)
 1. [_.find](#_find)
-1. [_.findIndex](#_findIndex)
+1. [_.findIndex](#_findindex)
 1. [_.indexOf](#_indexof)
 1. [_.lastIndexOf](#_lastindexof)
 1. [_.includes](#_includes)

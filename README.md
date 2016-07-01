@@ -28,6 +28,7 @@ You are welcome to contribute with more items provided below.
 **[Array](#array)**
 
 1. [_.concat](#_concat)
+1. [_.fill](#_fill)
 1. [_.find](#_find)
 1. [_.findIndex](#_findindex)
 1. [_.indexOf](#_indexof)
@@ -98,6 +99,48 @@ Creates a new array concatenating array with any additional arrays and/or values
 ![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
 --- | --- | --- | --- | --- |
 1.0  ✔  | 1.0 ✔ |  5.5 ✔  |  ✔  |  ✔  |
+
+**[⬆ back to top](#quick-links)**
+
+### _.fill
+
+Fills elements of array with value from start up to, but not including, end.
+*Note that `fill` is a mutable method in both native and Lodash/Underscore.*
+
+  ```js
+  // Underscore/Lodash
+  var array = [1, 2, 3]
+
+  _.fill(array, 'a')
+
+  console.log(array)
+  // output: ['a', 'a', 'a']
+
+  _.fill(Array(3), 2)
+  // output: [2, 2, 2]
+
+  _.fill([4, 6, 8, 10], '*', 1, 3)
+  // output: [4, '*', '*', 10]
+
+  // Native
+  var array = [1, 2, 3]
+
+  array.fill('a')
+
+  console.log(array)
+  // output: ['a', 'a', 'a']
+
+  Array(3).fill(2)
+  // output: [2, 2, 2]
+
+  [4, 6, 8, 10].fill('*', 1, 3)
+  // output: [4, '*', '*', 10]
+  ```
+### Browser Support
+
+![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
+--- | --- | --- | --- | --- |
+  45.0  | 31.0 ✔ |  Not supported  |  Not supported |  7.1  |
 
 **[⬆ back to top](#quick-links)**
 

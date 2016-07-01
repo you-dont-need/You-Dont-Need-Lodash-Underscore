@@ -28,7 +28,7 @@ You are welcome to contribute with more items provided below.
 **[Array](#array)**
 
 1. [_.find](#_find)
-1. [_.findIndex](#_find)
+1. [_.findIndex](#_findindex)
 1. [_.indexOf](#_indexof)
 1. [_.join](#_join)
 1. [_.lastIndexOf](#_lastindexof)

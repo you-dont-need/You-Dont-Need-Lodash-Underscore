@@ -28,7 +28,7 @@ You are welcome to contribute with more items provided below.
 1. [_.each](#_each)
 1. [_.map](#_map)
 1. [_.every](#_every)
-1. [_.some](#_every)
+1. [_.some](#_some)
 1. [_.reduce](#_reduce)
 1. [_.reduceRight](#_reduceright)
 1. [_.filter](#_filter)

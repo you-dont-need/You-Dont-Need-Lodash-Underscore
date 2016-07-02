@@ -1,5 +1,3 @@
 'use strict';
 
-module.exports.rules = {
-  all: require('./lib/rules/all')
-}
+module.exports.rules = require('./lib/rules/all');

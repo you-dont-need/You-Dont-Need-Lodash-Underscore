@@ -39,7 +39,7 @@ will help you identify places in your codebase where you don't (may not) need Lo
 Install the plugin...
 
 ```sh
-npm install --save-dev eslint-plugin-you-may-not-need-lodash-underscore
+npm install --save-dev eslint-plugin-you-dont-need-lodash-underscore
 ```
 .. then update your config.
 

@@ -36,6 +36,10 @@ You are welcome to contribute with more items provided below.
     <img src="https://img.shields.io/npm/v/eslint-plugin-you-dont-need-lodash-underscore.svg?style=flat-square"
          alt="NPM Version">
   </a>
+  <a href="https://npmjs.org/package/eslint-plugin-you-dont-need-lodash-underscore">
+    <img src="http://img.shields.io/npm/dm/eslint-plugin-you-dont-need-lodash-underscore.svg?style=flat-square"
+         alt="Downloads">
+  </a>
 </p>
 If you're using [ESLint](http://eslint.org/), you can install a
 [plugin](http://eslint.org/docs/user-guide/configuring#using-the-configuration-from-a-plugin) that

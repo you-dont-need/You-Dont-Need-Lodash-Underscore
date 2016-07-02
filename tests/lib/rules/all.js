@@ -22,11 +22,11 @@ ruleTester.run('no-lodash-underscore', rule, {
   invalid: [
     {
       code: '_.concat(array, 2, [3], [[4]])',
-      errors: ['Consider using the native Array.concat()']
+      errors: ['Consider using the native Array.prototype.concat()']
     },
     {
       code: '_.keys({one: 1, two: 2, three: 3})',
-      errors: ['Consider using the ES6 Object.keys function']
+      errors: ['Consider using the native Object.keys()']
     },
 
   ]

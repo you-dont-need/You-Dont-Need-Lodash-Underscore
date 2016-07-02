@@ -4,7 +4,7 @@
  */
 "use strict";
 
-var rule = require("../../../lib/rules/all"),
+var rule = require("../../../lib/rules/no-lodash-underscore"),
 
   RuleTester = require("eslint").RuleTester;
 

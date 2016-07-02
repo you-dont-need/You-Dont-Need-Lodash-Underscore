@@ -1,6 +1,6 @@
 {
-  "name": "you-dont-need-lodash-underscore",
-  "version": "3.0.0",
+  "name": "eslint-plugin-you-dont-need-lodash-underscore",
+  "version": "4.0.0",
   "description": "Lists of methods which you can use natively",
   "repository": {
     "type": "git",
@@ -8,9 +8,29 @@
   },
   "keywords": [
     "underscore",
-    "lodash"
+    "lodash",
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
   ],
   "author": "Robert Chang <cht8687@gmail.com>",
+  "contributors": [
+    "Patrick McElhaney <pmcelhaney@gmail.com> (http://patrickmcelhaney.com)"
+  ],
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha tests --recursive"
+  },
+  "dependencies": {
+    "requireindex": "~1.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.0",
+    "mocha": "^2.5.3"
+  },
+  "engines": {
+    "node": ">=4.0"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/cht8687/You-Dont-Need-Lodash-Underscore/issues"

@@ -30,6 +30,27 @@ You are welcome to contribute with more items provided below.
 > &mdash;<cite>@therebelrobot, Maker of web things, Facilitator for Node.js/io.js</cite>
 
 
+## ESLint Plugin
+
+If you're using [ESLint](http://eslint.org/), you can install a
+[plugin](http://eslint.org/docs/user-guide/configuring#using-the-configuration-from-a-plugin) that
+will help you identify places in your codebase where you don't (may not) need Lodash/Underscore.
+
+Install the plugin...
+
+```sh
+npm install --save-dev eslint-plugin-you-may-not-need-lodash-underscore
+```
+.. then update your config.
+
+```
+'plugins': ['you-dont-need-lodash-underscore'],
+'rules': {
+  'you-dont-need-lodash-underscore/all': 1,
+  ...
+}
+```
+
 ## Quick links
 
 **[Array](#array)**

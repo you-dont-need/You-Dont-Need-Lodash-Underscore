@@ -1,7 +1,7 @@
 language: node_js
 node_js:
-  - iojs
   - 4
   - 5
+  - 6
 after_success:
   - npm run coveralls

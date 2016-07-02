@@ -33,7 +33,7 @@ You are welcome to contribute with more items provided below.
 ## ESLint Plugin
 <p align="center">
   <a href="https://www.npmjs.com/package/eslint-plugin-you-dont-need-lodash-underscore">
-    <img src="https://img.shields.io/npm/v/eslint-plugin-you-dont-need-lodash-underscore.svg?style=flat-square" 
+    <img src="https://img.shields.io/npm/v/eslint-plugin-you-dont-need-lodash-underscore.svg?style=flat-square"
       alt="NPM Version">
   </a>
   <a href="https://npmjs.org/package/eslint-plugin-you-dont-need-lodash-underscore">
@@ -45,7 +45,7 @@ You are welcome to contribute with more items provided below.
       alt="Build Status">
   </a>
   <a href="https://coveralls.io/github/cht8687/You-Dont-Need-Lodash-Underscore?branch=master">
-    <img src="https://coveralls.io/repos/cht8687/You-Dont-Need-Lodash-Underscore/badge.svg?branch=master&service=github" 
+    <img src="https://coveralls.io/repos/cht8687/You-Dont-Need-Lodash-Underscore/badge.svg?branch=master&service=github"
       alt="Coverage Status" />
   </a>
 </p>

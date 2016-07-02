@@ -46,7 +46,7 @@ ruleTester.run('underscore.isNaN', rules['is-nan'], {
   ],
   invalid: [{
     code: 'underscore.isNaN(NaN)',
-    errors: ['Consider using the native isNaN() or ES6 Number.isNaN()']
+    errors: ['Consider using the native Number.isNaN()']
   }]
 });
 

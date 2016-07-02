@@ -26,12 +26,14 @@
     "unit-test": "istanbul cover --dir reports/coverage node_modules/mocha/bin/_mocha tests/**/*.js -- --reporter dot"
   },
   "dependencies": {
-    "kebab-case": "^1.0.0"
+    "kebab-case": "^1.0.0",
+    "lodash": "^4.13.1"
   },
   "devDependencies": {
     "coveralls": "^2.11.9",
     "eslint": "^3.0.0",
     "istanbul": "^0.4.4",
+    "lodash": "^4.13.1",
     "mocha": "^2.5.3"
   },
   "engines": {

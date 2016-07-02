@@ -61,14 +61,13 @@ npm install --save-dev eslint-plugin-you-dont-need-lodash-underscore
 ```
 .. then update your config.
 
+```js
+"plugins": ["you-dont-need-lodash-underscore"],
+"extend" : ["you-dont-need-lodash-underscore:safe-strict"],
 ```
-'plugins': ['you-dont-need-lodash-underscore'],
-'rules': {
-  'you-dont-need-lodash-underscore/for-each': 1,
-  'you-dont-need-lodash-underscore/concat': 1,
-  ...
-}
-```
+
+For more information, see [Configuring the ESLint Plugin](configuring.md)
+
 
 ## Quick links
 

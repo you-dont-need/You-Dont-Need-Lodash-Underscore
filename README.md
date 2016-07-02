@@ -31,12 +31,13 @@ You are welcome to contribute with more items provided below.
 
 
 ## ESLint Plugin
+
 <p align="center">
   <a href="https://www.npmjs.com/package/eslint-plugin-you-dont-need-lodash-underscore">
     <img src="https://img.shields.io/npm/v/eslint-plugin-you-dont-need-lodash-underscore.svg?style=flat-square"
       alt="NPM Version">
   </a>
-  <a href="https://npmjs.org/package/eslint-plugin-you-dont-need-lodash-underscore">
+  <a href="https://www.npmjs.org/package/eslint-plugin-you-dont-need-lodash-underscore">
     <img src="http://img.shields.io/npm/dm/eslint-plugin-you-dont-need-lodash-underscore.svg?style=flat-square"
       alt="Downloads">
   </a>

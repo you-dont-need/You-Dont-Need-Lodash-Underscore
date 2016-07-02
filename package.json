@@ -1,7 +1,7 @@
 {
   "name": "eslint-plugin-you-dont-need-lodash-underscore",
   "version": "4.0.1",
-  "description": "Lists of methods which you can use natively",
+  "description": "Check methods you can use natively without lodash/underscore",
   "repository": {
     "type": "git",
     "url": "https://github.com/cht8687/You-Dont-Need-Lodash-Underscore.git"
@@ -11,11 +11,13 @@
     "lodash",
     "eslint",
     "eslintplugin",
-    "eslint-plugin"
+    "eslint-plugin",
+    "native"
   ],
   "author": "Robert Chang <cht8687@gmail.com>",
   "contributors": [
-    "Patrick McElhaney <pmcelhaney@gmail.com> (http://patrickmcelhaney.com)"
+    "Patrick McElhaney <pmcelhaney@gmail.com> (http://patrickmcelhaney.com)",
+    "Steve Mao <maochenyan@gmail.com> (https://github.com/stevemao)"
   ],
   "main": "lib/index.js",
   "scripts": {

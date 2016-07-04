@@ -49,6 +49,10 @@ You are welcome to contribute with more items provided below.
     <img src="https://coveralls.io/repos/cht8687/You-Dont-Need-Lodash-Underscore/badge.svg?branch=master&service=github"
       alt="Coverage Status" />
   </a>
+  <a href="https://david-dm.org/cht8687/You-Dont-Need-Lodash-Underscore.svg">
+    <img src="https://david-dm.org/cht8687/You-Dont-Need-Lodash-Underscore.svg?style=flat-square"
+         alt="Dependency Status">
+  </a>
 </p>
 If you're using [ESLint](http://eslint.org/), you can install a
 [plugin](http://eslint.org/docs/user-guide/configuring#using-the-configuration-from-a-plugin) that

@@ -44,3 +44,11 @@ ruleTester.run('underscore.forEach', rules['for-each'], {
     errors: ['Consider using the native Array.prototype.forEach()']
   }]
 });
+
+// Chaining.
+ruleTester.run('_', rules.concat, {
+  valid: [
+    '_(2, [3], [[4]])'
+  ],
+  invalid: []
+});

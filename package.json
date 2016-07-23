@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-you-dont-need-lodash-underscore",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "Check methods you can use natively without lodash/underscore",
   "repository": {
     "type": "git",

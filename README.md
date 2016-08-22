@@ -469,12 +469,12 @@ Checks if value is in collection.
   var array = [1, 2, 3]
   // Underscore/Lodash - also called with _.contains
   _.includes(array, 1)
-  // → true
+  // output: true
 
   // Native
   var array = [1, 2, 3]
   array.includes(1)
-  // → true
+  // output: true
   ```
 ### Browser Support
 

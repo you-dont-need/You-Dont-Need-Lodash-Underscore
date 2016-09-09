@@ -475,12 +475,23 @@ Checks if value is in collection.
   var array = [1, 2, 3]
   array.includes(1)
   // output: true
+  
+  // Native (only works with flat array values, no complex objects)
+  var array = [1, 2, 3]
+  array.indexOf(1) > -1
+  // output: true
   ```
-### Browser Support
+### Browser Support for `array.includes`
 
 ![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
 --- | --- | --- | --- | --- |
   47✔  | 43 ✔ |  Not supported  |  34 |  9  |
+  
+### Browser Support for `array.indexOf`
+
+![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
+--- | --- | --- | --- | --- |
+  ✔  | ✔ |  ✔ |  ✔| ✔ |
 
 **[⬆ back to top](#quick-links)**
 

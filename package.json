@@ -1,10 +1,10 @@
 {
   "name": "eslint-plugin-you-dont-need-lodash-underscore",
-  "version": "5.0.1",
+  "version": "5.0.2",
   "description": "Check methods you can use natively without lodash/underscore",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cht8687/You-Dont-Need-Lodash-Underscore.git"
+    "url": "https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore.git"
   },
   "keywords": [
     "underscore",
@@ -39,7 +39,7 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cht8687/You-Dont-Need-Lodash-Underscore/issues"
+    "url": "https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore/issues"
   },
-  "homepage": "https://github.com/cht8687/You-Dont-Need-Lodash-Underscore.git"
+  "homepage": "https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore.git"
 }

@@ -41,16 +41,16 @@ You are welcome to contribute with more items provided below.
     <img src="http://img.shields.io/npm/dm/eslint-plugin-you-dont-need-lodash-underscore.svg?style=flat-square"
       alt="Downloads">
   </a>
-  <a href="https://travis-ci.org/cht8687/You-Dont-Need-Lodash-Underscore">
-    <img src="https://img.shields.io/travis/cht8687/You-Dont-Need-Lodash-Underscore.svg?style=flat-square"
+  <a href="https://travis-ci.org/you-dont-need/You-Dont-Need-Lodash-Underscore">
+    <img src="https://img.shields.io/travis/you-dont-need/You-Dont-Need-Lodash-Underscore.svg?style=flat-square"
       alt="Build Status">
   </a>
-  <a href="https://coveralls.io/github/cht8687/You-Dont-Need-Lodash-Underscore?branch=master">
-    <img src="https://coveralls.io/repos/cht8687/You-Dont-Need-Lodash-Underscore/badge.svg?branch=master&service=github"
+  <a href="https://coveralls.io/github/you-dont-need/You-Dont-Need-Lodash-Underscore?branch=master">
+    <img src="https://coveralls.io/repos/you-dont-need/You-Dont-Need-Lodash-Underscore/badge.svg?branch=master&service=github"
       alt="Coverage Status" />
   </a>
-  <a href="https://david-dm.org/cht8687/You-Dont-Need-Lodash-Underscore.svg">
-    <img src="https://david-dm.org/cht8687/You-Dont-Need-Lodash-Underscore.svg?style=flat-square"
+  <a href="https://david-dm.org/you-dont-need/You-Dont-Need-Lodash-Underscore.svg">
+    <img src="https://david-dm.org/you-dont-need/You-Dont-Need-Lodash-Underscore.svg?style=flat-square"
          alt="Dependency Status">
   </a>
 </p>

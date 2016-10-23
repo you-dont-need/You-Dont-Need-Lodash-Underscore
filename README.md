@@ -98,6 +98,7 @@ then Lodash/Underscore is the better option.*
 1. [_.filter](#_filter)
 1. [_.includes](#_includes)
 1. [_.map](#_map)
+1. [_.pluck](#_pluck)
 1. [_.reduce](#_reduce)
 1. [_.reduceRight](#_reduceright)
 1. [_.size](#_size)
@@ -515,6 +516,26 @@ Translate all items in an array or object to new array of items.
   })
   console.log(array2)
   // output: [2, 4, 6]
+  ```
+  
+  ### _.pluck
+  
+  `array.map` can also be used to replace `_.pluck`
+
+  ```js
+  // Underscore/Lodash
+  var array1 = [{name: "Alice"}, {name: "Bob"}, {name: "Jeremy"}]
+  var names = _.pluck(array1, "name")
+  console.log(names)
+  // output: ["Alice", "Bob", "Jeremy"]
+
+  // Native
+  var array1 = [{name: "Alice"}, {name: "Bob"}, {name: "Jeremy"}]
+  var names = array1.map(function(x){
+    return x.name
+  })
+  console.log(names)
+  // output: ["Alice", "Bob", "Jeremy"]
   ```
 ### Browser Support
 

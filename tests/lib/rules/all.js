@@ -35,7 +35,7 @@ ruleTester.run('lodash.keys', rules.keys, {
   }]
 });
 
-ruleTester.run('underscore.forEach', rules.forEach, {
+ruleTester.run('underscore.forEach', rules['for-each'], {
   valid: [
     '[0, 1].forEach()'
   ],
@@ -51,14 +51,4 @@ ruleTester.run('_', rules.concat, {
     '_(2, [3], [[4]])'
   ],
   invalid: []
-});
-
-ruleTester.run('_.findIndex', rules.findIndex, {
-  valid: [
-    '[{user: fred, age: 20, active: false}, {user: rick, age: 43, active: false}].findIndex(function (o) { return o.age >= 40; })'
-  ],
-  invalid: [{
-    code: '_.findIndex([{user: fred, age: 20, active: false}, {user: rick, age: 43, active: false}], function (o) { return o.age >= 40; });',
-    errors: ['Consider using the native ES6 Array.prototype.findIndex()']
-  }]
 });

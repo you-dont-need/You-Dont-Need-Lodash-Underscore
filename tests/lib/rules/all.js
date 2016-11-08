@@ -45,6 +45,16 @@ ruleTester.run('underscore.forEach', rules['for-each'], {
   }]
 });
 
+ruleTester.run('underscore.isNaN', rules['is-nan'], {
+  valid: [
+    'Number.isNaN(NaN);'
+  ],
+  invalid: [{
+    code: 'underscore.isNaN(NaN)',
+    errors: ['Consider using the native isNaN() or ES6 Number.isNaN()']
+  }]
+});
+
 // Chaining.
 ruleTester.run('_', rules.concat, {
   valid: [

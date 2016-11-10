@@ -518,7 +518,7 @@ Translate all items in an array or object to new array of items.
   // output: [2, 4, 6]
   ```
   
-  ### _.pluck
+### _.pluck
   
   `array.map` can also be used to replace `_.pluck`
 

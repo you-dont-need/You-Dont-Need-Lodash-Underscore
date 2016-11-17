@@ -520,7 +520,7 @@ Translate all items in an array or object to new array of items.
   
 ### _.pluck
   
-  `array.map` can also be used to replace `_.pluck`
+  `array.map` or `_.map` can also be used to replace `_.pluck`. Lodash v4.0 removed `_.pluck` in favor of `_.map` with iteratee shorthand. Details can be found in [Changelog](https://github.com/lodash/lodash/wiki/Changelog)
 
   ```js
   // Underscore/Lodash

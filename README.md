@@ -8,7 +8,7 @@ You are welcome to contribute with more items provided below.
 
 **Please note that, the examples used below are just showing you the native alternative of performing certain tasks. For some of the functions, Lodash provides you more options than native built-ins. This list is not a 1:1 comparison.
 
-## Voice of developers
+## Voice of Developers
 
 > [Make use of native JavaScript object and array utilities before going big.](https://twitter.com/codylindley/status/692356631007342593)
 
@@ -74,7 +74,7 @@ npm install --save-dev eslint-plugin-you-dont-need-lodash-underscore
 }
 ```
 
-## Quick links
+## Quick Links
 
 **[Array](#array)**
 

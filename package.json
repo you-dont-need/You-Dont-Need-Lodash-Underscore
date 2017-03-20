@@ -21,9 +21,8 @@
   ],
   "main": "lib/index.js",
   "scripts": {
-    "coveralls": "cat ./reports/coverage/lcov.info | coveralls",
-    "test": "npm run unit-test",
-    "unit-test": "istanbul cover --dir reports/coverage node_modules/mocha/bin/_mocha tests/**/*.js -- --reporter dot"
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "test": "istanbul cover tests"
   },
   "dependencies": {
     "kebab-case": "^1.0.0"
@@ -31,8 +30,7 @@
   "devDependencies": {
     "coveralls": "^2.11.9",
     "eslint": "^3.0.0",
-    "istanbul": "^0.4.4",
-    "mocha": "^2.5.3"
+    "istanbul": "^0.4.4"
   },
   "engines": {
     "node": ">=4.0"

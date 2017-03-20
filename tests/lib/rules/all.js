@@ -1,19 +1,14 @@
-/**
- * @fileoverview Check methods you can use natively without lodash/underscore
- * @author Patrick McElhaney
- */
 'use strict';
-
-// ------------------------------------------------------------------------------
-// Requirements
-// ------------------------------------------------------------------------------
-
-const rules = require('../../../lib/rules/all');
 const RuleTester = require('eslint').RuleTester;
+const assert = require('assert');
+const rules = require('../../../lib/rules/all');
+const allRules = require('../../../lib/rules/rules');
 
-// Only a couple of smoke tests because otherwise it would get very reduntant
+assert.equal(Object.keys(allRules).length, 35, 'Don\'t miss a rule 😄');
 
 const ruleTester = new RuleTester();
+
+// Only a couple of smoke tests because otherwise it would get very reduntant
 
 ruleTester.run('_.concat', rules.concat, {
   valid: [
@@ -55,7 +50,6 @@ ruleTester.run('underscore.isNaN', rules['is-nan'], {
   }]
 });
 
-// Chaining.
 ruleTester.run('_', rules.concat, {
   valid: [
     '_(2, [3], [[4]])'

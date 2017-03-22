@@ -63,16 +63,16 @@ Install the plugin...
 ```sh
 npm install --save-dev eslint-plugin-you-dont-need-lodash-underscore
 ```
-.. then update your config.
 
+...then update your config
+
+```js
+"plugins": ["you-dont-need-lodash-underscore"],
+"extend" : ["you-dont-need-lodash-underscore:compatible"],
 ```
-'plugins': ['you-dont-need-lodash-underscore'],
-'rules': {
-  'you-dont-need-lodash-underscore/for-each': 1,
-  'you-dont-need-lodash-underscore/concat': 1,
-  ...
-}
-```
+
+For more information, see [Configuring the ESLint Plugin](configuring.md)
+
 
 ## Quick Links
 
@@ -476,7 +476,7 @@ Checks if value is in collection.
   var array = [1, 2, 3]
   array.includes(1)
   // output: true
-  
+
   // Native (only works with flat array values, no complex objects)
   var array = [1, 2, 3]
   array.indexOf(1) > -1
@@ -487,7 +487,7 @@ Checks if value is in collection.
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
   47✔  | 43 ✔ |  Not supported  |  34 |  9  |
-  
+
 ### Browser Support for `array.indexOf`
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
@@ -517,9 +517,9 @@ Translate all items in an array or object to new array of items.
   console.log(array2)
   // output: [2, 4, 6]
   ```
-  
+
 ### _.pluck
-  
+
   `array.map` or `_.map` can also be used to replace `_.pluck`. Lodash v4.0 removed `_.pluck` in favor of `_.map` with iteratee shorthand. Details can be found in [Changelog](https://github.com/lodash/lodash/wiki/Changelog)
 
   ```js

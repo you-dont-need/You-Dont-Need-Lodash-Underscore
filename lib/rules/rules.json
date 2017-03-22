@@ -1,37 +1,157 @@
 {
-  "concat": "Consider using the native Array.prototype.concat()",
-  "fill": "Consider using the native ES6 Array.prototype.fill()",
-  "find": "Consider using the native ES6 Array.prototype.find()",
-  "detect": "Consider using the native ES6 Array.prototype.find()",
-  "findIndex": "Consider using the native ES6 Array.prototype.findIndex()",
-  "indexOf": "Consider using the native Array.prototype.indexOf()",
-  "join": "Consider using the native Array.prototype.join()",
-  "lastIndexOf": "Consider using the native Array.prototype.lastIndexOf()",
-  "reverse": "Consider using the native Array.prototype.reverse()",
-  "each": "Consider using the native Array.prototype.forEach()",
-  "forEach": "Consider using the native Array.prototype.forEach()",
-  "every": "Consider using the native Array.prototype.every()",
-  "all": "Consider using the native Array.prototype.every()",
-  "filter": "Consider using the native Array.prototype.filter()",
-  "select": "Consider using the native Array.prototype.filter()",
-  "includes": "Consider using the native ES6 Array.prototype.includes()",
-  "contains": "Consider using the native ES6 Array.prototype.includes()",
-  "map": "Consider using the native Array.prototype.map()",
-  "collect": "Consider using the native Array.prototype.map()",
-  "reduce": "Consider using the native Array.prototype.reduce()",
-  "inject": "Consider using the native Array.prototype.reduce()",
-  "foldl": "Consider using the native Array.prototype.reduce()",
-  "reduceRight": "Consider using the native Array.prototype.reduceRight()",
-  "foldr": "Consider using the native Array.prototype.reduceRight()",
-  "size": "Consider using the native Array.prototype.length",
-  "some": "Consider using the native Array.prototype.some()",
-  "any": "Consider using the native Array.prototype.some()",
-  "isNaN": "Consider using the native isNaN() or ES6 Number.isNaN()",
-  "extendOwn": "Consider using the native ES6 Object.assign()",
-  "assign": "Consider using the native ES6 Object.assign()",
-  "keys": "Consider using the native Object.keys()",
-  "repeat": "Consider using the native ES6 String.prototype.repeat()",
-  "toLower": "Consider using the native String.prototype.toLowerCase()",
-  "toUpper": "Consider using the native String.prototype.toUpperCase()",
-  "trim": "Consider using the native String.prototype.trim()"
+    "concat": {
+        "compatible": true,
+        "alternative": "Array.prototype.concat()"
+    },
+    "indexOf": {
+        "compatible": true,
+        "alternative": "Array.prototype.indexOf()"
+    },
+    "join": {
+        "compatible": true,
+        "alternative": "Array.prototype.join()"
+    },
+    "lastIndexOf": {
+        "compatible": true,
+        "alternative": "Array.prototype.lastIndexOf()"
+    },
+    "reverse": {
+        "compatible": true,
+        "alternative": "Array.prototype.reverse()"
+    },
+    "fill": {
+        "compatible": true,
+        "alternative": "Array.prototype.fill()",
+        "ES6": true
+    },
+    "find": {
+        "compatible": true,
+        "alternative": "Array.prototype.find()",
+        "ES6": true
+    },
+    "detect": {
+        "compatible": true,
+        "alternative": "Array.prototype.find()",
+        "ES6": true
+    },
+    "findIndex": {
+        "compatible": true,
+        "alternative": "Array.prototype.findIndex()",
+        "ES6": true
+    },
+
+    "each": {
+        "compatible": false,
+        "alternative": "Array.prototype.forEach()"
+    },
+    "forEach": {
+        "compatible": false,
+        "alternative": "Array.prototype.forEach()"
+    },
+    "every": {
+        "compatible": false,
+        "alternative": "Array.prototype.every()"
+    },
+    "all": {
+        "compatible": false,
+        "alternative": "Array.prototype.every()"
+    },
+    "filter": {
+        "compatible": false,
+        "alternative": "Array.prototype.filter()"
+    },
+    "select": {
+        "compatible": false,
+        "alternative": "Array.prototype.filter()"
+    },
+    "map": {
+        "compatible": false,
+        "alternative": "Array.prototype.map()"
+    },
+    "collect": {
+        "compatible": false,
+        "alternative": "Array.prototype.map()"
+    },
+    "reduce": {
+        "compatible": false,
+        "alternative": "Array.prototype.reduce()"
+    },
+    "inject": {
+        "compatible": false,
+        "alternative": "Array.prototype.reduce()"
+    },
+    "foldl": {
+        "compatible": false,
+        "alternative": "Array.prototype.reduce()"
+    },
+    "reduceRight": {
+        "compatible": false,
+        "alternative": "Array.prototype.reduceRight()"
+    },
+    "foldr": {
+        "compatible": false,
+        "alternative": "Array.prototype.reduceRight()"
+    },
+    "size": {
+        "compatible": false,
+        "alternative": "Array.prototype.length"
+    },
+    "some": {
+        "compatible": false,
+        "alternative": "Array.prototype.some()"
+    },
+    "any": {
+        "compatible": false,
+        "alternative": "Array.prototype.some()"
+    },
+    "includes": {
+        "compatible": false,
+        "alternative": "Array.prototype.includes()",
+        "ES6": true
+    },
+    "contains": {
+        "compatible": false,
+        "alternative": "Array.prototype.includes()",
+        "ES6": true
+    },
+
+    "isNaN": {
+        "ruleName": "is-nan",
+        "compatible": true,
+        "alternative": "Number.isNaN()",
+        "ES6": true
+    },
+
+    "keys": {
+        "compatible": true,
+        "alternative": "Object.keys()"
+    },
+    "extendOwn": {
+        "compatible": true,
+        "alternative": "Object.assign()",
+        "ES6": true
+    },
+    "assign": {
+        "compatible": true,
+        "alternative": "Object.assign()",
+        "ES6": true
+    },
+
+    "toLower": {
+        "compatible": true,
+        "alternative": "String.prototype.toLowerCase()"
+    },
+    "toUpper": {
+        "compatible": true,
+        "alternative": "String.prototype.toUpperCase()"
+    },
+    "trim": {
+        "compatible": true,
+        "alternative": "String.prototype.trim()"
+    },
+    "repeat": {
+        "compatible": true,
+        "alternative": "String.prototype.repeat()",
+        "ES6": true
+    }
 }

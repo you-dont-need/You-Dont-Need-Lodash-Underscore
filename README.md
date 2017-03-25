@@ -54,6 +54,7 @@ You are welcome to contribute with more items provided below.
          alt="Dependency Status">
   </a>
 </p>
+
 If you're using [ESLint](http://eslint.org/), you can install a
 [plugin](http://eslint.org/docs/user-guide/configuring#using-the-configuration-from-a-plugin) that
 will help you identify places in your codebase where you don't (may not) need Lodash/Underscore.

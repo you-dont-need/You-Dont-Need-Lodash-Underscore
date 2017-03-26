@@ -104,6 +104,7 @@ then Lodash/Underscore is the better option.*
 1. [_.reduceRight](#_reduceright)
 1. [_.size](#_size)
 1. [_.some](#_some)
+1. [_.minBy and _.maxBy](#_minby-and-_maxby)
 
 **[Function](#function)**
 
@@ -659,6 +660,59 @@ Tests whether some element in the array passes the test implemented by the provi
 
 **[⬆ back to top](#quick-links)**
 
+### _.minBy and _.maxBy
+
+Use Array#reduce for find the maximum or minimum collection item
+
+  ```js
+  // Underscore/Lodash
+  var data = [{ value: 6 }, { value: 2 }, { value: 4 }]
+  var minItem = _.minBy(data, 'value')
+  var maxItem = _.maxBy(data, 'value')
+  console.log(minItem, maxItem)
+  // output: { value: 2 } { value: 6 }
+
+  // Native
+  var data = [{ value: 6 }, { value: 2 }, { value: 4 }]
+  var minItem = data.reduce(function(a, b) { return a.value <= b.value ? a : b }, {})
+  var maxItem = data.reduce(function(a, b) { return a.value >= b.value ? a : b }, {})
+  console.log(minItem, maxItem)
+  // output: { value: 2 }, { value: 6 }
+  ```
+
+Extract a functor and use es2015 for better code
+
+  ```js
+  // utils
+  const makeSelect = (comparator) => (a, b) => comparator(a, b) ? a : b
+  const minByValue = makeSelect((a, b) => a.value <= b.value)
+  const maxByValue = makeSelect((a, b) => a.value <= b.value)
+
+  // main logic
+  const data = [{ value: 6 }, { value: 2 }, { value: 4 }]
+  const minItem = data.reduce(minByValue, {})
+  const maxItem = data.reduce(minByValue, {})
+
+  console.log(minItem, maxItem)
+  // output: { value: 2 }, { value: 6 }
+
+  // or also more universal and little slower variant of minBy
+  const minBy = (collection, key) => {
+    // slower becouse need to create a lambda function for each call...
+    const select = (a, b) => a[key] <= b[key] ? a : b
+    return collection.reduce(select, {})
+  }
+
+  console.log(minBy(data))
+  // output: { value: 2 }
+  ```
+### Browser Support
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+  ✔  | 3.0 ✔ |  9 ✔  |  10.5  |  4.0  |
+
+**[⬆ back to top](#quick-links)**
 
 ## Function
 

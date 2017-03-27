@@ -87,6 +87,7 @@ For more information, see [Configuring the ESLint Plugin](configuring.md)
 1. [_.join](#_join)
 1. [_.lastIndexOf](#_lastindexof)
 1. [_.reverse](#_reverse)
+1. [_.without](#_without)
 
 **[Collection*](#collection*)**
 
@@ -365,6 +366,56 @@ It's exposed on _ because previously, like `Underscore`, it was only exposed in 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
   1.0✔  |  1.0✔ |  5.5✔ |  ✔ |  ✔  |
+
+**[⬆ back to top](#quick-links)**
+
+
+### _.without
+:heavy_exclamation_mark:`Lodash only`
+Returns an array where matching items are filtered.
+
+  ```js
+  // Lodash
+  var array = [1, 2, 3]
+  console.log(_.filter(array, 2))
+  // output: [1, 3]
+
+  // Native
+  function without(array, match) {
+    var ret = [];
+    for (var i = 0; i < array.length; i)) {
+      if (array[i] != match) {
+        ret.push(array[i]);
+      }
+    }
+    return ret;
+  }
+  var array = [1, 2, 3]
+  console.log(without(array, 2))
+  // output: [1, 3]
+  
+  // ES5
+  function without(array, match) {
+    return array.filter(function(value) {
+      return value == match;
+    });
+  }
+  var array = [1, 2, 3]
+  console.log(without(array, 2))
+  // output: [1, 3]
+  
+  // ES2015
+  const without = (array, filtered) => array.filter(n => n != filtered);
+  var array = [1, 2, 3]
+  console.log(without(array, 2))
+  // output: [1, 3]
+  ```
+
+### Browser Support
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+  1.0✔  |  1.0✔ |  4✔ |  ✔ |  ✔  |
 
 **[⬆ back to top](#quick-links)**
 

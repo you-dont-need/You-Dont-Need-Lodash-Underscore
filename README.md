@@ -381,33 +381,10 @@ Returns an array where matching items are filtered.
   // output: [1, 3]
 
   // Native
-  function without(array, match) {
-    var ret = [];
-    for (var i = 0; i < array.length; i)) {
-      if (array[i] != match) {
-        ret.push(array[i]);
-      }
-    }
-    return ret;
-  }
   var array = [1, 2, 3]
-  console.log(without(array, 2))
-  // output: [1, 3]
-  
-  // ES5
-  function without(array, match) {
-    return array.filter(function(value) {
-      return value == match;
-    });
-  }
-  var array = [1, 2, 3]
-  console.log(without(array, 2))
-  // output: [1, 3]
-  
-  // ES2015
-  const without = (array, filtered) => array.filter(n => n != filtered);
-  var array = [1, 2, 3]
-  console.log(without(array, 2))
+  console.log(array.filter(function(value) {
+    return value !== 2;
+  }));
   // output: [1, 3]
   ```
 
@@ -415,7 +392,7 @@ Returns an array where matching items are filtered.
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
-  1.0✔  |  1.0✔ |  4✔ |  ✔ |  ✔  |
+  1.0✔  |  1.5✔ |  9✔ |  ✔ |  ✔  |
 
 **[⬆ back to top](#quick-links)**
 

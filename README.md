@@ -377,7 +377,7 @@ Returns an array where matching items are filtered.
   ```js
   // Lodash
   var array = [1, 2, 3]
-  console.log(_.filter(array, 2))
+  console.log(_.without(array, 2))
   // output: [1, 3]
 
   // Native

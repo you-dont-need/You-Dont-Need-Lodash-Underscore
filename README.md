@@ -87,6 +87,7 @@ For more information, see [Configuring the ESLint Plugin](configuring.md)
 1. [_.join](#_join)
 1. [_.lastIndexOf](#_lastindexof)
 1. [_.reverse](#_reverse)
+1. [_.without](#_without)
 
 **[Collection*](#collection*)**
 
@@ -366,6 +367,33 @@ It's exposed on _ because previously, like `Underscore`, it was only exposed in 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
   1.0✔  |  1.0✔ |  5.5✔ |  ✔ |  ✔  |
+
+**[⬆ back to top](#quick-links)**
+
+
+### _.without
+:heavy_exclamation_mark:`Lodash only`
+Returns an array where matching items are filtered.
+
+  ```js
+  // Lodash
+  var array = [1, 2, 3]
+  console.log(_.without(array, 2))
+  // output: [1, 3]
+
+  // Native
+  var array = [1, 2, 3]
+  console.log(array.filter(function(value) {
+    return value !== 2;
+  }));
+  // output: [1, 3]
+  ```
+
+### Browser Support
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+  1.0✔  |  1.5✔ |  9✔ |  ✔ |  ✔  |
 
 **[⬆ back to top](#quick-links)**
 

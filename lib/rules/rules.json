@@ -136,6 +136,11 @@
         "alternative": "Object.assign()",
         "ES6": true
     },
+    "values": {
+        "compatible": true,
+        "alternative": "Object.values()",
+        "ES6": true
+    },
 
     "toLower": {
         "compatible": true,

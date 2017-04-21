@@ -119,6 +119,7 @@ then Lodash/Underscore is the better option.*
 
 1. [_.assign](#_assign)
 1. [_.keys](#_keys)
+1. [_.values](#_values)
 
 **[String](#string)**
 
@@ -878,6 +879,29 @@ Retrieve all the names of the object's own enumerable properties.
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
   5✔  | 4.0 ✔ |  9  |  12 |  5  |
+
+**[⬆ back to top](#quick-links)**
+
+### _.values
+
+Retrieve all the names of the object's own enumerable properties.
+
+  ```js
+  // Underscore/Lodash
+  var result = _.values({one: 1, two: 2, three: 3})
+  console.log(result)
+  // output: [1, 2, 3]
+
+  // Native
+  var result2 = Object.values({one: 1, two: 2, three: 3})
+  console.log(result2)
+  // output: [1, 2, 3]
+  ```
+### Browser Support
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+  54 ✔  | 47 ✔ |  Not supported  |  Not supported |  Not supported  |
 
 **[⬆ back to top](#quick-links)**
 

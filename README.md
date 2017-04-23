@@ -121,7 +121,7 @@ then Lodash/Underscore is the better option.*
 1. [_.assign](#_assign)
 1. [_.keys](#_keys)
 1. [_.values](#_values)
-1. [_.toPairs](#_toPairs)
+1. [_.toPairs](#_topairs)
 
 **[String](#string)**
 

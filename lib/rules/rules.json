@@ -141,6 +141,21 @@
         "alternative": "Object.values()",
         "ES6": true
     },
+    "entries": {
+        "compatible": true,
+        "alternative": "Object.entries()",
+        "ES6": true
+    },
+    "toPairs": {
+        "compatible": true,
+        "alternative": "Object.entries()",
+        "ES6": true
+    },
+    "pairs": {
+        "compatible": true,
+        "alternative": "Object.entries()",
+        "ES6": true
+    },
 
     "toLower": {
         "compatible": true,

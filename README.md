@@ -150,6 +150,7 @@ Creates a new array concatenating array with any additional arrays and/or values
   console.log(other)
   // output: [1, 2, 3, [4]]
   ```
+
 ### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
@@ -192,6 +193,7 @@ Fills elements of array with value from start up to, but not including, end.
   [4, 6, 8, 10].fill('*', 1, 3)
   // output: [4, '*', '*', 10]
   ```
+
 ### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
@@ -225,6 +227,7 @@ Returns the value of the first element in the array that satisfies the provided 
   users.find(function (o) { return o.age < 40; })
   // output: object for 'barney'
   ```
+
 ### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
@@ -260,6 +263,7 @@ Returns the index of the first element in the array that satisfies the provided 
   console.log(index)
   // output: 1
   ```
+
 ### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
@@ -285,6 +289,7 @@ Returns the first index at which a given element can be found in the array, or -
   console.log(result)
   // output: 0
   ```
+
 ### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
@@ -308,6 +313,7 @@ Joins a list of elements in an array with a given separator.
   console.log(result)
   // output: 'one--two--three'
   ```
+
 ### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
@@ -333,6 +339,7 @@ Returns the index of the last occurrence of value in the array, or -1 if value i
   console.log(result)
   // output: 2
   ```
+
 ### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
@@ -422,6 +429,7 @@ Iterates over a list of elements, yielding each in turn to an iteratee function.
   })
   // output: 1 2 3
   ```
+
 ### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
@@ -454,6 +462,7 @@ Tests whether all elements in the array pass the test implemented by the provide
   console.log(result)
   // output: true
   ```
+
 ### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
@@ -485,6 +494,7 @@ Creates a new array with all elements that pass the test implemented by the prov
   console.log(filtered)
   // output: [12, 130, 44]
   ```
+
 ### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
@@ -513,6 +523,7 @@ Checks if a value is in collection.
   array.indexOf(1) > -1
   // output: true
   ```
+
 ### Browser Support for `array.includes`
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
@@ -568,6 +579,7 @@ Translates all items in an array or object to new array of items.
   console.log(names)
   // output: ["Alice", "Bob", "Jeremy"]
   ```
+
 ### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
@@ -597,6 +609,7 @@ Applies a function against an accumulator and each value of the array (from left
   console.log(result)
   // output: 10
   ```
+
 ### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
@@ -626,6 +639,7 @@ This method is like _.reduce except that it iterates over elements of collection
   console.log(result)
   // output: -2
   ```
+
 ### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
@@ -649,6 +663,7 @@ Returns the number of values in the collection.
   console.log(result2)
   // output: 3
   ```
+
 ### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
@@ -681,6 +696,7 @@ Tests whether any of the elements in the array pass the test implemented by the 
   console.log(result)
   // output: true
   ```
+
 ### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
@@ -735,6 +751,7 @@ Extract a functor and use es2015 for better code
   console.log(minBy(data))
   // output: { value: 2 }
   ```
+
 ### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
@@ -766,6 +783,7 @@ Creates a version of the function that will only be run after first being called
     }
   })
   ```
+
 ### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
@@ -851,6 +869,7 @@ The method is used to copy the values of all enumerable own properties from one 
   console.log(result);
   // output: { 'c': 3, 'e': 5 }
   ```
+
 ### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
@@ -874,6 +893,7 @@ Retrieves all the names of the object's own enumerable properties.
   console.log(result2)
   // output: ["one", "two", "three"]
   ```
+
 ### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
@@ -897,6 +917,7 @@ Retrieve all the names of the object's own enumerable properties.
   console.log(result2)
   // output: [1, 2, 3]
   ```
+
 ### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
@@ -922,6 +943,7 @@ Repeats the given string n times.
   console.log(result)
   // output: 'abcabc'
   ```
+
 ### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
@@ -945,6 +967,7 @@ Lowercases a given string.
   console.log(result)
   // output: 'foobar'
   ```
+
 ### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
@@ -968,6 +991,7 @@ Uppercases a given string.
   console.log(result)
   // output: 'FOOBAR'
   ```
+
 ### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
@@ -991,6 +1015,7 @@ Removes the leading and trailing whitespace characters from a string.
   console.log(result)
   // output: 'abc'
   ```
+
 ### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]

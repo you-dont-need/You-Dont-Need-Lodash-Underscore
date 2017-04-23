@@ -1,4 +1,4 @@
-## You don't (may not) need Lodash/Underscore [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/cht8687/You-Dont-Need-Lodash-Underscore)
+# You don't (may not) need Lodash/Underscore [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/cht8687/You-Dont-Need-Lodash-Underscore)
 
 Lodash and Underscore are great modern JavaScript utility libraries, and they are widely used by Front-end developers. However, when you are targeting modern browsers, you may find out that there are many methods which are already supported natively thanks to ECMAScript5 [ES5] and ECMAScript2015 [ES6]. If you want your project to require fewer dependencies, and you know your target browser clearly, then you may not need Lodash/Underscore.
 
@@ -7,6 +7,7 @@ You are welcome to contribute with more items provided below.
 **If you are targeting legacy JavaScript engine with those ES5 methods, you can use [es5-shim](https://github.com/es-shims/es5-shim)
 
 **Please note that, the examples used below are just showing you the native alternative of performing certain tasks. For some of the functions, Lodash provides you more options than native built-ins. This list is not a 1:1 comparison.
+
 
 ## Voice of Developers
 
@@ -377,7 +378,6 @@ It's exposed on _ because previously, like `Underscore`, it was only exposed in 
   1.0✔  |  1.0✔ |  5.5✔ |  ✔ |  ✔  |
 
 **[⬆ back to top](#quick-links)**
-
 
 ### _.without
 :heavy_exclamation_mark:`Lodash only`
@@ -760,6 +760,7 @@ Extract a functor and use es2015 for better code
 
 **[⬆ back to top](#quick-links)**
 
+
 ## Function
 
 ### _.after
@@ -1024,20 +1025,24 @@ Removes the leading and trailing whitespace characters from a string.
 
 **[⬆ back to top](#quick-links)**
 
+
 ## Reference
 
 * [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
 * [Underscore.js](http://underscorejs.org)
 * [Lodash.js](https://lodash.com/docs)
 
+
 ## Inspired by:
 
 * [You-Dont-Need-jQuery](https://github.com/oneuijs/You-Dont-Need-jQuery)
 * [Rui's blog](http://ktei.github.io/2016/01/07/some-general-js-tips-1.html)
 
+
 # License
 
 MIT
+
 
 [chrome-image]: https://raw.github.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png
 [firefox-image]: https://raw.github.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png

@@ -200,7 +200,7 @@ Fills elements of array with value from start up to, but not including, end.
 
 ### _.find
 
-Returns a value in the array, if an element in the array satisfies the provided testing function. Otherwise undefined is returned.
+Returns the value of the first element in the array that satisfies the provided testing function. Otherwise undefined is returned.
 
   ```js
   // Underscore/Lodash
@@ -233,7 +233,7 @@ Returns a value in the array, if an element in the array satisfies the provided 
 
 ### _.findIndex
 
-Returns an index in the array, if an element in the array satisfies the provided testing function. Otherwise -1 is returned.
+Returns the index of the first element in the array that satisfies the provided testing function. Otherwise -1 is returned.
 
   ```js
   // Underscore/Lodash
@@ -466,7 +466,7 @@ Creates a new array with all elements that pass the test implemented by the prov
 
 ### _.includes
 
-Checks if value is in collection.
+Checks if a value is in collection.
 
   ```js
   var array = [1, 2, 3]
@@ -500,7 +500,7 @@ Checks if value is in collection.
 
 ### _.map
 
-Translate all items in an array or object to new array of items.
+Translates all items in an array or object to new array of items.
 
   ```js
   // Underscore/Lodash
@@ -607,7 +607,7 @@ This method is like _.reduce except that it iterates over elements of collection
 
 ### _.size
 
-Return the number of values in the collection.
+Returns the number of values in the collection.
 
   ```js
   // Underscore/Lodash
@@ -630,7 +630,7 @@ Return the number of values in the collection.
 
 ### _.some
 
-Tests whether some element in the array passes the test implemented by the provided function.
+Tests whether any of the elements in the array pass the test implemented by the provided function.
 
   ```js
   // Underscore/Lodash
@@ -750,7 +750,7 @@ Creates a version of the function that will only be run after first being called
 
 ### _.isNaN
 
-Checks if value is NaN.
+Checks if a value is NaN.
 
   ```js
   // Underscore/Lodash
@@ -832,7 +832,7 @@ The method is used to copy the values of all enumerable own properties from one 
 
 ### _.keys
 
-Retrieve all the names of the object's own enumerable properties.
+Retrieves all the names of the object's own enumerable properties.
 
   ```js
   // Underscore/Lodash
@@ -880,7 +880,7 @@ Repeats the given string n times.
 
 ### _.toLower
 :heavy_exclamation_mark:`Lodash only`
-Lowercase a given string.
+Lowercases a given string.
 
   ```js
   // Lodash
@@ -903,7 +903,7 @@ Lowercase a given string.
 
 ### _.toUpper
 :heavy_exclamation_mark:`Lodash only`
-Uppercase a given string.
+Uppercases a given string.
 
   ```js
   // Lodash
@@ -926,7 +926,7 @@ Uppercase a given string.
 
 ### _.trim
 :heavy_exclamation_mark:`Lodash only`
-Removes leading and trailing whitespace characters from string.
+Removes the leading and trailing whitespace characters from a string.
 
   ```js
   // Lodash

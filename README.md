@@ -930,7 +930,7 @@ Retrieve all the given object's own enumerable property values.
 
 ### _.toPairs
 
-Retrieve all the value of the object's own enumerable keyed-value pairs.
+Retrieve all the given object's own enumerable property `[ key, value ]` pairs.
 
   ```js
   // Underscore - also called with _.pairs

@@ -4,7 +4,7 @@ const assert = require('assert');
 const rules = require('../../../lib/rules/all');
 const allRules = require('../../../lib/rules/rules');
 
-assert.equal(Object.keys(allRules).length, 36, 'Don\'t miss a rule 😄');
+assert.equal(Object.keys(allRules).length, 38, 'Don\'t miss a rule 😄');
 
 const ruleTester = new RuleTester();
 

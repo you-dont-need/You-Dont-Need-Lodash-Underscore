@@ -121,6 +121,7 @@ then Lodash/Underscore is the better option.*
 1. [_.assign](#_assign)
 1. [_.keys](#_keys)
 1. [_.values](#_values)
+1. [_.toPairs](#_toPairs)
 
 **[String](#string)**
 
@@ -905,7 +906,7 @@ Retrieves all the names of the object's own enumerable properties.
 
 ### _.values
 
-Retrieve all the names of the object's own enumerable properties.
+Retrieve all the value of the object's own enumerable properties.
 
   ```js
   // Underscore/Lodash
@@ -924,6 +925,31 @@ Retrieve all the names of the object's own enumerable properties.
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
   54 ✔  | 47 ✔ |  Not supported  |  Not supported |  Not supported  |
+
+**[⬆ back to top](#quick-links)**
+
+### _.toPairs
+
+Retrieve all the value of the object's own enumerable keyed-value pairs.
+
+  ```js
+  // Underscore - also called with _.pairs
+  // Lodash - also called with _.entries
+  var result = _.toPairs({one: 1, two: 2, three: 3})
+  console.log(result)
+  // output: [["one", 1], ["two": 2], ["three", 3]]
+
+  // Native
+  var result2 = Object.entries({one: 1, two: 2, three: 3})
+  console.log(result2)
+  // output: [["one", 1], ["two": 2], ["three", 3]]
+  ```
+
+### Browser Support
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+  38 ✔  | 28 ✔ |  Not supported  |  25 |  7.1  |
 
 **[⬆ back to top](#quick-links)**
 

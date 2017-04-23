@@ -906,7 +906,7 @@ Retrieves all the names of the object's own enumerable properties.
 
 ### _.values
 
-Retrieve all the value of the object's own enumerable properties.
+Retrieve all the given object's own enumerable property values.
 
   ```js
   // Underscore/Lodash

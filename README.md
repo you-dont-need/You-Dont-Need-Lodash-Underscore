@@ -906,7 +906,7 @@ Retrieves all the names of the object's own enumerable properties.
 
 ### _.values
 
-Retrieve all the given object's own enumerable property values.
+Retrieves all the given object's own enumerable property values.
 
   ```js
   // Underscore/Lodash
@@ -930,7 +930,7 @@ Retrieve all the given object's own enumerable property values.
 
 ### _.toPairs
 
-Retrieve all the given object's own enumerable property `[ key, value ]` pairs.
+Retrieves all the given object's own enumerable property `[ key, value ]` pairs.
 
   ```js
   // Underscore - also called with _.pairs

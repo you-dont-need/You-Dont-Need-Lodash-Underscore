@@ -200,7 +200,7 @@ Fills elements of array with value from start up to, but not including, end.
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
-  45.0  | 31.0 ✔ |  Not supported  |  Not supported |  7.1  |
+  45.0 ✔ | 31.0 ✔ |  Not supported  |  Not supported |  7.1 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -234,7 +234,7 @@ Returns the value of the first element in the array that satisfies the provided 
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
-  45.0  | 25.0 ✔ |  Not supported  |  Not supported |  7.1  |
+  45.0 ✔ | 25.0 ✔ |  Not supported  |  Not supported |  7.1 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -270,7 +270,7 @@ Returns the index of the first element in the array that satisfies the provided 
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
-  45.0  | 25.0 ✔ |  Not supported  |  Not supported |  7.1  |
+  45.0 ✔ | 25.0 ✔ |  Not supported  |  Not supported |  7.1 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -320,7 +320,7 @@ Joins a list of elements in an array with a given separator.
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
-  1.0✔  |  1.0✔ |  5.5✔  |  ✔ |  ✔  |
+  1.0 ✔  |  1.0 ✔ |  5.5 ✔  |  ✔ |  ✔  |
 
 **[⬆ back to top](#quick-links)**
 
@@ -376,7 +376,7 @@ It's exposed on _ because previously, like `Underscore`, it was only exposed in 
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
-  1.0✔  |  1.0✔ |  5.5✔ |  ✔ |  ✔  |
+  1.0 ✔  |  1.0 ✔ |  5.5 ✔ |  ✔ |  ✔  |
 
 **[⬆ back to top](#quick-links)**
 
@@ -402,7 +402,7 @@ Returns an array where matching items are filtered.
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
-  1.0✔  |  1.5✔ |  9✔ |  ✔ |  ✔  |
+  1.0 ✔  |  1.5 ✔ |  9 ✔ |  ✔ |  ✔  |
 
 **[⬆ back to top](#quick-links)**
 
@@ -529,13 +529,13 @@ Checks if a value is in collection.
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
-  47✔  | 43 ✔ |  Not supported  |  34 |  9  |
+  47 ✔  | 43 ✔ |  Not supported  |  34 ✔ |  9 ✔ |
 
 ### Browser Support for `array.indexOf`
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
-  ✔  | ✔ |  ✔ |  ✔| ✔ |
+  ✔ | ✔ | ✔ | ✔ | ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -615,7 +615,7 @@ Applies a function against an accumulator and each value of the array (from left
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
-  ✔  | 3.0 ✔ |  9 ✔  |  10.5  |  4.0  |
+  ✔  | 3.0 ✔ |  9 ✔  |  10.5 ✔ |  4.0 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -645,7 +645,7 @@ This method is like _.reduce except that it iterates over elements of collection
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
-  ✔  | 3.0 ✔ |  9 ✔  |  10.5  |  4.0  |
+  ✔  | 3.0 ✔ |  9 ✔  |  10.5 ✔ |  4.0 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -669,7 +669,7 @@ Returns the number of values in the collection.
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
-  5✔  | 4.0 ✔ |  9  |  12 |  5  |
+  5 ✔  | 4.0 ✔ |  9 ✔ |  12 ✔ |  5 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -757,7 +757,7 @@ Extract a functor and use es2015 for better code
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
-  ✔  | 3.0 ✔ |  9 ✔  |  10.5  |  4.0  |
+  ✔  | 3.0 ✔ |  9 ✔  |  10.5 ✔ |  4.0 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -832,7 +832,7 @@ Voice from the Lodash author:
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
-  25  | 15 |  Not supported |  ✔ |  9  |
+  25 ✔ | 15 ✔ |  Not supported |  ✔ |  9 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -876,7 +876,7 @@ The method is used to copy the values of all enumerable own properties from one 
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
-  45✔  |  34✔ |  No support  |  32✔ |  9✔  |
+  45 ✔  |  34 ✔ |  No support  |  32 ✔ |  9 ✔  |
 
  **[⬆ back to top](#quick-links)**
 
@@ -900,7 +900,7 @@ Retrieves all the names of the object's own enumerable properties.
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
-  5✔  | 4.0 ✔ |  9  |  12 |  5  |
+  5 ✔  | 4.0 ✔ |  9 ✔ |  12 ✔ |  5 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -949,7 +949,7 @@ Retrieves all the given object's own enumerable property `[ key, value ]` pairs.
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
-  38 ✔  | 28 ✔ |  Not supported  |  25 |  7.1  |
+  38 ✔  | 28 ✔ |  Not supported  |  25 ✔ |  7.1 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -975,7 +975,7 @@ Repeats the given string n times.
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
-  41✔  |  24✔ |  Not supported  |  Not supported |  9  |
+  41 ✔  |  24 ✔ |  Not supported  |  Not supported |  9 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -1047,7 +1047,7 @@ Removes the leading and trailing whitespace characters from a string.
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
-  5.0✔  |  3.5✔ |  9.0✔  |  10.5✔ |  5.0✔  |
+  5.0 ✔  |  3.5 ✔ |  9.0 ✔  |  10.5 ✔ |  5.0 ✔  |
 
 **[⬆ back to top](#quick-links)**
 

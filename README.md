@@ -129,7 +129,7 @@ then Lodash/Underscore is the better option.*
 1. [_.toLower](#_tolower)
 1. [_.toUpper](#_toupper)
 1. [_.trim](#_trim)
-
+1. [_.template](#_template)
 
 ## Array
 
@@ -1048,6 +1048,30 @@ Removes the leading and trailing whitespace characters from a string.
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
   5.0 ✔  |  3.5 ✔ |  9.0 ✔  |  10.5 ✔ |  5.0 ✔  |
+
+**[⬆ back to top](#quick-links)**
+
+### _.template
+:heavy_exclamation_mark: *Note this is an alternative implementation. Native template literals not escape html.*
+
+Create a template function.
+
+  ```js
+  // Lodash/Underscore
+  const compiled = _.template('hello <%= user %>!');
+  compiled({ 'user': 'fred' });
+
+  // Native
+  const templateLitreal = (value) => `hello ${value.user}`;
+  templateLiterlFunction({ 'user': 'fred' });
+
+  ```
+
+### Browser Support
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+  41 ✔  |  34 ✔ |  Not supported  |  28 ✔ |  9 ✔  |
 
 **[⬆ back to top](#quick-links)**
 

@@ -89,6 +89,7 @@ For more information, see [Configuring the ESLint Plugin](configuring.md)
 1. [_.lastIndexOf](#_lastindexof)
 1. [_.reverse](#_reverse)
 1. [_.without](#_without)
+1. [_.compact](#_compact)
 
 **[Collection*](#collection*)**
 
@@ -404,6 +405,25 @@ Returns an array where matching items are filtered.
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
   1.0 ✔  |  1.5 ✔ |  9 ✔ |  ✔ |  ✔  |
+
+**[⬆ back to top](#quick-links)**
+
+### _.compact
+Creates an array with all falsey values removed. 
+
+  ```js
+  // Underscore/Lodash
+  _.compact([0, 1, false, 2, '', 3]);
+
+  // Native
+  [0, 1, false, 2, '', 3].filter( v => !!v)
+  ```
+
+### Browser Support
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+   ✔  |  1.5 ✔ |  9 ✔ |  ✔ |  ✔  |
 
 **[⬆ back to top](#quick-links)**
 

@@ -526,13 +526,13 @@ Checks if a value is in collection.
   // output: true
   ```
 
-### Browser Support for `array.includes`
+### Browser Support for `Array.prototype.includes`
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
   47 ✔  | 43 ✔ |  Not supported  |  34 ✔ |  9 ✔ |
 
-### Browser Support for `array.indexOf`
+### Browser Support for `Array.prototype.indexOf`
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |

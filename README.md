@@ -511,7 +511,7 @@ Checks if a value is in collection.
 
   ```js
   var array = [1, 2, 3]
-  // Underscore/Lodash - also called with _.contains
+  // Underscore/Lodash - also called _.contains
   _.includes(array, 1)
   // output: true
 
@@ -520,7 +520,7 @@ Checks if a value is in collection.
   array.includes(1)
   // output: true
 
-  // Native (only works with flat array values, no complex objects)
+  // Native (does not use same value zero)
   var array = [1, 2, 3]
   array.indexOf(1) > -1
   // output: true
@@ -934,8 +934,8 @@ Retrieves all the given object's own enumerable property values.
 Retrieves all the given object's own enumerable property `[ key, value ]` pairs.
 
   ```js
-  // Underscore - also called with _.pairs
-  // Lodash - also called with _.entries
+  // Underscore - also called _.pairs
+  // Lodash - also called _.entries
   var result = _.toPairs({one: 1, two: 2, three: 3})
   console.log(result)
   // output: [["one", 1], ["two": 2], ["three", 3]]

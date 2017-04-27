@@ -80,6 +80,7 @@ For more information, see [Configuring the ESLint Plugin](configuring.md)
 
 **[Array](#array)**
 
+1. [_.compact](#_compact)
 1. [_.concat](#_concat)
 1. [_.fill](#_fill)
 1. [_.find](#_find)
@@ -133,6 +134,26 @@ then Lodash/Underscore is the better option.*
 
 
 ## Array
+
+### _.compact
+
+Creates an array with all falsey values removed.
+
+  ```js
+  // Underscore/Lodash
+  _.compact([0, 1, false, 2, '', 3]);
+
+  // Native
+  [0, 1, false, 2, '', 3].filter( v => !!v)
+  ```
+
+### Browser Support
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+   ✔  |  1.5 ✔ |  9 ✔ |  ✔ |  ✔  |
+
+**[⬆ back to top](#quick-links)**
 
 ### _.concat
 
@@ -406,7 +427,6 @@ Returns an array where matching items are filtered.
   1.0 ✔  |  1.5 ✔ |  9 ✔ |  ✔ |  ✔  |
 
 **[⬆ back to top](#quick-links)**
-
 
 ## Collection*
 

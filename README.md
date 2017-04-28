@@ -121,8 +121,8 @@ then Lodash/Underscore is the better option.*
 
 1. [_.assign](#_assign)
 1. [_.keys](#_keys)
-1. [_.values](#_values)
 1. [_.toPairs](#_topairs)
+1. [_.values](#_values)
 
 **[String](#string)**
 
@@ -925,30 +925,6 @@ Retrieves all the names of the object's own enumerable properties.
 
 **[⬆ back to top](#quick-links)**
 
-### _.values
-
-Retrieves all the given object's own enumerable property values.
-
-  ```js
-  // Underscore/Lodash
-  var result = _.values({one: 1, two: 2, three: 3})
-  console.log(result)
-  // output: [1, 2, 3]
-
-  // Native
-  var result2 = Object.values({one: 1, two: 2, three: 3})
-  console.log(result2)
-  // output: [1, 2, 3]
-  ```
-
-### Browser Support
-
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  54 ✔  | 47 ✔ |  Not supported  |  Not supported |  Not supported  |
-
-**[⬆ back to top](#quick-links)**
-
 ### _.toPairs
 
 Retrieves all the given object's own enumerable property `[ key, value ]` pairs.
@@ -971,6 +947,30 @@ Retrieves all the given object's own enumerable property `[ key, value ]` pairs.
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
   38 ✔  | 28 ✔ |  Not supported  |  25 ✔ |  7.1 ✔ |
+
+**[⬆ back to top](#quick-links)**
+
+### _.values
+
+Retrieves all the given object's own enumerable property values.
+
+  ```js
+  // Underscore/Lodash
+  var result = _.values({one: 1, two: 2, three: 3})
+  console.log(result)
+  // output: [1, 2, 3]
+
+  // Native
+  var result2 = Object.values({one: 1, two: 2, three: 3})
+  console.log(result2)
+  // output: [1, 2, 3]
+  ```
+
+### Browser Support
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+  54 ✔  | 47 ✔ |  Not supported  |  Not supported |  Not supported  |
 
 **[⬆ back to top](#quick-links)**
 

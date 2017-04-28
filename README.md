@@ -102,12 +102,12 @@ then Lodash/Underscore is the better option.*
 1. [_.filter](#_filter)
 1. [_.includes](#_includes)
 1. [_.map](#_map)
+1. [_.minBy and _.maxBy](#_minby-and-_maxby)
 1. [_.pluck](#_pluck)
 1. [_.reduce](#_reduce)
 1. [_.reduceRight](#_reduceright)
 1. [_.size](#_size)
 1. [_.some](#_some)
-1. [_.minBy and _.maxBy](#_minby-and-_maxby)
 
 **[Function](#function)**
 
@@ -121,16 +121,16 @@ then Lodash/Underscore is the better option.*
 
 1. [_.assign](#_assign)
 1. [_.keys](#_keys)
-1. [_.values](#_values)
 1. [_.toPairs](#_topairs)
+1. [_.values](#_values)
 
 **[String](#string)**
 
 1. [_.repeat](#_repeat)
+1. [_.template](#_template)
 1. [_.toLower](#_tolower)
 1. [_.toUpper](#_toupper)
 1. [_.trim](#_trim)
-1. [_.template](#_template)
 
 
 ## Array
@@ -582,6 +582,61 @@ Translates all items in an array or object to new array of items.
   // output: [2, 4, 6]
   ```
 
+### _.minBy and _.maxBy
+
+Use Array#reduce for find the maximum or minimum collection item
+
+  ```js
+  // Underscore/Lodash
+  var data = [{ value: 6 }, { value: 2 }, { value: 4 }]
+  var minItem = _.minBy(data, 'value')
+  var maxItem = _.maxBy(data, 'value')
+  console.log(minItem, maxItem)
+  // output: { value: 2 } { value: 6 }
+
+  // Native
+  var data = [{ value: 6 }, { value: 2 }, { value: 4 }]
+  var minItem = data.reduce(function(a, b) { return a.value <= b.value ? a : b }, {})
+  var maxItem = data.reduce(function(a, b) { return a.value >= b.value ? a : b }, {})
+  console.log(minItem, maxItem)
+  // output: { value: 2 }, { value: 6 }
+  ```
+
+Extract a functor and use es2015 for better code
+
+  ```js
+  // utils
+  const makeSelect = (comparator) => (a, b) => comparator(a, b) ? a : b
+  const minByValue = makeSelect((a, b) => a.value <= b.value)
+  const maxByValue = makeSelect((a, b) => a.value <= b.value)
+
+  // main logic
+  const data = [{ value: 6 }, { value: 2 }, { value: 4 }]
+  const minItem = data.reduce(minByValue, {})
+  const maxItem = data.reduce(maxByValue, {})
+
+  console.log(minItem, maxItem)
+  // output: { value: 2 }, { value: 6 }
+
+  // or also more universal and little slower variant of minBy
+  const minBy = (collection, key) => {
+    // slower becouse need to create a lambda function for each call...
+    const select = (a, b) => a[key] <= b[key] ? a : b
+    return collection.reduce(select, {})
+  }
+
+  console.log(minBy(data))
+  // output: { value: 2 }
+  ```
+
+### Browser Support
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+  ✔  | 3.0 ✔ |  9 ✔  |  10.5 ✔ |  4.0 ✔ |
+
+**[⬆ back to top](#quick-links)**
+
 ### _.pluck
 
   `array.map` or `_.map` can also be used to replace `_.pluck`. Lodash v4.0 removed `_.pluck` in favor of `_.map` with iteratee shorthand. Details can be found in [Changelog](https://github.com/lodash/lodash/wiki/Changelog)
@@ -727,62 +782,6 @@ Tests whether any of the elements in the array pass the test implemented by the 
 
 **[⬆ back to top](#quick-links)**
 
-### _.minBy and _.maxBy
-
-Use Array#reduce for find the maximum or minimum collection item
-
-  ```js
-  // Underscore/Lodash
-  var data = [{ value: 6 }, { value: 2 }, { value: 4 }]
-  var minItem = _.minBy(data, 'value')
-  var maxItem = _.maxBy(data, 'value')
-  console.log(minItem, maxItem)
-  // output: { value: 2 } { value: 6 }
-
-  // Native
-  var data = [{ value: 6 }, { value: 2 }, { value: 4 }]
-  var minItem = data.reduce(function(a, b) { return a.value <= b.value ? a : b }, {})
-  var maxItem = data.reduce(function(a, b) { return a.value >= b.value ? a : b }, {})
-  console.log(minItem, maxItem)
-  // output: { value: 2 }, { value: 6 }
-  ```
-
-Extract a functor and use es2015 for better code
-
-  ```js
-  // utils
-  const makeSelect = (comparator) => (a, b) => comparator(a, b) ? a : b
-  const minByValue = makeSelect((a, b) => a.value <= b.value)
-  const maxByValue = makeSelect((a, b) => a.value <= b.value)
-
-  // main logic
-  const data = [{ value: 6 }, { value: 2 }, { value: 4 }]
-  const minItem = data.reduce(minByValue, {})
-  const maxItem = data.reduce(maxByValue, {})
-
-  console.log(minItem, maxItem)
-  // output: { value: 2 }, { value: 6 }
-
-  // or also more universal and little slower variant of minBy
-  const minBy = (collection, key) => {
-    // slower becouse need to create a lambda function for each call...
-    const select = (a, b) => a[key] <= b[key] ? a : b
-    return collection.reduce(select, {})
-  }
-
-  console.log(minBy(data))
-  // output: { value: 2 }
-  ```
-
-### Browser Support
-
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  ✔  | 3.0 ✔ |  9 ✔  |  10.5 ✔ |  4.0 ✔ |
-
-**[⬆ back to top](#quick-links)**
-
-
 ## Function
 
 ### _.after
@@ -925,30 +924,6 @@ Retrieves all the names of the object's own enumerable properties.
 
 **[⬆ back to top](#quick-links)**
 
-### _.values
-
-Retrieves all the given object's own enumerable property values.
-
-  ```js
-  // Underscore/Lodash
-  var result = _.values({one: 1, two: 2, three: 3})
-  console.log(result)
-  // output: [1, 2, 3]
-
-  // Native
-  var result2 = Object.values({one: 1, two: 2, three: 3})
-  console.log(result2)
-  // output: [1, 2, 3]
-  ```
-
-### Browser Support
-
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  54 ✔  | 47 ✔ |  Not supported  |  Not supported |  Not supported  |
-
-**[⬆ back to top](#quick-links)**
-
 ### _.toPairs
 
 Retrieves all the given object's own enumerable property `[ key, value ]` pairs.
@@ -971,6 +946,30 @@ Retrieves all the given object's own enumerable property `[ key, value ]` pairs.
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
   38 ✔  | 28 ✔ |  Not supported  |  25 ✔ |  7.1 ✔ |
+
+**[⬆ back to top](#quick-links)**
+
+### _.values
+
+Retrieves all the given object's own enumerable property values.
+
+  ```js
+  // Underscore/Lodash
+  var result = _.values({one: 1, two: 2, three: 3})
+  console.log(result)
+  // output: [1, 2, 3]
+
+  // Native
+  var result2 = Object.values({one: 1, two: 2, three: 3})
+  console.log(result2)
+  // output: [1, 2, 3]
+  ```
+
+### Browser Support
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+  54 ✔  | 47 ✔ |  Not supported  |  Not supported |  Not supported  |
 
 **[⬆ back to top](#quick-links)**
 
@@ -997,6 +996,29 @@ Repeats the given string n times.
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
   41 ✔  |  24 ✔ |  Not supported  |  Not supported |  9 ✔ |
+
+**[⬆ back to top](#quick-links)**
+
+### _.template
+:heavy_exclamation_mark: *Note this is an alternative implementation. Native template literals not escape html.*
+
+Create a template function.
+
+  ```js
+  // Lodash/Underscore
+  const compiled = _.template('hello <%= user %>!');
+  compiled({ 'user': 'fred' });
+
+  // Native
+  const templateLitreal = (value) => `hello ${value.user}`;
+  templateLiterlFunction({ 'user': 'fred' });
+  ```
+
+### Browser Support
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+  41 ✔  |  34 ✔ |  Not supported  |  28 ✔ |  9 ✔  |
 
 **[⬆ back to top](#quick-links)**
 
@@ -1071,30 +1093,6 @@ Removes the leading and trailing whitespace characters from a string.
   5.0 ✔  |  3.5 ✔ |  9.0 ✔  |  10.5 ✔ |  5.0 ✔  |
 
 **[⬆ back to top](#quick-links)**
-
-### _.template
-:heavy_exclamation_mark: *Note this is an alternative implementation. Native template literals not escape html.*
-
-Create a template function.
-
-  ```js
-  // Lodash/Underscore
-  const compiled = _.template('hello <%= user %>!');
-  compiled({ 'user': 'fred' });
-
-  // Native
-  const templateLitreal = (value) => `hello ${value.user}`;
-  templateLiterlFunction({ 'user': 'fred' });
-  ```
-
-### Browser Support
-
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  41 ✔  |  34 ✔ |  Not supported  |  28 ✔ |  9 ✔  |
-
-**[⬆ back to top](#quick-links)**
-
 
 ## Reference
 

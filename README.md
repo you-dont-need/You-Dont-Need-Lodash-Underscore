@@ -85,6 +85,7 @@ For more information, see [Configuring the ESLint Plugin](configuring.md)
 1. [_.fill](#_fill)
 1. [_.find](#_find)
 1. [_.findIndex](#_findindex)
+1. [_.head and _.tail](#_head-and-_tail)
 1. [_.indexOf](#_indexof)
 1. [_.join](#_join)
 1. [_.lastIndexOf](#_lastindexof)
@@ -293,6 +294,39 @@ Returns the index of the first element in the array that satisfies the provided 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
   45.0 ✔ | 25.0 ✔ |  Not supported  |  Not supported |  7.1 ✔ |
+
+**[⬆ back to top](#quick-links)**
+
+### _.head and _.tail
+Gets the first element or all but the first element.
+
+  ```js
+  const array = [1, 2, 3]
+
+  // Underscore: _.first, _.head, _.take
+  // Lodash: _.first, _.head
+  _.head(array)
+  // output: 1
+
+  // Underscore: _.rest, _.tail, _.drop
+  // Lodash: _.tail
+  _.tail(array)
+  // output: [2, 3]
+
+
+  // Native
+  const [ head, ...tail ] = array
+  console.log(head)
+  // output: 1
+  console.log(tail)
+  // output [2, 3]
+  ```
+
+### Browser Support
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+  49 ✔  |  34 ✔ |  Not Supported |  Not Supported |  ✔  |
 
 **[⬆ back to top](#quick-links)**
 

@@ -42,7 +42,7 @@ To save the trouble of configuring each rule individually, you can start by exte
 default configurations, and then override individual rules as desired.
 
 ```js
-"extend" : ["you-dont-need-lodash-underscore:compatible-error"],
+"extends" : ["plugin:you-dont-need-lodash-underscore/compatible-error"],
 ```
 
 The following options are available:

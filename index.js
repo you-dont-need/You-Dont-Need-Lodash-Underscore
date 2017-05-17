@@ -13,26 +13,38 @@ const ERROR = 2;
 
 const configure = (list, level) => (
   list.reduce((ret, rule) => (Object.assign({}, ret,
-    { [rules[rule].ruleName || kebabCase(rule)]: level })), {})
+    { ['you-dont-need-lodash-underscore/' + (rules[rule].ruleName || kebabCase(rule))]: level })), {})
 )
 
 module.exports.configs = {
-    'all-warn': {
-      rules: configure(all, WARN)
-    },
+  'all-warn': {
+    plugins: [
+      'you-dont-need-lodash-underscore'
+    ],
+    rules: configure(all, WARN)
+  },
 
-    'all': {
-      rules: configure(all, ERROR)
-    },
+  'all': {
+    plugins: [
+      'you-dont-need-lodash-underscore'
+    ],
+    rules: configure(all, ERROR)
+  },
 
-    'compatible-warn': {
-      rules: configure(compatible, WARN)
-    },
+  'compatible-warn': {
+    plugins: [
+      'you-dont-need-lodash-underscore'
+    ],
+    rules: configure(compatible, WARN)
+  },
 
-    'compatible': {
-      rules: Object.assign(
-        configure(compatible, ERROR),
-        configure(incompatible, WARN)
-      )
-    }
+  'compatible': {
+    plugins: [
+      'you-dont-need-lodash-underscore'
+    ],
+    rules: Object.assign(
+      configure(compatible, ERROR),
+      configure(incompatible, WARN)
+    )
+  }
 }

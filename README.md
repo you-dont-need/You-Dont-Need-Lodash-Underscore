@@ -43,15 +43,15 @@ You are welcome to contribute with more items provided below.
       alt="Downloads">
   </a>
   <a href="https://travis-ci.org/you-dont-need/You-Dont-Need-Lodash-Underscore">
-    <img src="https://img.shields.io/travis/you-dont-need/You-Dont-Need-Lodash-Underscore.svg?style=flat-square"
+    <img src="https://img.shields.io/travis/you-dont-need/You-Dont-Need-Lodash-Underscore/master.svg?style=flat-square"
       alt="Build Status">
   </a>
   <a href="https://coveralls.io/github/you-dont-need/You-Dont-Need-Lodash-Underscore?branch=master">
-    <img src="https://coveralls.io/repos/you-dont-need/You-Dont-Need-Lodash-Underscore/badge.svg?branch=master&service=github"
+    <img src="https://img.shields.io/coveralls/you-dont-need/You-Dont-Need-Lodash-Underscore/master.svg?style=flat-square"
       alt="Coverage Status" />
   </a>
-  <a href="https://david-dm.org/you-dont-need/You-Dont-Need-Lodash-Underscore.svg">
-    <img src="https://david-dm.org/you-dont-need/You-Dont-Need-Lodash-Underscore.svg?style=flat-square"
+  <a href="https://david-dm.org/you-dont-need/You-Dont-Need-Lodash-Underscore">
+    <img src="https://img.shields.io/david/you-dont-need/You-Dont-Need-Lodash-Underscore.svg?style=flat-square"
          alt="Dependency Status">
   </a>
 </p>

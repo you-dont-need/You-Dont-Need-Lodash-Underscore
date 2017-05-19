@@ -147,7 +147,7 @@ Creates an array with all falsey values removed.
   [0, 1, false, 2, '', 3].filter( v => !!v)
   ```
 
-### Browser Support
+#### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
@@ -175,7 +175,7 @@ Creates a new array concatenating array with any additional arrays and/or values
   // output: [1, 2, 3, [4]]
   ```
 
-### Browser Support
+#### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
@@ -218,7 +218,7 @@ Fills elements of array with value from start up to, but not including, end.
   // output: [4, '*', '*', 10]
   ```
 
-### Browser Support
+#### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
@@ -252,7 +252,7 @@ Returns the value of the first element in the array that satisfies the provided 
   // output: object for 'barney'
   ```
 
-### Browser Support
+#### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
@@ -288,7 +288,7 @@ Returns the index of the first element in the array that satisfies the provided 
   // output: 1
   ```
 
-### Browser Support
+#### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
@@ -321,7 +321,7 @@ Gets the first element or all but the first element.
   // output [2, 3]
   ```
 
-### Browser Support
+#### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
@@ -347,7 +347,7 @@ Returns the first index at which a given element can be found in the array, or -
   // output: 0
   ```
 
-### Browser Support
+#### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
@@ -371,7 +371,7 @@ Joins a list of elements in an array with a given separator.
   // output: 'one--two--three'
   ```
 
-### Browser Support
+#### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
@@ -397,7 +397,7 @@ Returns the index of the last occurrence of value in the array, or -1 if value i
   // output: 2
   ```
 
-### Browser Support
+#### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
@@ -427,7 +427,7 @@ Voice from the Lodash author:
 It's exposed on _ because previously, like `Underscore`, it was only exposed in the chaining syntax.
 >--- [jdalton](https://github.com/cht8687/You-Dont-Need-Lodash-Underscore/commit/22c4bcf2be48dd415d2b073759805562e520b615#)
 
-### Browser Support
+#### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
@@ -453,7 +453,7 @@ Returns an array where matching items are filtered.
   // output: [1, 3]
   ```
 
-### Browser Support
+#### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
@@ -485,7 +485,7 @@ Iterates over a list of elements, yielding each in turn to an iteratee function.
   // output: 1 2 3
   ```
 
-### Browser Support
+#### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
@@ -518,7 +518,7 @@ Tests whether all elements in the array pass the test implemented by the provide
   // output: true
   ```
 
-### Browser Support
+#### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
@@ -550,7 +550,7 @@ Creates a new array with all elements that pass the test implemented by the prov
   // output: [12, 130, 44]
   ```
 
-### Browser Support
+#### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
@@ -579,13 +579,13 @@ Checks if a value is in collection.
   // output: true
   ```
 
-### Browser Support for `Array.prototype.includes`
+#### Browser Support for `Array.prototype.includes`
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
   47 ✔  | 43 ✔ |  Not supported  |  34 ✔ |  9 ✔ |
 
-### Browser Support for `Array.prototype.indexOf`
+#### Browser Support for `Array.prototype.indexOf`
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
@@ -662,7 +662,7 @@ Extract a functor and use es2015 for better code
   // output: { value: 2 }
   ```
 
-### Browser Support
+#### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
@@ -690,7 +690,7 @@ Extract a functor and use es2015 for better code
   // output: ["Alice", "Bob", "Jeremy"]
   ```
 
-### Browser Support
+#### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
@@ -720,7 +720,7 @@ Applies a function against an accumulator and each value of the array (from left
   // output: 10
   ```
 
-### Browser Support
+#### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
@@ -750,7 +750,7 @@ This method is like _.reduce except that it iterates over elements of collection
   // output: -2
   ```
 
-### Browser Support
+#### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
@@ -774,7 +774,7 @@ Returns the number of values in the collection.
   // output: 3
   ```
 
-### Browser Support
+#### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
@@ -807,7 +807,7 @@ Tests whether any of the elements in the array pass the test implemented by the 
   // output: true
   ```
 
-### Browser Support
+#### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
@@ -839,7 +839,7 @@ Creates a version of the function that will only be run after first being called
   })
   ```
 
-### Browser Support
+#### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
  :-: | :-: | :-: | :-: | :-: |
@@ -875,13 +875,13 @@ Voice from the Lodash author:
 >Lodash's `_.isNaN` is equiv to ES6 `Number.isNaN` which is different than the global `isNaN`.
 >--- [jdalton](https://github.com/cht8687/You-Dont-Need-Lodash-Underscore/commit/b8559a603dccaaa2449b5a68a2d8325cf1fb29cd#)
 
-### Browser Support for `isNaN`
+#### Browser Support for `isNaN`
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
   ✔  |  ✔ |  ✔ |  ✔ |  ✔  |
 
-### Browser Support for `Number.isNaN`
+#### Browser Support for `Number.isNaN`
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
@@ -925,7 +925,7 @@ The method is used to copy the values of all enumerable own properties from one 
   // output: { 'c': 3, 'e': 5 }
   ```
 
-### Browser Support
+#### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
@@ -949,7 +949,7 @@ Retrieves all the names of the object's own enumerable properties.
   // output: ["one", "two", "three"]
   ```
 
-### Browser Support
+#### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
@@ -974,7 +974,7 @@ Retrieves all the given object's own enumerable property `[ key, value ]` pairs.
   // output: [["one", 1], ["two": 2], ["three", 3]]
   ```
 
-### Browser Support
+#### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
@@ -998,7 +998,7 @@ Retrieves all the given object's own enumerable property values.
   // output: [1, 2, 3]
   ```
 
-### Browser Support
+#### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
@@ -1024,7 +1024,7 @@ Repeats the given string n times.
   // output: 'abcabc'
   ```
 
-### Browser Support
+#### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
@@ -1047,7 +1047,7 @@ Create a template function.
   templateLiterlFunction({ 'user': 'fred' });
   ```
 
-### Browser Support
+#### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
@@ -1071,7 +1071,7 @@ Lowercases a given string.
   // output: 'foobar'
   ```
 
-### Browser Support
+#### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
@@ -1095,7 +1095,7 @@ Uppercases a given string.
   // output: 'FOOBAR'
   ```
 
-### Browser Support
+#### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
@@ -1119,7 +1119,7 @@ Removes the leading and trailing whitespace characters from a string.
   // output: 'abc'
   ```
 
-### Browser Support
+#### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |

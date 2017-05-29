@@ -104,6 +104,7 @@ then Lodash/Underscore is the better option.*
 1. [_.map](#_map)
 1. [_.minBy and _.maxBy](#_minby-and-_maxby)
 1. [_.pluck](#_pluck)
+1. [_.range](#_range)
 1. [_.reduce](#_reduce)
 1. [_.reduceRight](#_reduceright)
 1. [_.size](#_size)
@@ -131,7 +132,6 @@ then Lodash/Underscore is the better option.*
 1. [_.toLower](#_tolower)
 1. [_.toUpper](#_toupper)
 1. [_.trim](#_trim)
-
 
 ## Array
 
@@ -725,6 +725,42 @@ Applies a function against an accumulator and each value of the array (from left
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
   ✔  | 3.0 ✔ |  9 ✔  |  10.5 ✔ |  4.0 ✔ |
+
+**[⬆ back to top](#quick-links)**
+
+### _.range
+
+Creates an array of numbers progressing from start up to.
+
+  ```js
+  // Underscore/Lodash
+  _.range(4)  // output: [0, 1, 2, 3]
+  _.range(-4) // output: [0, -1, -2, -3]
+  _.range(1, 5)     // output: [1, 2, 3, 4]
+  _.range(0, 20, 5) // output: [0, 5, 10, 15]
+
+  // Native ( solution with Array.from )
+  Array.from({length: 4}, (_, i) => i)  // output: [0, 1, 2, 3]
+  Array.from({length: 4}, (_, i) => -i) // output: [0, -1, -2, -3]
+  Array.from({length: 4}, (_, i) => i + 1) // output: [1, 2, 3, 1]
+  Array.from({length: 4}, (_, i) => i * 5) // output: [0, 5, 10, 15]
+
+  // Native ( solution with keys() and spread )
+  [...Array(4).keys()] // output: [0, 1, 2, 3]
+  ```
+
+
+#### Browser Support ( Array.from )
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+ 45 ✔  | 32 ✔ |  Not supported   |  ✔ |  9.0 ✔ |
+
+#### Browser Support ( keys and array spread )
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+ 46 ✔  | 16 ✔ |  Not supported | 37 ✔ |  7.1 ✔ |
 
 **[⬆ back to top](#quick-links)**
 

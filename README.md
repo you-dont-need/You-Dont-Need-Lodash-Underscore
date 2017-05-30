@@ -742,7 +742,7 @@ Creates an array of numbers progressing from start up to.
   // Native ( solution with Array.from )
   Array.from({length: 4}, (_, i) => i)  // output: [0, 1, 2, 3]
   Array.from({length: 4}, (_, i) => -i) // output: [0, -1, -2, -3]
-  Array.from({length: 4}, (_, i) => i + 1) // output: [1, 2, 3, 1]
+  Array.from({length: 4}, (_, i) => i + 1) // output: [1, 2, 3, 4]
   Array.from({length: 4}, (_, i) => i * 5) // output: [0, 5, 10, 15]
 
   // Native ( solution with keys() and spread )

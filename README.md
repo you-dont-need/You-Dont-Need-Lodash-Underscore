@@ -641,7 +641,7 @@ Extract a functor and use es2015 for better code
   // utils
   const makeSelect = (comparator) => (a, b) => comparator(a, b) ? a : b
   const minByValue = makeSelect((a, b) => a.value <= b.value)
-  const maxByValue = makeSelect((a, b) => a.value <= b.value)
+  const maxByValue = makeSelect((a, b) => a.value >= b.value)
 
   // main logic
   const data = [{ value: 6 }, { value: 2 }, { value: 4 }]
@@ -653,12 +653,12 @@ Extract a functor and use es2015 for better code
 
   // or also more universal and little slower variant of minBy
   const minBy = (collection, key) => {
-    // slower becouse need to create a lambda function for each call...
+    // slower because need to create a lambda function for each call...
     const select = (a, b) => a[key] <= b[key] ? a : b
     return collection.reduce(select, {})
   }
 
-  console.log(minBy(data))
+  console.log(minBy(data, 'value'))
   // output: { value: 2 }
   ```
 

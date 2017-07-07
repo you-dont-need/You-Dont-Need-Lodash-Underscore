@@ -1080,7 +1080,7 @@ Create a template function.
 
   // Native
   const templateLitreal = (value) => `hello ${value.user}`;
-  templateLiterlFunction({ 'user': 'fred' });
+  templateLitreal({ 'user': 'fred' });
   ```
 
 #### Browser Support

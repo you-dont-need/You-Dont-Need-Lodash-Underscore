@@ -137,7 +137,7 @@ then Lodash/Underscore is the better option.*
 
 ### _.compact
 
-Creates an array with all falsey values removed.
+Creates an array with all falsy values removed.
 
   ```js
   // Underscore/Lodash

@@ -84,6 +84,8 @@ For more information, see [Configuring the ESLint Plugin](configuring.md)
 1. [_.fill](#_fill)
 1. [_.find](#_find)
 1. [_.findIndex](#_findindex)
+1. [_.flatten](#_flatten)
+1. [_.flattenDeep](#_flattendeep)
 1. [_.head and _.tail](#_head-and-_tail)
 1. [_.indexOf](#_indexof)
 1. [_.join](#_join)
@@ -293,6 +295,55 @@ Returns the index of the first element in the array that satisfies the provided 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
   45.0 ✔ | 25.0 ✔ |  Not supported  |  Not supported |  7.1 ✔ |
+
+**[⬆ back to top](#quick-links)**
+
+### _.flatten
+
+Flattens array a single level deep.
+
+  ```js
+  // Underscore/Lodash
+  _.flatten([1, [2, [3, [4]], 5]]);
+  // => [1, 2, [3, [4]], 5]
+
+  // Native
+  const flatten = [1, [2, [3, [4]], 5]].reduce( (a, b) => [...a, ...b], [])
+  // => [1, 2, [3, [4]], 5]
+
+  ```
+
+#### Browser Support
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+  46.0 ✔ | 16.0 ✔ |  Not supported  |  Not supported |  7.1 ✔ |
+
+**[⬆ back to top](#quick-links)**
+
+### _.flattenDeep
+
+Recursively flattens array.
+
+  ```js
+  // Underscore/Lodash
+  _.flattenDeep([1, [2, [3, [4]], 5]]);
+  // => [1, 2, 3, 4, 5]
+
+  // Native
+  const flattenDeep = (arr) => Array.isArray(arr) 
+    ? arr.reduce( (a, b) => [...flattenDeep(a), ...flattenDeep(b)] , []) 
+    : [arr]
+
+  flattenDeep([1, [[2], [3, [4]], 5]])
+  // => [1, 2, 3, 4, 5]
+  ```
+
+#### Browser Support
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+  46.0 ✔ | 16.0 ✔ |  Not supported  |  Not supported |  7.1 ✔ |
 
 **[⬆ back to top](#quick-links)**
 

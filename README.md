@@ -514,7 +514,7 @@ Returns an array where matching items are filtered.
 **[⬆ back to top](#quick-links)**
 
 ### _.slice
-Returns a shallow copy of a portion of an array into a new array object selected from begin to end (end not included)
+Returns a shallow copy of a portion of an array into a new array object selected from `begin` to `end` (`end` not included)
 
   ```js
   // Lodash

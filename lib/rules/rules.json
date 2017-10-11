@@ -1,185 +1,181 @@
 {
-    "concat": {
-        "compatible": true,
-        "alternative": "Array.prototype.concat()"
-    },
-    "indexOf": {
-        "compatible": true,
-        "alternative": "Array.prototype.indexOf()"
-    },
-    "join": {
-        "compatible": true,
-        "alternative": "Array.prototype.join()"
-    },
-    "lastIndexOf": {
-        "compatible": true,
-        "alternative": "Array.prototype.lastIndexOf()"
-    },
-    "reverse": {
-        "compatible": true,
-        "alternative": "Array.prototype.reverse()"
-    },
-    "fill": {
-        "compatible": true,
-        "alternative": "Array.prototype.fill()",
-        "ES6": true
-    },
-    "find": {
-        "compatible": false,
-        "alternative": "Array.prototype.find()",
-        "ES6": true
-    },
-    "detect": {
-        "compatible": true,
-        "alternative": "Array.prototype.find()",
-        "ES6": true
-    },
-    "findIndex": {
-        "compatible": false,
-        "alternative": "Array.prototype.findIndex()",
-        "ES6": true
-    },
-
-    "each": {
-        "compatible": false,
-        "alternative": "Array.prototype.forEach()"
-    },
-    "forEach": {
-        "compatible": false,
-        "alternative": "Array.prototype.forEach()"
-    },
-    "every": {
-        "compatible": false,
-        "alternative": "Array.prototype.every()"
-    },
-    "all": {
-        "compatible": false,
-        "alternative": "Array.prototype.every()"
-    },
-    "filter": {
-        "compatible": false,
-        "alternative": "Array.prototype.filter()"
-    },
-    "select": {
-        "compatible": false,
-        "alternative": "Array.prototype.filter()"
-    },
-    "map": {
-        "compatible": false,
-        "alternative": "Array.prototype.map()"
-    },
-    "collect": {
-        "compatible": false,
-        "alternative": "Array.prototype.map()"
-    },
-    "reduce": {
-        "compatible": false,
-        "alternative": "Array.prototype.reduce()"
-    },
-    "inject": {
-        "compatible": false,
-        "alternative": "Array.prototype.reduce()"
-    },
-    "foldl": {
-        "compatible": false,
-        "alternative": "Array.prototype.reduce()"
-    },
-    "reduceRight": {
-        "compatible": false,
-        "alternative": "Array.prototype.reduceRight()"
-    },
-    "foldr": {
-        "compatible": false,
-        "alternative": "Array.prototype.reduceRight()"
-    },
-    "size": {
-        "compatible": false,
-        "alternative": "Array.prototype.length"
-    },
-    "some": {
-        "compatible": false,
-        "alternative": "Array.prototype.some()"
-    },
-    "any": {
-        "compatible": false,
-        "alternative": "Array.prototype.some()"
-    },
-    "includes": {
-        "compatible": false,
-        "alternative": "Array.prototype.includes()",
-        "ES6": true
-    },
-    "contains": {
-        "compatible": false,
-        "alternative": "Array.prototype.includes()",
-        "ES6": true
-    },
-    "slice": {
-        "compatible": true,
-        "alternative": "Array.prototype.slice()"
-    },
-
-    "isNaN": {
-        "ruleName": "is-nan",
-        "compatible": true,
-        "alternative": "Number.isNaN()",
-        "ES6": true
-    },
-
-    "keys": {
-        "compatible": true,
-        "alternative": "Object.keys()"
-    },
-    "extendOwn": {
-        "compatible": true,
-        "alternative": "Object.assign()",
-        "ES6": true
-    },
-    "assign": {
-        "compatible": true,
-        "alternative": "Object.assign()",
-        "ES6": true
-    },
-    "values": {
-        "compatible": true,
-        "alternative": "Object.values()",
-        "ES6": true
-    },
-    "entries": {
-        "compatible": true,
-        "alternative": "Object.entries()",
-        "ES6": true
-    },
-    "toPairs": {
-        "compatible": true,
-        "alternative": "Object.entries()",
-        "ES6": true
-    },
-    "pairs": {
-        "compatible": true,
-        "alternative": "Object.entries()",
-        "ES6": true
-    },
-
-    "toLower": {
-        "compatible": true,
-        "alternative": "String.prototype.toLowerCase()"
-    },
-    "toUpper": {
-        "compatible": true,
-        "alternative": "String.prototype.toUpperCase()"
-    },
-    "trim": {
-        "compatible": true,
-        "alternative": "String.prototype.trim()"
-    },
-    "repeat": {
-        "compatible": true,
-        "alternative": "String.prototype.repeat()",
-        "ES6": true
-    },
-    "replace": {
-        "compatible": true,
-        "alternative": "String.prototype.replace()"
-    }
+   "all": {
+      "alternative": "Array.prototype.every()",
+      "compatible": false
+   },
+   "any": {
+      "alternative": "Array.prototype.some()",
+      "compatible": false
+   },
+   "assign": {
+      "ES6": true,
+      "alternative": "Object.assign()",
+      "compatible": true
+   },
+   "collect": {
+      "alternative": "Array.prototype.map()",
+      "compatible": false
+   },
+   "concat": {
+      "alternative": "Array.prototype.concat()",
+      "compatible": true
+   },
+   "contains": {
+      "ES6": true,
+      "alternative": "Array.prototype.includes()",
+      "compatible": false
+   },
+   "detect": {
+      "ES6": true,
+      "alternative": "Array.prototype.find()",
+      "compatible": true
+   },
+   "each": {
+      "alternative": "Array.prototype.forEach()",
+      "compatible": false
+   },
+   "entries": {
+      "ES6": true,
+      "alternative": "Object.entries()",
+      "compatible": true
+   },
+   "every": {
+      "alternative": "Array.prototype.every()",
+      "compatible": false
+   },
+   "extendOwn": {
+      "ES6": true,
+      "alternative": "Object.assign()",
+      "compatible": true
+   },
+   "fill": {
+      "ES6": true,
+      "alternative": "Array.prototype.fill()",
+      "compatible": true
+   },
+   "filter": {
+      "alternative": "Array.prototype.filter()",
+      "compatible": false
+   },
+   "find": {
+      "ES6": true,
+      "alternative": "Array.prototype.find()",
+      "compatible": false
+   },
+   "findIndex": {
+      "ES6": true,
+      "alternative": "Array.prototype.findIndex()",
+      "compatible": false
+   },
+   "foldl": {
+      "alternative": "Array.prototype.reduce()",
+      "compatible": false
+   },
+   "foldr": {
+      "alternative": "Array.prototype.reduceRight()",
+      "compatible": false
+   },
+   "forEach": {
+      "alternative": "Array.prototype.forEach()",
+      "compatible": false
+   },
+   "includes": {
+      "ES6": true,
+      "alternative": "Array.prototype.includes()",
+      "compatible": false
+   },
+   "indexOf": {
+      "alternative": "Array.prototype.indexOf()",
+      "compatible": true
+   },
+   "inject": {
+      "alternative": "Array.prototype.reduce()",
+      "compatible": false
+   },
+   "isNaN": {
+      "ES6": true,
+      "alternative": "Number.isNaN()",
+      "compatible": true,
+      "ruleName": "is-nan"
+   },
+   "join": {
+      "alternative": "Array.prototype.join()",
+      "compatible": true
+   },
+   "keys": {
+      "alternative": "Object.keys()",
+      "compatible": true
+   },
+   "lastIndexOf": {
+      "alternative": "Array.prototype.lastIndexOf()",
+      "compatible": true
+   },
+   "map": {
+      "alternative": "Array.prototype.map()",
+      "compatible": false
+   },
+   "pairs": {
+      "ES6": true,
+      "alternative": "Object.entries()",
+      "compatible": true
+   },
+   "reduce": {
+      "alternative": "Array.prototype.reduce()",
+      "compatible": false
+   },
+   "reduceRight": {
+      "alternative": "Array.prototype.reduceRight()",
+      "compatible": false
+   },
+   "repeat": {
+      "ES6": true,
+      "alternative": "String.prototype.repeat()",
+      "compatible": true
+   },
+   "replace": {
+      "alternative": "String.prototype.replace()",
+      "compatible": true
+   },
+   "reverse": {
+      "alternative": "Array.prototype.reverse()",
+      "compatible": true
+   },
+   "select": {
+      "alternative": "Array.prototype.filter()",
+      "compatible": false
+   },
+   "size": {
+      "alternative": "Array.prototype.length",
+      "compatible": false
+   },
+   "slice": {
+      "alternative": "Array.prototype.slice()",
+      "compatible": true
+   },
+   "some": {
+      "alternative": "Array.prototype.some()",
+      "compatible": false
+   },
+   "toLower": {
+      "alternative": "String.prototype.toLowerCase()",
+      "compatible": true
+   },
+   "toPairs": {
+      "ES6": true,
+      "alternative": "Object.entries()",
+      "compatible": true
+   },
+   "toUpper": {
+      "alternative": "String.prototype.toUpperCase()",
+      "compatible": true
+   },
+   "trim": {
+      "alternative": "String.prototype.trim()",
+      "compatible": true
+   },
+   "values": {
+      "ES6": true,
+      "alternative": "Object.values()",
+      "compatible": true
+   }
 }

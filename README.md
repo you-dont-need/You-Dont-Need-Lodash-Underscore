@@ -135,6 +135,7 @@ then Lodash/Underscore is the better option.*
 1. [_.toLower](#_tolower)
 1. [_.toUpper](#_toupper)
 1. [_.trim](#_trim)
+1. [_.replace](#_replace)
 
 ## Array
 
@@ -1235,6 +1236,33 @@ Removes the leading and trailing whitespace characters from a string.
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
   5.0 ✔  |  3.5 ✔ |  9.0 ✔  |  10.5 ✔ |  5.0 ✔  |
+
+**[⬆ back to top](#quick-links)**
+
+### _.replace
+returns a new string with some or all matches of a `pattern` replaced by a `replacement`
+
+  ```js
+  // Lodash
+  var re = /apples/gi;
+  var str = 'Apples are round, and apples are juicy.';
+  var newstr = _.replace(str, re, 'oranges');
+  console.log(newstr);
+  // output: 'oranges are round, and oranges are juicy.'
+
+  // Native
+  var re = /apples/gi;
+  var str = 'Apples are round, and apples are juicy.';
+  var result = str.replace(re, 'oranges');
+  console.log(result);
+  // output: 'oranges are round, and oranges are juicy.'
+  ```
+
+#### Browser Support
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+  ✔  |  ✔ |  ✔  |  ✔ |  ✔  |
 
 **[⬆ back to top](#quick-links)**
 

@@ -92,6 +92,7 @@ For more information, see [Configuring the ESLint Plugin](configuring.md)
 1. [_.lastIndexOf](#_lastindexof)
 1. [_.reverse](#_reverse)
 1. [_.without](#_without)
+1. [_.slice](#_slice)
 
 **[Collection*](#collection*)**
 
@@ -511,6 +512,21 @@ Returns an array where matching items are filtered.
   1.0 ✔  |  1.5 ✔ |  9 ✔ |  ✔ |  ✔  |
 
 **[⬆ back to top](#quick-links)**
+
+### _.slice
+Returns a shallow copy of a portion of an array into a new array object selected from begin to end (end not included)
+
+  ```js
+  // Lodash
+  var array = [1, 2, 3, 4]
+  console.log(_.slice(array, 1, 3))
+  // output: [2, 3]
+
+  // Native
+  var array = [1, 2, 3, 4]
+  console.log(array.slice(1, 3));
+  // output: [2, 3]
+  ```
 
 ## Collection*
 

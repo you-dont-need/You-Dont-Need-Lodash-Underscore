@@ -532,7 +532,7 @@ Returns a shallow copy of a portion of an array into a new array object selected
  
  ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
  :-: | :-: | :-: | :-: | :-: |
-   1.0 ✔  |  1.5 ✔ |  9 ✔ |  ✔ |  ✔  |
+  ✔  |  ✔  |  ✔  |  ✔  |  ✔  |
    
 **[⬆ back to top](#quick-links)**
 

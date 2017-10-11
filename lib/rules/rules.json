@@ -25,7 +25,7 @@
         "ES6": true
     },
     "find": {
-        "compatible": true,
+        "compatible": false,
         "alternative": "Array.prototype.find()",
         "ES6": true
     },
@@ -35,7 +35,7 @@
         "ES6": true
     },
     "findIndex": {
-        "compatible": true,
+        "compatible": false,
         "alternative": "Array.prototype.findIndex()",
         "ES6": true
     },

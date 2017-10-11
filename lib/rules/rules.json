@@ -114,6 +114,10 @@
         "alternative": "Array.prototype.includes()",
         "ES6": true
     },
+    "slice": {
+        "compatible": true,
+        "alternative": "Array.prototype.slice()"
+    },
 
     "isNaN": {
         "ruleName": "is-nan",

@@ -173,5 +173,10 @@
         "compatible": true,
         "alternative": "String.prototype.repeat()",
         "ES6": true
+    },
+    "uniq": {
+        "compatible": true, // not sure
+        "alternative": "[... new Set(arr)]",
+        "ES6": true
     }
 }

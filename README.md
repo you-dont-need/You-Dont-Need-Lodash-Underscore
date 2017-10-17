@@ -92,6 +92,7 @@ For more information, see [Configuring the ESLint Plugin](configuring.md)
 1. [_.lastIndexOf](#_lastindexof)
 1. [_.reverse](#_reverse)
 1. [_.without](#_without)
+1. [_.slice](#_slice)
 
 **[Collection*](#collection*)**
 
@@ -134,6 +135,7 @@ then Lodash/Underscore is the better option.*
 1. [_.toLower](#_tolower)
 1. [_.toUpper](#_toupper)
 1. [_.trim](#_trim)
+1. [_.replace](#_replace)
 
 ## Array
 
@@ -510,6 +512,29 @@ Returns an array where matching items are filtered.
 :-: | :-: | :-: | :-: | :-: |
   1.0 ✔  |  1.5 ✔ |  9 ✔ |  ✔ |  ✔  |
 
+**[⬆ back to top](#quick-links)**
+
+### _.slice
+Returns a shallow copy of a portion of an array into a new array object selected from `begin` to `end` (`end` not included)
+
+  ```js
+  // Lodash
+  var array = [1, 2, 3, 4]
+  console.log(_.slice(array, 1, 3))
+  // output: [2, 3]
+
+  // Native
+  var array = [1, 2, 3, 4]
+  console.log(array.slice(1, 3));
+  // output: [2, 3]
+  ```
+  
+#### Browser Support
+ 
+ ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+ :-: | :-: | :-: | :-: | :-: |
+  ✔  |  ✔  |  ✔  |  ✔  |  ✔  |
+   
 **[⬆ back to top](#quick-links)**
 
 ## Collection*
@@ -1211,6 +1236,33 @@ Removes the leading and trailing whitespace characters from a string.
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
   5.0 ✔  |  3.5 ✔ |  9.0 ✔  |  10.5 ✔ |  5.0 ✔  |
+
+**[⬆ back to top](#quick-links)**
+
+### _.replace
+returns a new string with some or all matches of a `pattern` replaced by a `replacement`
+
+  ```js
+  // Lodash
+  var re = /apples/gi;
+  var str = 'Apples are round, and apples are juicy.';
+  var newstr = _.replace(str, re, 'oranges');
+  console.log(newstr);
+  // output: 'oranges are round, and oranges are juicy.'
+
+  // Native
+  var re = /apples/gi;
+  var str = 'Apples are round, and apples are juicy.';
+  var result = str.replace(re, 'oranges');
+  console.log(result);
+  // output: 'oranges are round, and oranges are juicy.'
+  ```
+
+#### Browser Support
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+  ✔  |  ✔ |  ✔  |  ✔ |  ✔  |
 
 **[⬆ back to top](#quick-links)**
 

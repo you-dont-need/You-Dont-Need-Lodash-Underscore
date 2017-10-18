@@ -175,7 +175,7 @@
         "ES6": true
     },
     "uniq": {
-        "compatible": true, // not sure
+        "compatible": true,
         "alternative": "[... new Set(arr)]",
         "ES6": true
     }

@@ -1272,6 +1272,29 @@ returns a new string with some or all matches of a `pattern` replaced by a `repl
 * [Underscore.js](http://underscorejs.org)
 * [Lodash.js](https://lodash.com/docs)
 
+### _.uniq
+Removes all duplicates entries from an array.
+
+  ```js
+  // Underscore/Lodash
+  var result = _.uniq([1, 2, 1, 4, 1, 3]);
+  console.log(result)
+  // output: [1, 2, 4, 3]
+
+  // Native
+  var result = [... new Set([1, 2, 1, 4, 1, 3])]
+  console.log(result)
+  // output: [1, 2, 4, 3]
+  ```
+
+#### Browser Support
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+  38 ✔  |  13 ✔ |  11 ✔  |  25 ✔ |  7.1 ✔  |
+
+**[⬆ back to top](#quick-links)**
+
 
 ## Inspired by:
 

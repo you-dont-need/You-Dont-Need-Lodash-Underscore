@@ -39,6 +39,11 @@
         "alternative": "Array.prototype.findIndex()",
         "ES6": true
     },
+    "isArray": {
+        "compatible": true,
+        "alternative": "Array.prototype.isArray()",
+        "ES6": true
+    },
 
     "each": {
         "compatible": false,

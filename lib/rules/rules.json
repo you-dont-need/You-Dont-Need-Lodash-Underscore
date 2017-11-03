@@ -41,7 +41,7 @@
     },
     "isArray": {
         "compatible": true,
-        "alternative": "Array.prototype.isArray()"
+        "alternative": "Array.isArray()"
     },
 
     "each": {

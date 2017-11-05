@@ -93,6 +93,7 @@ For more information, see [Configuring the ESLint Plugin](configuring.md)
 1. [_.reverse](#_reverse)
 1. [_.without](#_without)
 1. [_.slice](#_slice)
+1. [_.isArray](#_isarray)
 
 **[Collection*](#collection*)**
 
@@ -333,8 +334,8 @@ Recursively flattens array.
   // => [1, 2, 3, 4, 5]
 
   // Native
-  const flattenDeep = (arr) => Array.isArray(arr) 
-    ? arr.reduce( (a, b) => [...flattenDeep(a), ...flattenDeep(b)] , []) 
+  const flattenDeep = (arr) => Array.isArray(arr)
+    ? arr.reduce( (a, b) => [...flattenDeep(a), ...flattenDeep(b)] , [])
     : [arr]
 
   flattenDeep([1, [[2], [3, [4]], 5]])
@@ -528,13 +529,36 @@ Returns a shallow copy of a portion of an array into a new array object selected
   console.log(array.slice(1, 3));
   // output: [2, 3]
   ```
-  
+
 #### Browser Support
- 
+
  ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
  :-: | :-: | :-: | :-: | :-: |
   ✔  |  ✔  |  ✔  |  ✔  |  ✔  |
-   
+
+**[⬆ back to top](#quick-links)**
+
+### _.isArray
+Returns true if given value is an array.
+
+  ```js
+  // Lodash
+  var array = []
+  console.log(_.isArray(array))
+  // output: true
+
+  // Native
+  var array = []
+  console.log(Array.isArray(array));
+  // output: true
+  ```
+
+  #### Browser Support
+
+ ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+ :-: | :-: | :-: | :-: | :-: |
+  5 ✔  |  4 ✔  |  9 ✔  |  10.5 ✔  | 5 ✔  |
+
 **[⬆ back to top](#quick-links)**
 
 ## Collection*

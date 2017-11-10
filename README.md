@@ -84,11 +84,13 @@ For more information, see [Configuring the ESLint Plugin](configuring.md)
 1. [_.fill](#_fill)
 1. [_.find](#_find)
 1. [_.findIndex](#_findindex)
+1. [_.first](#_first)
 1. [_.flatten](#_flatten)
 1. [_.flattenDeep](#_flattendeep)
 1. [_.head and _.tail](#_head-and-_tail)
 1. [_.indexOf](#_indexof)
 1. [_.join](#_join)
+1. [_.last](#_last)
 1. [_.lastIndexOf](#_lastindexof)
 1. [_.reverse](#_reverse)
 1. [_.without](#_without)
@@ -301,6 +303,34 @@ Returns the index of the first element in the array that satisfies the provided 
 
 **[⬆ back to top](#quick-links)**
 
+### _.first
+
+Returns the first element of an array. Passing n will return the first n elements of the array.
+
+  ```js
+  // Underscore/Lodash
+  _.first([1, 2, 3, 4, 5]);
+  // => 1
+
+  _.first([1, 2, 3, 4, 5], 2);
+  // => [1, 2]
+
+  // Native
+  [1, 2, 3, 4, 5][0];
+  // => 1
+
+  [1, 2, 3, 4, 5].slice(0, 2);
+  // => [1, 2]
+  ```
+
+#### Browser Support
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+  ✔  |  ✔  |  ✔  |  ✔  |  ✔  |
+
+**[⬆ back to top](#quick-links)**
+
 ### _.flatten
 
 Flattens array a single level deep.
@@ -430,6 +460,39 @@ Joins a list of elements in an array with a given separator.
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
   1.0 ✔  |  1.0 ✔ |  5.5 ✔  |  ✔ |  ✔  |
+
+**[⬆ back to top](#quick-links)**
+
+### _.last
+
+Returns the last element of an array. Passing n will return the last n elements of the array.
+
+  ```js
+  // Underscore/Lodash
+  const numbers = [1, 2, 3, 4, 5];
+  _.last(numbers);
+  // => 5
+
+  _.last(numbers, 2);
+  // => [4, 5]
+
+  // Native
+  const numbers = [1, 2, 3, 4, 5];
+  numbers[numbers.length - 1];
+  // => 5
+  //or
+  numbers.slice(-1)[0];
+  // => 5
+
+  numbers.slice(-2);
+  // => [4, 5]
+  ```
+
+#### Browser Support
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+  ✔  |  ✔  |  ✔  |  ✔  |  ✔  |
 
 **[⬆ back to top](#quick-links)**
 

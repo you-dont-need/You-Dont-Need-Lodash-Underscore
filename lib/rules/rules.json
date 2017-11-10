@@ -11,6 +11,10 @@
         "compatible": true,
         "alternative": "Array.prototype.join()"
     },
+    "last": {
+        "compatible": true,
+        "alternative": "Array.prototype.slice()"
+    },
     "lastIndexOf": {
         "compatible": true,
         "alternative": "Array.prototype.lastIndexOf()"
@@ -33,6 +37,10 @@
         "compatible": true,
         "alternative": "Array.prototype.find()",
         "ES6": true
+    },
+    "first": {
+        "compatible": true,
+        "alternative": "Array.prototype.slice()"
     },
     "findIndex": {
         "compatible": false,

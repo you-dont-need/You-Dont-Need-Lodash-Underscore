@@ -4,7 +4,7 @@ const assert = require('assert');
 const rules = require('../../../lib/rules/all');
 const allRules = require('../../../lib/rules/rules');
 
-assert.equal(Object.keys(allRules).length, 43, 'Don\'t miss a rule 😄');
+assert.equal(Object.keys(allRules).length, 45, 'Don\'t miss a rule 😄');
 
 const ruleTester = new RuleTester();
 
@@ -47,6 +47,34 @@ ruleTester.run('underscore.isNaN', rules['is-nan'], {
   invalid: [{
     code: 'underscore.isNaN(NaN)',
     errors: ['Consider using the native Number.isNaN()']
+  }]
+});
+
+ruleTester.run('_.first', rules['first'], {
+  valid: [
+    '[0, 1, 3][0]',
+    '[0, 1, 3].slice(0, 2)'
+  ],
+  invalid: [{
+      code: '_.first([0, 1, 3])',
+      errors: ['Consider using the native Array.prototype.slice()']
+  }, {
+    code: '_.first([0, 1, 3], 2)',
+    errors: ['Consider using the native Array.prototype.slice()']
+  }]
+});
+
+ruleTester.run('_.last', rules['last'], {
+  valid: [
+    'var numbers = [0, 1, 3]; numbers[numbers.length - 1]',
+    '[0, 1, 3].slice(-2)'
+  ],
+  invalid: [{
+      code: '_.last([0, 1, 3])',
+      errors: ['Consider using the native Array.prototype.slice()']
+  }, {
+    code: '_.last([0, 1, 3], 2)',
+    errors: ['Consider using the native Array.prototype.slice()']
   }]
 });
 

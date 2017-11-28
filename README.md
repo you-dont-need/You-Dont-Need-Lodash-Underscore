@@ -341,7 +341,7 @@ Flattens array a single level deep.
   // => [1, 2, [3, [4]], 5]
 
   // Native
-  const flatten = [1, [2, [3, [4]], 5]].reduce( (a, b) => [...a, ...b], [])
+  const flatten = [1, [2, [3, [4]], 5]].reduce( (a, b) => a.concat(b), [])
   // => [1, 2, [3, [4]], 5]
 
   ```

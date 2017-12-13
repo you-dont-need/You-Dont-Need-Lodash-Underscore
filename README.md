@@ -106,6 +106,7 @@ then Lodash/Underscore is the better option.*
 1. [_.each](#_each)
 1. [_.every](#_every)
 1. [_.filter](#_filter)
+1. [_.groupBy](#_groupby)
 1. [_.includes](#_includes)
 1. [_.map](#_map)
 1. [_.minBy and _.maxBy](#_minby-and-_maxby)
@@ -718,6 +719,42 @@ Creates a new array with all elements that pass the test implemented by the prov
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
   ✔  | 1.5 ✔ |  9 ✔  |  ✔  |  ✔  |
+
+**[⬆ back to top](#quick-links)**
+
+### _.groupBy
+
+Group items by key.
+
+  ```js
+  // Underscore/Lodash
+  var grouped = _.groupBy(['one', 'two', 'three'], 'length')
+  console.log(grouped)
+  // output: {3: ["one", "two"], 5: ["three"]}
+
+  // Native
+  var grouped = ['one', 'two', 'three'].reduce((r, v, i, a, k = v.length) => ((r[k] || (r[k] = [])).push(v), r), {})
+  console.log(grouped)
+  // output: {3: ["one", "two"], 5: ["three"]}
+  ```
+  
+  ```js
+  // Underscore/Lodash
+  var grouped = _.groupBy([1.3, 2.1, 2.4], num => Math.floor(num))
+  console.log(grouped)
+  // output: {1: [1.3], 2: [2.1, 2.4]}
+
+  // Native
+  var grouped = [1.3, 2.1, 2.4].reduce((r, v, i, a, k = Math.floor(v)) => ((r[k] || (r[k] = [])).push(v), r), {})
+  console.log(grouped)
+  // output: {1: [1.3], 2: [2.1, 2.4]}
+  ```
+
+#### Browser Support
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+  ✔  | 3.0 ✔ |  9 ✔  |  10.5 ✔ |  4.0 ✔ |
 
 **[⬆ back to top](#quick-links)**
 

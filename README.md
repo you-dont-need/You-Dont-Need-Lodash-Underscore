@@ -116,6 +116,7 @@ then Lodash/Underscore is the better option.*
 1. [_.reduceRight](#_reduceright)
 1. [_.size](#_size)
 1. [_.some](#_some)
+1. [_.uniq](#_uniq)
 
 **[Function](#function)**
 
@@ -1041,6 +1042,32 @@ Tests whether any of the elements in the array pass the test implemented by the 
   var result = array.some(isLargerThanTen)
   console.log(result)
   // output: true
+  ```
+
+#### Browser Support
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+  38 ✔  | 13 ✔ |  Not Supported  |  25 ✔  | 9 ✔  |
+
+**[⬆ back to top](#quick-links)**
+
+### _.uniq
+
+Produces a duplicate-free version of the array, using === to test object equality.
+
+  ```js
+  // Underscore/Lodash
+  var array = [1, 2, 1, 4, 1, 3]
+  var result = _.uniq(array)
+  console.log(result)
+  // output: [1, 2, 4, 3]
+
+  // Native
+  var array = [1, 2, 1, 4, 1, 3];
+  var result = [...new Set(array)];
+  console.log(result)
+  // output: [1, 2, 4, 3]
   ```
 
 #### Browser Support

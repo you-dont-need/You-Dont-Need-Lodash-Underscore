@@ -30,7 +30,8 @@
   "devDependencies": {
     "coveralls": "^2.11.9",
     "eslint": "^3.0.0",
-    "istanbul": "^0.4.4"
+    "istanbul": "^0.4.4",
+    "lodash": "^4.17.4"
   },
   "engines": {
     "node": ">=4.0"

@@ -11,3 +11,6 @@ assert.equal(plugin.configs['compatible-warn'].rules['you-dont-need-lodash-under
 assert.equal(plugin.configs['compatible-warn'].rules['you-dont-need-lodash-underscore/last-index-of'], 1);
 assert.equal(plugin.configs.compatible.rules['you-dont-need-lodash-underscore/for-each'], 1);
 assert.equal(plugin.configs.compatible.rules['you-dont-need-lodash-underscore/is-nan'], 2);
+
+// snippet test
+require('./unit/all.js');

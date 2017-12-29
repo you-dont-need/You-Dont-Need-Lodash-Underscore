@@ -22,10 +22,12 @@
   "main": "lib/index.js",
   "scripts": {
     "coveralls": "cat ./coverage/lcov.info | coveralls",
-    "test": "istanbul cover tests"
+    "test": "istanbul cover tests",
+    "test:unit": "mocha tests/unit"
   },
   "dependencies": {
-    "kebab-case": "^1.0.0"
+    "kebab-case": "^1.0.0",
+    "mocha": "^4.1.0"
   },
   "devDependencies": {
     "coveralls": "^2.11.9",

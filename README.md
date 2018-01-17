@@ -120,6 +120,7 @@ then Lodash/Underscore is the better option.*
 **[Function](#function)**
 
 1. [_.after](#_after)
+1. [_.partial](#_partial)
 
 **[Lang](#lang)**
 
@@ -1082,7 +1083,31 @@ Creates a version of the function that will only be run after first being called
    ✔  |  ✔ |  ✔ |  ✔ |  ✔  |
 
  **[⬆ back to top](#quick-links)**
+ 
+ ### _.partial
+Create a new function that calls _func_ with _args_.
 
+  ```js
+  // Lodash
+  function greet(greeting, name) {
+    return greeting + ' ' + name;
+  }
+  var sayHelloTo = _.partial(greet, 'hello');
+
+  // Native
+  function greet(greeting, name) {
+    return greeting + ' ' + name;
+  }
+  var sayHelloTo = (...args) => greet('hello', ...args)
+  ```
+
+#### Browser Support
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+  62 ✔  | 56 ✔ |  ✗  |  49 ✔ |  11 ✔ |
+
+**[⬆ back to top](#quick-links)**
 
 ## Lang
 

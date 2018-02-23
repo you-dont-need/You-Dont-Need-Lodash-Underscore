@@ -737,7 +737,7 @@ Group items by key.
   console.log(grouped)
   // output: {3: ["one", "two"], 5: ["three"]}
   ```
-  
+
   ```js
   // Underscore/Lodash
   var grouped = _.groupBy([1.3, 2.1, 2.4], num => Math.floor(num))
@@ -1156,7 +1156,7 @@ The method is used to copy the values of all enumerable own properties from one 
   }
   Foo.prototype.d = 4;
   Bar.prototype.f = 6;
-  var result = Object.assign(new Foo, new Bar);
+  var result = Object.assign({}, new Foo, new Bar);
   console.log(result);
   // output: { 'c': 3, 'e': 5 }
   ```

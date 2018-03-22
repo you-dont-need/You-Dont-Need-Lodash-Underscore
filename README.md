@@ -231,7 +231,7 @@ Fills elements of array with value from start up to, but not including, end.
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
-  45.0 ✔ | 31.0 ✔ |  Not supported  |  Not supported |  7.1 ✔ |
+  45.0 ✔ | 31.0 ✔ |  Not supported  |  32.0 ✔ |  7.1 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -265,7 +265,7 @@ Returns the value of the first element in the array that satisfies the provided 
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
-  45.0 ✔ | 25.0 ✔ |  Not supported  |  Not supported |  7.1 ✔ |
+  45.0 ✔ | 25.0 ✔ |  Not supported  |  32.0 ✔ |  7.1 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -301,7 +301,7 @@ Returns the index of the first element in the array that satisfies the provided 
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
-  45.0 ✔ | 25.0 ✔ |  Not supported  |  Not supported |  7.1 ✔ |
+  45.0 ✔ | 25.0 ✔ |  Not supported  |  32.0 ✔ |  7.1 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -352,7 +352,7 @@ Flattens array a single level deep.
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
-  46.0 ✔ | 16.0 ✔ |  Not supported  |  Not supported |  7.1 ✔ |
+  46.0 ✔ | 3.0 ✔ |  9.0 ✔  |  10.5 ✔ |  7.1 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -378,7 +378,7 @@ Recursively flattens array.
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
-  46.0 ✔ | 16.0 ✔ |  Not supported  |  Not supported |  7.1 ✔ |
+  46.0 ✔ | 16.0 ✔ |  Not supported  |  37.0 ✔ |  7.1 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -411,7 +411,7 @@ Gets the first element or all but the first element.
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
-  49 ✔  |  34 ✔ |  Not Supported |  Not Supported |  ✔  |
+  49 ✔  |  34 ✔ |  Not Supported |  37 ✔ |  ✔  |
 
 **[⬆ back to top](#quick-links)**
 
@@ -1263,7 +1263,7 @@ Retrieves all the given object's own enumerable property values.
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
-  54 ✔  | 47 ✔ |  Not supported  |  Not supported |  Not supported  |
+  54 ✔  | 47 ✔ |  Not supported  |  41.0 ✔ |  10.1 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -1289,7 +1289,7 @@ Repeats the given string n times.
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
-  41 ✔  |  24 ✔ |  Not supported  |  Not supported |  9 ✔ |
+  41 ✔  |  24 ✔ |  Not supported  |  28 ✔ |  9 ✔ |
 
 **[⬆ back to top](#quick-links)**
 

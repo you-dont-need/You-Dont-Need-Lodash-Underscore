@@ -131,6 +131,12 @@
         "alternative": "Array.prototype.slice()"
     },
 
+    "bind": {
+        "ruleName": "bind",
+        "compatible": true,
+        "alternative": "Function.prototype.bind()"
+    },
+
     "isNaN": {
         "ruleName": "is-nan",
         "compatible": true,

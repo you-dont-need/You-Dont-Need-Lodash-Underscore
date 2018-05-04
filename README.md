@@ -121,6 +121,7 @@ then Lodash/Underscore is the better option.*
 **[Function](#function)**
 
 1. [_.after](#_after)
+1. [_.bind](#_bind)
 1. [_.partial](#_partial)
 
 **[Lang](#lang)**
@@ -1108,6 +1109,36 @@ Creates a version of the function that will only be run after first being called
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
  :-: | :-: | :-: | :-: | :-: |
    ✔  |  ✔ |  ✔ |  ✔ |  ✔  |
+
+ **[⬆ back to top](#quick-links)**
+ 
+### _.bind
+Create a new function that calls _func_ with _thisArg_ and _args_.
+
+  ```js
+  var objA = {
+    x: 66,
+    offsetX: function(offset) {
+      return this.x + offset;
+    }
+  }
+  
+  var objB = {
+    x: 67
+  };
+  
+  // Underscore/Lodash
+  var boundOffsetX = _.bind(objA.offsetX, objB, 0);
+
+  // Native
+  var boundOffsetX = objA.offsetX.bind(objB, 0);
+  ```
+
+#### Browser Support
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+ :-: | :-: | :-: | :-: | :-: |
+   ✔  |  ✔ |  9 ✔ |  ✔ |  ✔  |
 
  **[⬆ back to top](#quick-links)**
  

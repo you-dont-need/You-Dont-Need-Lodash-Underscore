@@ -395,7 +395,7 @@ Returns an object composed from key-value pairs.
   // => { 'a': 1, 'b': 2 }
 
   // Native
-  var fromPairs = function(arr) {
+  const fromPairs = function(arr) {
     return arr.reduce(function(accumulator, value) {
       accumulator[value[0]] = value[1];
       return accumulator;
@@ -403,7 +403,7 @@ Returns an object composed from key-value pairs.
   }
   
   // Compact form
-  var fromPairs = (arr) => arr.reduce((acc, val) => (acc[val[0]] = val[1], acc), {})
+  const fromPairs = (arr) => arr.reduce((acc, val) => (acc[val[0]] = val[1], acc), {})
   
   fromPairs([['a', 1], ['b', 2]]);
   // => { 'a': 1, 'b': 2 }

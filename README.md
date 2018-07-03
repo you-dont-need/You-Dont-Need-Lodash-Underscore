@@ -87,6 +87,7 @@ For more information, see [Configuring the ESLint Plugin](configuring.md)
 1. [_.first](#_first)
 1. [_.flatten](#_flatten)
 1. [_.flattenDeep](#_flattendeep)
+1. [_.fromPairs](#_frompairs)
 1. [_.head and _.tail](#_head-and-_tail)
 1. [_.indexOf](#_indexof)
 1. [_.join](#_join)
@@ -381,6 +382,38 @@ Recursively flattens array.
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
   46.0 ✔ | 16.0 ✔ |  Not supported  |  37.0 ✔ |  7.1 ✔ |
+
+**[⬆ back to top](#quick-links)**
+
+### _.fromPairs
+
+Returns an object composed from key-value pairs.
+
+  ```js
+  // Underscore/Lodash
+  _.fromPairs([['a', 1], ['b', 2]]);
+  // => { 'a': 1, 'b': 2 }
+
+  // Native
+  const fromPairs = function(arr) {
+    return arr.reduce(function(accumulator, value) {
+      accumulator[value[0]] = value[1];
+      return accumulator;
+    }, {})
+  }
+  
+  // Compact form
+  const fromPairs = (arr) => arr.reduce((acc, val) => (acc[val[0]] = val[1], acc), {})
+  
+  fromPairs([['a', 1], ['b', 2]]);
+  // => { 'a': 1, 'b': 2 }
+  ```
+
+#### Browser Support
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+  ✔  | 3.0 ✔ |  9 ✔  |  10.5 ✔ |  4.0 ✔ |
 
 **[⬆ back to top](#quick-links)**
 

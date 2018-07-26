@@ -6,7 +6,9 @@ const allRules = require('../../../lib/rules/rules');
 
 assert.equal(Object.keys(allRules).length, 46, 'Don\'t miss a rule 😄');
 
-const ruleTester = new RuleTester();
+const ruleTester = new RuleTester({
+  parserOptions: { ecmaVersion: 2018, sourceType: "module" }
+});
 
 // Only a couple of smoke tests because otherwise it would get very reduntant
 
@@ -18,6 +20,9 @@ ruleTester.run('_.concat', rules.concat, {
     code: '_.concat(array, 2, [3], [[4]])',
     errors: ['Consider using the native Array.prototype.concat()']
   }]
+}, {
+  code: "import concat from 'lodash/concat';",
+  errors: ["Import from 'lodash/concat' detected. Consider using the native Array.prototype.concat()"]
 });
 
 ruleTester.run('lodash.keys', rules.keys, {
@@ -28,6 +33,9 @@ ruleTester.run('lodash.keys', rules.keys, {
     code: 'lodash.keys({one: 1, two: 2, three: 3})',
     errors: ['Consider using the native Object.keys()']
   }]
+}, {
+  code: "import keys from 'lodash/keys';",
+  errors: ["Import from 'lodash/keys' detected. Consider using the native Object.keys()"]
 });
 
 ruleTester.run('underscore.forEach', rules['for-each'], {
@@ -38,6 +46,9 @@ ruleTester.run('underscore.forEach', rules['for-each'], {
     code: 'underscore.forEach()',
     errors: ['Consider using the native Array.prototype.forEach()']
   }]
+}, {
+  code: "import forEach from 'lodash/forEach';",
+  errors: ["Import from 'lodash/forEach' detected. Consider using the native Array.prototype.forEach()"]
 });
 
 ruleTester.run('underscore.isNaN', rules['is-nan'], {
@@ -48,6 +59,9 @@ ruleTester.run('underscore.isNaN', rules['is-nan'], {
     code: 'underscore.isNaN(NaN)',
     errors: ['Consider using the native Number.isNaN()']
   }]
+}, {
+  code: `import isNaN from "lodash/isNaN";`,
+  errors: ["Import from 'lodash/isNaN' detected. Consider using the native Number.isNaN()"]
 });
 
 ruleTester.run('_.first', rules['first'], {

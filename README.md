@@ -135,6 +135,7 @@ then Lodash/Underscore is the better option.*
 1. [_.keys](#_keys)
 1. [_.toPairs](#_topairs)
 1. [_.values](#_values)
+1. [_.get](#_get)
 
 **[String](#string)**
 
@@ -1358,6 +1359,29 @@ Retrieves all the given object's own enumerable property values.
 
 **[⬆ back to top](#quick-links)**
 
+### _.get
+
+Gets the value at path of object.
+
+  ```js
+  // Lodash
+  var object = { a: [{ b: { c: 3 } }] };
+  var result = _.get(object, 'a[0].b.c', 1);
+  console.log(result);
+  // output: 3
+
+  // Native
+  var object = { a: [{ b: { c: 3 } }] };
+  var { a: [{ b: { c = 1 } }] } = object;
+  console.log(result);
+  // output: 3
+  ```
+
+#### Browser Support
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+  49 ✔  | 41 ✔ |  Not supported  |  41.0 ✔ |  8 ✔ |
 
 ## String
 

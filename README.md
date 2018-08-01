@@ -128,6 +128,7 @@ then Lodash/Underscore is the better option.*
 **[Lang](#lang)**
 
 1. [_.isNaN](#_isnan)
+1. [_.isUndefined](#_isundefined)
 
 **[Object](#object)**
 
@@ -1242,6 +1243,29 @@ Voice from the Lodash author:
 
 **[⬆ back to top](#quick-links)**
 
+### _.isUndefined
+
+Checks if value is undefined.
+
+```js
+// Underscore/Lodash
+console.log(_.isUndefined(a))
+// output: true
+
+// Native
+console.log(typeof a === 'undefined');
+// output: true
+console.log(a === undefined);
+// output: true
+```
+
+#### Browser Support
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+  ✔  | 1 ✔ |  ✔  | ✔ | ✔ |
+
+**[⬆ back to top](#quick-links)**
 
 ## Object
 

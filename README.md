@@ -97,6 +97,7 @@ For more information, see [Configuring the ESLint Plugin](configuring.md)
 1. [_.without](#_without)
 1. [_.slice](#_slice)
 1. [_.isArray](#_isarray)
+1. [_.isArrayBuffer](#_isarraybuffer)
 
 **[Collection*](#collection*)**
 
@@ -662,6 +663,28 @@ Returns true if given value is an array.
  ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
  :-: | :-: | :-: | :-: | :-: |
   5 ✔  |  4 ✔  |  9 ✔  |  10.5 ✔  | 5 ✔  |
+
+**[⬆ back to top](#quick-links)**
+
+### _.isArrayBuffer
+
+Checks if value is classified as an ArrayBuffer object.
+
+  ```js
+  // Lodash
+  _.isArrayBuffer(new ArrayBuffer(2));
+  // output: true
+
+  // Native
+  console.log(new ArrayBuffer(2) instanceof ArrayBuffer);
+  // output: true
+  ```
+
+  #### Browser Support
+
+ ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+ :-: | :-: | :-: | :-: | :-: |
+  ✔  |  1 ✔  | ✔  | ✔  | ✔  |
 
 **[⬆ back to top](#quick-links)**
 

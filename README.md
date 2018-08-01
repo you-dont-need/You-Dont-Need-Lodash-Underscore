@@ -129,6 +129,8 @@ then Lodash/Underscore is the better option.*
 
 1. [_.isNaN](#_isnan)
 1. [_.isUndefined](#_isundefined)
+1. [_.gt](#_gt)
+1. [_.gte](#_gte)
 
 **[Object](#object)**
 
@@ -1264,6 +1266,50 @@ console.log(a === undefined);
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
   ✔  | 1 ✔ |  ✔  | ✔ | ✔ |
+
+**[⬆ back to top](#quick-links)**
+
+### _.gt
+
+Checks if value is greater than other.
+
+```js
+// Lodash
+console.log(_.gt(3, 1))
+// output: true
+
+// Native
+console.log(3 > 1);
+// output: true
+```
+
+#### Browser Support
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+  ✔  | ✔ |  ✔  | ✔ | ✔ |
+
+**[⬆ back to top](#quick-links)**
+
+### _.gte
+
+Checks if value is greater than or equal to other.
+
+```js
+// Lodash
+console.log(_.gte(3, 1))
+// output: true
+
+// Native
+console.log(3 >= 1);
+// output: true
+```
+
+#### Browser Support
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+  ✔  | ✔ |  ✔  | ✔ | ✔ |
 
 **[⬆ back to top](#quick-links)**
 

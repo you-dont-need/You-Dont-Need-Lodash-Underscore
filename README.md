@@ -323,6 +323,13 @@ Returns the first element of an array. Passing n will return the first n element
   // Native
   [1, 2, 3, 4, 5][0];
   // => 1
+  //or
+  new Array(1, 2, 3, 4, 5).shift();
+  // => 1
+
+  // Native (works even with potentially undefined/null, like _.first)
+  new Array(undefined).shift();
+  // => undefined
 
   [1, 2, 3, 4, 5].slice(0, 2);
   // => [1, 2]
@@ -520,6 +527,13 @@ Returns the last element of an array. Passing n will return the last n elements 
   //or
   numbers.slice(-1)[0];
   // => 5
+  //or
+  new Array(numbers).pop();
+  // => 5
+
+  // Native (works even with potentially undefined/null)
+  new Array(undefined).pop();
+  // => undefined
 
   numbers.slice(-2);
   // => [4, 5]

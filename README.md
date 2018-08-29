@@ -79,6 +79,7 @@ For more information, see [Configuring the ESLint Plugin](configuring.md)
 
 **[Array](#array)**
 
+1. [_.chunk](#_chunk)
 1. [_.compact](#_compact)
 1. [_.concat](#_concat)
 1. [_.fill](#_fill)
@@ -146,6 +147,44 @@ then Lodash/Underscore is the better option.*
 1. [_.replace](#_replace)
 
 ## Array
+
+### _.chunk
+
+Creates an array of elements split into groups the length of size.
+```js
+// Underscore/Lodash
+_.chunk(['a', 'b', 'c', 'd'], 2);
+// => [['a', 'b'], ['c', 'd']]
+ 
+_.chunk(['a', 'b', 'c', 'd'], 3);
+// => [['a', 'b', 'c'], ['d']]
+
+
+// Native
+
+const chunk = (input, size) => {
+  return input.reduce((arr, item, idx) => {
+    return idx % size === 0
+      ? [...arr, [item]]
+      : [...arr.slice(0, -1), [...arr.slice(-1)[0], item]];
+  }, []);
+};
+
+chunk(['a', 'b', 'c', 'd'], 2);
+// => [['a', 'b'], ['c', 'd']]
+ 
+chunk(['a', 'b', 'c', 'd'], 3);
+// => [['a', 'b', 'c'], ['d']]
+
+```
+
+#### Browser Support
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+   ✔  |  ✔ |  Not Supported |  ✔ |  ✔  |
+
+**[⬆ back to top](#quick-links)**
 
 ### _.compact
 

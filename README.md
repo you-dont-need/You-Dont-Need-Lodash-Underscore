@@ -364,11 +364,14 @@ Returns the first element of an array. Passing n will return the first n element
   [1, 2, 3, 4, 5][0];
   // => 1
   //or
-  new Array(1, 2, 3, 4, 5).shift();
+  [].concat(1, 2, 3, 4, 5).shift()
+  // => 1
+  //or
+  [].concat([1, 2, 3, 4, 5]).shift()
   // => 1
 
   // Native (works even with potentially undefined/null, like _.first)
-  new Array(undefined).shift();
+  [].concat(undefined).shift()
   // => undefined
 
   [1, 2, 3, 4, 5].slice(0, 2);
@@ -568,11 +571,11 @@ Returns the last element of an array. Passing n will return the last n elements 
   numbers.slice(-1)[0];
   // => 5
   //or
-  new Array(numbers).pop();
+  [].concat(numbers).pop()
   // => 5
 
   // Native (works even with potentially undefined/null)
-  new Array(undefined).pop();
+  [].concat(undefined).pop()
   // => undefined
 
   numbers.slice(-2);

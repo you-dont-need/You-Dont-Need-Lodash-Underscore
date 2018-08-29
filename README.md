@@ -324,11 +324,14 @@ Returns the first element of an array. Passing n will return the first n element
   [1, 2, 3, 4, 5][0];
   // => 1
   //or
-  new Array(1, 2, 3, 4, 5).shift();
+  [].concat(1, 2, 3, 4, 5).shift()
+  // => 1
+  //or
+  [].concat([1, 2, 3, 4, 5]).shift()
   // => 1
 
   // Native (works even with potentially undefined/null, like _.first)
-  new Array(undefined).shift();
+  [].concat(undefined).shift()
   // => undefined
 
   [1, 2, 3, 4, 5].slice(0, 2);
@@ -408,10 +411,10 @@ Returns an object composed from key-value pairs.
       return accumulator;
     }, {})
   }
-  
+
   // Compact form
   const fromPairs = (arr) => arr.reduce((acc, val) => (acc[val[0]] = val[1], acc), {})
-  
+
   fromPairs([['a', 1], ['b', 2]]);
   // => { 'a': 1, 'b': 2 }
   ```
@@ -528,11 +531,11 @@ Returns the last element of an array. Passing n will return the last n elements 
   numbers.slice(-1)[0];
   // => 5
   //or
-  new Array(numbers).pop();
+  [].concat(numbers).pop()
   // => 5
 
   // Native (works even with potentially undefined/null)
-  new Array(undefined).pop();
+  [].concat(undefined).pop()
   // => undefined
 
   numbers.slice(-2);
@@ -1158,7 +1161,7 @@ Creates a version of the function that will only be run after first being called
    ✔  |  ✔ |  ✔ |  ✔ |  ✔  |
 
  **[⬆ back to top](#quick-links)**
- 
+
 ### _.bind
 Create a new function that calls _func_ with _thisArg_ and _args_.
 
@@ -1169,11 +1172,11 @@ Create a new function that calls _func_ with _thisArg_ and _args_.
       return this.x + offset;
     }
   }
-  
+
   var objB = {
     x: 67
   };
-  
+
   // Underscore/Lodash
   var boundOffsetX = _.bind(objA.offsetX, objB, 0);
 
@@ -1188,7 +1191,7 @@ Create a new function that calls _func_ with _thisArg_ and _args_.
    ✔  |  ✔ |  9 ✔ |  ✔ |  ✔  |
 
  **[⬆ back to top](#quick-links)**
- 
+
 ### _.partial
 Create a new function that calls _func_ with _args_.
 

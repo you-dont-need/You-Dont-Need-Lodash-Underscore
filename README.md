@@ -1149,7 +1149,7 @@ Sorts an array of object based on an object key provided by a parameter (note th
 
   // Native
   let sortBy = (key) => {
-    return (a[key] > b[key]) ? 1 : ((b[key] > a[key]) ? -1 : 0);
+    return (a, b) => (a[key] > b[key]) ? 1 : ((b[key] > a[key]) ? -1 : 0);
   };
 
   fruits.sort(sortBy("name"));

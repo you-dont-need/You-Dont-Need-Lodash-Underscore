@@ -117,7 +117,8 @@ then Lodash/Underscore is the better option.*
 1. [_.reduce](#_reduce)
 1. [_.reduceRight](#_reduceright)
 1. [_.size](#_size)
-1. [_.some](#_some)
+1. [_.some](#_some))
+1. [_.sortBy](#_sortBy)
 1. [_.uniq](#_uniq)
 
 **[Function](#function)**
@@ -1125,6 +1126,35 @@ Tests whether any of the elements in the array pass the test implemented by the 
   38 ✔  | 13 ✔ |  Not Supported  |  25 ✔  | 9 ✔  |
 
 **[⬆ back to top](#quick-links)**
+
+### _.sortBy
+
+Sorts an array of object based on an object key provided by a parameter (note this is more limited than Underscore/Lodash).
+
+	```js
+	const fruits = [
+		{name:"banana", amount: 2},
+		{name:"apple", amount: 4},
+		{name:"pineapple", amount: 2}
+		{name:"mango", amount: 1},
+	];
+
+	// Underscore
+	_.sortBy(fruits, 'name');
+	// => [{name:"apple", amount: 4}, {name:"banana", amount: 2}, {name:"mango", amount: 1}, {name:"pineapple", amount: 2}]
+
+	// Lodash
+	_.orderBy(fruits, ['name'],['asc']);
+	// => [{name:"apple", amount: 4}, {name:"banana", amount: 2}, {name:"mango", amount: 1}, {name:"pineapple", amount: 2}]
+
+	// Native
+	let sortBy = (key) => {
+		return (a[key] > b[key]) ? 1 : ((b[key] > a[key]) ? -1 : 0);
+	};
+
+	fruits.sort(sortBy("name"));
+	// => [{name:"apple", amount: 4}, {name:"banana", amount: 2}, {name:"mango", amount: 1}, {name:"pineapple", amount: 2}]
+	```
 
 ### _.uniq
 

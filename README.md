@@ -195,7 +195,7 @@ Creates an array with all falsy values removed.
   _.compact([0, 1, false, 2, '', 3]);
 
   // Native
-  [0, 1, false, 2, '', 3].filter(v => v)
+  [0, 1, false, 2, '', 3].filter(Boolean)
   ```
 
 #### Browser Support

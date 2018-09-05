@@ -136,6 +136,7 @@ then Lodash/Underscore is the better option.*
 1. [_.keys](#_keys)
 1. [_.toPairs](#_topairs)
 1. [_.values](#_values)
+1. [_.omit](#_omit)
 
 **[String](#string)**
 
@@ -155,7 +156,7 @@ Creates an array of elements split into groups the length of size.
 // Underscore/Lodash
 _.chunk(['a', 'b', 'c', 'd'], 2);
 // => [['a', 'b'], ['c', 'd']]
- 
+
 _.chunk(['a', 'b', 'c', 'd'], 3);
 // => [['a', 'b', 'c'], ['d']]
 
@@ -172,7 +173,7 @@ const chunk = (input, size) => {
 
 chunk(['a', 'b', 'c', 'd'], 2);
 // => [['a', 'b'], ['c', 'd']]
- 
+
 chunk(['a', 'b', 'c', 'd'], 3);
 // => [['a', 'b', 'c'], ['d']]
 
@@ -440,10 +441,10 @@ Returns an object composed from key-value pairs.
       return accumulator;
     }, {})
   }
-  
+
   // Compact form
   const fromPairs = (arr) => arr.reduce((acc, val) => (acc[val[0]] = val[1], acc), {})
-  
+
   fromPairs([['a', 1], ['b', 2]]);
   // => { 'a': 1, 'b': 2 }
   ```
@@ -1183,7 +1184,7 @@ Creates a version of the function that will only be run after first being called
    ✔  |  ✔ |  ✔ |  ✔ |  ✔  |
 
  **[⬆ back to top](#quick-links)**
- 
+
 ### _.bind
 Create a new function that calls _func_ with _thisArg_ and _args_.
 
@@ -1194,11 +1195,11 @@ Create a new function that calls _func_ with _thisArg_ and _args_.
       return this.x + offset;
     }
   }
-  
+
   var objB = {
     x: 67
   };
-  
+
   // Underscore/Lodash
   var boundOffsetX = _.bind(objA.offsetX, objB, 0);
 
@@ -1213,7 +1214,7 @@ Create a new function that calls _func_ with _thisArg_ and _args_.
    ✔  |  ✔ |  9 ✔ |  ✔ |  ✔  |
 
  **[⬆ back to top](#quick-links)**
- 
+
 ### _.partial
 Create a new function that calls _func_ with _args_.
 
@@ -1394,6 +1395,32 @@ Retrieves all the given object's own enumerable property values.
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
   54 ✔  | 47 ✔ |  Not supported  |  41.0 ✔ |  10.1 ✔ |
+
+**[⬆ back to top](#quick-links)**
+
+### _.omit
+
+Returns a copy of the object, filtered to omit the keys specified.
+
+  ```js
+  var object = { 'a': 1, 'b': '2', 'c': 3 };
+
+  // Underscore/Lodash
+  var result = _.omit(object, ['a', 'c']);
+  console.log(result)
+  // output: { 'b': '2' }
+
+  // Native
+  var { a, c, ...result2 } = object;
+  console.log(result2)
+  // output: { 'b': '2' }
+  ```
+
+#### Browser Support
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+  60 ✔  | 55 ✔ |  Not supported  |  37 ✔ | Not Supported |
 
 **[⬆ back to top](#quick-links)**
 

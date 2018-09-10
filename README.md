@@ -116,9 +116,10 @@ then Lodash/Underscore is the better option.*
 1. [_.range](#_range)
 1. [_.reduce](#_reduce)
 1. [_.reduceRight](#_reduceright)
+1. [_.orderBy](#_sortby)
 1. [_.size](#_size)
-1. [_.some](#_some))
-1. [_.sortBy](#_sortBy)
+1. [_.some](#_some)
+1. [_.sortBy](#_sortby)
 1. [_.uniq](#_uniq)
 
 **[Function](#function)**

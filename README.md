@@ -116,10 +116,10 @@ then Lodash/Underscore is the better option.*
 1. [_.range](#_range)
 1. [_.reduce](#_reduce)
 1. [_.reduceRight](#_reduceright)
-1. [_.orderBy](#_sortby)
+1. [_.orderBy](#_sortby-and-_orderby)
 1. [_.size](#_size)
 1. [_.some](#_some)
-1. [_.sortBy](#_sortby)
+1. [_.sortBy](#_sortby-and-_orderby)
 1. [_.uniq](#_uniq)
 
 **[Function](#function)**
@@ -1128,7 +1128,7 @@ Tests whether any of the elements in the array pass the test implemented by the 
 
 **[⬆ back to top](#quick-links)**
 
-### _.sortBy & _.orderBy
+### _.sortBy and _.orderBy
 
 Sorts an array of object based on an object key provided by a parameter (note this is more limited than Underscore/Lodash).
 

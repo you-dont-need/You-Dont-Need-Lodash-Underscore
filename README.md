@@ -1512,6 +1512,7 @@ Retrieves all the given object's own enumerable property values.
 ### _.get
 
 Gets the value at path of object.
+*Note: If provided path does not exists inside the object js will generate error.*
 
   ```js
   // Lodash
@@ -1526,7 +1527,7 @@ Gets the value at path of object.
   console.log(result);
   // output: 3
   ```
- 
+
 #### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]

@@ -204,5 +204,10 @@
     "replace": {
         "compatible": true,
         "alternative": "String.prototype.replace()"
+    },
+    "omit": {
+        "compatible": true,
+        "alternative": "{a, b, c, ...notOmittedValues}",
+        "ES6": true
     }
 }

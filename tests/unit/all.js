@@ -43,4 +43,25 @@ describe('code snippet example', () => {
       )
     })
   })
+  describe('chunk', () => {
+    const chunk = (input, size) => {
+      return input.reduce((arr, item, idx) => {
+        return idx % size === 0
+          ? [...arr, [item]]
+          : [...arr.slice(0, -1), [...arr.slice(-1)[0], item]];
+      }, []);
+    };
+    it("_.chunk(['a', 'b', 'c', 'd'], 2);", () => {
+      assert.deepEqual(
+        _.chunk(['a', 'b', 'c', 'd'], 2),
+        chunk(['a', 'b', 'c', 'd'], 2)
+      )
+    })
+    it("_.chunk(['a', 'b', 'c', 'd'], 3);", () => {
+      assert.deepEqual(
+        _.chunk(['a', 'b', 'c', 'd'], 3),
+        chunk(['a', 'b', 'c', 'd'], 3)
+      )
+    })
+  })
 })

@@ -79,6 +79,7 @@ For more information, see [Configuring the ESLint Plugin](configuring.md)
 
 **[Array](#array)**
 
+1. [_.chunk](#_chunk)
 1. [_.compact](#_compact)
 1. [_.concat](#_concat)
 1. [_.fill](#_fill)
@@ -140,6 +141,7 @@ then Lodash/Underscore is the better option.*
 1. [_.toPairs](#_topairs)
 1. [_.values](#_values)
 1. [_.get](#_get)
+1. [_.omit](#_omit)
 
 **[String](#string)**
 
@@ -152,6 +154,44 @@ then Lodash/Underscore is the better option.*
 
 ## Array
 
+### _.chunk
+
+Creates an array of elements split into groups the length of size.
+```js
+// Underscore/Lodash
+_.chunk(['a', 'b', 'c', 'd'], 2);
+// => [['a', 'b'], ['c', 'd']]
+
+_.chunk(['a', 'b', 'c', 'd'], 3);
+// => [['a', 'b', 'c'], ['d']]
+
+
+// Native
+
+const chunk = (input, size) => {
+  return input.reduce((arr, item, idx) => {
+    return idx % size === 0
+      ? [...arr, [item]]
+      : [...arr.slice(0, -1), [...arr.slice(-1)[0], item]];
+  }, []);
+};
+
+chunk(['a', 'b', 'c', 'd'], 2);
+// => [['a', 'b'], ['c', 'd']]
+
+chunk(['a', 'b', 'c', 'd'], 3);
+// => [['a', 'b', 'c'], ['d']]
+
+```
+
+#### Browser Support
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+   ✔  |  ✔ |  Not Supported |  ✔ |  ✔  |
+
+**[⬆ back to top](#quick-links)**
+
 ### _.compact
 
 Creates an array with all falsy values removed.
@@ -161,7 +201,7 @@ Creates an array with all falsy values removed.
   _.compact([0, 1, false, 2, '', 3]);
 
   // Native
-  [0, 1, false, 2, '', 3].filter(v => v)
+  [0, 1, false, 2, '', 3].filter(Boolean)
   ```
 
 #### Browser Support
@@ -328,6 +368,16 @@ Returns the first element of an array. Passing n will return the first n element
   // Native
   [1, 2, 3, 4, 5][0];
   // => 1
+  //or
+  [].concat(1, 2, 3, 4, 5).shift()
+  // => 1
+  //or
+  [].concat([1, 2, 3, 4, 5]).shift()
+  // => 1
+
+  // Native (works even with potentially undefined/null, like _.first)
+  [].concat(undefined).shift()
+  // => undefined
 
   [1, 2, 3, 4, 5].slice(0, 2);
   // => [1, 2]
@@ -406,10 +456,10 @@ Returns an object composed from key-value pairs.
       return accumulator;
     }, {})
   }
-  
+
   // Compact form
   const fromPairs = (arr) => arr.reduce((acc, val) => (acc[val[0]] = val[1], acc), {})
-  
+
   fromPairs([['a', 1], ['b', 2]]);
   // => { 'a': 1, 'b': 2 }
   ```
@@ -525,6 +575,13 @@ Returns the last element of an array. Passing n will return the last n elements 
   //or
   numbers.slice(-1)[0];
   // => 5
+  //or
+  [].concat(numbers).pop()
+  // => 5
+
+  // Native (works even with potentially undefined/null)
+  [].concat(undefined).pop()
+  // => undefined
 
   numbers.slice(-2);
   // => [4, 5]
@@ -1171,7 +1228,7 @@ Creates a version of the function that will only be run after first being called
    ✔  |  ✔ |  ✔ |  ✔ |  ✔  |
 
  **[⬆ back to top](#quick-links)**
- 
+
 ### _.bind
 Create a new function that calls _func_ with _thisArg_ and _args_.
 
@@ -1182,11 +1239,11 @@ Create a new function that calls _func_ with _thisArg_ and _args_.
       return this.x + offset;
     }
   }
-  
+
   var objB = {
     x: 67
   };
-  
+
   // Underscore/Lodash
   var boundOffsetX = _.bind(objA.offsetX, objB, 0);
 
@@ -1201,7 +1258,7 @@ Create a new function that calls _func_ with _thisArg_ and _args_.
    ✔  |  ✔ |  9 ✔ |  ✔ |  ✔  |
 
  **[⬆ back to top](#quick-links)**
- 
+
 ### _.partial
 Create a new function that calls _func_ with _args_.
 
@@ -1469,12 +1526,38 @@ Gets the value at path of object.
   console.log(result);
   // output: 3
   ```
-
+ 
 #### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
   49 ✔  | 41 ✔ |  Not supported  |  41.0 ✔ |  8 ✔ |
+  
+### _.omit
+
+Returns a copy of the object, filtered to omit the keys specified.
+
+  ```js
+  var object = { 'a': 1, 'b': '2', 'c': 3 };
+
+  // Underscore/Lodash
+  var result = _.omit(object, ['a', 'c']);
+  console.log(result)
+  // output: { 'b': '2' }
+
+  // Native
+  var { a, c, ...result2 } = object;
+  console.log(result2)
+  // output: { 'b': '2' }
+  ```
+
+#### Browser Support
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+  60 ✔  | 55 ✔ |  Not supported  |  37 ✔ | Not Supported |
+
+**[⬆ back to top](#quick-links)**
 
 ## String
 

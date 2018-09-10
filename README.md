@@ -1128,7 +1128,7 @@ Tests whether any of the elements in the array pass the test implemented by the 
 
 **[⬆ back to top](#quick-links)**
 
-### _.sortBy
+### _.sortBy & _.orderBy
 
 Sorts an array of object based on an object key provided by a parameter (note this is more limited than Underscore/Lodash).
 
@@ -1136,8 +1136,8 @@ Sorts an array of object based on an object key provided by a parameter (note th
   const fruits = [
     {name:"banana", amount: 2},
     {name:"apple", amount: 4},
-    {name:"pineapple", amount: 2}
-    {name:"mango", amount: 1},
+    {name:"pineapple", amount: 2},
+    {name:"mango", amount: 1}
   ];
 
   // Underscore
@@ -1149,7 +1149,7 @@ Sorts an array of object based on an object key provided by a parameter (note th
   // => [{name:"apple", amount: 4}, {name:"banana", amount: 2}, {name:"mango", amount: 1}, {name:"pineapple", amount: 2}]
 
   // Native
-  let sortBy = (key) => {
+  const sortBy = (key) => {
     return (a, b) => (a[key] > b[key]) ? 1 : ((b[key] > a[key]) ? -1 : 0);
   };
 

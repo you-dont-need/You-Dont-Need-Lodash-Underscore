@@ -98,6 +98,7 @@ For more information, see [Configuring the ESLint Plugin](configuring.md)
 1. [_.without](#_without)
 1. [_.slice](#_slice)
 1. [_.isArray](#_isarray)
+1. [_.isArrayBuffer](#_isarraybuffer)
 
 **[Collection*](#collection*)**
 
@@ -131,6 +132,9 @@ then Lodash/Underscore is the better option.*
 **[Lang](#lang)**
 
 1. [_.isNaN](#_isnan)
+1. [_.isUndefined](#_isundefined)
+1. [_.gt](#_gt)
+1. [_.gte](#_gte)
 
 **[Object](#object)**
 
@@ -138,6 +142,7 @@ then Lodash/Underscore is the better option.*
 1. [_.keys](#_keys)
 1. [_.toPairs](#_topairs)
 1. [_.values](#_values)
+1. [_.get](#_get)
 1. [_.omit](#_omit)
 
 **[String](#string)**
@@ -717,6 +722,28 @@ Returns true if given value is an array.
  ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
  :-: | :-: | :-: | :-: | :-: |
   5 ✔  |  4 ✔  |  9 ✔  |  10.5 ✔  | 5 ✔  |
+
+**[⬆ back to top](#quick-links)**
+
+### _.isArrayBuffer
+
+Checks if value is classified as an ArrayBuffer object.
+
+  ```js
+  // Lodash
+  _.isArrayBuffer(new ArrayBuffer(2));
+  // output: true
+
+  // Native
+  console.log(new ArrayBuffer(2) instanceof ArrayBuffer);
+  // output: true
+  ```
+
+  #### Browser Support
+
+ ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+ :-: | :-: | :-: | :-: | :-: |
+  ✔  |  1 ✔  | ✔  | ✔  | ✔  |
 
 **[⬆ back to top](#quick-links)**
 
@@ -1329,6 +1356,73 @@ Voice from the Lodash author:
 
 **[⬆ back to top](#quick-links)**
 
+### _.isUndefined
+
+Checks if value is undefined.
+
+```js
+// Underscore/Lodash
+console.log(_.isUndefined(a))
+// output: true
+
+// Native
+console.log(typeof a === 'undefined');
+// output: true
+console.log(a === undefined);
+// output: true
+```
+
+#### Browser Support
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+  ✔  | 1 ✔ |  ✔  | ✔ | ✔ |
+
+**[⬆ back to top](#quick-links)**
+
+### _.gt
+
+Checks if value is greater than other.
+
+```js
+// Lodash
+console.log(_.gt(3, 1))
+// output: true
+
+// Native
+console.log(3 > 1);
+// output: true
+```
+
+#### Browser Support
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+  ✔  | ✔ |  ✔  | ✔ | ✔ |
+
+**[⬆ back to top](#quick-links)**
+
+### _.gte
+
+Checks if value is greater than or equal to other.
+
+```js
+// Lodash
+console.log(_.gte(3, 1))
+// output: true
+
+// Native
+console.log(3 >= 1);
+// output: true
+```
+
+#### Browser Support
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+  ✔  | ✔ |  ✔  | ✔ | ✔ |
+
+**[⬆ back to top](#quick-links)**
 
 ## Object
 
@@ -1446,6 +1540,31 @@ Retrieves all the given object's own enumerable property values.
 
 **[⬆ back to top](#quick-links)**
 
+### _.get
+
+Gets the value at path of object.
+*Note: If provided path does not exists inside the object js will generate error.*
+
+  ```js
+  // Lodash
+  var object = { a: [{ b: { c: 3 } }] };
+  var result = _.get(object, 'a[0].b.c', 1);
+  console.log(result);
+  // output: 3
+
+  // Native
+  var object = { a: [{ b: { c: 3 } }] };
+  var { a: [{ b: { c = 1 } }] } = object;
+  console.log(result);
+  // output: 3
+  ```
+
+#### Browser Support
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+  49 ✔  | 41 ✔ |  Not supported  |  41.0 ✔ |  8 ✔ |
+  
 ### _.omit
 
 Returns a copy of the object, filtered to omit the keys specified.
@@ -1471,7 +1590,6 @@ Returns a copy of the object, filtered to omit the keys specified.
   60 ✔  | 55 ✔ |  Not supported  |  37 ✔ | Not Supported |
 
 **[⬆ back to top](#quick-links)**
-
 
 ## String
 

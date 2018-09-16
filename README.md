@@ -1554,8 +1554,8 @@ Gets the value at path of object.
 
   // Native
   var object = { a: [{ b: { c: 3 } }] };
-  var { a: [{ b: { c = 1 } }] } = object;
-  console.log(result);
+  var { a: [{ b: { c: result2 = 1 } }] } = object;
+  console.log(result2);
   // output: 3
   ```
 

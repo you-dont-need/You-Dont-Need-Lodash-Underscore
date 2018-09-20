@@ -144,6 +144,7 @@ then Lodash/Underscore is the better option.*
 1. [_.values](#_values)
 1. [_.get](#_get)
 1. [_.omit](#_omit)
+1. [_.pick](# pick)
 1. [_.pickBy](# pickBy)
 
 **[String](#string)**
@@ -1592,9 +1593,44 @@ Returns a copy of the object, filtered to omit the keys specified.
 
 **[⬆ back to top](#quick-links)**
 
+### _.pick
+
+Creates an object composed of the object properties predicate returns truthy for.
+
+  ```js
+ var object = { 'a': 1, 'b': '2', 'c': 3 };
+
+  // Underscore/Lodash
+  var result = _.pick(object, ['a', 'c']);
+  console.log(result)
+  // output: {a: 1, c: 3}
+
+  // Native
+  function pick(object, paths) {
+      const obj = {};
+  		for (const path of paths) {
+      	if (object[path]) {
+        	obj[path] = object[path]
+        }
+      }
+      return obj;
+  } 
+  var result = pick(object, ['a', 'c']);
+  console.log(result)
+  // output: {a: 1, c: 3}
+  ```
+
+#### Browser Support
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+  38 ✔  | 13 ✔ |  12 ✔  |  25 ✔ | 7.1 ✔ |
+
+**[⬆ back to top](#quick-links)**
+
 ### _.pickBy
 
-Returns a copy of the object, filtered to omit the keys specified.
+Creates an object composed of the object properties predicate returns truthy for.
 
   ```js
   var object = { 'a': 1, 'b': null, 'c': 3, 'd': false, 'e': undefined };
@@ -1614,6 +1650,8 @@ Returns a copy of the object, filtered to omit the keys specified.
       }
       return obj;
   } 
+  var result = pickBy(object);
+  console.log(result)
   // output: {a: 1, c: 3}
   ```
 
@@ -1621,7 +1659,7 @@ Returns a copy of the object, filtered to omit the keys specified.
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
-  60 ✔  | 55 ✔ |  Not supported  |  37 ✔ | Not Supported |
+  ✔  | ✔ |  6 ✔  | ✔ | ✔ |
 
 **[⬆ back to top](#quick-links)**
 

@@ -144,6 +144,7 @@ then Lodash/Underscore is the better option.*
 1. [_.values](#_values)
 1. [_.get](#_get)
 1. [_.omit](#_omit)
+1. [_.pickBy](# pickBy)
 
 **[String](#string)**
 
@@ -1581,6 +1582,39 @@ Returns a copy of the object, filtered to omit the keys specified.
   var { a, c, ...result2 } = object;
   console.log(result2)
   // output: { 'b': '2' }
+  ```
+
+#### Browser Support
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+  60 ✔  | 55 ✔ |  Not supported  |  37 ✔ | Not Supported |
+
+**[⬆ back to top](#quick-links)**
+
+### _.pickBy
+
+Returns a copy of the object, filtered to omit the keys specified.
+
+  ```js
+  var object = { 'a': 1, 'b': null, 'c': 3, 'd': false, 'e': undefined };
+
+  // Underscore/Lodash
+  var result = _.pickBy(object);
+  console.log(result)
+  // output: {a: 1, c: 3}
+
+  // Native
+  function pickBy(object) {
+      const obj = {};
+      for (const key in object) {
+          if (object[key] !== null && object[key] !== false && object[key] !== undefined) {
+              obj[key] = object[key];
+          }
+      }
+      return obj;
+  } 
+  // output: {a: 1, c: 3}
   ```
 
 #### Browser Support

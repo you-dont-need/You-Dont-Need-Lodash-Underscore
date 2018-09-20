@@ -21,6 +21,23 @@ describe('code snippet example', () => {
     assert.deepEqual(lodashResult, nativeResult)
   })
 
+  it('pick', () => {
+    var object = { 'a': 1, 'b': '2', 'c': 3 };
+    function pick(object, paths) {
+        const obj = {};
+            for (const path of paths) {
+            if (object[path]) {
+              obj[path] = object[path]
+          }
+        }
+        return obj;
+    } 
+    assert.deepEqual(
+        _.pick(object, ['a', 'c']),
+        pick(object, ['a', 'c'])
+    )
+  })
+
   it('pickBy', () => {
     var object = { 'a': 1, 'b': null, 'c': 3, 'd': false, 'e': undefined };
     function pickBy(object) {

@@ -21,6 +21,23 @@ describe('code snippet example', () => {
     assert.deepEqual(lodashResult, nativeResult)
   })
 
+  it('pickBy', () => {
+    var object = { 'a': 1, 'b': null, 'c': 3, 'd': false, 'e': undefined };
+    function pickBy(object) {
+        const obj = {};
+        for (const key in object) {
+            if (object[key] !== null && object[key] !== false && object[key] !== undefined) {
+                obj[key] = object[key];
+            }
+        }
+        return obj;
+    }
+    assert.deepEqual(
+        _.pickBy(object),
+        pickBy(object)
+    )
+  })
+
   describe('fill', () => {
     it("_.fill(array, 'a')", () => {
       var array = [1, 2, 3]

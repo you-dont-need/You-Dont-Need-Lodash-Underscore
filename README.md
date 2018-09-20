@@ -145,7 +145,7 @@ then Lodash/Underscore is the better option.*
 1. [_.get](#_get)
 1. [_.omit](#_omit)
 1. [_.pick](#_pick)
-1. [_.pickBy](#_pickBy)
+1. [_.pickBy](#_pickby)
 
 **[String](#string)**
 

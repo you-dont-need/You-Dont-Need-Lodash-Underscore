@@ -96,6 +96,7 @@ For more information, see [Configuring the ESLint Plugin](configuring.md)
 1. [_.lastIndexOf](#_lastindexof)
 1. [_.reverse](#_reverse)
 1. [_.without](#_without)
+1. [_.intersection](#_intersection)
 1. [_.slice](#_slice)
 1. [_.isArray](#_isarray)
 1. [_.isArrayBuffer](#_isarraybuffer)
@@ -671,6 +672,37 @@ Returns an array where matching items are filtered.
     return value !== 2;
   }));
   // output: [1, 3]
+  ```
+
+#### Browser Support
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+  1.0 ✔  |  1.5 ✔ |  9 ✔ |  ✔ |  ✔  |
+
+**[⬆ back to top](#quick-links)**
+
+### _.intersection
+Returns an array that is the intersection of all the arrays. Each value in the result is present in each of the arrays.
+
+  ```js
+  // Underscore/Lodash
+  console.log(_.intersection([1, 2, 3], [101, 2, 1, 10], [2, 1]))
+  // output: [1, 2]
+
+  // Native
+  var arrays = [[1, 2, 3], [101, 2, 1, 10], [2, 1]];
+  console.log(array.reduce(function(a, b) {
+    return a.filter(function(value) {
+      return b.includes(value);
+    });
+  })));
+  // output: [1, 2]
+
+  // ES6
+  let arrays = [[1, 2, 3], [101, 2, 1, 10], [2, 1]];
+  console.log(arrays.reduce((a, b) => a.filter(c => b.includes(c))));
+  // output: [1, 2]
   ```
 
 #### Browser Support

@@ -97,6 +97,7 @@ For more information, see [Configuring the ESLint Plugin](configuring.md)
 1. [_.reverse](#_reverse)
 1. [_.without](#_without)
 1. [_.intersection](#_intersection)
+1. [_.difference](#_difference)
 1. [_.slice](#_slice)
 1. [_.isArray](#_isarray)
 1. [_.isArrayBuffer](#_isarraybuffer)
@@ -703,6 +704,37 @@ Returns an array that is the intersection of all the arrays. Each value in the r
   let arrays = [[1, 2, 3], [101, 2, 1, 10], [2, 1]];
   console.log(arrays.reduce((a, b) => a.filter(c => b.includes(c))));
   // output: [1, 2]
+  ```
+
+#### Browser Support
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+  1.0 ✔  |  1.5 ✔ |  9 ✔ |  ✔ |  ✔  |
+
+**[⬆ back to top](#quick-links)**
+
+### _.difference
+Similar to [without](#_without), but returns the values from array that are not present in the other arrays.
+
+  ```js
+  // Underscore/Lodash
+  console.log(_.difference([1, 2, 3, 4, 5], [5, 2, 10]))
+  // output: [1, 3, 4]
+
+  // Native
+  var arrays = [[1, 2, 3, 4, 5], [5, 2, 10]];
+  console.log(array.reduce(function(a, b) {
+    return a.filter(function(value) {
+      return !b.includes(value);
+    });
+  })));
+  // output: [1, 3, 4]
+
+  // ES6
+  let arrays = [[1, 2, 3, 4, 5], [5, 2, 10]];
+  console.log(arrays.reduce((a, b) => a.filter(c => !b.includes(c))));
+  // output: [1, 3, 4]
   ```
 
 #### Browser Support

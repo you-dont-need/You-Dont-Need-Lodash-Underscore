@@ -24,34 +24,34 @@ describe('code snippet example', () => {
   it('pick', () => {
     var object = { 'a': 1, 'b': '2', 'c': 3 };
     function pick(object, paths) {
-        const obj = {};
-            for (const path of paths) {
-            if (object[path]) {
-              obj[path] = object[path]
-          }
+      const obj = {};
+      for (const path of paths) {
+        if (object[path]) {
+          obj[path] = object[path]
         }
-        return obj;
-    } 
+      }
+      return obj;
+    }
     assert.deepEqual(
-        _.pick(object, ['a', 'c']),
-        pick(object, ['a', 'c'])
+      _.pick(object, ['a', 'c']),
+      pick(object, ['a', 'c'])
     )
   })
 
   it('pickBy', () => {
     var object = { 'a': 1, 'b': null, 'c': 3, 'd': false, 'e': undefined };
     function pickBy(object) {
-        const obj = {};
-        for (const key in object) {
-            if (object[key] !== null && object[key] !== false && object[key] !== undefined) {
-                obj[key] = object[key];
-            }
+      const obj = {};
+      for (const key in object) {
+        if (object[key] !== null && object[key] !== false && object[key] !== undefined) {
+          obj[key] = object[key];
         }
-        return obj;
+      }
+      return obj;
     }
     assert.deepEqual(
-        _.pickBy(object),
-        pickBy(object)
+      _.pickBy(object),
+      pickBy(object)
     )
   })
 
@@ -95,6 +95,23 @@ describe('code snippet example', () => {
       assert.deepEqual(
         _.chunk(['a', 'b', 'c', 'd'], 3),
         chunk(['a', 'b', 'c', 'd'], 3)
+      )
+    })
+  })
+  describe('times', () => {
+    const times = (n, fn = (_, x) => x) => {
+      return Array.from(Array(n), fn)
+    };
+    it("_.times(10);", () => {
+      assert.deepEqual(
+        _.times(10),
+        times(10)
+      )
+    })
+    it("_.times(10, x => x + 1);", () => {
+      assert.deepEqual(
+        _.times(10, x => x + 1),
+        times(10, (_, x) => x + 1)
       )
     })
   })

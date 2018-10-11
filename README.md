@@ -158,6 +158,10 @@ then Lodash/Underscore is the better option.*
 1. [_.trim](#_trim)
 1. [_.replace](#_replace)
 
+**[Util](#string)**
+
+1. [_.times](#_times)
+
 ## Array
 
 ### _.chunk
@@ -1900,6 +1904,31 @@ Removes all duplicates entries from an array.
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
   38 ✔  |  13 ✔ |  11 ✔  |  25 ✔ |  7.1 ✔  |
+
+**[⬆ back to top](#quick-links)**
+
+## Util
+
+### _.times
+Invokes the iteratee n times, returning an array of the results of each invocation.
+
+  ```js
+  // Lodash
+  var result = _.times(10)
+  console.log(result)
+  // output: '[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]'
+
+  // Native
+  var result = Array.from(10, (_,x) => x)
+  console.log(result)
+  // output: '[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]'
+  ```
+
+#### Browser Support
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+  45 ✔  | 32 ✔ |  Not supported  |  ✔ | 9 ✔  |
 
 **[⬆ back to top](#quick-links)**
 

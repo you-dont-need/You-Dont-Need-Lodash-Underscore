@@ -134,6 +134,8 @@ then Lodash/Underscore is the better option.*
 **[Lang](#lang)**
 
 1. [_.isNaN](#_isnan)
+1. [_.isNil](#_isnil)
+1. [_.isNull](#_isnull)
 1. [_.isUndefined](#_isundefined)
 1. [_.gt](#_gt)
 1. [_.gte](#_gte)

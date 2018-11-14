@@ -1975,8 +1975,13 @@ Invokes the iteratee n times, returning an array of the results of each invocati
   console.log(result)
   // output: '[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]'
 
-  // Native
+  // Native(first variation)
   var result = Array.from({length: 10}, (_,x) => x)
+  console.log(result)
+  // output: '[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]'
+  
+  // Native(second variation)
+  var result = [...Array(10).keys()]
   console.log(result)
   // output: '[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]'
   ```

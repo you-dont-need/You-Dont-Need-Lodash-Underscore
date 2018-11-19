@@ -1733,7 +1733,7 @@ Creates an object composed of the object properties predicate returns truthy for
   // Native
   function pick(object, paths) {
       const obj = {};
-  		for (const path of paths) {
+      for (const path of paths) {
       	if (object[path]) {
         	obj[path] = object[path]
         }

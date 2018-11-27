@@ -1979,6 +1979,11 @@ Invokes the iteratee n times, returning an array of the results of each invocati
   var result = Array.from({length: 10}, (_,x) => x)
   console.log(result)
   // output: '[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]'
+  
+  // Native
+  var result = [...Array(10).keys()]
+  console.log(result)
+  // output: '[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]'
   ```
 
 #### Browser Support

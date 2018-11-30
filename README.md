@@ -1289,10 +1289,10 @@ Produces a duplicate-free version of the array, using === to test object equalit
   // output: [1, 2, 4, 3]
 
   // Native
-  var array = [1, 2, 1, 4, 1, 3];
+  var array = [1, 1, 2, 3, 4, 4, 4];
   var result = array.filter((v, i, a) => a.indexOf(v) === i);
   console.log(result)
-  // output: [1, 2, 4, 3]
+  // output: [1, 2, 3, 4]
   ```
 
 #### Browser Support

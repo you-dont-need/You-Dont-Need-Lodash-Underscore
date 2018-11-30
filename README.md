@@ -4,11 +4,9 @@ Lodash and Underscore are great modern JavaScript utility libraries, and they ar
 
 You are welcome to contribute with more items provided below.
 
-* If you are targeting legacy JavaScript engine with those ES5 methods, you can use [es5-shim](https://github.com/es-shims/es5-shim)
+**If you are targeting legacy JavaScript engine with those ES5 methods, you can use [es5-shim](https://github.com/es-shims/es5-shim)
 
-* Please note that, the examples used below are just showing you the native alternative of performing certain tasks. For some of the functions, Lodash provides you more options than native built-ins. This list is not a 1:1 comparison.
-
-* Please send a PR if you want to add or modify the code. No need to open an issue unless it's something big and you want to discuss.
+**Please note that, the examples used below are just showing you the native alternative of performing certain tasks. For some of the functions, Lodash provides you more options than native built-ins. This list is not a 1:1 comparison.
 
 
 ## Voice of Developers
@@ -1292,7 +1290,7 @@ Produces a duplicate-free version of the array, using === to test object equalit
 
   // Native
   var array = [1, 2, 1, 4, 1, 3];
-  var result = [...new Set(array)];
+  var result = array.filter((v, i, a) => a.indexOf(v) === i);
   console.log(result)
   // output: [1, 2, 4, 3]
   ```

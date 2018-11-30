@@ -198,7 +198,7 @@
     },
     "uniq": {
         "compatible": true,
-        "alternative": "[... new Set(arr)]",
+        "alternative": "Array.prototype.filter((v, i, a) => a.indexOf(v) === i)",
         "ES6": true
     },
     "replace": {

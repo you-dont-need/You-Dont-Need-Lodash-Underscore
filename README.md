@@ -1193,6 +1193,37 @@ This method is like _.reduce except that it iterates over elements of collection
 
 **[⬆ back to top](#quick-links)**
 
+### _.sample
+
+Gets a random element from `array`.
+
+  ```js
+  // Underscore/Lodash
+  const array = [0, 1, 2, 3, 4]
+  const result = _.sample(array)
+  console.log(result)
+  // output: 2
+
+  // Native
+  const array = [0, 1, 2, 3, 4]
+  const sample = arr => {
+    const len = arr == null ? 0 : arr.length
+    return len ? arr[Math.floor(Math.random() * len)] : undefined
+  }
+
+  const result = sample(array)
+  console.log(result)
+  // output: 2
+  ```
+
+#### Browser Support
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+  ✔  | 1.0 ✔ |  ✔  |  ✔ |  ✔ |
+
+**[⬆ back to top](#quick-links)**
+
 ### _.size
 
 Returns the number of values in the collection.

@@ -115,4 +115,57 @@ describe('code snippet example', () => {
       )
     })
   })
+  describe('assign', () => {
+    function Foo() {
+      this.c = 3;
+    }
+    function Bar() {
+      this.e = 5;
+    }
+    Foo.prototype.d = 4;
+    Bar.prototype.f = 6;
+    const assign = (target, ...sources) => Object.assign(target, ...sources);
+    it("_.assign({}, new Foo, new Bar);", () => {
+      assert.deepEqual(
+        _.assign({}, new Foo, new Bar),
+        assign({}, new Foo, new Bar)
+      )
+    })
+    it("_.assign(new Foo, new Bar);", () => {
+      assert.deepEqual(
+        _.assign(new Foo, new Bar),
+        assign(new Foo, new Bar)
+      )
+    })
+  })
+  describe('extend', () => {
+    function Foo() {
+      this.c = 3;
+    }
+    function Bar() {
+      this.e = 5;
+    }
+    Foo.prototype.d = 4;
+    Bar.prototype.f = 6;
+    const extend = (target, ...sources) => {
+      let source = [];
+      sources.forEach(src => {
+        source = source.concat([src, Object.getPrototypeOf(src)])
+      })
+      return Object.assign(target, ...source)
+    };
+
+    it("_.extend({}, new Foo, new Bar);", () => {
+      assert.deepEqual(
+        _.extend({}, new Foo, new Bar),
+        extend({}, new Foo, new Bar)
+      )
+    })
+    it("_.extend(new Foo, new Bar);", () => {
+      assert.deepEqual(
+        _.extend(new Foo, new Bar),
+        extend(new Foo, new Bar)
+      )
+    })
+  })
 })

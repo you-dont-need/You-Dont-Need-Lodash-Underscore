@@ -1598,6 +1598,58 @@ The method is used to copy the values of all enumerable own properties from one 
 
  **[⬆ back to top](#quick-links)**
 
+### _.extend
+
+The method is used to copy the values of all enumerable own and inherited properties from one or more source objects to a target object.
+
+  ```js
+  // Underscore
+  // Lodash: _.assignIn
+  function Foo() {
+    this.c = 3;
+  }
+  function Bar() {
+    this.e = 5;
+  }
+  Foo.prototype.d = 4;
+  Bar.prototype.f = 6;
+  var result = _.extend({}, new Foo, new Bar);
+  console.log(result);
+  // output: { 'c': 3, 'd': 4, 'e': 5, 'f': 6 }
+
+  // Native
+  function Foo() {
+    this.c = 3;
+  }
+  function Bar() {
+    this.e = 5;
+  }
+  Foo.prototype.d = 4;
+  Bar.prototype.f = 6;
+  var result = Object.assign({}, new Foo, Foo.prototype, new Bar, Bar.prototype);
+  console.log(result);
+  // output: { 'c': 3, 'd': 4, 'e': 5, 'f': 6 }
+
+  //Or using a function
+  const extend = (target, ...sources) => {
+    let source = [];
+    sources.forEach(src => {
+      source = source.concat([src, Object.getPrototypeOf(src)])
+    })
+    return Object.assign(target, ...source)
+  };
+  console.log(extend({}, new Foo, new Bar));
+  // output: { 'c': 3, 'd': 4, 'e': 5, 'f': 6 }
+  ```
+
+#### Browser Support
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+  45 ✔  |  34 ✔ |  No support  |  32 ✔ |  9 ✔  |
+
+ **[⬆ back to top](#quick-links)**
+
 ### _.keys
 
 Retrieves all the names of the object's own enumerable properties.

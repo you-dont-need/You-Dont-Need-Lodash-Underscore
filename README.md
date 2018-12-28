@@ -1727,7 +1727,7 @@ Returns a copy of the object, filtered to omit the keys specified.
 Creates an object composed of the object properties predicate returns truthy for.
 
   ```js
- var object = { 'a': 1, 'b': '2', 'c': 3 };
+  var object = { 'a': 1, 'b': '2', 'c': 3 };
 
   // Underscore/Lodash
   var result = _.pick(object, ['a', 'c']);
@@ -1735,15 +1735,14 @@ Creates an object composed of the object properties predicate returns truthy for
   // output: {a: 1, c: 3}
 
   // Native
-  function pick(object, paths) {
-      const obj = {};
-      for (const path of paths) {
-        if (object[path]) {
-          obj[path] = object[path]
-        }
-      }
-      return obj;
-  } 
+  function pick(object, keys) {
+    return keys.reduce((obj, key) => {
+       if (object[key]) {
+          obj[key] = object[key];
+       }
+       return obj;
+     }, {});
+  }
   var result = pick(object, ['a', 'c']);
   console.log(result)
   // output: {a: 1, c: 3}

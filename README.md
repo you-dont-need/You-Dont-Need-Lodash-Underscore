@@ -1827,8 +1827,8 @@ Create a template function.
   compiled({ 'user': 'fred' });
 
   // Native
-  const templateLitreal = (value) => `hello ${value.user}`;
-  templateLitreal({ 'user': 'fred' });
+  const templateLiteral = (value) => `hello ${value.user}`;
+  templateLiteral({ 'user': 'fred' });
   ```
 
 #### Browser Support

@@ -1917,11 +1917,11 @@ Splits string by separator.
   // output: ['a','b']
   ```
 
-#### Browser Support
+#### Browser Support for `String.prototype.split()`
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
-  ✔  |  1 ✔ |  ✔  | ✔ | ✔ |
+  ✔  |  1.0 ✔ |  ✔  | ✔ | ✔ |
 
 **[⬆ back to top](#quick-links)**
 

@@ -156,6 +156,7 @@ then Lodash/Underscore is the better option.*
 **[String](#string)**
 
 1. [_.repeat](#_repeat)
+1. [_.split](#_split)
 1. [_.template](#_template)
 1. [_.toLower](#_tolower)
 1. [_.toUpper](#_toupper)
@@ -1883,6 +1884,7 @@ Repeats the given string n times.
   ```js
   // Lodash
   var result = _.repeat('abc', 2)
+  console.log(result)
   // output: 'abcabc'
 
   // Native
@@ -1896,6 +1898,28 @@ Repeats the given string n times.
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
   41 ✔  |  24 ✔ |  Not supported  |  28 ✔ |  9 ✔ |
+  
+### _.split
+:heavy_exclamation_mark:`Lodash only`
+Splits string by separator.
+
+  ```js
+  // Lodash
+  var result = _.split('a-b-c', '-', 2)
+    console.log(result)
+  // output: ['a','b']
+
+  // Native
+  var result = 'a-b-c'.split('-', 2)
+  console.log(result)
+  // output: ['a','b']
+  ```
+
+#### Browser Support
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+  ✔  |  1 ✔ |  ✔  | ✔ | ✔ |
 
 **[⬆ back to top](#quick-links)**
 

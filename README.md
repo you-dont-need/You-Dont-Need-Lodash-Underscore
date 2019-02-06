@@ -1899,6 +1899,8 @@ Repeats the given string n times.
 :-: | :-: | :-: | :-: | :-: |
   41 ✔  |  24 ✔ |  Not supported  |  28 ✔ |  9 ✔ |
   
+  **[⬆ back to top](#quick-links)**
+  
 ### _.split
 :heavy_exclamation_mark:`Lodash only`
 Splits string by separator.

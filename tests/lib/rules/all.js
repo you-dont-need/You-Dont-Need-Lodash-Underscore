@@ -21,9 +21,9 @@ ruleTester.run('_.concat', rules.concat, {
     errors: ['Consider using the native Array.prototype.concat()']
   }]
 }, {
-  code: "import concat from 'lodash/concat';",
-  errors: ["Import from 'lodash/concat' detected. Consider using the native Array.prototype.concat()"]
-});
+    code: "import concat from 'lodash/concat';",
+    errors: ["Import from 'lodash/concat' detected. Consider using the native Array.prototype.concat()"]
+  });
 
 ruleTester.run('lodash.keys', rules.keys, {
   valid: [
@@ -34,9 +34,9 @@ ruleTester.run('lodash.keys', rules.keys, {
     errors: ['Consider using the native Object.keys()']
   }]
 }, {
-  code: "import keys from 'lodash/keys';",
-  errors: ["Import from 'lodash/keys' detected. Consider using the native Object.keys()"]
-});
+    code: "import keys from 'lodash/keys';",
+    errors: ["Import from 'lodash/keys' detected. Consider using the native Object.keys()"]
+  });
 
 ruleTester.run('underscore.forEach', rules['for-each'], {
   valid: [
@@ -47,9 +47,9 @@ ruleTester.run('underscore.forEach', rules['for-each'], {
     errors: ['Consider using the native Array.prototype.forEach()']
   }]
 }, {
-  code: "import forEach from 'lodash/forEach';",
-  errors: ["Import from 'lodash/forEach' detected. Consider using the native Array.prototype.forEach()"]
-});
+    code: "import forEach from 'lodash/forEach';",
+    errors: ["Import from 'lodash/forEach' detected. Consider using the native Array.prototype.forEach()"]
+  });
 
 ruleTester.run('underscore.isNaN', rules['is-nan'], {
   valid: [
@@ -60,9 +60,9 @@ ruleTester.run('underscore.isNaN', rules['is-nan'], {
     errors: ['Consider using the native Number.isNaN()']
   }]
 }, {
-  code: `import isNaN from "lodash/isNaN";`,
-  errors: ["Import from 'lodash/isNaN' detected. Consider using the native Number.isNaN()"]
-});
+    code: `import isNaN from "lodash/isNaN";`,
+    errors: ["Import from 'lodash/isNaN' detected. Consider using the native Number.isNaN()"]
+  });
 
 ruleTester.run('_.first', rules['first'], {
   valid: [
@@ -70,8 +70,8 @@ ruleTester.run('_.first', rules['first'], {
     '[0, 1, 3].slice(0, 2)'
   ],
   invalid: [{
-      code: '_.first([0, 1, 3])',
-      errors: ['Consider using the native Array.prototype.slice()']
+    code: '_.first([0, 1, 3])',
+    errors: ['Consider using the native Array.prototype.slice()']
   }, {
     code: '_.first([0, 1, 3], 2)',
     errors: ['Consider using the native Array.prototype.slice()']
@@ -84,8 +84,8 @@ ruleTester.run('_.last', rules['last'], {
     '[0, 1, 3].slice(-2)'
   ],
   invalid: [{
-      code: '_.last([0, 1, 3])',
-      errors: ['Consider using the native Array.prototype.slice()']
+    code: '_.last([0, 1, 3])',
+    errors: ['Consider using the native Array.prototype.slice()']
   }, {
     code: '_.last([0, 1, 3], 2)',
     errors: ['Consider using the native Array.prototype.slice()']

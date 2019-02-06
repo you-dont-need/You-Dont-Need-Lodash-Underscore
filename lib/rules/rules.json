@@ -51,7 +51,6 @@
         "compatible": true,
         "alternative": "Array.isArray()"
     },
-
     "each": {
         "compatible": false,
         "alternative": "Array.prototype.forEach()"
@@ -130,20 +129,17 @@
         "compatible": true,
         "alternative": "Array.prototype.slice()"
     },
-
     "bind": {
         "ruleName": "bind",
         "compatible": true,
         "alternative": "Function.prototype.bind()"
     },
-
     "isNaN": {
         "ruleName": "is-nan",
         "compatible": true,
         "alternative": "Number.isNaN()",
         "ES6": true
     },
-
     "keys": {
         "compatible": true,
         "alternative": "Object.keys()"
@@ -178,7 +174,10 @@
         "alternative": "Object.entries()",
         "ES6": true
     },
-
+    "split": {
+        "compatible": true,
+        "alternative": "String.prototype.split()"
+    },
     "toLower": {
         "compatible": true,
         "alternative": "String.prototype.toLowerCase()"

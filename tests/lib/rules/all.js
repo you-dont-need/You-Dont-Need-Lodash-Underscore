@@ -25,9 +25,7 @@ ruleTester.run('_.concat', rules.concat, {
   invalid: [{
     code: '_.concat(array, 2, [3], [[4]])',
     errors: ['Consider using the native Array.prototype.concat()']
-  },
-    ...illegalImportsCases("concat", "Array.prototype.concat()")
-  ],
+  }].concat(illegalImportsCases("concat", "Array.prototype.concat()")),
 });
 
 ruleTester.run('lodash.keys', rules.keys, {
@@ -37,9 +35,7 @@ ruleTester.run('lodash.keys', rules.keys, {
   invalid: [{
     code: 'lodash.keys({one: 1, two: 2, three: 3})',
     errors: ['Consider using the native Object.keys()']
-  },
-    ...illegalImportsCases("keys", "Object.keys()")
-  ]
+  }].concat(illegalImportsCases("keys", "Object.keys()")),
 });
 
 ruleTester.run('underscore.forEach', rules['for-each'], {
@@ -49,9 +45,7 @@ ruleTester.run('underscore.forEach', rules['for-each'], {
   invalid: [{
     code: 'underscore.forEach()',
     errors: ['Consider using the native Array.prototype.forEach()']
-  },
-    ...illegalImportsCases("forEach", "Array.prototype.forEach()")
-  ]
+  }].concat(illegalImportsCases("forEach", "Array.prototype.forEach()")),
 });
 
 ruleTester.run('underscore.isNaN', rules['is-nan'], {
@@ -61,9 +55,7 @@ ruleTester.run('underscore.isNaN', rules['is-nan'], {
   invalid: [{
     code: 'underscore.isNaN(NaN)',
     errors: ['Consider using the native Number.isNaN()']
-  },
-    ...illegalImportsCases("isNaN", "Number.isNaN()")
-  ]
+  }].concat(illegalImportsCases("isNaN", "Number.isNaN()")),
 });
 
 ruleTester.run('_.first', rules['first'], {

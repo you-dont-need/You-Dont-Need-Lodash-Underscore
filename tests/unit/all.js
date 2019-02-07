@@ -168,4 +168,43 @@ describe('code snippet example', () => {
       )
     })
   })
+  describe('isEmpty', () => {
+    function isEmpty(obj) {
+      for(var key in obj) {
+          if(obj.hasOwnProperty(key))
+              return false;
+      }
+      return true;
+    }
+    it ('_.isEmpty(null)', () => {
+      assert.equal(
+        _.isEmpty(null),
+        isEmpty(null)
+      )
+    })
+    it ("_.isEmpty('')", () => {
+      assert.equal(
+        _.isEmpty(''),
+        isEmpty('')
+      )
+    })
+    it ("_.isEmpty({})", () => {
+      assert.equal(
+        _.isEmpty({}),
+        isEmpty({})
+      )
+    })
+    it ("_.isEmpty([])", () => {
+      assert.equal(
+        _.isEmpty([]),
+        isEmpty([])
+      )
+    })
+    it ("_.isEmpty({a: '1'})", () => {
+      assert.equal(
+        _.isEmpty({a: '1'}),
+        isEmpty({a: '1'})
+      )
+    })
+  })
 })

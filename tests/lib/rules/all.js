@@ -4,7 +4,7 @@ const assert = require('assert');
 const rules = require('../../../lib/rules/all');
 const allRules = require('../../../lib/rules/rules');
 
-assert.equal(Object.keys(allRules).length, 47, 'Don\'t miss a rule 😄');
+assert.equal(Object.keys(allRules).length, 48, 'Don\'t miss a rule 😄');
 
 const ruleTester = new RuleTester({
   parserOptions: { ecmaVersion: 2018, sourceType: "module" }

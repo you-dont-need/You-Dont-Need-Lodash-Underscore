@@ -135,6 +135,7 @@ then Lodash/Underscore is the better option.*
 
 **[Lang](#lang)**
 
+1. [_.isFinite](#_isfinite)
 1. [_.isNaN](#_isnan)
 1. [_.isNil](#_isnil)
 1. [_.isNull](#_isnull)
@@ -1426,6 +1427,31 @@ Create a new function that calls _func_ with _args_.
 **[⬆ back to top](#quick-links)**
 
 ## Lang
+
+### _.isFinite
+
+Converts value to a finite number.
+
+  ```js
+  // Lodash
+  console.log(_.isFinite('3'))
+  // output: false
+  console.log(_.isFinite(3))
+  // output: true
+
+  // Native
+  console.log(Number.isFinite('3'))
+  // output: false
+  console.log(Number.isFinite(3))
+  // output: true
+  ```
+#### Browser Support for `Number.isFinite()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  19.0 ✔  |  ✔ | 16.0 ✔ |  ✖  |  15.0 ✔ |  9.0 ✔ |
+
+**[⬆ back to top](#quick-links)**
 
 ### _.isNaN
 

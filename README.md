@@ -156,6 +156,7 @@ then Lodash/Underscore is the better option.*
 **[String](#string)**
 
 1. [_.repeat](#_repeat)
+1. [_.startsWith](#startsWith)
 1. [_.template](#_template)
 1. [_.toLower](#_tolower)
 1. [_.toUpper](#_toupper)
@@ -1875,6 +1876,30 @@ Creates an object composed of the object properties predicate returns truthy for
 **[⬆ back to top](#quick-links)**
 
 ## String
+
+### _.startsWith
+:heavy_exclamation_mark:`Lodash only`
+Checks if string starts with the given target string.
+
+  ```js
+  // Lodash
+  var result = _.startsWith('abc', 'b', 1)
+  console.log(result)
+  // output: true
+
+  // Native
+  var result = 'abc'.startsWith('b', 1)
+  console.log(result)
+  // output: true
+  ```
+
+#### Browser Support for `String.prototype.startsWith()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  41.0 ✔  |  ✔ | 17.0 ✔ |  ✖  |  28.0 ✔ |  9.0 ✔ |
+
+**[⬆ back to top](#quick-links)**
 
 ### _.repeat
 :heavy_exclamation_mark:`Lodash only`

@@ -198,11 +198,11 @@ chunk(['a', 'b', 'c', 'd'], 3);
 
 ```
 
-#### Browser Support
+#### Browser Support for Spread in array literals
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-   ✔  |  ✔ |  Not Supported |  ✔ |  ✔  |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+   46.0 ✔  | 12.0 ✔ | 16.0 ✔ |  ✖ |  37.0 ✔ |  8.0 ✔  |
 
 **[⬆ back to top](#quick-links)**
 
@@ -220,9 +220,9 @@ Creates an array with all falsy values removed.
 
 #### Browser Support
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-   ✔  |  1.5 ✔ |  9 ✔ |  ✔ |  ✔  |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+   ✔  |  ✔ |  1.5 ✔ |  9.0 ✔ |  ✔ |  ✔  |
 
 **[⬆ back to top](#quick-links)**
 
@@ -246,11 +246,11 @@ Creates a new array concatenating array with any additional arrays and/or values
   // output: [1, 2, 3, [4]]
   ```
 
-#### Browser Support
+#### Browser Support for `Array.prototype.concat()`
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-1.0  ✔  | 1.0 ✔ |  5.5 ✔  |  ✔  |  ✔  |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+1.0  ✔  | ✔  |  1.0 ✔ |  5.5 ✔  |  ✔  |  ✔  |
 
 **[⬆ back to top](#quick-links)**
 
@@ -289,11 +289,11 @@ Fills elements of array with value from start up to, but not including, end.
   // output: [4, '*', '*', 10]
   ```
 
-#### Browser Support
+#### Browser Support for `Array.prototype.fill()`
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  45.0 ✔ | 31.0 ✔ |  Not supported  |  32.0 ✔ |  7.1 ✔ |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  45.0 ✔ | ✔  | 31.0 ✔ |  ✖  |  32.0 ✔ |  8 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -323,11 +323,11 @@ Returns the value of the first element in the array that satisfies the provided 
   // output: object for 'barney'
   ```
 
-#### Browser Support
+#### Browser Support for `Array.prototype.find()`
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  45.0 ✔ | 25.0 ✔ |  Not supported  |  32.0 ✔ |  7.1 ✔ |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  45.0 ✔ | ✔ | 25.0 ✔ |  ✖  |  32.0 ✔ |  7.1 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -359,11 +359,11 @@ Returns the index of the first element in the array that satisfies the provided 
   // output: 1
   ```
 
-#### Browser Support
+#### Browser Support for `Array.prototype.findIndex()`
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  45.0 ✔ | 25.0 ✔ |  Not supported  |  32.0 ✔ |  7.1 ✔ |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  45.0 ✔ | ✔ | 25.0 ✔ |  ✖  |  32.0 ✔ |  7.1 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -397,11 +397,11 @@ Returns the first element of an array. Passing n will return the first n element
   // => [1, 2]
   ```
 
-#### Browser Support
+#### Browser Support for `Array.prototype.slice()`
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  ✔  |  ✔  |  ✔  |  ✔  |  ✔  |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  1.0 ✔  |  ✔  |  1.0 ✔  |  ✔  |  ✔  | ✔  |
 
 **[⬆ back to top](#quick-links)**
 
@@ -420,11 +420,11 @@ Flattens array a single level deep.
 
   ```
 
-#### Browser Support
+#### Browser Support for `Array.prototype.reduce()`
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  46.0 ✔ | 3.0 ✔ |  9.0 ✔  |  10.5 ✔ |  7.1 ✔ |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |  :-: |
+  46.0 ✔ |  ✔ | 3.0 ✔ |  9.0 ✔  |  10.5 ✔ |  4 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -448,9 +448,9 @@ Recursively flattens array.
 
 #### Browser Support
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  46.0 ✔ | 16.0 ✔ |  Not supported  |  37.0 ✔ |  7.1 ✔ |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  46.0 ✔ |  ✔ | 16.0 ✔ |  ✖  |  37.0 ✔ |  7.1 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -478,11 +478,11 @@ Returns an object composed from key-value pairs.
   // => { 'a': 1, 'b': 2 }
   ```
 
-#### Browser Support
+#### Browser Support for `Array.prototype.reduce()`
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  ✔  | 3.0 ✔ |  9 ✔  |  10.5 ✔ |  4.0 ✔ |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  |  ✔ | 3.0 ✔ |  9.0 ✔  |  10.5 ✔ |  4.0 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -511,11 +511,11 @@ Gets the first element or all but the first element.
   // output [2, 3]
   ```
 
-#### Browser Support
+#### Browser Support for Spread in array literals
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  49 ✔  |  34 ✔ |  Not Supported |  37 ✔ |  ✔  |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  46.0 ✔  | 12.0 ✔ |  16.0 ✔ |  ✖ |  37.0 ✔ | 8.0 ✔  |
 
 **[⬆ back to top](#quick-links)**
 
@@ -537,11 +537,11 @@ Returns the first index at which a given element can be found in the array, or -
   // output: 0
   ```
 
-#### Browser Support
+#### Browser Support for `Array.prototype.indexOf()`
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  ✔  | 1.5 ✔ |  9 ✔  |  ✔  |  ✔  |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  | ✔  |  1.5 ✔ |  9.0 ✔  |  ✔  |  ✔  |
 
 **[⬆ back to top](#quick-links)**
 
@@ -561,11 +561,11 @@ Joins a list of elements in an array with a given separator.
   // output: 'one--two--three'
   ```
 
-#### Browser Support
+#### Browser Support for `Array.prototype.join()`
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  1.0 ✔  |  1.0 ✔ |  5.5 ✔  |  ✔ |  ✔  |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  1.0 ✔  |   ✔  | 1.0 ✔ |  5.5 ✔  |  ✔ |  ✔  |
 
 **[⬆ back to top](#quick-links)**
 
@@ -601,11 +601,11 @@ Returns the last element of an array. Passing n will return the last n elements 
   // => [4, 5]
   ```
 
-#### Browser Support
+#### Browser Support for `Array.prototype.concat()`
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  ✔  |  ✔  |  ✔  |  ✔  |  ✔  |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  1.0 ✔  |  ✔  | 1.0 ✔  | 5.5 ✔  |  ✔  | ✔  |
 
 **[⬆ back to top](#quick-links)**
 
@@ -627,11 +627,11 @@ Returns the index of the last occurrence of value in the array, or -1 if value i
   // output: 2
   ```
 
-#### Browser Support
+#### Browser Support for `Array.prototype.lastIndexOf()`
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  ✔  |  ✔ |  9 ✔  |  ✔  |  ✔  |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  |  ✔ | 1.5 ✔  | 9.0 ✔  |  ✔  |  ✔  |
 
 **[⬆ back to top](#quick-links)**
 
@@ -657,11 +657,11 @@ Voice from the Lodash author:
 It's exposed on _ because previously, like `Underscore`, it was only exposed in the chaining syntax.
 >--- [jdalton](https://github.com/cht8687/You-Dont-Need-Lodash-Underscore/commit/22c4bcf2be48dd415d2b073759805562e520b615#)
 
-#### Browser Support
+#### Browser Support for `Array.prototype.reverse()`
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  1.0 ✔  |  1.0 ✔ |  5.5 ✔ |  ✔ |  ✔  |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  | ✔ | 1.5 ✔ |  9 ✔ |  ✔ |  ✔  |
 
 **[⬆ back to top](#quick-links)**
 
@@ -683,11 +683,11 @@ Returns an array where matching items are filtered.
   // output: [1, 3]
   ```
 
-#### Browser Support
+#### Browser Support for `Array.prototype.filter()`
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  1.0 ✔  |  1.5 ✔ |  9 ✔ |  ✔ |  ✔  |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  1.0 ✔  | ✔ | 1.5 ✔ |  9 ✔ |  ✔ |  ✔  |
 
 **[⬆ back to top](#quick-links)**
 
@@ -714,11 +714,11 @@ Returns an array that is the intersection of all the arrays. Each value in the r
   // output: [1, 2]
   ```
 
-#### Browser Support
+#### Browser Support for `Array.prototype.reduce()`
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  1.0 ✔  |  1.5 ✔ |  9 ✔ |  ✔ |  ✔  |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  |  ✔ | 3.0 ✔ |  9.0 ✔  |  10.5 ✔ |  4.0 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -745,11 +745,11 @@ Similar to [without](#_without), but returns the values from array that are not 
   // output: [1, 3, 4]
   ```
 
-#### Browser Support
+#### Browser Support for `Array.prototype.reduce()`
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  1.0 ✔  |  1.5 ✔ |  9 ✔ |  ✔ |  ✔  |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+   ✔  |  ✔ | 3.0 ✔ |  9.0 ✔  |  10.5 ✔ |  4.0 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -768,11 +768,11 @@ Returns a shallow copy of a portion of an array into a new array object selected
   // output: [2, 3]
   ```
 
-#### Browser Support
+#### Browser Support for `Array.prototype.slice()`
 
- ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
- :-: | :-: | :-: | :-: | :-: |
-  ✔  |  ✔  |  ✔  |  ✔  |  ✔  |
+ ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+ :-: | :-: | :-: | :-: | :-: | :-: |
+  1.0 ✔  |  ✔  |  1.0 ✔  |  ✔  |  ✔  |  ✔  |
 
 **[⬆ back to top](#quick-links)**
 
@@ -791,11 +791,11 @@ Returns true if given value is an array.
   // output: true
   ```
 
-  #### Browser Support
+  #### Browser Support for `Array.isArray()`
 
- ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
- :-: | :-: | :-: | :-: | :-: |
-  5 ✔  |  4 ✔  |  9 ✔  |  10.5 ✔  | 5 ✔  |
+ ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+ :-: | :-: | :-: | :-: | :-: | :-: |
+  5.0 ✔  |  ✔  | 4.0 ✔  |  9.0 ✔  |  10.5 ✔  | 5.0 ✔  |
 
 **[⬆ back to top](#quick-links)**
 
@@ -813,11 +813,11 @@ Checks if value is classified as an ArrayBuffer object.
   // output: true
   ```
 
-  #### Browser Support
+  #### Browser Support for `instanceof`
 
- ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
- :-: | :-: | :-: | :-: | :-: |
-  ✔  |  1 ✔  | ✔  | ✔  | ✔  |
+ ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+ :-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  |  ✔  | 1.0 ✔  | ✔  | ✔  | ✔  |
 
 **[⬆ back to top](#quick-links)**
 
@@ -845,11 +845,11 @@ Iterates over a list of elements, yielding each in turn to an iteratee function.
   // output: 1 2 3
   ```
 
-#### Browser Support
+#### Browser Support for `Array.prototype.forEach()`
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  ✔  | 1.5 ✔ |  9 ✔  |  ✔  |  ✔  |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  | ✔ | 1.5 ✔ |  9.0 ✔  |  ✔  |  ✔  |
 
 **[⬆ back to top](#quick-links)**
 
@@ -878,11 +878,11 @@ Tests whether all elements in the array pass the test implemented by the provide
   // output: true
   ```
 
-#### Browser Support
+#### Browser Support fpr `Array.prototype.every()`
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  ✔  | 1.5 ✔ |  9 ✔  |  ✔  |  ✔  |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  | ✔ | 1.5 ✔ |  9.0 ✔  |  ✔  |  ✔  |
 
 **[⬆ back to top](#quick-links)**
 
@@ -910,11 +910,11 @@ Creates a new array with all elements that pass the test implemented by the prov
   // output: [12, 130, 44]
   ```
 
-#### Browser Support
+#### Browser Support for `Array.prototype.filter()`
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  ✔  | 1.5 ✔ |  9 ✔  |  ✔  |  ✔  |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  | ✔ | 1.5 ✔ |  9 ✔  |  ✔  |  ✔  |
 
 **[⬆ back to top](#quick-links)**
 
@@ -946,11 +946,11 @@ Group items by key.
   // output: {1: [1.3], 2: [2.1, 2.4]}
   ```
 
-#### Browser Support
+#### Browser Support for `Array.prototype.reduce()`
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  ✔  | 3.0 ✔ |  9 ✔  |  10.5 ✔ |  4.0 ✔ |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  | ✔  | 3.0 ✔ |  9.0 ✔  |  10.5 ✔ |  4.0 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -977,15 +977,15 @@ Checks if a value is in collection.
 
 #### Browser Support for `Array.prototype.includes`
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  47 ✔  | 43 ✔ |  Not supported  |  34 ✔ |  9 ✔ |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  47.0 ✔  | 14.0 ✔ | 43.0 ✔ |  ✖  |  34.0 ✔ |  9.0 ✔ |
 
 #### Browser Support for `Array.prototype.indexOf`
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  ✔ | ✔ | ✔ | ✔ | ✔ |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔ | ✔ | 1.5 ✔ | 9.0 ✔ | ✔ | ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -1010,6 +1010,14 @@ Translates all items in an array or object to new array of items.
   console.log(array2)
   // output: [2, 4, 6]
   ```
+
+#### Browser Support for `Array.prototype.map()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  | ✔ | 1.5 ✔ |  9.0 ✔  |  ✔ |  ✔ |
+
+**[⬆ back to top](#quick-links)**
 
 ### _.minBy and _.maxBy
 
@@ -1058,11 +1066,11 @@ Extract a functor and use es2015 for better code
   // output: { value: 2 }
   ```
 
-#### Browser Support
+#### Browser Support for `Array.prototype.reduce()`
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  ✔  | 3.0 ✔ |  9 ✔  |  10.5 ✔ |  4.0 ✔ |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  | ✔ | 3.0 ✔ |  9.0 ✔  |  10.5 ✔ |  4.0 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -1086,11 +1094,11 @@ Extract a functor and use es2015 for better code
   // output: ["Alice", "Bob", "Jeremy"]
   ```
 
-#### Browser Support
+#### Browser Support for `Array.prototype.map()`
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  ✔  | 1.5 ✔ |  9 ✔  |  ✔  |  ✔  |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  |  ✔ | 1.5 ✔ |  9.0 ✔  |  ✔  |  ✔  |
 
 **[⬆ back to top](#quick-links)**
 
@@ -1116,11 +1124,11 @@ Applies a function against an accumulator and each value of the array (from left
   // output: 10
   ```
 
-#### Browser Support
+#### Browser Support for `Array.prototype.reduce()`
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  ✔  | 3.0 ✔ |  9 ✔  |  10.5 ✔ |  4.0 ✔ |
+![Chrome][chrome-image] | ![Edge][edge-image] |  ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  | ✔ | 3.0 ✔ |  9.0 ✔  |  10.5 ✔ |  4.0 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -1149,17 +1157,17 @@ Creates an array of numbers progressing from start up to.
   ```
 
 
-#### Browser Support ( Array.from )
+#### Browser Support for `Array.from()`
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
- 45 ✔  | 32 ✔ |  Not supported   |  ✔ |  9.0 ✔ |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+ 45.0 ✔  |  ✔ |  32.0 ✔ |  ✖   |  ✔ |  9.0 ✔ |
 
-#### Browser Support ( keys and array spread )
+#### Browser Support for keys and spread in Array literals
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
- 46 ✔  | 16 ✔ |  Not supported | 37 ✔ |  7.1 ✔ |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+ 46.0 ✔  |  12.0 ✔ |  16.0 ✔ |  ✖ | 37.0 ✔ |  7.1 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -1185,11 +1193,11 @@ This method is like _.reduce except that it iterates over elements of collection
   // output: -2
   ```
 
-#### Browser Support
+#### Browser Support for `Array.prototype.reduceRight()`
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  ✔  | 3.0 ✔ |  9 ✔  |  10.5 ✔ |  4.0 ✔ |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  | ✔ | 3.0 ✔ |  9.0 ✔  |  10.5 ✔ |  4.0 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -1216,11 +1224,11 @@ Gets a random element from `array`.
   // output: 2
   ```
 
-#### Browser Support
+#### Browser Support for `Array.prototype.length()` and `Math.random()`
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  ✔  | 1.0 ✔ |  ✔  |  ✔ |  ✔ |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  | ✔ | 1.0 ✔ |  ✔  |  ✔ |  ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -1240,11 +1248,11 @@ Returns the number of values in the collection.
   // output: 3
   ```
 
-#### Browser Support
+#### Browser Support for `Object.keys()`
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  5 ✔  | 4.0 ✔ |  9 ✔ |  12 ✔ |  5 ✔ |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  5.0 ✔  | ✔ | 4.0 ✔ |  9.0 ✔ |  12.0 ✔ |  5.0 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -1273,11 +1281,11 @@ Tests whether any of the elements in the array pass the test implemented by the 
   // output: true
   ```
 
-#### Browser Support
+#### Browser Support for `Array.prototype.some()`
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  38 ✔  | 13 ✔ |  Not Supported  |  25 ✔  | 9 ✔  |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  | ✔ | 1.5 ✔ |  ✔ 9.0  |  ✔  | ✔  |
 
 **[⬆ back to top](#quick-links)**
 
@@ -1312,6 +1320,14 @@ Sorts an array of object based on an object key provided by a parameter (note th
   // => [{name:"apple", amount: 4}, {name:"banana", amount: 2}, {name:"mango", amount: 1}, {name:"pineapple", amount: 2}]
   ```
 
+#### Browser Support for `Array.prototype.concat()` and `Array.prototype.sort()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  1.0 ✔  | ✔ | 1.0 ✔ |  5.5 ✔  |  ✔  |  ✔  |
+
+**[⬆ back to top](#quick-links)**
+
 ### _.uniq
 
 Produces a duplicate-free version of the array, using === to test object equality.
@@ -1330,11 +1346,11 @@ Produces a duplicate-free version of the array, using === to test object equalit
   // output: [1, 2, 4, 3]
   ```
 
-#### Browser Support
+#### Browser Support for Spread in array literals
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  ✔  | 1.5 ✔ |  9 ✔  |  ✔  |  ✔  |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+ 46.0  ✔  | 12.0 ✔ | 16.0 ✔ |  ✖  |  37.0 ✔  |  8.0 ✔  |
 
 **[⬆ back to top](#quick-links)**
 
@@ -1362,11 +1378,11 @@ Creates a version of the function that will only be run after first being called
   })
   ```
 
-#### Browser Support
+#### Browser Support for `Array.prototype.forEach()`
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
- :-: | :-: | :-: | :-: | :-: |
-   ✔  |  ✔ |  ✔ |  ✔ |  ✔  |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+ :-: | :-: | :-: | :-: | :-: | :-: |
+   ✔  |  ✔ |  1.5 ✔ |  9.0 ✔ |  ✔  | ✔  |
 
  **[⬆ back to top](#quick-links)**
 
@@ -1392,11 +1408,11 @@ Create a new function that calls _func_ with _thisArg_ and _args_.
   var boundOffsetX = objA.offsetX.bind(objB, 0);
   ```
 
-#### Browser Support
+#### Browser Support for `Function.prototype.bind()`
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
- :-: | :-: | :-: | :-: | :-: |
-   ✔  |  ✔ |  9 ✔ |  ✔ |  ✔  |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+ :-: | :-: | :-: | :-: | :-: | :-: |
+  7.0 ✔  |  ✔ | 4.0 ✔ |  9.0 ✔ |  11.6 ✔ |  5.1 ✔  |
 
  **[⬆ back to top](#quick-links)**
 
@@ -1408,20 +1424,26 @@ Create a new function that calls _func_ with _args_.
   function greet(greeting, name) {
     return greeting + ' ' + name;
   }
-  var sayHelloTo = _.partial(greet, 'hello');
+  var sayHelloTo = _.partial(greet, 'Hello');
+  var result = sayHelloTo('Jose')
+  console.log(result)
+  // output: 'Hello Jose'
 
   // Native
   function greet(greeting, name) {
     return greeting + ' ' + name;
   }
-  var sayHelloTo = (...args) => greet('hello', ...args)
+  var sayHelloTo = (...args) => greet('Hello', ...args)
+  var result = sayHelloTo('Jose')
+  console.log(result)
+  // output: 'Hello Jose'
   ```
 
-#### Browser Support
+#### Browser Support for Spread
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  62 ✔  | 56 ✔ |  ✗  |  49 ✔ |  11 ✔ |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  46.0 ✔ | 12.0 ✔ | 16.0 ✔ |  ✖  |  37.0 ✔ |  8.0 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -1454,15 +1476,15 @@ Voice from the Lodash author:
 
 #### Browser Support for `isNaN`
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  ✔  |  ✔ |  ✔ |  ✔ |  ✔  |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  | ✔ |  1.0 ✔ |  ✔ |  ✔ |  ✔  |
 
 #### Browser Support for `Number.isNaN`
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  25 ✔ | 15 ✔ |  Not supported |  ✔ |  9 ✔ |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  25.0 ✔ | ✔ |  15.0 ✔ |  ✖ |  ✔ |  9.0 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -1476,19 +1498,23 @@ console.log(_.isNil(null))
 // output: true
 console.log(_.isNil(NaN))
 // output: false
+console.log(_.isNil(undefined))
+// output: true
 
 // Native
 console.log(null == null);
 // output: true
 console.log(NaN == null);
 // output: false
+console.log(undefined == null)
+// output: true
 ```
 
 #### Browser Support
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  ✔  |  ✔ |  ✔  | ✔ | ✔ |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  |  ✔ | ✔ |  ✔  | ✔ | ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -1512,9 +1538,9 @@ console.log(void 0 === null);
 
 #### Browser Support
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  ✔  |  ✔ |  ✔  | ✔ | ✔ |
+![Chrome][chrome-image] |  ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  |  ✔ | ✔ |  ✔  | ✔ | ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -1536,9 +1562,9 @@ console.log(a === undefined);
 
 #### Browser Support
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  ✔  | 1 ✔ |  ✔  | ✔ | ✔ |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  | ✔ | 1 ✔ |  ✔  | ✔ | ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -1558,9 +1584,9 @@ console.log(3 > 1);
 
 #### Browser Support
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  ✔  | ✔ |  ✔  | ✔ | ✔ |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  | ✔ | ✔ |  ✔  | ✔ | ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -1580,9 +1606,9 @@ console.log(3 >= 1);
 
 #### Browser Support
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  ✔  | ✔ |  ✔  | ✔ | ✔ |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  | ✔ | ✔ |  ✔  | ✔ | ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -1621,11 +1647,11 @@ The method is used to copy the values of all enumerable own properties from one 
   // output: { 'c': 3, 'e': 5 }
   ```
 
-#### Browser Support
+#### Browser Support for `Object.assign()`
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  45 ✔  |  34 ✔ |  No support  |  32 ✔ |  9 ✔  |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  45.0 ✔  | ✔ | 34.0 ✔ |  ✖  |  32.0 ✔ |  9.0 ✔  |
 
  **[⬆ back to top](#quick-links)**
 
@@ -1673,11 +1699,11 @@ The method is used to copy the values of all enumerable own and inherited proper
   // output: { 'c': 3, 'd': 4, 'e': 5, 'f': 6 }
   ```
 
-#### Browser Support
+#### Browser Support for `Object.assign()`
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  45 ✔  |  34 ✔ |  No support  |  32 ✔ |  9 ✔  |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  45.0 ✔  | ✔ | 34.0 ✔ |  ✖  |  32.0 ✔ |  9.0 ✔  |
 
  **[⬆ back to top](#quick-links)**
 
@@ -1697,11 +1723,11 @@ Retrieves all the names of the object's own enumerable properties.
   // output: ["one", "two", "three"]
   ```
 
-#### Browser Support
+#### Browser Support for `Object.keys()`
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  5 ✔  | 4.0 ✔ |  9 ✔ |  12 ✔ |  5 ✔ |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |  :-: |
+  5.0 ✔  | ✔ | 4.0 ✔ |  9.0 ✔ |  12.0 ✔ |  5.0 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -1722,11 +1748,11 @@ Retrieves all the given object's own enumerable property `[ key, value ]` pairs.
   // output: [["one", 1], ["two", 2], ["three", 3]]
   ```
 
-#### Browser Support
+#### Browser Support for `Object.entries()`
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  38 ✔  | 28 ✔ |  Not supported  |  25 ✔ |  7.1 ✔ |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  54.0 ✔  | 14.0 ✔  | 47.0 ✔ |  ✖  |  41.0 ✔ |  10.1 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -1746,11 +1772,11 @@ Retrieves all the given object's own enumerable property values.
   // output: [1, 2, 3]
   ```
 
-#### Browser Support
+#### Browser Support for `Object.values()`
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  54 ✔  | 47 ✔ |  Not supported  |  41.0 ✔ |  10.1 ✔ |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  54.0 ✔  | 14.0 ✔ |  47.0 ✔ |  ✖  |  41.0 ✔ |  10.1 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -1773,11 +1799,11 @@ Gets the value at path of object.
   // output: 3
   ```
 
-#### Browser Support
+#### Browser Support for Object destructing
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  49 ✔  | 41 ✔ |  Not supported  |  41.0 ✔ |  8 ✔ |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  49.0 ✔  | 14.0 ✔ |  41.0 ✔ |  ✖  |  41.0 ✔ |  8.0 ✔ |
   
 ### _.omit
 
@@ -1797,11 +1823,11 @@ Returns a copy of the object, filtered to omit the keys specified.
   // output: { 'b': '2' }
   ```
 
-#### Browser Support
+#### Browser Support for Spread in object literals
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  60 ✔  | 55 ✔ |  Not supported  |  37 ✔ | Not Supported |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  60.0 ✔ | ✖ | 55.0 ✔ |  ✖ |  37.0 ✔ | ✖ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -1833,9 +1859,9 @@ Creates an object composed of the object properties predicate returns truthy for
 
 #### Browser Support
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  38 ✔  | 13 ✔ |  12 ✔  |  25 ✔ | 7.1 ✔ |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  38.0 ✔ | ✔ | 13.0 ✔ |  12.0 ✔  |  25.0 ✔ | 7.1 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -1868,9 +1894,9 @@ Creates an object composed of the object properties predicate returns truthy for
 
 #### Browser Support
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  ✔  | ✔ |  6 ✔  | ✔ | ✔ |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |  :-: |
+  ✔  | ✔ |  ✔ | 6.0 ✔  | ✔ | ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -1891,11 +1917,11 @@ Repeats the given string n times.
   // output: 'abcabc'
   ```
 
-#### Browser Support
+#### Browser Support for `String.prototype.repeat()`
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  41 ✔  |  24 ✔ |  Not supported  |  28 ✔ |  9 ✔ |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  41.0 ✔  | ✔ | 24.0 ✔ |  ✖  |  28.0 ✔ |  9.0 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -1907,18 +1933,22 @@ Create a template function.
   ```js
   // Lodash/Underscore
   const compiled = _.template('hello <%= user %>!');
-  compiled({ 'user': 'fred' });
+  var result = compiled({ 'user': 'fred' });
+  console.log(result);
+  // output: 'hello fred'
 
   // Native
   const templateLiteral = (value) => `hello ${value.user}`;
-  templateLiteral({ 'user': 'fred' });
+  var result = templateLiteral({ 'user': 'fred' });
+  console.log(result);
+  // output: 'hello fred'
   ```
 
-#### Browser Support
+#### Browser Support for String (template) literals
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  41 ✔  |  34 ✔ |  Not supported  |  28 ✔ |  9 ✔  |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  41.0 ✔  | 12.0 ✔ | 34.0 ✔ |  ✖  |  28.0 ✔ |  9.0 ✔  |
 
 **[⬆ back to top](#quick-links)**
 
@@ -1938,11 +1968,11 @@ Lowercases a given string.
   // output: 'foobar'
   ```
 
-#### Browser Support
+#### Browser Support for `String.prototype.toLowerCase()`
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  ✔  |  ✔ |  ✔  |  ✔ |  ✔  |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  |  ✔ | 1.0 ✔ |  ✔  |  ✔ |  ✔  |
 
 **[⬆ back to top](#quick-links)**
 
@@ -1962,11 +1992,11 @@ Uppercases a given string.
   // output: 'FOOBAR'
   ```
 
-#### Browser Support
+#### Browser Support for `String.prototype.toUpperCase()`
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  ✔  |  ✔ |  ✔  |  ✔ |  ✔  |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  |  ✔ | 1.0 ✔ |  ✔  |  ✔ |  ✔  |
 
 **[⬆ back to top](#quick-links)**
 
@@ -1986,11 +2016,11 @@ Removes the leading and trailing whitespace characters from a string.
   // output: 'abc'
   ```
 
-#### Browser Support
+#### Browser Support for `String.prototype.trim()`
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  5.0 ✔  |  3.5 ✔ |  9.0 ✔  |  10.5 ✔ |  5.0 ✔  |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  5.0 ✔  | ✔ |  3.5 ✔ |  9.0 ✔  |  10.5 ✔ |  5.0 ✔  |
 
 **[⬆ back to top](#quick-links)**
 
@@ -2013,11 +2043,11 @@ returns a new string with some or all matches of a `pattern` replaced by a `repl
   // output: 'oranges are round, and oranges are juicy.'
   ```
 
-#### Browser Support
+#### Browser Support for `String.prototype.replace()`
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  ✔  |  ✔ |  ✔  |  ✔ |  ✔  |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  | ✔ | 1.0 ✔ |  ✔  |  ✔ |  ✔  |
 
 **[⬆ back to top](#quick-links)**
 
@@ -2044,9 +2074,9 @@ Removes all duplicates entries from an array.
 
 #### Browser Support
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  38 ✔  |  13 ✔ |  11 ✔  |  25 ✔ |  7.1 ✔  |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  38.0 ✔  | ✔ | 13.0 ✔ |  11.0 ✔  |  25.0 ✔ |  7.1 ✔  |
 
 **[⬆ back to top](#quick-links)**
 
@@ -2072,11 +2102,11 @@ Invokes the iteratee n times, returning an array of the results of each invocati
   // output: '[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]'
   ```
 
-#### Browser Support
+#### Browser Support for `Array.from()`
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  45 ✔  | 32 ✔ |  Not supported  |  ✔ | 9 ✔  |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  45.0 ✔  | ✔ |  32.0 ✔ |  ✖  |  ✔ | 9.0 ✔  |
 
 **[⬆ back to top](#quick-links)**
 
@@ -2097,3 +2127,5 @@ MIT
 [ie-image]: https://raw.github.com/alrra/browser-logos/master/src/archive/internet-explorer_9-11/internet-explorer_9-11_48x48.png
 [opera-image]: https://raw.github.com/alrra/browser-logos/master/src/opera/opera_48x48.png
 [safari-image]: https://raw.github.com/alrra/browser-logos/master/src/safari/safari_48x48.png
+[edge-image]:
+https://raw.github.com/alrra/browser-logos/master/src/edge/edge_48x48.png

@@ -135,6 +135,7 @@ then Lodash/Underscore is the better option.*
 
 **[Lang](#lang)**
 
+1. [_.isEmpty](#_isempty)
 1. [_.isNaN](#_isnan)
 1. [_.isNil](#_isnil)
 1. [_.isNull](#_isnull)
@@ -1426,6 +1427,49 @@ Create a new function that calls _func_ with _args_.
 **[⬆ back to top](#quick-links)**
 
 ## Lang
+
+### _.isEmpty
+
+Checks if value is an empty object, collection, map, or set.
+
+  ```js
+  // Lodash
+  console.log(_.isEmpty(null)
+  // output: true
+  console.log(_.isEmpty('')
+  // output: true
+  console.log(_.isEmpty({})
+  // output: true
+  console.log(_.isEmpty([])
+  // output: true
+  console.log(_.isEmpty({a: '1'})
+  // output: false
+
+  // Native
+  const isEmpty = obj => {
+    return (obj ? [Object, Array].includes(obj.constructor) && !Object.entries(obj).length : true);
+  }
+
+  console.log(isEmpty(null)
+  // output: true
+  console.log(isEmpty('')
+  // output: true
+  console.log(isEmpty({})
+  // output: true
+  console.log(isEmpty([])
+  // output: true
+  console.log(isEmpty({a: '1'})
+  // output: false
+  ```
+
+#### Browser Support for `Array.prototype.includes()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+   47.0 ✔  | 14.0 ✔ | 43.0 ✔ |  ✖ |  34.0 ✔ |  9.0 ✔  |
+
+**[⬆ back to top](#quick-links)**
+
 
 ### _.isNaN
 

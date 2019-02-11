@@ -1766,18 +1766,27 @@ Gets the value at path of object.
   console.log(result);
   // output: 3
 
-  // Native
+  // Native (ES6 - IE not supported)
   var object = { a: [{ b: { c: 3 } }] };
   var { a: [{ b: { c: result2 = 1 } }] } = object;
   console.log(result2);
   // output: 3
+  
+  // Native
+  const get = (obj, path, defaultValue) => path.split(".")
+  .reduce((a, c) => (a && a[c] ? a[c] : (defaultValue || null)), obj)
+  
+  var object = { a: [{ b: { c: 3 } }] };
+  var result = get(object, 'a[0].b.c', 1); 
+  // output: 3
+  
   ```
 
 #### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
-  49 ✔  | 41 ✔ |  Not supported  |  41.0 ✔ |  8 ✔ |
+  49 ✔  | 41 ✔ | 9 ✔  |  41.0 ✔ |  8 ✔ |
   
 ### _.omit
 

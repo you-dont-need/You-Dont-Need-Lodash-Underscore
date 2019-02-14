@@ -168,6 +168,41 @@ describe('code snippet example', () => {
       )
     })
   })
+  describe('isEmpty', () => {
+    const isEmpty = (obj) => {
+      return (obj ? [Object, Array].includes(obj.constructor) && !Object.entries(obj).length : true);
+    };
+    it ('_.isEmpty(null)', () => {
+      assert.equal(
+        _.isEmpty(null),
+        isEmpty(null)
+      )
+    })
+    it ("_.isEmpty('')", () => {
+      assert.equal(
+        _.isEmpty(''),
+        isEmpty('')
+      )
+    })
+    it ("_.isEmpty({})", () => {
+      assert.equal(
+        _.isEmpty({}),
+        isEmpty({})
+      )
+    })
+    it ("_.isEmpty([])", () => {
+      assert.equal(
+        _.isEmpty([]),
+        isEmpty([])
+      )
+    })
+    it ("_.isEmpty({a: '1'})", () => {
+      assert.equal(
+        _.isEmpty({a: '1'}),
+        isEmpty({a: '1'})
+      )
+    })
+  })
   describe('split', () => {
     const source = 'a-b-c';
     const separator = '-';

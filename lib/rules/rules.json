@@ -182,6 +182,10 @@
         "compatible": true,
         "alternative": "String.prototype.split()"
     },
+    "startsWith": {
+        "compatible": true,
+        "alternative": "String.prototype.startsWith()"
+    },
     "toLower": {
         "compatible": true,
         "alternative": "String.prototype.toLowerCase()"

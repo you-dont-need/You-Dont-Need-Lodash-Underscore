@@ -5,6 +5,8 @@ node_js:
   - 6
   - 7
   - 8
+  - 10
+  - 11
 after_success:
   - npm run coveralls
   - npm run test:unit

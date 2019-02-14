@@ -135,6 +135,7 @@ then Lodash/Underscore is the better option.*
 
 **[Lang](#lang)**
 
+1. [_.isEmpty](#_isempty)
 1. [_.isFinite](#_isfinite)
 1. [_.isNaN](#_isnan)
 1. [_.isNil](#_isnil)
@@ -157,6 +158,7 @@ then Lodash/Underscore is the better option.*
 **[String](#string)**
 
 1. [_.repeat](#_repeat)
+1. [_.startsWith](#startsWith)
 1. [_.template](#_template)
 1. [_.toLower](#_tolower)
 1. [_.toUpper](#_toupper)
@@ -1428,6 +1430,49 @@ Create a new function that calls _func_ with _args_.
 
 ## Lang
 
+### _.isEmpty
+
+Checks if value is an empty object, collection, map, or set.
+
+  ```js
+  // Lodash
+  console.log(_.isEmpty(null)
+  // output: true
+  console.log(_.isEmpty('')
+  // output: true
+  console.log(_.isEmpty({})
+  // output: true
+  console.log(_.isEmpty([])
+  // output: true
+  console.log(_.isEmpty({a: '1'})
+  // output: false
+
+  // Native
+  const isEmpty = obj => {
+    return (obj ? [Object, Array].includes(obj.constructor) && !Object.entries(obj).length : true);
+  }
+
+  console.log(isEmpty(null)
+  // output: true
+  console.log(isEmpty('')
+  // output: true
+  console.log(isEmpty({})
+  // output: true
+  console.log(isEmpty([])
+  // output: true
+  console.log(isEmpty({a: '1'})
+  // output: false
+  ```
+
+#### Browser Support for `Array.prototype.includes()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+   47.0 ✔  | 14.0 ✔ | 43.0 ✔ |  ✖ |  34.0 ✔ |  9.0 ✔  |
+
+**[⬆ back to top](#quick-links)**
+
+
 ### _.isFinite
 
 Converts value to a finite number.
@@ -1792,18 +1837,27 @@ Gets the value at path of object.
   console.log(result);
   // output: 3
 
-  // Native
+  // Native (ES6 - IE not supported)
   var object = { a: [{ b: { c: 3 } }] };
   var { a: [{ b: { c: result2 = 1 } }] } = object;
   console.log(result2);
   // output: 3
+  
+  // Native
+  const get = (obj, path, defaultValue) => path.split(".")
+  .reduce((a, c) => (a && a[c] ? a[c] : (defaultValue || null)), obj)
+  
+  var object = { a: [{ b: { c: 3 } }] };
+  var result = get(object, 'a[0].b.c', 1); 
+  // output: 3
+  
   ```
 
 #### Browser Support
 
 ![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |
-  49 ✔  | 41 ✔ |  Not supported  |  41.0 ✔ |  8 ✔ |
+  49 ✔  | 41 ✔ | 9 ✔  |  41.0 ✔ |  8 ✔ |
   
 ### _.omit
 
@@ -1901,6 +1955,30 @@ Creates an object composed of the object properties predicate returns truthy for
 **[⬆ back to top](#quick-links)**
 
 ## String
+
+### _.startsWith
+:heavy_exclamation_mark:`Lodash only`
+Checks if string starts with the given target string.
+
+  ```js
+  // Lodash
+  var result = _.startsWith('abc', 'b', 1)
+  console.log(result)
+  // output: true
+
+  // Native
+  var result = 'abc'.startsWith('b', 1)
+  console.log(result)
+  // output: true
+  ```
+
+#### Browser Support for `String.prototype.startsWith()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  41.0 ✔  |  ✔ | 17.0 ✔ |  ✖  |  28.0 ✔ |  9.0 ✔ |
+
+**[⬆ back to top](#quick-links)**
 
 ### _.repeat
 :heavy_exclamation_mark:`Lodash only`

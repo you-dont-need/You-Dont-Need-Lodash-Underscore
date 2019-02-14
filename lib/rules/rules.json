@@ -181,7 +181,10 @@
         "alternative": "Object.entries()",
         "ES6": true
     },
-
+    "startsWith": {
+        "compatible": true,
+        "alternative": "String.prototype.startsWith()"
+    },
     "toLower": {
         "compatible": true,
         "alternative": "String.prototype.toLowerCase()"

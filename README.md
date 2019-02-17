@@ -1848,7 +1848,7 @@ Gets the value at path of object.
   .reduce((a, c) => (a && a[c] ? a[c] : (defaultValue || null)), obj)
   
   var object = { a: [{ b: { c: 3 } }] };
-  var result = get(object, 'a[0].b.c', 1); 
+  var result = get(object, 'a.0.b.c', 1); 
   // output: 3
   
   ```

@@ -2,7 +2,7 @@
 
 **[Section](#section)**
 
-1. [_.example](#_example)
+1. [_.sortYourMethodAlphabetically](#_sortYourMethodAlphabetically) 
 
 
 
@@ -12,22 +12,22 @@
 
 
 
-### _.example
+### _.sortYourMethodAlphabetically
 Explains or copy/paste lodash/underscore description.
 
   ```js
   // Lodash
-  var result = _.example('abc', ...)
+  var result = _.sortYourMethodAlphabetically('abc', ...)
   console.log(result)
   // output: true
 
   // Native
-  var result = 'abc'.example(...)
+  var result = 'abc'.sortYourMethodAlphabetically(...)
   console.log(result)
   // output: true
   ```
 
-#### Browser Support for `Array.prototype.example()`
+#### Browser Support for `Array.prototype.sortYourMethodAlphabetically()`
 
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |

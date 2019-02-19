@@ -2150,11 +2150,11 @@ Removes all duplicates entries from an array.
   // output: [1, 2, 4, 3]
   ```
 
-#### Browser Support
+#### Browser Support for `new Set()`
 
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |
-  38.0 ✔  | ✔ | 13.0 ✔ |  11.0 ✔  |  25.0 ✔ |  7.1 ✔  |
+  38.0 ✔  | ✔ 12.0 | 13.0 ✔ |  11.0 ✔  |  25.0 ✔ |  7.1 ✔  |
 
 **[⬆ back to top](#quick-links)**
 

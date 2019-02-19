@@ -135,6 +135,15 @@ then Lodash/Underscore is the better option.*
 
 **[Lang](#lang)**
 
+<<<<<<< HEAD
+=======
+1. [_.isEmpty](#_isempty)
+1. [_.isFinite](#_isfinite)
+1. [_.isNaN](#_isnan)
+1. [_.isNil](#_isnil)
+1. [_.isNull](#_isnull)
+1. [_.isUndefined](#_isundefined)
+>>>>>>> master
 1. [_.gt](#_gt)
 2. [_.gte](#_gte)
 3. [_.isEmpty](#_isempty)
@@ -1538,6 +1547,31 @@ Checks if value is an empty object, collection, map, or set.
 **[⬆ back to top](#quick-links)**
 
 
+### _.isFinite
+
+Converts value to a finite number.
+
+  ```js
+  // Lodash
+  console.log(_.isFinite('3'))
+  // output: false
+  console.log(_.isFinite(3))
+  // output: true
+
+  // Native
+  console.log(Number.isFinite('3'))
+  // output: false
+  console.log(Number.isFinite(3))
+  // output: true
+  ```
+#### Browser Support for `Number.isFinite()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  19.0 ✔  |  ✔ | 16.0 ✔ |  ✖  |  15.0 ✔ |  9.0 ✔ |
+
+**[⬆ back to top](#quick-links)**
+
 ### _.isNaN
 
 Checks if a value is NaN.
@@ -1812,6 +1846,43 @@ Retrieves all the names of the object's own enumerable properties.
 
 **[⬆ back to top](#quick-links)**
 
+<<<<<<< HEAD
+=======
+### _.get
+
+Gets the value at path of object.
+*Note: If provided path does not exists inside the object js will generate error.*
+
+  ```js
+  // Lodash
+  var object = { a: [{ b: { c: 3 } }] };
+  var result = _.get(object, 'a[0].b.c', 1);
+  console.log(result);
+  // output: 3
+
+  // Native (ES6 - IE not supported)
+  var object = { a: [{ b: { c: 3 } }] };
+  var { a: [{ b: { c: result2 = 1 } }] } = object;
+  console.log(result2);
+  // output: 3
+  
+  // Native
+  const get = (obj, path, defaultValue) => path.split(".")
+  .reduce((a, c) => (a && a[c] ? a[c] : (defaultValue || null)), obj)
+  
+  var object = { a: [{ b: { c: 3 } }] };
+  var result = get(object, 'a.0.b.c', 1); 
+  // output: 3
+  
+  ```
+
+#### Browser Support
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+  49 ✔  | 41 ✔ | 9 ✔  |  41.0 ✔ |  8 ✔ |
+  
+>>>>>>> master
 ### _.omit
 
 Returns a copy of the object, filtered to omit the keys specified.

@@ -136,7 +136,10 @@
         "compatible": true,
         "alternative": "Function.prototype.bind()"
     },
-
+    "isFinite": {
+        "compatible": true,
+        "alternative": "Number.isFinite()"
+    },
     "isNaN": {
         "ruleName": "is-nan",
         "compatible": true,

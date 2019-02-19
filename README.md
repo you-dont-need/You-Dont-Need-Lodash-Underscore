@@ -84,6 +84,7 @@ For more information, see [Configuring the ESLint Plugin](configuring.md)
 1. [_.chunk](#_chunk)
 1. [_.compact](#_compact)
 1. [_.concat](#_concat)
+1. [_.difference](#_difference)
 1. [_.fill](#_fill)
 1. [_.find](#_find)
 1. [_.findIndex](#_findindex)
@@ -93,16 +94,15 @@ For more information, see [Configuring the ESLint Plugin](configuring.md)
 1. [_.fromPairs](#_frompairs)
 1. [_.head and _.tail](#_head-and-_tail)
 1. [_.indexOf](#_indexof)
+1. [_.intersection](#_intersection)
+1. [_.isArray](#_isarray)
+1. [_.isArrayBuffer](#_isarraybuffer)
 1. [_.join](#_join)
 1. [_.last](#_last)
 1. [_.lastIndexOf](#_lastindexof)
 1. [_.reverse](#_reverse)
-1. [_.without](#_without)
-1. [_.intersection](#_intersection)
-1. [_.difference](#_difference)
 1. [_.slice](#_slice)
-1. [_.isArray](#_isarray)
-1. [_.isArrayBuffer](#_isarraybuffer)
+1. [_.without](#_without)
 
 **[Collection*](#collection*)**
 
@@ -111,58 +111,58 @@ and will not work with objects. If this functionality is needed,
 then Lodash/Underscore is the better option.*
 
 1. [_.each](#_each)
-1. [_.every](#_every)
-1. [_.filter](#_filter)
-1. [_.groupBy](#_groupby)
-1. [_.includes](#_includes)
-1. [_.map](#_map)
-1. [_.minBy and _.maxBy](#_minby-and-_maxby)
-1. [_.orderBy](#_sortby-and-_orderby)
-1. [_.pluck](#_pluck)
-1. [_.range](#_range)
-1. [_.reduce](#_reduce)
-1. [_.reduceRight](#_reduceright)
-1. [_.size](#_size)
-1. [_.some](#_some)
-1. [_.sortBy](#_sortby-and-_orderby)
-1. [_.uniq](#_uniq)
+2. [_.every](#_every)
+3. [_.filter](#_filter)
+4. [_.groupBy](#_groupby)
+5. [_.includes](#_includes)
+6. [_.map](#_map)
+7. [_.minBy and _.maxBy](#_minby-and-_maxby)
+8. [_.orderBy](#_sortby-and-_orderby)
+9. [_.pluck](#_pluck)
+10. [_.range](#_range)
+11. [_.reduce](#_reduce)
+12. [_.reduceRight](#_reduceright)
+13. [_.size](#_size)
+14. [_.some](#_some)
+15. [_.sortBy](#_sortby-and-_orderby)
+16. [_.uniq](#_uniq)
 
 **[Function](#function)**
 
 1. [_.after](#_after)
-1. [_.bind](#_bind)
-1. [_.partial](#_partial)
+2. [_.bind](#_bind)
+3. [_.partial](#_partial)
 
 **[Lang](#lang)**
 
-1. [_.isEmpty](#_isempty)
-1. [_.isNaN](#_isnan)
-1. [_.isNil](#_isnil)
-1. [_.isNull](#_isnull)
-1. [_.isUndefined](#_isundefined)
 1. [_.gt](#_gt)
-1. [_.gte](#_gte)
+2. [_.gte](#_gte)
+3. [_.isEmpty](#_isempty)
+4. [_.isNaN](#_isnan)
+5. [_.isNil](#_isnil)
+6. [_.isNull](#_isnull)
+7. [_.isUndefined](#_isundefined)
 
 **[Object](#object)**
 
 1. [_.assign](#_assign)
-1. [_.keys](#_keys)
-1. [_.toPairs](#_topairs)
-1. [_.values](#_values)
-1. [_.get](#_get)
-1. [_.omit](#_omit)
-1. [_.pick](#_pick)
-1. [_.pickBy](#_pickby)
+2. [_.get](#_get)
+3. [_.keys](#_keys)
+4. [_.omit](#_omit)
+5. [_.pick](#_pick)
+6. [_.pickBy](#_pickby)
+7. [_.toPairs](#_topairs)
+8. [_.values](#_values)
 
 **[String](#string)**
 
 1. [_.repeat](#_repeat)
-1. [_.startsWith](#startsWith)
-1. [_.template](#_template)
-1. [_.toLower](#_tolower)
-1. [_.toUpper](#_toupper)
-1. [_.trim](#_trim)
-1. [_.replace](#_replace)
+2. [_.replace](#_replace)
+3. [_.startsWith](#startsWith)
+4. [_.template](#_template)
+5. [_.toLower](#_tolower)
+6. [_.toUpper](#_toupper)
+7. [_.trim](#_trim)
 
 **[Util](#string)**
 
@@ -253,6 +253,37 @@ Creates a new array concatenating array with any additional arrays and/or values
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |
 1.0  ✔  | ✔  |  1.0 ✔ |  5.5 ✔  |  ✔  |  ✔  |
+
+**[⬆ back to top](#quick-links)**
+
+### _.difference
+Similar to [without](#_without), but returns the values from array that are not present in the other arrays.
+
+  ```js
+  // Underscore/Lodash
+  console.log(_.difference([1, 2, 3, 4, 5], [5, 2, 10]))
+  // output: [1, 3, 4]
+
+  // Native
+  var arrays = [[1, 2, 3, 4, 5], [5, 2, 10]];
+  console.log(array.reduce(function(a, b) {
+    return a.filter(function(value) {
+      return !b.includes(value);
+    });
+  })));
+  // output: [1, 3, 4]
+
+  // ES6
+  let arrays = [[1, 2, 3, 4, 5], [5, 2, 10]];
+  console.log(arrays.reduce((a, b) => a.filter(c => !b.includes(c))));
+  // output: [1, 3, 4]
+  ```
+
+#### Browser Support for `Array.prototype.reduce()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+   ✔  |  ✔ | 3.0 ✔ |  9.0 ✔  |  10.5 ✔ |  4.0 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -547,6 +578,82 @@ Returns the first index at which a given element can be found in the array, or -
 
 **[⬆ back to top](#quick-links)**
 
+### _.intersection
+Returns an array that is the intersection of all the arrays. Each value in the result is present in each of the arrays.
+
+  ```js
+  // Underscore/Lodash
+  console.log(_.intersection([1, 2, 3], [101, 2, 1, 10], [2, 1]))
+  // output: [1, 2]
+
+  // Native
+  var arrays = [[1, 2, 3], [101, 2, 1, 10], [2, 1]];
+  console.log(array.reduce(function(a, b) {
+    return a.filter(function(value) {
+      return b.includes(value);
+    });
+  })));
+  // output: [1, 2]
+
+  // ES6
+  let arrays = [[1, 2, 3], [101, 2, 1, 10], [2, 1]];
+  console.log(arrays.reduce((a, b) => a.filter(c => b.includes(c))));
+  // output: [1, 2]
+  ```
+
+#### Browser Support for `Array.prototype.reduce()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  |  ✔ | 3.0 ✔ |  9.0 ✔  |  10.5 ✔ |  4.0 ✔ |
+
+**[⬆ back to top](#quick-links)**
+
+### _.isArray
+Returns true if given value is an array.
+
+  ```js
+  // Lodash
+  var array = []
+  console.log(_.isArray(array))
+  // output: true
+
+  // Native
+  var array = []
+  console.log(Array.isArray(array));
+  // output: true
+  ```
+
+  #### Browser Support for `Array.isArray()`
+
+ ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+ :-: | :-: | :-: | :-: | :-: | :-: |
+  5.0 ✔  |  ✔  | 4.0 ✔  |  9.0 ✔  |  10.5 ✔  | 5.0 ✔  |
+
+**[⬆ back to top](#quick-links)**
+
+### _.isArrayBuffer
+
+Checks if value is classified as an ArrayBuffer object.
+
+  ```js
+  // Lodash
+  _.isArrayBuffer(new ArrayBuffer(2));
+  // output: true
+
+  // Native
+  console.log(new ArrayBuffer(2) instanceof ArrayBuffer);
+  // output: true
+  ```
+
+  #### Browser Support for `instanceof`
+
+ ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+ :-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  |  ✔  | 1.0 ✔  | ✔  | ✔  | ✔  |
+
+**[⬆ back to top](#quick-links)**
+
 ### _.join
 :heavy_exclamation_mark:`Lodash only`
 Joins a list of elements in an array with a given separator.
@@ -667,94 +774,6 @@ It's exposed on _ because previously, like `Underscore`, it was only exposed in 
 
 **[⬆ back to top](#quick-links)**
 
-### _.without
-:heavy_exclamation_mark:`Lodash only`
-Returns an array where matching items are filtered.
-
-  ```js
-  // Lodash
-  var array = [1, 2, 3]
-  console.log(_.without(array, 2))
-  // output: [1, 3]
-
-  // Native
-  var array = [1, 2, 3]
-  console.log(array.filter(function(value) {
-    return value !== 2;
-  }));
-  // output: [1, 3]
-  ```
-
-#### Browser Support for `Array.prototype.filter()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  1.0 ✔  | ✔ | 1.5 ✔ |  9 ✔ |  ✔ |  ✔  |
-
-**[⬆ back to top](#quick-links)**
-
-### _.intersection
-Returns an array that is the intersection of all the arrays. Each value in the result is present in each of the arrays.
-
-  ```js
-  // Underscore/Lodash
-  console.log(_.intersection([1, 2, 3], [101, 2, 1, 10], [2, 1]))
-  // output: [1, 2]
-
-  // Native
-  var arrays = [[1, 2, 3], [101, 2, 1, 10], [2, 1]];
-  console.log(array.reduce(function(a, b) {
-    return a.filter(function(value) {
-      return b.includes(value);
-    });
-  })));
-  // output: [1, 2]
-
-  // ES6
-  let arrays = [[1, 2, 3], [101, 2, 1, 10], [2, 1]];
-  console.log(arrays.reduce((a, b) => a.filter(c => b.includes(c))));
-  // output: [1, 2]
-  ```
-
-#### Browser Support for `Array.prototype.reduce()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  |  ✔ | 3.0 ✔ |  9.0 ✔  |  10.5 ✔ |  4.0 ✔ |
-
-**[⬆ back to top](#quick-links)**
-
-### _.difference
-Similar to [without](#_without), but returns the values from array that are not present in the other arrays.
-
-  ```js
-  // Underscore/Lodash
-  console.log(_.difference([1, 2, 3, 4, 5], [5, 2, 10]))
-  // output: [1, 3, 4]
-
-  // Native
-  var arrays = [[1, 2, 3, 4, 5], [5, 2, 10]];
-  console.log(array.reduce(function(a, b) {
-    return a.filter(function(value) {
-      return !b.includes(value);
-    });
-  })));
-  // output: [1, 3, 4]
-
-  // ES6
-  let arrays = [[1, 2, 3, 4, 5], [5, 2, 10]];
-  console.log(arrays.reduce((a, b) => a.filter(c => !b.includes(c))));
-  // output: [1, 3, 4]
-  ```
-
-#### Browser Support for `Array.prototype.reduce()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-   ✔  |  ✔ | 3.0 ✔ |  9.0 ✔  |  10.5 ✔ |  4.0 ✔ |
-
-**[⬆ back to top](#quick-links)**
-
 ### _.slice
 Returns a shallow copy of a portion of an array into a new array object selected from `begin` to `end` (`end` not included)
 
@@ -778,48 +797,29 @@ Returns a shallow copy of a portion of an array into a new array object selected
 
 **[⬆ back to top](#quick-links)**
 
-### _.isArray
-Returns true if given value is an array.
+### _.without
+:heavy_exclamation_mark:`Lodash only`
+Returns an array where matching items are filtered.
 
   ```js
   // Lodash
-  var array = []
-  console.log(_.isArray(array))
-  // output: true
+  var array = [1, 2, 3]
+  console.log(_.without(array, 2))
+  // output: [1, 3]
 
   // Native
-  var array = []
-  console.log(Array.isArray(array));
-  // output: true
+  var array = [1, 2, 3]
+  console.log(array.filter(function(value) {
+    return value !== 2;
+  }));
+  // output: [1, 3]
   ```
 
-  #### Browser Support for `Array.isArray()`
+#### Browser Support for `Array.prototype.filter()`
 
- ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
- :-: | :-: | :-: | :-: | :-: | :-: |
-  5.0 ✔  |  ✔  | 4.0 ✔  |  9.0 ✔  |  10.5 ✔  | 5.0 ✔  |
-
-**[⬆ back to top](#quick-links)**
-
-### _.isArrayBuffer
-
-Checks if value is classified as an ArrayBuffer object.
-
-  ```js
-  // Lodash
-  _.isArrayBuffer(new ArrayBuffer(2));
-  // output: true
-
-  // Native
-  console.log(new ArrayBuffer(2) instanceof ArrayBuffer);
-  // output: true
-  ```
-
-  #### Browser Support for `instanceof`
-
- ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
- :-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  |  ✔  | 1.0 ✔  | ✔  | ✔  | ✔  |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  1.0 ✔  | ✔ | 1.5 ✔ |  9 ✔ |  ✔ |  ✔  |
 
 **[⬆ back to top](#quick-links)**
 
@@ -1451,6 +1451,50 @@ Create a new function that calls _func_ with _args_.
 
 ## Lang
 
+### _.gt
+
+Checks if value is greater than other.
+
+```js
+// Lodash
+console.log(_.gt(3, 1))
+// output: true
+
+// Native
+console.log(3 > 1);
+// output: true
+```
+
+#### Browser Support
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  | ✔ | ✔ |  ✔  | ✔ | ✔ |
+
+**[⬆ back to top](#quick-links)**
+
+### _.gte
+
+Checks if value is greater than or equal to other.
+
+```js
+// Lodash
+console.log(_.gte(3, 1))
+// output: true
+
+// Native
+console.log(3 >= 1);
+// output: true
+```
+
+#### Browser Support
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  | ✔ | ✔ |  ✔  | ✔ | ✔ |
+
+**[⬆ back to top](#quick-links)**
+
 ### _.isEmpty
 
 Checks if value is an empty object, collection, map, or set.
@@ -1613,50 +1657,6 @@ console.log(a === undefined);
 
 **[⬆ back to top](#quick-links)**
 
-### _.gt
-
-Checks if value is greater than other.
-
-```js
-// Lodash
-console.log(_.gt(3, 1))
-// output: true
-
-// Native
-console.log(3 > 1);
-// output: true
-```
-
-#### Browser Support
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  | ✔ | ✔ |  ✔  | ✔ | ✔ |
-
-**[⬆ back to top](#quick-links)**
-
-### _.gte
-
-Checks if value is greater than or equal to other.
-
-```js
-// Lodash
-console.log(_.gte(3, 1))
-// output: true
-
-// Native
-console.log(3 >= 1);
-// output: true
-```
-
-#### Browser Support
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  | ✔ | ✔ |  ✔  | ✔ | ✔ |
-
-**[⬆ back to top](#quick-links)**
-
 ## Object
 
 ### _.assign
@@ -1699,6 +1699,42 @@ The method is used to copy the values of all enumerable own properties from one 
   45.0 ✔  | ✔ | 34.0 ✔ |  ✖  |  32.0 ✔ |  9.0 ✔  |
 
  **[⬆ back to top](#quick-links)**
+
+ ### _.get
+
+Gets the value at path of object.
+*Note: If provided path does not exists inside the object js will generate error.*
+
+  ```js
+  // Lodash
+  var object = { a: [{ b: { c: 3 } }] };
+  var result = _.get(object, 'a[0].b.c', 1);
+  console.log(result);
+  // output: 3
+
+  // Native (ES6 - IE not supported)
+  var object = { a: [{ b: { c: 3 } }] };
+  var { a: [{ b: { c: result2 = 1 } }] } = object;
+  console.log(result2);
+  // output: 3
+  
+  // Native
+  const get = (obj, path, defaultValue) => path.split(".")
+  .reduce((a, c) => (a && a[c] ? a[c] : (defaultValue || null)), obj)
+  
+  var object = { a: [{ b: { c: 3 } }] };
+  var result = get(object, 'a[0].b.c', 1); 
+  // output: 3
+  
+  ```
+
+#### Browser Support for Object destructing
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  49.0 ✔  | 14.0 ✔ |  41.0 ✔ |  ✖  |  41.0 ✔ |  8.0 ✔ |
+
+  **[⬆ back to top](#quick-links)**
 
 ### _.extend
 
@@ -1776,89 +1812,6 @@ Retrieves all the names of the object's own enumerable properties.
 
 **[⬆ back to top](#quick-links)**
 
-### _.toPairs
-
-Retrieves all the given object's own enumerable property `[ key, value ]` pairs.
-
-  ```js
-  // Underscore - also called _.pairs
-  // Lodash - also called _.entries
-  var result = _.toPairs({one: 1, two: 2, three: 3})
-  console.log(result)
-  // output: [["one", 1], ["two", 2], ["three", 3]]
-
-  // Native
-  var result2 = Object.entries({one: 1, two: 2, three: 3})
-  console.log(result2)
-  // output: [["one", 1], ["two", 2], ["three", 3]]
-  ```
-
-#### Browser Support for `Object.entries()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  54.0 ✔  | 14.0 ✔  | 47.0 ✔ |  ✖  |  41.0 ✔ |  10.1 ✔ |
-
-**[⬆ back to top](#quick-links)**
-
-### _.values
-
-Retrieves all the given object's own enumerable property values.
-
-  ```js
-  // Underscore/Lodash
-  var result = _.values({one: 1, two: 2, three: 3})
-  console.log(result)
-  // output: [1, 2, 3]
-
-  // Native
-  var result2 = Object.values({one: 1, two: 2, three: 3})
-  console.log(result2)
-  // output: [1, 2, 3]
-  ```
-
-#### Browser Support for `Object.values()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  54.0 ✔  | 14.0 ✔ |  47.0 ✔ |  ✖  |  41.0 ✔ |  10.1 ✔ |
-
-**[⬆ back to top](#quick-links)**
-
-### _.get
-
-Gets the value at path of object.
-*Note: If provided path does not exists inside the object js will generate error.*
-
-  ```js
-  // Lodash
-  var object = { a: [{ b: { c: 3 } }] };
-  var result = _.get(object, 'a[0].b.c', 1);
-  console.log(result);
-  // output: 3
-
-  // Native (ES6 - IE not supported)
-  var object = { a: [{ b: { c: 3 } }] };
-  var { a: [{ b: { c: result2 = 1 } }] } = object;
-  console.log(result2);
-  // output: 3
-  
-  // Native
-  const get = (obj, path, defaultValue) => path.split(".")
-  .reduce((a, c) => (a && a[c] ? a[c] : (defaultValue || null)), obj)
-  
-  var object = { a: [{ b: { c: 3 } }] };
-  var result = get(object, 'a[0].b.c', 1); 
-  // output: 3
-  
-  ```
-
-#### Browser Support for Object destructing
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  49.0 ✔  | 14.0 ✔ |  41.0 ✔ |  ✖  |  41.0 ✔ |  8.0 ✔ |
-  
 ### _.omit
 
 Returns a copy of the object, filtered to omit the keys specified.
@@ -1954,6 +1907,55 @@ Creates an object composed of the object properties predicate returns truthy for
 
 **[⬆ back to top](#quick-links)**
 
+### _.toPairs
+
+Retrieves all the given object's own enumerable property `[ key, value ]` pairs.
+
+  ```js
+  // Underscore - also called _.pairs
+  // Lodash - also called _.entries
+  var result = _.toPairs({one: 1, two: 2, three: 3})
+  console.log(result)
+  // output: [["one", 1], ["two", 2], ["three", 3]]
+
+  // Native
+  var result2 = Object.entries({one: 1, two: 2, three: 3})
+  console.log(result2)
+  // output: [["one", 1], ["two", 2], ["three", 3]]
+  ```
+
+#### Browser Support for `Object.entries()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  54.0 ✔  | 14.0 ✔  | 47.0 ✔ |  ✖  |  41.0 ✔ |  10.1 ✔ |
+
+**[⬆ back to top](#quick-links)**
+
+### _.values
+
+Retrieves all the given object's own enumerable property values.
+
+  ```js
+  // Underscore/Lodash
+  var result = _.values({one: 1, two: 2, three: 3})
+  console.log(result)
+  // output: [1, 2, 3]
+
+  // Native
+  var result2 = Object.values({one: 1, two: 2, three: 3})
+  console.log(result2)
+  // output: [1, 2, 3]
+  ```
+
+#### Browser Support for `Object.values()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  54.0 ✔  | 14.0 ✔ |  47.0 ✔ |  ✖  |  41.0 ✔ |  10.1 ✔ |
+
+**[⬆ back to top](#quick-links)**
+
 ## String
 
 ### _.startsWith
@@ -2000,6 +2002,33 @@ Repeats the given string n times.
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |
   41.0 ✔  | ✔ | 24.0 ✔ |  ✖  |  28.0 ✔ |  9.0 ✔ |
+
+**[⬆ back to top](#quick-links)**
+
+### _.replace
+returns a new string with some or all matches of a `pattern` replaced by a `replacement`
+
+  ```js
+  // Lodash
+  var re = /apples/gi;
+  var str = 'Apples are round, and apples are juicy.';
+  var newstr = _.replace(str, re, 'oranges');
+  console.log(newstr);
+  // output: 'oranges are round, and oranges are juicy.'
+
+  // Native
+  var re = /apples/gi;
+  var str = 'Apples are round, and apples are juicy.';
+  var result = str.replace(re, 'oranges');
+  console.log(result);
+  // output: 'oranges are round, and oranges are juicy.'
+  ```
+
+#### Browser Support for `String.prototype.replace()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  | ✔ | 1.0 ✔ |  ✔  |  ✔ |  ✔  |
 
 **[⬆ back to top](#quick-links)**
 
@@ -2099,33 +2128,6 @@ Removes the leading and trailing whitespace characters from a string.
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |
   5.0 ✔  | ✔ |  3.5 ✔ |  9.0 ✔  |  10.5 ✔ |  5.0 ✔  |
-
-**[⬆ back to top](#quick-links)**
-
-### _.replace
-returns a new string with some or all matches of a `pattern` replaced by a `replacement`
-
-  ```js
-  // Lodash
-  var re = /apples/gi;
-  var str = 'Apples are round, and apples are juicy.';
-  var newstr = _.replace(str, re, 'oranges');
-  console.log(newstr);
-  // output: 'oranges are round, and oranges are juicy.'
-
-  // Native
-  var re = /apples/gi;
-  var str = 'Apples are round, and apples are juicy.';
-  var result = str.replace(re, 'oranges');
-  console.log(result);
-  // output: 'oranges are round, and oranges are juicy.'
-  ```
-
-#### Browser Support for `String.prototype.replace()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  | ✔ | 1.0 ✔ |  ✔  |  ✔ |  ✔  |
 
 **[⬆ back to top](#quick-links)**
 

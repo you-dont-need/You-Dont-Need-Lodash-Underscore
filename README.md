@@ -994,6 +994,7 @@ Checks if a value is in collection.
 **[⬆ back to top](#quick-links)**
 
 ### _.keyBy
+:heavy_exclamation_mark: `Lodash only`
 Creates an object composed of keys generated from the results of running each element of collection thru iteratee.
 
   ```js
@@ -1006,7 +1007,7 @@ Creates an object composed of keys generated from the results of running each el
   // output: { a1: { id: 'a1', title: 'abc' }}
 
   // keyBy for array only
-  const keyBy = (array = [], key) => array.reduce((r, x) => ({ ...r, [key ? x[key] : x]: x }), {});
+  const keyBy = (array, key) => (array || []).reduce((r, x) => ({ ...r, [key ? x[key] : x]: x }), {});
 
   // Native
   console.log(keyBy(['a', 'b', 'c']))
@@ -1017,8 +1018,9 @@ Creates an object composed of keys generated from the results of running each el
   // output: { a1: { id: 'a1', title: 'abc' }}
 
   // keyBy for array and object
-  const collectionKeyBy = (collection = [], key) => { 
-    return collection.isArray() ? keyBy(collection, key) : Object.values(keyBy(collection, key));
+  const collectionKeyBy = (collection, key) => { 
+    const c = collection || {};
+    return c.isArray() ? keyBy(c, key) : Object.values(keyBy(c, key));
   }
   ```
 
@@ -1486,9 +1488,7 @@ Checks if value is an empty object, collection, map, or set.
   // output: false
 
   // Native
-  const isEmpty = obj => {
-    return (obj ? [Object, Array].includes(obj.constructor) && !Object.entries(obj).length : true);
-  }
+  const isEmpty = obj => [Object, Array].includes((obj || {}).constructor) && !Object.entries((obj || {})).length;
 
   console.log(isEmpty(null)
   // output: true

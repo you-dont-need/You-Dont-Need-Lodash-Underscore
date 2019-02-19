@@ -136,7 +136,10 @@
         "compatible": true,
         "alternative": "Function.prototype.bind()"
     },
-
+    "isFinite": {
+        "compatible": true,
+        "alternative": "Number.isFinite()"
+    },
     "isNaN": {
         "ruleName": "is-nan",
         "compatible": true,
@@ -178,7 +181,10 @@
         "alternative": "Object.entries()",
         "ES6": true
     },
-
+    "startsWith": {
+        "compatible": true,
+        "alternative": "String.prototype.startsWith()"
+    },
     "toLower": {
         "compatible": true,
         "alternative": "String.prototype.toLowerCase()"

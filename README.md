@@ -115,6 +115,7 @@ then Lodash/Underscore is the better option.*
 1. [_.filter](#_filter)
 1. [_.groupBy](#_groupby)
 1. [_.includes](#_includes)
+1. [_.keyBy](#_keyBy)
 1. [_.map](#_map)
 1. [_.minBy and _.maxBy](#_minby-and-_maxby)
 1. [_.orderBy](#_sortby-and-_orderby)
@@ -992,6 +993,45 @@ Checks if a value is in collection.
 
 **[⬆ back to top](#quick-links)**
 
+### _.keyBy
+:heavy_exclamation_mark: `Lodash only`
+Creates an object composed of keys generated from the results of running each element of collection thru iteratee.
+
+  ```js
+  // Lodash
+  console.log(_.keyBy(['a', 'b', 'c']))
+  // output: { a: 'a', b: 'b', c: 'c' }
+  console.log(_.keyBy([{ id: 'a1', title: 'abc' }, { id: 'b2', title: 'def' }], 'id')
+  // output: { a1: { id: 'a1', title: 'abc' }, b2: { id: 'b2', title: 'def' } }
+  console.log(_.keyBy({ data: { id: 'a1', title: 'abc' }}, 'id')
+  // output: { a1: { id: 'a1', title: 'abc' }}
+
+  // keyBy for array only
+  const keyBy = (array, key) => (array || []).reduce((r, x) => ({ ...r, [key ? x[key] : x]: x }), {});
+
+  // Native
+  console.log(keyBy(['a', 'b', 'c']))
+  // output: { a: 'a', b: 'b', c: 'c' }
+  console.log(keyBy([{ id: 'a1', title: 'abc' }, { id: 'b2', title: 'def' }], 'id')
+  // output: { a1: { id: 'a1', title: 'abc' }, b2: { id: 'b2', title: 'def' } }
+  console.log(keyBy(Object.values({ data: { id: 'a1', title: 'abc' }}), 'id')
+  // output: { a1: { id: 'a1', title: 'abc' }}
+
+  // keyBy for array and object
+  const collectionKeyBy = (collection, key) => { 
+    const c = collection || {};
+    return c.isArray() ? keyBy(c, key) : Object.values(keyBy(c, key));
+  }
+  ```
+
+#### Browser Support for `Array.prototype.reduce()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  | 12.0 ✔ | 3.0 ✔ |  9.0 ✔  |  10.5 ✔ |  4.0 ✔ |
+
+**[⬆ back to top](#quick-links)**
+
 ### _.map
 
 Translates all items in an array or object to new array of items.
@@ -1514,9 +1554,7 @@ Checks if value is an empty object, collection, map, or set.
   // output: false
 
   // Native
-  const isEmpty = obj => {
-    return (obj ? [Object, Array].includes(obj.constructor) && !Object.entries(obj).length : true);
-  }
+  const isEmpty = obj => [Object, Array].includes((obj || {}).constructor) && !Object.entries((obj || {})).length;
 
   console.log(isEmpty(null)
   // output: true

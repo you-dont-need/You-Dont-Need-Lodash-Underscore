@@ -111,67 +111,59 @@ and will not work with objects. If this functionality is needed,
 then Lodash/Underscore is the better option.*
 
 1. [_.each](#_each)
-2. [_.every](#_every)
-3. [_.filter](#_filter)
-4. [_.groupBy](#_groupby)
-5. [_.includes](#_includes)
-6. [_.map](#_map)
-7. [_.minBy and _.maxBy](#_minby-and-_maxby)
-8. [_.orderBy](#_sortby-and-_orderby)
-9. [_.pluck](#_pluck)
-10. [_.range](#_range)
-11. [_.reduce](#_reduce)
-12. [_.reduceRight](#_reduceright)
-13. [_.size](#_size)
-14. [_.some](#_some)
-15. [_.sortBy](#_sortby-and-_orderby)
-16. [_.uniq](#_uniq)
+1. [_.every](#_every)
+1. [_.filter](#_filter)
+1. [_.groupBy](#_groupby)
+1. [_.includes](#_includes)
+1. [_.map](#_map)
+1. [_.minBy and _.maxBy](#_minby-and-_maxby)
+1. [_.orderBy](#_sortby-and-_orderby)
+1. [_.pluck](#_pluck)
+1. [_.range](#_range)
+1. [_.reduce](#_reduce)
+1. [_.reduceRight](#_reduceright)
+1. [_.size](#_size)
+1. [_.some](#_some)
+1. [_.sortBy](#_sortby-and-_orderby)
+1. [_.uniq](#_uniq)
 
 **[Function](#function)**
 
 1. [_.after](#_after)
-2. [_.bind](#_bind)
-3. [_.partial](#_partial)
+1. [_.bind](#_bind)
+1. [_.partial](#_partial)
 
 **[Lang](#lang)**
 
-<<<<<<< HEAD
-=======
+1. [_.gt](#_gt)
+1. [_.gte](#_gte)
 1. [_.isEmpty](#_isempty)
 1. [_.isFinite](#_isfinite)
 1. [_.isNaN](#_isnan)
 1. [_.isNil](#_isnil)
 1. [_.isNull](#_isnull)
 1. [_.isUndefined](#_isundefined)
->>>>>>> master
-1. [_.gt](#_gt)
-2. [_.gte](#_gte)
-3. [_.isEmpty](#_isempty)
-4. [_.isNaN](#_isnan)
-5. [_.isNil](#_isnil)
-6. [_.isNull](#_isnull)
-7. [_.isUndefined](#_isundefined)
 
 **[Object](#object)**
 
 1. [_.assign](#_assign)
-2. [_.get](#_get)
-3. [_.keys](#_keys)
-4. [_.omit](#_omit)
-5. [_.pick](#_pick)
-6. [_.pickBy](#_pickby)
-7. [_.toPairs](#_topairs)
-8. [_.values](#_values)
+1. [_.get](#_get)
+1. [_.keys](#_keys)
+1. [_.omit](#_omit)
+1. [_.pick](#_pick)
+1. [_.pickBy](#_pickby)
+1. [_.toPairs](#_topairs)
+1. [_.values](#_values)
 
 **[String](#string)**
 
 1. [_.repeat](#_repeat)
-2. [_.replace](#_replace)
-3. [_.startsWith](#startsWith)
-4. [_.template](#_template)
-5. [_.toLower](#_tolower)
-6. [_.toUpper](#_toupper)
-7. [_.trim](#_trim)
+1. [_.replace](#_replace)
+1. [_.startsWith](#startsWith)
+1. [_.template](#_template)
+1. [_.toLower](#_tolower)
+1. [_.toUpper](#_toupper)
+1. [_.trim](#_trim)
 
 **[Util](#string)**
 

@@ -148,6 +148,7 @@ then Lodash/Underscore is the better option.*
 **[Object](#object)**
 
 1. [_.assign](#_assign)
+1. [_.extend](#_extend)
 1. [_.get](#_get)
 1. [_.keys](#_keys)
 1. [_.omit](#_omit)
@@ -1538,7 +1539,7 @@ console.log(3 >= 1);
 
 ### _.isEmpty
 
-Checks if value is an empty object, collection, map, or set.
+Checks if value is an empty object or collection.
 
   ```js
   // Lodash
@@ -1764,42 +1765,6 @@ The method is used to copy the values of all enumerable own properties from one 
 
  **[⬆ back to top](#quick-links)**
 
- ### _.get
-
-Gets the value at path of object.
-*Note: If provided path does not exists inside the object js will generate error.*
-
-  ```js
-  // Lodash
-  var object = { a: [{ b: { c: 3 } }] };
-  var result = _.get(object, 'a[0].b.c', 1);
-  console.log(result);
-  // output: 3
-
-  // Native (ES6 - IE not supported)
-  var object = { a: [{ b: { c: 3 } }] };
-  var { a: [{ b: { c: result2 = 1 } }] } = object;
-  console.log(result2);
-  // output: 3
-  
-  // Native
-  const get = (obj, path, defaultValue) => path.split(".")
-  .reduce((a, c) => (a && a[c] ? a[c] : (defaultValue || null)), obj)
-  
-  var object = { a: [{ b: { c: 3 } }] };
-  var result = get(object, 'a[0].b.c', 1); 
-  // output: 3
-  
-  ```
-
-#### Browser Support for Object destructing
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  49.0 ✔  | 14.0 ✔ |  41.0 ✔ |  ✖  |  41.0 ✔ |  8.0 ✔ |
-
-  **[⬆ back to top](#quick-links)**
-
 ### _.extend
 
 The method is used to copy the values of all enumerable own and inherited properties from one or more source objects to a target object.
@@ -1852,6 +1817,42 @@ The method is used to copy the values of all enumerable own and inherited proper
 
  **[⬆ back to top](#quick-links)**
 
+ ### _.get
+
+Gets the value at path of object.
+*Note: If provided path does not exists inside the object js will generate error.*
+
+  ```js
+  // Lodash
+  var object = { a: [{ b: { c: 3 } }] };
+  var result = _.get(object, 'a[0].b.c', 1);
+  console.log(result);
+  // output: 3
+
+  // Native (ES6 - IE not supported)
+  var object = { a: [{ b: { c: 3 } }] };
+  var { a: [{ b: { c: result2 = 1 } }] } = object;
+  console.log(result2);
+  // output: 3
+  
+  // Native
+  const get = (obj, path, defaultValue) => path.split(".")
+  .reduce((a, c) => (a && a[c] ? a[c] : (defaultValue || null)), obj)
+  
+  var object = { a: [{ b: { c: 3 } }] };
+  var result = get(object, 'a[0].b.c', 1); 
+  // output: 3
+  
+  ```
+
+#### Browser Support for Object destructing
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  49.0 ✔  | 14.0 ✔ |  41.0 ✔ |  ✖  |  41.0 ✔ |  8.0 ✔ |
+
+  **[⬆ back to top](#quick-links)**
+
 ### _.keys
 
 Retrieves all the names of the object's own enumerable properties.
@@ -1876,43 +1877,6 @@ Retrieves all the names of the object's own enumerable properties.
 
 **[⬆ back to top](#quick-links)**
 
-<<<<<<< HEAD
-=======
-### _.get
-
-Gets the value at path of object.
-*Note: If provided path does not exists inside the object js will generate error.*
-
-  ```js
-  // Lodash
-  var object = { a: [{ b: { c: 3 } }] };
-  var result = _.get(object, 'a[0].b.c', 1);
-  console.log(result);
-  // output: 3
-
-  // Native (ES6 - IE not supported)
-  var object = { a: [{ b: { c: 3 } }] };
-  var { a: [{ b: { c: result2 = 1 } }] } = object;
-  console.log(result2);
-  // output: 3
-  
-  // Native
-  const get = (obj, path, defaultValue) => path.split(".")
-  .reduce((a, c) => (a && a[c] ? a[c] : (defaultValue || null)), obj)
-  
-  var object = { a: [{ b: { c: 3 } }] };
-  var result = get(object, 'a.0.b.c', 1); 
-  // output: 3
-  
-  ```
-
-#### Browser Support
-
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  49 ✔  | 41 ✔ | 9 ✔  |  41.0 ✔ |  8 ✔ |
-  
->>>>>>> master
 ### _.omit
 
 Returns a copy of the object, filtered to omit the keys specified.
@@ -1950,6 +1914,13 @@ Creates an object composed of the object properties predicate returns truthy for
   var result = _.pick(object, ['a', 'c']);
   console.log(result)
   // output: {a: 1, c: 3}
+
+  // Native
+  const { a, c } = object;
+  const result = { a, c};
+  console.log(result);
+  // output: {a: 1, c: 3}
+  // for an array of this object --> array.map(({a, c}) => ({a, c}));
 
   // Native
   function pick(object, keys) {

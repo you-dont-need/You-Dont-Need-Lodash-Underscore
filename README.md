@@ -1836,7 +1836,7 @@ Gets the value at path of object.
   // output: 3
   
   // Native
-  const get = (obj, path, defaultValue) => path.split(/[\[\]].*/)
+  const get = (obj, path, defaultValue) => path.split(/[\[\]]\.*/)
   .reduce((a, c) => (a && Object.hasOwnProperty.call(a,c) ? a[c] : (defaultValue || null)), obj)
   
   var object = { a: [{ b: { c: 3 } }] };

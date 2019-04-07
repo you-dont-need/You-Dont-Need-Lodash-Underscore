@@ -203,4 +203,48 @@ describe('code snippet example', () => {
       )
     })
   })
+  describe('get', () => {
+    // add array notation
+    const get = (obj, path, defaultValue) => String.prototype.split.call(path, /,?[\[\]]?\.?/)
+      .reduce((a, c) => (a && Object.hasOwnProperty.call(a,c) ? a[c] : (defaultValue || null)), obj)
+
+    var obj = { a: [{ b: { c: 0 } }, [0]], d: { e: 2 } };
+
+    it ("should handle falsey values", () => {
+      assert.equal(
+        _.get(obj, 'a[0].b.c', 1),
+        get(obj, 'a[0].b.c', 1)
+      )
+    })
+    it ("should handle just bracket notation", () => {
+      assert.equal(
+        _.get(obj, 'a[0][1]', 1),
+        get(obj, 'a[0][1]', 1)
+      )
+    })
+    it ("should handle just period notation", () => {
+      assert.equal(
+        _.get(obj, 'a.d.e', 1),
+        get(obj, 'a.d.e', 1)
+      )
+    })
+    it ("should handle neither notation", () => {
+      assert.deepEqual(
+        _.get(obj, 'a', 1),
+        get(obj, 'a', 1)
+      )
+    })
+    it ("should handle both notation", () => {
+      assert.equal(
+        _.get(obj, 'a[0].b.c', 1),
+        get(obj, 'a[0].b.c', 1)
+      )
+    })
+    it ("should handle array path", () => {
+      assert.equal(
+        _.get(obj, ['a', [0], 'b', 'c'], 1),
+        get(obj, ['a', [0], 'b', 'c'], 1)
+      )
+    })
+  })
 })

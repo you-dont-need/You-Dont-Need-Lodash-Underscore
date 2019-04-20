@@ -1839,7 +1839,7 @@ Gets the value at path of object.
   const get = (obj, path, defaultValue = null) =>
     String.prototype.split.call(path, /[,[\].]+?/)
       .filter(Boolean)
-      .reduce((a, c) => (a && Object.hasOwnProperty.call(a,c) ? a[c] : defaultValue), obj)
+      .reduce((a, c) => (Object.hasOwnProperty.call(a,c) ? a[c] : defaultValue), obj)
   
   var object = { a: [{ b: { c: 3 } }] };
   var result = get(object, 'a[0].b.c', 1); 

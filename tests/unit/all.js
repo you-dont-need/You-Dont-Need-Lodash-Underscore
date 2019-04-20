@@ -208,38 +208,38 @@ describe('code snippet example', () => {
     const get = (obj, path, defaultValue = null) =>
       String.prototype.split.call(path, /[,[\].]+?/)
         .filter(Boolean)
-        .reduce((a, c) => (a && Object.hasOwnProperty.call(a,c) ? a[c] : defaultValue), obj)
+        .reduce((a, c) => (Object.hasOwnProperty.call(a,c) ? a[c] : defaultValue), obj)
 
-    var obj = { a: [{ b: { c: 0 } }, [0]], d: { e: 2 } };
+    var obj = { aa: [{ b: { c: 0 }, 1: 0 }], dd: { ee: { ff: 2 } } };
 
     it ("should handle falsey values", () => {
-      var val = _.get(obj, 'a[0].b.c', 1)
-      assert.equal(val, get(obj, 'a[0].b.c', 1))
+      var val = _.get(obj, 'aa[0].b.c', 1)
+      assert.equal(val, get(obj, 'aa[0].b.c', 1))
       assert.notEqual(val, 1)
     })
     it ("should handle just bracket notation", () => {
-      var val = _.get(obj, 'a[0][1]', 1)
-      assert.equal(val, get(obj, 'a[0][1]', 1))
+      var val = _.get(obj, 'aa[0][1]', 1)
+      assert.equal(val, get(obj, 'aa[0][1]', 1))
       assert.notEqual(val, 1)
     })
     it ("should handle just period notation", () => {
-      var val = _.get(obj, 'a.d.e', 1)
-      assert.equal(val, get(obj, 'a.d.e', 1))
+      var val = _.get(obj, 'dd.ee.ff', 1)
+      assert.equal(val, get(obj, 'dd.ee.ff', 1))
       assert.notEqual(val, 1)
     })
     it ("should handle neither notation", () => {
-      var val = _.get(obj, 'a', 1)
-      assert.deepEqual(val, get(obj, 'a', 1))
+      var val = _.get(obj, 'aa', 1)
+      assert.deepEqual(val, get(obj, 'aa', 1))
       assert.notEqual(val, 1)
     })
     it ("should handle both notation", () => {
-      var val = _.get(obj, 'a[0].b.c', 1)
-      assert.equal(val, get(obj, 'a[0].b.c', 1))
+      var val = _.get(obj, 'aa[0].b.c', 1)
+      assert.equal(val, get(obj, 'aa[0].b.c', 1))
       assert.notEqual(val, 1)
     })
     it ("should handle array path", () => {
-      var val = _.get(obj, ['a', [0], 'b', 'c'], 1)
-      assert.equal(val, get(obj, ['a', [0], 'b', 'c'], 1))
+      var val = _.get(obj, ['aa', [0], 'b', 'c'], 1)
+      assert.equal(val, get(obj, ['aa', [0], 'b', 'c'], 1))
       assert.notEqual(val, 1)
     })
   })

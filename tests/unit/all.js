@@ -243,4 +243,20 @@ describe('code snippet example', () => {
       assert.notEqual(val, 1)
     })
   })
+
+  it('each(object)', () => {
+    var object = { 'a': 1, 'b': 2, 'c': 3 };
+    function each(object, func) {
+      const obj = {};
+      return Object.entries(object).forEach(function([key, value]){ return func(value, key);} );
+    }
+    const keysFromLodash = [];
+    const keysFromNative = [];
+    _.each(object, function(value, key) { keysFromLodash.push(key); });
+    each(object, function(value, key) { keysFromNative.push(key); });
+    assert.deepEqual(
+      keysFromLodash,
+      keysFromNative
+    );
+  })
 })

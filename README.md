@@ -111,6 +111,7 @@ and will not work with objects. If this functionality is needed,
 then Lodash/Underscore is the better option.*
 
 1. [_.each](#_each)
+1. [_.each(object)](#_.each(object))
 1. [_.every](#_every)
 1. [_.filter](#_filter)
 1. [_.groupBy](#_groupby)
@@ -855,6 +856,32 @@ Iterates over a list of elements, yielding each in turn to an iteratee function.
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |
   ✔  | ✔ | 1.5 ✔ |  9.0 ✔  |  ✔  |  ✔  |
+
+**[⬆ back to top](#quick-links)**
+
+### _.each(object)
+
+Iterates over all enumerable string-keyed properties of an object, skipping properties in the prototype chain, yielding each in turn to an iteratee function.
+
+  ```js
+  // Underscore/Lodash
+  _.each({ 'a': 1, 'b': 2, 'c': 3 }, function(value, key) {
+    console.log(key);
+  });
+  // output: a b c
+
+  // Native
+  Object.entries({ 'a': 1, 'b': 2, 'c': 3 }).forEach(function ([key, value]) {
+    console.log(key)
+  });
+  // output: a b c
+  ```
+
+#### Browser Support for `Object.entries()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  54 ✔  |  14 ✔  |  47 ✔  |  ✖  |  41 ✔  |  10.1 ✔  |
 
 **[⬆ back to top](#quick-links)**
 

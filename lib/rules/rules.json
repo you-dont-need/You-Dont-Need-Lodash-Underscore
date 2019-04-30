@@ -3,6 +3,10 @@
         "compatible": true,
         "alternative": "Array.prototype.concat()"
     },
+    "drop": {
+        "compatible": true,
+        "alternative": "Array.prototype.slice()"
+    },
     "indexOf": {
         "compatible": true,
         "alternative": "Array.prototype.indexOf()"

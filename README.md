@@ -85,6 +85,7 @@ For more information, see [Configuring the ESLint Plugin](configuring.md)
 1. [_.compact](#_compact)
 1. [_.concat](#_concat)
 1. [_.difference](#_difference)
+1. [_.drop](#_drop)
 1. [_.fill](#_fill)
 1. [_.find](#_find)
 1. [_.findIndex](#_findindex)
@@ -287,6 +288,34 @@ Similar to [without](#_without), but returns the values from array that are not 
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |
    ✔  |  ✔ | 3.0 ✔ |  9.0 ✔  |  10.5 ✔ |  4.0 ✔ |
+
+**[⬆ back to top](#quick-links)**
+
+### _.drop
+
+Creates a slice of array with n elements dropped from the beginning.
+
+  ```js
+  // Underscore/Lodash
+  _.drop([1, 2, 3]);
+  // => [2, 3]
+
+  _.drop([1, 2, 3], 2);
+  // => [3]
+
+  // Native
+  [1, 2, 3].slice(1);
+  // => [2, 3]
+  
+  [1, 2, 3].slice(2);
+  // => [3]
+  ```
+
+#### Browser Support for `Array.prototype.slice()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  1.0 ✔  |  ✔  |  1.0 ✔  |  ✔  |  ✔  | ✔  |
 
 **[⬆ back to top](#quick-links)**
 

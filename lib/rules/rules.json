@@ -191,6 +191,10 @@
         "alternative": "Object.entries()",
         "ES6": true
     },
+    "split": {
+        "compatible": true,
+        "alternative": "String.prototype.split()"
+    },
     "startsWith": {
         "compatible": true,
         "alternative": "String.prototype.startsWith()"

@@ -146,6 +146,16 @@
         "alternative": "Number.isNaN()",
         "ES6": true
     },
+    "isNull": {
+        "ruleName": "is-null",
+        "compatible": true,
+        "alternative": "value === null"
+    },
+    "isUndefined": {
+        "ruleName": "is-undefined",
+        "compatible": true,
+        "alternative": "value === undefined"
+    },
 
     "keys": {
         "compatible": true,

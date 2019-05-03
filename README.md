@@ -1541,6 +1541,7 @@ console.log(3 >= 1);
 ### _.isEmpty
 
 Checks if value is an empty object or collection.
+:heavy_exclamation_mark:`Note this is not evaluating a Set or a map`
 
   ```js
   // Lodash
@@ -2126,9 +2127,9 @@ Splits string by separator.
 
 #### Browser Support for `String.prototype.split()`
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  ✔  |  1.0 ✔ |  ✔  | ✔ | ✔ |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  | ✔ |  1.0 ✔ |  ✔  | ✔ | ✔ |
 
 **[⬆ back to top](#quick-links)**
 

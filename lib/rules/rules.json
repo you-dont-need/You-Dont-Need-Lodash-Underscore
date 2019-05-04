@@ -130,6 +130,10 @@
         "compatible": true,
         "alternative": "Array.prototype.slice()"
     },
+    "takeRight": {
+        "compatible": false,
+        "alternative": "Array.prototype.slice()"
+    },
 
     "bind": {
         "ruleName": "bind",

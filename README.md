@@ -1541,7 +1541,7 @@ console.log(3 >= 1);
 ### _.isEmpty
 
 Checks if value is an empty object or collection.
-:heavy_exclamation_mark:`Note this is not evaluating a Set or a map`
+:heavy_exclamation_mark:`Note this is not evaluating a Set or a Map`
 
   ```js
   // Lodash

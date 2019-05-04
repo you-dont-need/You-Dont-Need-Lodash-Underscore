@@ -455,6 +455,9 @@ Flattens array a single level deep.
   const flatten = [1, [2, [3, [4]], 5]].reduce( (a, b) => a.concat(b), [])
   // => [1, 2, [3, [4]], 5]
 
+  // Native(ES2019)
+  const flatten = [1, [2, [3, [4]], 5]].flat()
+  // => [1, 2, [3, [4]], 5]
   ```
 
 #### Browser Support for `Array.prototype.reduce()`
@@ -481,6 +484,11 @@ Recursively flattens array.
 
   flattenDeep([1, [[2], [3, [4]], 5]])
   // => [1, 2, 3, 4, 5]
+  
+  // Native(ES2019)
+  [1, [2, [3, [4]], 5]].flat(Infinity)
+  // => [1, 2, 3, 4, 5]
+  
   ```
 
 #### Browser Support

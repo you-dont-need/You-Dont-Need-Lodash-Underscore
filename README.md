@@ -466,6 +466,14 @@ Flattens array a single level deep.
 :-: | :-: | :-: | :-: | :-: |  :-: |
   46.0 ✔ |  ✔ | 3.0 ✔ |  9.0 ✔  |  10.5 ✔ |  4 ✔ |
 
+#### Browser Support for `Array.prototype.flat()`
+
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image] |
+:-: | :-: | :-: | :-: | :-: | :-: |
+69 ✔ | ✖ | 62 ✔ | ✖ | 56 ✔ | 12 ✔ |
+
+
 **[⬆ back to top](#quick-links)**
 
 ### _.flattenDeep
@@ -496,6 +504,13 @@ Recursively flattens array.
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |
   46.0 ✔ |  ✔ | 16.0 ✔ |  ✖  |  37.0 ✔ |  7.1 ✔ |
+
+
+#### Browser Support for `Array.prototype.flat()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image] |
+:-: | :-: | :-: | :-: | :-: | :-: |
+69 ✔ | ✖ | 62 ✔ | ✖ | 56 ✔ | 12 ✔ |
 
 **[⬆ back to top](#quick-links)**
 

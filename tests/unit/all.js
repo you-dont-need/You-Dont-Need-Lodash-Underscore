@@ -243,4 +243,21 @@ describe('code snippet example', () => {
       assert.notEqual(val, 1)
     })
   })
+  describe('split', () => {
+    const source = 'a-b-c';
+    const separator = '-';
+    const limit = 2;
+    it(`_.split("${source}", "${separator}")`, () => {
+      assert.equal(
+        _.split(source, separator),
+        source.split(separator)
+      );
+    })
+    it(`_.split("${source}", "${separator}", ${limit})`, () => {
+      assert.equal(
+        _.split(source, separator, limit),
+        source.split(separator, limit)
+      );
+    })
+  })
 })

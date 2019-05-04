@@ -161,6 +161,7 @@ then Lodash/Underscore is the better option.*
 
 1. [_.repeat](#_repeat)
 1. [_.replace](#_replace)
+1. [_.split](#_split)
 1. [_.startsWith](#startsWith)
 1. [_.template](#_template)
 1. [_.toLower](#_tolower)
@@ -2108,6 +2109,7 @@ Repeats the given string n times.
   ```js
   // Lodash
   var result = _.repeat('abc', 2)
+  console.log(result)
   // output: 'abcabc'
 
   // Native
@@ -2148,6 +2150,30 @@ returns a new string with some or all matches of a `pattern` replaced by a `repl
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |
   ✔  | ✔ | 1.0 ✔ |  ✔  |  ✔ |  ✔  |
+
+**[⬆ back to top](#quick-links)**
+  
+### _.split
+:heavy_exclamation_mark:`Lodash only`
+Splits string by separator.
+
+  ```js
+  // Lodash
+  var result = _.split('a-b-c', '-', 2)
+    console.log(result)
+  // output: ['a','b']
+
+  // Native
+  var result = 'a-b-c'.split('-', 2)
+  console.log(result)
+  // output: ['a','b']
+  ```
+
+#### Browser Support for `String.prototype.split()`
+
+![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: |
+  ✔  |  1.0 ✔ |  ✔  | ✔ | ✔ |
 
 **[⬆ back to top](#quick-links)**
 

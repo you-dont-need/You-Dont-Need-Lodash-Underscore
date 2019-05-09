@@ -173,6 +173,10 @@ then Lodash/Underscore is the better option.*
 
 1. [_.times](#_times)
 
+**[Number](#number)**
+
+1. [_.inRange](# inRange)
+
 ## Array
 
 ### _.chunk
@@ -2340,6 +2344,41 @@ Invokes the iteratee n times, returning an array of the results of each invocati
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |
   45.0 ✔  | ✔ |  32.0 ✔ |  ✖  |  ✔ | 9.0 ✔  |
+
+**[⬆ back to top](#quick-links)**
+
+## Number
+
+### _.inRange
+Checks if n is between start and up to, but not including, end. If end is not specified, it's set to start with start then set to 0. If start is greater than end the params are swapped to support negative ranges.
+
+  ```js
+    // Lodash
+    _.inRange(3, 2, 4);
+    // output: true
+    _.inRange(-3, -2, -6);
+    // output: true
+
+    //Native
+    const inRange = (num, init, final) => {
+      if(final === undefined){
+        final = init;
+        init = 0;
+      }
+      return (num > Math.min(init, final) && num < Math.max(init, final));
+    }
+
+    inRange(3, 2, 4);
+    // output: true
+    inRange(-3, -2, -6);
+    // output: true
+  ```
+
+  #### Browser Support for `Math.min() and Math.max()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  |  ✔  |  ✔  |  ✔  |  ✔  |  ✔  |
 
 **[⬆ back to top](#quick-links)**
 

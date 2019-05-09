@@ -175,7 +175,7 @@ then Lodash/Underscore is the better option.*
 
 **[Number](#number)**
 
-1. [_.inRange](# inRange)
+1. [_.inRange](#_inRange)
 
 ## Array
 

@@ -266,7 +266,7 @@ describe('code snippet example', () => {
         final = init;
         init = 0;
       }
-      return (num > Math.min(init, final) && num < Math.max(init, final));
+      return (num >= Math.min(init, final) && num < Math.max(init, final));
     }
     
     it('_.inRange(3, 2, 4)', () => {
@@ -315,6 +315,13 @@ describe('code snippet example', () => {
       assert.equal(
         _.inRange(-3, -2, -6),
         inRange(-3, -2, -6)
+      )
+    });
+
+    it('_.inRange(1, 1, 5)', () => {
+      assert.equal(
+        _.inRange(1, 1, 5),
+        inRange(1, 1, 5)
       )
     });
   })

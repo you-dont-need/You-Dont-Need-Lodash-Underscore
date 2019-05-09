@@ -2365,7 +2365,7 @@ Checks if n is between start and up to, but not including, end. If end is not sp
         final = init;
         init = 0;
       }
-      return (num > Math.min(init, final) && num < Math.max(init, final));
+      return (num >= Math.min(init, final) && num < Math.max(init, final));
     }
 
     inRange(3, 2, 4);

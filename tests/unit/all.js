@@ -260,4 +260,69 @@ describe('code snippet example', () => {
       );
     })
   })
+  describe('inRange', () => {
+    const inRange = (num, init, final) => {
+      if(final === undefined){
+        final = init;
+        init = 0;
+      }
+      return (num >= Math.min(init, final) && num < Math.max(init, final));
+    }
+    
+    it('_.inRange(3, 2, 4)', () => {
+      assert.equal(
+        _.inRange(3, 2, 4),
+        inRange(3, 2, 4)
+      )
+    });
+ 
+    it('_.inRange(4, 8)', () => {
+      assert.equal(
+        _.inRange(4, 8),
+        inRange(4, 8)
+      )
+    });
+    
+    it('_.inRange(4, 2)', () => {
+      assert.equal(
+        _.inRange(4, 2),
+        inRange(4, 2)
+      )
+    });
+    
+    it('_.inRange(2, 2)', () => {
+      assert.equal(
+        _.inRange(2, 2),
+        inRange(2, 2)
+      )
+    });
+    
+    it('_.inRange(1.2, 2)', () => {
+      assert.equal(
+        _.inRange(1.2, 2),
+        inRange(1.2, 2)
+      )
+    });
+    
+    it('_.inRange(5.2, 4)', () => {
+      assert.equal(
+        _.inRange(5.2, 4),
+        inRange(5.2, 4)
+      )
+    });
+    
+    it('_.inRange(-3, -2, -6)', () => {
+      assert.equal(
+        _.inRange(-3, -2, -6),
+        inRange(-3, -2, -6)
+      )
+    });
+
+    it('_.inRange(1, 1, 5)', () => {
+      assert.equal(
+        _.inRange(1, 1, 5),
+        inRange(1, 1, 5)
+      )
+    });
+  })
 })

@@ -85,6 +85,7 @@ For more information, see [Configuring the ESLint Plugin](configuring.md)
 1. [_.compact](#_compact)
 1. [_.concat](#_concat)
 1. [_.difference](#_difference)
+1. [_.drop](#_drop)
 1. [_.fill](#_fill)
 1. [_.find](#_find)
 1. [_.findIndex](#_findindex)
@@ -171,6 +172,10 @@ then Lodash/Underscore is the better option.*
 **[Util](#string)**
 
 1. [_.times](#_times)
+
+**[Number](#number)**
+
+1. [_.inRange](#_inRange)
 
 ## Array
 
@@ -288,6 +293,34 @@ Similar to [without](#_without), but returns the values from array that are not 
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |
    ✔  |  ✔ | 3.0 ✔ |  9.0 ✔  |  10.5 ✔ |  4.0 ✔ |
+
+**[⬆ back to top](#quick-links)**
+
+### _.drop
+
+Creates a slice of array with n elements dropped from the beginning.
+
+  ```js
+  // Underscore/Lodash
+  _.drop([1, 2, 3]);
+  // => [2, 3]
+
+  _.drop([1, 2, 3], 2);
+  // => [3]
+
+  // Native
+  [1, 2, 3].slice(1);
+  // => [2, 3]
+  
+  [1, 2, 3].slice(2);
+  // => [3]
+  ```
+
+#### Browser Support for `Array.prototype.slice()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  1.0 ✔  |  ✔  |  1.0 ✔  |  ✔  |  ✔  | ✔  |
 
 **[⬆ back to top](#quick-links)**
 
@@ -455,6 +488,9 @@ Flattens array a single level deep.
   const flatten = [1, [2, [3, [4]], 5]].reduce( (a, b) => a.concat(b), [])
   // => [1, 2, [3, [4]], 5]
 
+  // Native(ES2019)
+  const flatten = [1, [2, [3, [4]], 5]].flat()
+  // => [1, 2, [3, [4]], 5]
   ```
 
 #### Browser Support for `Array.prototype.reduce()`
@@ -462,6 +498,14 @@ Flattens array a single level deep.
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: |  :-: |
   46.0 ✔ |  ✔ | 3.0 ✔ |  9.0 ✔  |  10.5 ✔ |  4 ✔ |
+
+#### Browser Support for `Array.prototype.flat()`
+
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image] |
+:-: | :-: | :-: | :-: | :-: | :-: |
+69 ✔ | ✖ | 62 ✔ | ✖ | 56 ✔ | 12 ✔ |
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -481,6 +525,11 @@ Recursively flattens array.
 
   flattenDeep([1, [[2], [3, [4]], 5]])
   // => [1, 2, 3, 4, 5]
+  
+  // Native(ES2019)
+  [1, [2, [3, [4]], 5]].flat(Infinity)
+  // => [1, 2, 3, 4, 5]
+  
   ```
 
 #### Browser Support
@@ -488,6 +537,13 @@ Recursively flattens array.
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |
   46.0 ✔ |  ✔ | 16.0 ✔ |  ✖  |  37.0 ✔ |  7.1 ✔ |
+
+
+#### Browser Support for `Array.prototype.flat()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image] |
+:-: | :-: | :-: | :-: | :-: | :-: |
+69 ✔ | ✖ | 62 ✔ | ✖ | 56 ✔ | 12 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -1586,6 +1642,7 @@ console.log(3 >= 1);
 ### _.isEmpty
 
 Checks if value is an empty object or collection.
+:heavy_exclamation_mark:`Note this is not evaluating a Set or a Map`
 
   ```js
   // Lodash
@@ -2171,9 +2228,9 @@ Splits string by separator.
 
 #### Browser Support for `String.prototype.split()`
 
-![Chrome][chrome-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |
-  ✔  |  1.0 ✔ |  ✔  | ✔ | ✔ |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  | ✔ |  1.0 ✔ |  ✔  | ✔ | ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -2332,6 +2389,41 @@ Invokes the iteratee n times, returning an array of the results of each invocati
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |
   45.0 ✔  | ✔ |  32.0 ✔ |  ✖  |  ✔ | 9.0 ✔  |
+
+**[⬆ back to top](#quick-links)**
+
+## Number
+
+### _.inRange
+Checks if n is between start and up to, but not including, end. If end is not specified, it's set to start with start then set to 0. If start is greater than end the params are swapped to support negative ranges.
+
+  ```js
+    // Lodash
+    _.inRange(3, 2, 4);
+    // output: true
+    _.inRange(-3, -2, -6);
+    // output: true
+
+    //Native
+    const inRange = (num, init, final) => {
+      if(final === undefined){
+        final = init;
+        init = 0;
+      }
+      return (num >= Math.min(init, final) && num < Math.max(init, final));
+    }
+
+    inRange(3, 2, 4);
+    // output: true
+    inRange(-3, -2, -6);
+    // output: true
+  ```
+
+  #### Browser Support for `Math.min() and Math.max()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  |  ✔  |  ✔  |  ✔  |  ✔  |  ✔  |
 
 **[⬆ back to top](#quick-links)**
 

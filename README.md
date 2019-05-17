@@ -2412,6 +2412,9 @@ Checks if n is between start and up to, but not including, end. If end is not sp
       }
       return (num >= Math.min(init, final) && num < Math.max(init, final));
     }
+    
+    //Native
+    const inRange = (num, a, b=0) => (Math.min(a,b) <= num && num < Math.max(a,b));
 
     inRange(3, 2, 4);
     // output: true

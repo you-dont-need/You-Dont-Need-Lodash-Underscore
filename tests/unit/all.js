@@ -248,15 +248,15 @@ describe('code snippet example', () => {
     const separator = '-';
     const limit = 2;
     it(`_.split("${source}", "${separator}")`, () => {
-      assert.equal(
-        JSON.stringify(_.split(source, separator)),
-        JSON.stringify(source.split(separator))
+      assert.deepEqual(
+        _.split(source, separator),
+        source.split(separator)
       );
     })
     it(`_.split("${source}", "${separator}", ${limit})`, () => {
-      assert.equal(
-        JSON.stringify(_.split(source, separator, limit)),
-        JSON.stringify(source.split(separator, limit))
+      assert.deepEqual(
+        _.split(source, separator, limit),
+        source.split(separator, limit)
       );
     })
   })

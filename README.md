@@ -1583,6 +1583,13 @@ Create a new function that calls _func_ with _args_.
   var result = sayHelloTo('Jose')
   console.log(result)
   // output: 'Hello Jose'
+  
+  // Native
+  const partial = (func, ...boundArgs) => (...remainingArgs) => func(...boundArgs, ...remainingArgs)
+  var sayHelloTo = partial(greet, 'Hello');
+  var result = sayHelloTo('Jose')
+  console.log(result)
+  // output: 'Hello Jose'
   ```
 
 #### Browser Support for Spread

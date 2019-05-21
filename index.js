@@ -31,6 +31,13 @@ module.exports.configs = {
     rules: configure(all, ERROR)
   },
 
+  'compatible-error': {
+    plugins: [
+      'you-dont-need-lodash-underscore'
+    ],
+    rules: configure(compatible, ERROR)
+  },
+
   'compatible-warn': {
     plugins: [
       'you-dont-need-lodash-underscore'

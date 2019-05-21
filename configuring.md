@@ -49,6 +49,7 @@ The following options are available:
 
 - you-dont-need-lodash-underscore:all-warn (all rules set to warn)
 - you-dont-need-lodash-underscore:all (all rules set to error)
+- you-dont-need-lodash-underscore:compatible-error (rules in which the native implementation is perfectly compatible with the _ one are set to error, the rest are disabled)
 - you-dont-need-lodash-underscore:compatible-warn (rules in which the native implementation is perfectly compatible with the _ one are set to warn, the rest are disabled)
 - you-dont-need-lodash-underscore:compatible (rules in which the native implementation is perfectly compatible with _ one are set to error, the rest are set to warn)
 

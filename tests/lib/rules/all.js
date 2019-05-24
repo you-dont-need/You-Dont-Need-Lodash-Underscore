@@ -25,6 +25,9 @@ ruleTester.run('_.concat', rules.concat, {
   }, {
     code: "import concat from 'lodash.concat';",
     errors: ["Import from 'lodash.concat' detected. Consider using the native Array.prototype.concat()"]
+  }, {
+    code: "import { concat } from 'lodash';",
+    errors: ["Import { concat } from 'lodash' detected. Consider using the native Array.prototype.concat()"]
   }]
 });
 
@@ -36,11 +39,14 @@ ruleTester.run('lodash.keys', rules.keys, {
     code: 'lodash.keys({one: 1, two: 2, three: 3})',
     errors: ['Consider using the native Object.keys()']
   }, {
-    code: "import concat from 'lodash/keys';",
+    code: "import keys from 'lodash/keys';",
     errors: ["Import from 'lodash/keys' detected. Consider using the native Object.keys()"]
   }, {
-    code: "import concat from 'lodash.keys';",
+    code: "import keys from 'lodash.keys';",
     errors: ["Import from 'lodash.keys' detected. Consider using the native Object.keys()"]
+  }, {
+    code: "import { keys } from 'lodash';",
+    errors: ["Import { keys } from 'lodash' detected. Consider using the native Object.keys()"]
   }]
 });
 
@@ -52,11 +58,14 @@ ruleTester.run('underscore.forEach', rules['for-each'], {
     code: 'underscore.forEach()',
     errors: ['Consider using the native Array.prototype.forEach()']
   }, {
-    code: "import concat from 'lodash/forEach';",
+    code: "import forEach from 'lodash/forEach';",
     errors: ["Import from 'lodash/forEach' detected. Consider using the native Array.prototype.forEach()"]
   }, {
-    code: "import concat from 'lodash.foreach';",
+    code: "import forEach from 'lodash.foreach';",
     errors: ["Import from 'lodash.foreach' detected. Consider using the native Array.prototype.forEach()"]
+  }, {
+    code: "import { forEach } from 'lodash';",
+    errors: ["Import { forEach } from 'lodash' detected. Consider using the native Array.prototype.forEach()"]
   }]
 });
 
@@ -68,11 +77,14 @@ ruleTester.run('underscore.isNaN', rules['is-nan'], {
     code: 'underscore.isNaN(NaN)',
     errors: ['Consider using the native Number.isNaN()']
   }, {
-    code: "import concat from 'lodash/isNaN';",
+    code: "import isNaN from 'lodash/isNaN';",
     errors: ["Import from 'lodash/isNaN' detected. Consider using the native Number.isNaN()"]
   }, {
-    code: "import concat from 'lodash.isnan';",
+    code: "import isNaN from 'lodash.isnan';",
     errors: ["Import from 'lodash.isnan' detected. Consider using the native Number.isNaN()"]
+  }, {
+    code: "import { isNaN } from 'lodash';",
+    errors: ["Import { isNaN } from 'lodash' detected. Consider using the native Number.isNaN()"]
   }]
 });
 

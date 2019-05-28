@@ -33,37 +33,30 @@ ruleTester.run('lodash.keys', rules.keys, {
   }]
 });
 
-[
-  { fnName: 'keys', alternative: 'Object.keys()' }, 
-  { fnName: 'indexOf', alternative: 'Array.prototype.indexOf()' },
-  { fnName: 'forEach', alternative: 'Array.prototype.forEach()' },
-  { fnName: 'isNaN', ruleName: 'is-nan', alternative: 'Number.isNaN()' }
-].forEach(({ fnName, ruleName, alternative }) => {
-  ruleTester.run(`Import lodash.${fnName.toLowerCase()}`, rules[ruleName || kebabCase(fnName)], {
-    valid: [],
-    invalid: [{
-      code: `import ${fnName} from 'lodash/${fnName}';`,
-      errors: [`Import from 'lodash/${fnName}' detected. Consider using the native ${alternative}`]
-    }, {
-      code: `import ${fnName} from 'lodash.${fnName.toLowerCase()}';`,
-      errors: [`Import from 'lodash.${fnName.toLowerCase()}' detected. Consider using the native ${alternative}`]
-   }, {
-      code: `import { ${fnName} as x } from 'lodash';`,
-      errors: [`Import { ${fnName} } from 'lodash' detected. Consider using the native ${alternative}`]
-    }, {
-      code: `const { ${fnName}: x } = require('lodash');`,
-      errors: [`{ ${fnName} } = require('lodash') detected. Consider using the native ${alternative}`]
-    }, {
-      code: `({ ${fnName}: x } = require('lodash'));`,
-      errors: [`{ ${fnName} } = require('lodash') detected. Consider using the native ${alternative}`]
-    }, {
-      code: `require('lodash/${fnName}');`,
-      errors: [`require('lodash/${fnName}') detected. Consider using the native ${alternative}`]
-    }, {
-      code: `require('lodash.${fnName.toLowerCase()}');`,
-      errors: [`require('lodash.${fnName.toLowerCase()}') detected. Consider using the native ${alternative}`]
-    }]
-  });
+ruleTester.run(`Import lodash.isnan`, rules['is-nan'], {
+  valid: [`{ x: require('lodash') }`],
+  invalid: [{
+    code: `import isNaN from 'lodash/isNaN';`,
+    errors: [`Import from 'lodash/isNaN' detected. Consider using the native Number.isNaN()`]
+  }, {
+    code: `import isNaN from 'lodash.isnan';`,
+    errors: [`Import from 'lodash.isnan' detected. Consider using the native Number.isNaN()`]
+  }, {
+    code: `import { isNaN as x } from 'lodash';`,
+    errors: [`Import { isNaN } from 'lodash' detected. Consider using the native Number.isNaN()`]
+  }, {
+    code: `const { isNaN: x } = require('lodash');`,
+    errors: [`{ isNaN } = require('lodash') detected. Consider using the native Number.isNaN()`]
+  }, {
+    code: `({ isNaN: x } = require('lodash'));`,
+    errors: [`{ isNaN } = require('lodash') detected. Consider using the native Number.isNaN()`]
+  }, {
+    code: `require('lodash/isNaN');`,
+    errors: [`require('lodash/isNaN') detected. Consider using the native Number.isNaN()`]
+  }, {
+    code: `require('lodash.isnan');`,
+    errors: [`require('lodash.isnan') detected. Consider using the native Number.isNaN()`]
+  }]
 });
 
 ruleTester.run('underscore.forEach', rules['for-each'], {

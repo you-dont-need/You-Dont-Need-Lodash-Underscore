@@ -1,7 +1,6 @@
 'use strict';
 const RuleTester = require('eslint').RuleTester;
 const assert = require('assert');
-const kebabCase = require('kebab-case');
 const rules = require('../../../lib/rules/all');
 const allRules = require('../../../lib/rules/rules');
 

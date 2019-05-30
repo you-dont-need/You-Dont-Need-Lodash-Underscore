@@ -160,6 +160,7 @@ then Lodash/Underscore is the better option.*
 
 **[String](#string)**
 
+1. [_.padStart and _.padEnd](#_padstart-and-_padend)
 1. [_.repeat](#_repeat)
 1. [_.replace](#_replace)
 1. [_.split](#_split)
@@ -2134,6 +2135,34 @@ Retrieves all the given object's own enumerable property values.
 **[⬆ back to top](#quick-links)**
 
 ## String
+
+### _.padStart and _.padEnd
+:heavy_exclamation_mark:`Lodash only`
+Pads the current string with another string (multiple times, if needed) until the resulting string reaches the given length.
+
+  ```js
+  // Lodash
+  console.log(_.padStart('123', 5, '0'))
+  // output: '00123'
+
+  console.log(_.padEnd('123', 5, '0'))
+  // output: '12300'
+
+  // Native
+  console.log('123'.padStart(5, '0'))
+  // output: '00123'
+
+  console.log('123'.padEnd(5, '0'))
+  // output: '12300'
+  ```
+
+#### Browser Support for `String.prototype.padStart()` and `String.prototype.padEnd()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  57.0 ✔  |  15.0 ✔ | 48.0 ✔ |  ✖  |  44.0 ✔ |  10.0 ✔ |
+
+**[⬆ back to top](#quick-links)**
 
 ### _.startsWith
 :heavy_exclamation_mark:`Lodash only`

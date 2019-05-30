@@ -219,6 +219,16 @@
         "compatible": true,
         "alternative": "String.prototype.trim()"
     },
+    "padStart": {
+        "compatible": true,
+        "alternative": "String.prototype.padStart()",
+        "ES6": true
+    },
+    "padEnd": {
+        "compatible": true,
+        "alternative": "String.prototype.padEnd()",
+        "ES6": true
+    },
     "repeat": {
         "compatible": true,
         "alternative": "String.prototype.repeat()",

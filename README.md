@@ -1099,7 +1099,7 @@ Checks if a value is in collection.
 
 ### _.keyBy
 :heavy_exclamation_mark: `Lodash only`
-Creates an object composed of keys generated from the results of running each element of collection thru iteratee.
+Creates an object composed of keys generated from the results of running each element of collection through iteratee.
 
   ```js
   // Lodash

@@ -134,6 +134,10 @@
         "compatible": true,
         "alternative": "Array.prototype.slice()"
     },
+    "takeRight": {
+        "compatible": false,
+        "alternative": "Array.prototype.slice()"
+    },
 
     "bind": {
         "ruleName": "bind",
@@ -149,6 +153,11 @@
         "compatible": true,
         "alternative": "Number.isNaN()",
         "ES6": true
+    },
+    "isNil": {
+        "ruleName": "is-nil",
+        "compatible": true,
+        "alternative": "value === null || value === undefined"
     },
     "isNull": {
         "ruleName": "is-null",
@@ -214,6 +223,16 @@
     "trim": {
         "compatible": true,
         "alternative": "String.prototype.trim()"
+    },
+    "padStart": {
+        "compatible": true,
+        "alternative": "String.prototype.padStart()",
+        "ES6": true
+    },
+    "padEnd": {
+        "compatible": true,
+        "alternative": "String.prototype.padEnd()",
+        "ES6": true
     },
     "repeat": {
         "compatible": true,

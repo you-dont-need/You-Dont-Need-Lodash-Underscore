@@ -160,6 +160,7 @@ then Lodash/Underscore is the better option.*
 
 **[String](#string)**
 
+1. [_.padStart and _.padEnd](#_padstart-and-_padend)
 1. [_.repeat](#_repeat)
 1. [_.replace](#_replace)
 1. [_.split](#_split)
@@ -168,6 +169,7 @@ then Lodash/Underscore is the better option.*
 1. [_.toLower](#_tolower)
 1. [_.toUpper](#_toupper)
 1. [_.trim](#_trim)
+1. [_.upperFirst](#_upperFirst)
 
 **[Util](#string)**
 
@@ -670,6 +672,51 @@ Returns an array that is the intersection of all the arrays. Each value in the r
 
 **[⬆ back to top](#quick-links)**
 
+### _.takeRight
+
+Creates a slice of array with n elements taken from the end. 
+:heavy_exclamation_mark: Native slice does not behave entirely the same as the `Lodash` method. See example below to understand why.
+
+  ```js
+  // Underscore/Lodash
+  _.takeRight([1, 2, 3]);
+  // => [3]
+  
+  _.takeRight([1, 2, 3], 2);
+  // => [2, 3]
+  
+  _.takeRight([1, 2, 3], 5);
+  // => [1, 2, 3]
+
+  // Native
+  [1, 2, 3].slice(-1);
+  // => [3]
+  
+  [1, 2, 3].slice(-2);
+  // => [2, 3]
+
+  [1, 2, 3].slice(-5);
+  // => [1, 2, 3]
+
+  // Difference in compatibility
+  
+  // Lodash
+  _.takeRight([1, 2, 3], 0);
+  // => []
+
+  // Native
+  [1, 2, 3].slice(0);
+  // => [1, 2, 3]
+  ```
+
+#### Browser Support for `Array.prototype.slice()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  1.0 ✔  |  ✔  |  1.0 ✔  |  ✔  |  ✔  | ✔  |
+
+**[⬆ back to top](#quick-links)**
+
 ### _.isArray
 Returns true if given value is an array.
 
@@ -1054,7 +1101,7 @@ Checks if a value is in collection.
 
 ### _.keyBy
 :heavy_exclamation_mark: `Lodash only`
-Creates an object composed of keys generated from the results of running each element of collection thru iteratee.
+Creates an object composed of keys generated from the results of running each element of collection through iteratee.
 
   ```js
   // Lodash
@@ -1539,6 +1586,13 @@ Create a new function that calls _func_ with _args_.
   var result = sayHelloTo('Jose')
   console.log(result)
   // output: 'Hello Jose'
+  
+  // Native
+  const partial = (func, ...boundArgs) => (...remainingArgs) => func(...boundArgs, ...remainingArgs)
+  var sayHelloTo = partial(greet, 'Hello');
+  var result = sayHelloTo('Jose')
+  console.log(result)
+  // output: 'Hello Jose'
   ```
 
 #### Browser Support for Spread
@@ -1986,7 +2040,7 @@ Creates an object composed of the object properties predicate returns truthy for
   // Native
   function pick(object, keys) {
     return keys.reduce((obj, key) => {
-       if (object[key]) {
+       if (object && object.hasOwnProperty(key)) {
           obj[key] = object[key];
        }
        return obj;
@@ -2090,6 +2144,34 @@ Retrieves all the given object's own enumerable property values.
 **[⬆ back to top](#quick-links)**
 
 ## String
+
+### _.padStart and _.padEnd
+:heavy_exclamation_mark:`Lodash only`
+Pads the current string with another string (multiple times, if needed) until the resulting string reaches the given length.
+
+  ```js
+  // Lodash
+  console.log(_.padStart('123', 5, '0'))
+  // output: '00123'
+
+  console.log(_.padEnd('123', 5, '0'))
+  // output: '12300'
+
+  // Native
+  console.log('123'.padStart(5, '0'))
+  // output: '00123'
+
+  console.log('123'.padEnd(5, '0'))
+  // output: '12300'
+  ```
+
+#### Browser Support for `String.prototype.padStart()` and `String.prototype.padEnd()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  57.0 ✔  |  15.0 ✔ | 48.0 ✔ |  ✖  |  44.0 ✔ |  10.0 ✔ |
+
+**[⬆ back to top](#quick-links)**
 
 ### _.startsWith
 :heavy_exclamation_mark:`Lodash only`
@@ -2289,6 +2371,31 @@ Removes the leading and trailing whitespace characters from a string.
 
 **[⬆ back to top](#quick-links)**
 
+### _.upperFIrst
+:heavy_exclamation_mark:`Lodash only`
+Uppercases the first letter of a given string
+
+  ```js
+  // Lodash
+  var result = _.upperFirst('george')
+  console.log(result)
+  // output: 'George'
+
+  // Native
+  const upperFirst = (string) => {
+    return string ? string.charAt(0).toUpperCase() + string.slice(1) : ''
+  }
+  
+  var result = upperFirst('george')
+  console.log(result)
+  // output: 'George'
+  ```
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  | ✔ |  ✔ |  ✔  |  ✔ |  ✔  |
+
+**[⬆ back to top](#quick-links)**
+
 ## Reference
 
 * [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
@@ -2368,6 +2475,9 @@ Checks if n is between start and up to, but not including, end. If end is not sp
       }
       return (num >= Math.min(init, final) && num < Math.max(init, final));
     }
+    
+    //Native
+    const inRange = (num, a, b=0) => (Math.min(a,b) <= num && num < Math.max(a,b));
 
     inRange(3, 2, 4);
     // output: true

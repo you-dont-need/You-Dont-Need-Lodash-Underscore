@@ -4,7 +4,7 @@ const assert = require('assert');
 const rules = require('../../../lib/rules/all');
 const allRules = require('../../../lib/rules/rules');
 
-assert.equal(Object.keys(allRules).length, 53, 'Don\'t miss a rule 😄');
+assert.equal(Object.keys(allRules).length, 57, 'Don\'t miss a rule 😄');
 
 const ruleTester = new RuleTester({
   parserOptions: { ecmaVersion: 2018, sourceType: "module" }
@@ -19,12 +19,6 @@ ruleTester.run('_.concat', rules.concat, {
   invalid: [{
     code: '_.concat(array, 2, [3], [[4]])',
     errors: ['Consider using the native Array.prototype.concat()']
-  }, {
-    code: "import concat from 'lodash/concat';",
-    errors: ["Import from 'lodash/concat' detected. Consider using the native Array.prototype.concat()"]
-  }, {
-    code: "import concat from 'lodash.concat';",
-    errors: ["Import from 'lodash.concat' detected. Consider using the native Array.prototype.concat()"]
   }]
 });
 
@@ -35,12 +29,32 @@ ruleTester.run('lodash.keys', rules.keys, {
   invalid: [{
     code: 'lodash.keys({one: 1, two: 2, three: 3})',
     errors: ['Consider using the native Object.keys()']
+  }]
+});
+
+ruleTester.run(`Import lodash.isnan`, rules['is-nan'], {
+  valid: [`{ x: require('lodash') }`],
+  invalid: [{
+    code: `import isNaN from 'lodash/isNaN';`,
+    errors: [`Import from 'lodash/isNaN' detected. Consider using the native Number.isNaN()`]
   }, {
-    code: "import concat from 'lodash/keys';",
-    errors: ["Import from 'lodash/keys' detected. Consider using the native Object.keys()"]
+    code: `import isNaN from 'lodash.isnan';`,
+    errors: [`Import from 'lodash.isnan' detected. Consider using the native Number.isNaN()`]
   }, {
-    code: "import concat from 'lodash.keys';",
-    errors: ["Import from 'lodash.keys' detected. Consider using the native Object.keys()"]
+    code: `import { isNaN as x } from 'lodash';`,
+    errors: [`Import { isNaN } from 'lodash' detected. Consider using the native Number.isNaN()`]
+  }, {
+    code: `const { isNaN: x } = require('lodash');`,
+    errors: [`{ isNaN } = require('lodash') detected. Consider using the native Number.isNaN()`]
+  }, {
+    code: `({ isNaN: x } = require('lodash'));`,
+    errors: [`{ isNaN } = require('lodash') detected. Consider using the native Number.isNaN()`]
+  }, {
+    code: `require('lodash/isNaN');`,
+    errors: [`require('lodash/isNaN') detected. Consider using the native Number.isNaN()`]
+  }, {
+    code: `require('lodash.isnan');`,
+    errors: [`require('lodash.isnan') detected. Consider using the native Number.isNaN()`]
   }]
 });
 
@@ -51,12 +65,6 @@ ruleTester.run('underscore.forEach', rules['for-each'], {
   invalid: [{
     code: 'underscore.forEach()',
     errors: ['Consider using the native Array.prototype.forEach()']
-  }, {
-    code: "import concat from 'lodash/forEach';",
-    errors: ["Import from 'lodash/forEach' detected. Consider using the native Array.prototype.forEach()"]
-  }, {
-    code: "import concat from 'lodash.foreach';",
-    errors: ["Import from 'lodash.foreach' detected. Consider using the native Array.prototype.forEach()"]
   }]
 });
 
@@ -67,12 +75,6 @@ ruleTester.run('underscore.isNaN', rules['is-nan'], {
   invalid: [{
     code: 'underscore.isNaN(NaN)',
     errors: ['Consider using the native Number.isNaN()']
-  }, {
-    code: "import concat from 'lodash/isNaN';",
-    errors: ["Import from 'lodash/isNaN' detected. Consider using the native Number.isNaN()"]
-  }, {
-    code: "import concat from 'lodash.isnan';",
-    errors: ["Import from 'lodash.isnan' detected. Consider using the native Number.isNaN()"]
   }]
 });
 

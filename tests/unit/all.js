@@ -115,6 +115,7 @@ describe('code snippet example', () => {
       )
     })
   })
+
   describe('assign', () => {
     function Foo() {
       this.c = 3;
@@ -325,6 +326,7 @@ describe('code snippet example', () => {
       )
     });
   })
+
   describe('random', () => {
     
     const random = (lower, upper) => {
@@ -353,4 +355,63 @@ describe('code snippet example', () => {
       assert(random(1.2, 5.2) >= 1.2 && random(1,2, 5.2) <= 5.2);
     });
   });
+  
+  describe('padStart', () => {
+    it('_.padStart("123", 5, "0")', () => {
+      assert.equal(
+        _.padStart("123", 5, '0'),
+        "123".padStart(5, '0')
+      );
+    })
+
+    it('_.padStart("123", 6, "_-")', () => {
+      assert.equal(
+        _.padStart("123", 6, '_-'),
+        "123".padStart(6, '_-')
+      );
+    })
+  })
+
+  describe('padEnd', () => {
+    it('_.padEnd("123", 5, "0")', () => {
+      assert.equal(
+        _.padEnd("123", 5, '0'),
+        "123".padEnd(5, '0')
+      );
+    })
+
+    it('_.padEnd("123", 6, "_-")', () => {
+      assert.equal(
+        _.padEnd("123", 6, '_-'),
+        "123".padEnd(6, '_-')
+      );
+    })
+  })
+
+  describe('upperFirst', () => {
+    const upperFirst = (string) => {
+      return string ? string.charAt(0).toUpperCase() + string.slice(1) : ''
+    }
+
+    it('_.upperFirst("george")', () => {
+      assert.equal(
+        _.upperFirst('george'),
+        upperFirst('george')
+      )
+    })
+
+    it('_.upperFirst(null)', () => {
+      assert.equal(
+        _.upperFirst(null),
+        upperFirst(null)
+      )
+    })
+
+    it('_.upperFirst("")', () => {
+      assert.equal(
+        _.upperFirst(''),
+        upperFirst('')
+      )
+    })
+  })
 })

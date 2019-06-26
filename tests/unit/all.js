@@ -358,4 +358,31 @@ describe('code snippet example', () => {
       );
     })
   })
+
+  describe('upperFirst', () => {
+    const upperFirst = (string) => {
+      return string ? string.charAt(0).toUpperCase() + string.slice(1) : ''
+    }
+
+    it('_.upperFirst("george")', () => {
+      assert.equal(
+        _.upperFirst('george'),
+        upperFirst('george')
+      )
+    })
+
+    it('_.upperFirst(null)', () => {
+      assert.equal(
+        _.upperFirst(null),
+        upperFirst(null)
+      )
+    })
+
+    it('_.upperFirst("")', () => {
+      assert.equal(
+        _.upperFirst(''),
+        upperFirst('')
+      )
+    })
+  })
 })

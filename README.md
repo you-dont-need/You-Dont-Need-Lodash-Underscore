@@ -169,6 +169,7 @@ then Lodash/Underscore is the better option.*
 1. [_.toLower](#_tolower)
 1. [_.toUpper](#_toupper)
 1. [_.trim](#_trim)
+1. [_.upperFirst](#_upperFirst)
 
 **[Util](#string)**
 
@@ -2366,6 +2367,31 @@ Removes the leading and trailing whitespace characters from a string.
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |
   5.0 ✔  | ✔ |  3.5 ✔ |  9.0 ✔  |  10.5 ✔ |  5.0 ✔  |
+
+**[⬆ back to top](#quick-links)**
+
+### _.upperFIrst
+:heavy_exclamation_mark:`Lodash only`
+Uppercases the first letter of a given string
+
+  ```js
+  // Lodash
+  var result = _.upperFirst('george')
+  console.log(result)
+  // output: 'George'
+
+  // Native
+  const upperFirst = (string) => {
+    return string ? string.charAt(0).toUpperCase() + string.slice(1) : ''
+  }
+  
+  var result = upperFirst('george')
+  console.log(result)
+  // output: 'George'
+  ```
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  | ✔ |  ✔ |  ✔  |  ✔ |  ✔  |
 
 **[⬆ back to top](#quick-links)**
 

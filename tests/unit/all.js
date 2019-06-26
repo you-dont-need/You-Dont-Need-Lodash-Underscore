@@ -249,13 +249,13 @@ describe('code snippet example', () => {
     const separator = '-';
     const limit = 2;
     it(`_.split("${source}", "${separator}")`, () => {
-      assert.equal(
+      assert.deepEqual(
         _.split(source, separator),
         source.split(separator)
       );
     })
     it(`_.split("${source}", "${separator}", ${limit})`, () => {
-      assert.equal(
+      assert.deepEqual(
         _.split(source, separator, limit),
         source.split(separator, limit)
       );
@@ -327,6 +327,35 @@ describe('code snippet example', () => {
     });
   })
 
+  describe('random', () => {
+    
+    const random = (lower, upper) => {
+      if(!upper || typeof upper === 'boolean') {
+        upper = lower;
+        lower = 0;
+      }
+      
+      let randomic = Math.random() * upper;
+      return randomic >= lower ? randomic : random(lower, upper);
+    }
+
+    it('_.random(0, 5)', () => {
+      assert(random(0, 5) >= 0 && random(0, 5) <= 5);
+    });
+
+    it('_.random(5)', () => {
+      assert(random(5) >= 0 && random(5) <= 5);
+    });
+
+    it('_.random(5, true)', () => {
+      assert(random(5, true) >= 0 && random(5, true) <= 5);
+    });
+
+    it('_.random(1.2, 5.2)', () => {
+      assert(random(1.2, 5.2) >= 1.2 && random(1,2, 5.2) <= 5.2);
+    });
+  });
+  
   describe('padStart', () => {
     it('_.padStart("123", 5, "0")', () => {
       assert.equal(

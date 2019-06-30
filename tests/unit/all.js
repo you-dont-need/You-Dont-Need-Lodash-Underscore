@@ -205,27 +205,27 @@ describe('code snippet example', () => {
     })
   })
   describe('get', () => {
-    // add array notation
-    const get = (obj, path, defaultValue = null) =>
-      String.prototype.split.call(path, /[,[\].]+?/)
+    const get = (obj, path, defaultValue) => {
+      const result = String.prototype.split.call(path, /[,[\].]+?/)
         .filter(Boolean)
-        .reduce((a, c) => (Object.hasOwnProperty.call(a,c) ? a[c] : defaultValue), obj)
-
+        .reduce((res, key) => (res !== null && res !== undefined) ? res[key] : res, obj);
+      return (result === undefined || result === obj) ? defaultValue : result;
+    }
     var obj = { aa: [{ b: { c: 0 }, 1: 0 }], dd: { ee: { ff: 2 } } };
 
     it ("should handle falsey values", () => {
       var val = _.get(obj, 'aa[0].b.c', 1)
-      assert.equal(val, get(obj, 'aa[0].b.c', 1))
+      assert.strictEqual(val, get(obj, 'aa[0].b.c', 1))
       assert.notEqual(val, 1)
     })
     it ("should handle just bracket notation", () => {
       var val = _.get(obj, 'aa[0][1]', 1)
-      assert.equal(val, get(obj, 'aa[0][1]', 1))
+      assert.strictEqual(val, get(obj, 'aa[0][1]', 1))
       assert.notEqual(val, 1)
     })
     it ("should handle just period notation", () => {
       var val = _.get(obj, 'dd.ee.ff', 1)
-      assert.equal(val, get(obj, 'dd.ee.ff', 1))
+      assert.strictEqual(val, get(obj, 'dd.ee.ff', 1))
       assert.notEqual(val, 1)
     })
     it ("should handle neither notation", () => {
@@ -235,13 +235,44 @@ describe('code snippet example', () => {
     })
     it ("should handle both notation", () => {
       var val = _.get(obj, 'aa[0].b.c', 1)
-      assert.equal(val, get(obj, 'aa[0].b.c', 1))
+      assert.strictEqual(val, get(obj, 'aa[0].b.c', 1))
       assert.notEqual(val, 1)
     })
     it ("should handle array path", () => {
       var val = _.get(obj, ['aa', [0], 'b', 'c'], 1)
-      assert.equal(val, get(obj, ['aa', [0], 'b', 'c'], 1))
+      assert.strictEqual(val, get(obj, ['aa', [0], 'b', 'c'], 1))
       assert.notEqual(val, 1)
+    })
+    it ("should handle undefined without default", () => {
+      var val = _.get(obj, 'dd.b')
+      assert.strictEqual(val, get(obj, 'dd.b'))
+    })
+    it ("should handle undefined with default", () => {
+      var val = _.get(obj, 'dd.b', 1)
+      assert.strictEqual(val, get(obj, 'dd.b', 1))
+    })
+    it ("should handle deep undefined without default", () => {
+      var val = _.get(obj, 'dd.b.c')
+      assert.strictEqual(val, get(obj, 'dd.b.c'))
+    })
+    it ("should handle deep undefined with default", () => {
+      var val = _.get(obj, 'dd.b.c', 1)
+      assert.strictEqual(val, get(obj, 'dd.b.c', 1))
+      assert.strictEqual(val, 1);
+    })
+    it ("should handle null default", () => {
+      var val = _.get(obj, 'dd.b', null)
+      assert.strictEqual(val, get(obj, 'dd.b', null))
+      assert.strictEqual(val, null);
+    })
+    it ("should handle empty path", () => {
+      var val = _.get(obj, '', 1)
+      assert.strictEqual(val, get(obj, '', 1))
+      assert.notEqual(val, obj);
+    })
+    it ("should handle undefined obj", () => {
+      var val = _.get(undefined, 'aa')
+      assert.strictEqual(val, get(undefined, 'aa'))
     })
   })
   describe('split', () => {

@@ -329,30 +329,89 @@ describe('code snippet example', () => {
 
   describe('random', () => {
     
-    const random = (lower, upper) => {
-      if(!upper || typeof upper === 'boolean') {
-        upper = lower;
-        lower = 0;
+    const random = (...args) => {
+      let [lower, upper, isFloat] = [0, 1, true];
+      if (args.length === 1) {
+        upper = args[0];
+        isFloat = args[0] % 1;
+      } else if (args.length === 2) {
+        if (typeof args[1] === 'boolean') {
+          [upper, isFloat] = args;
+        } else {
+          [lower, upper] = args;
+          isFloat = args[0] % 1 || args[1] % 1;
+        }
+      } else if (args.length === 3) {
+        [lower, upper, isFloat] = args;
       }
-      
-      let randomic = Math.random() * upper;
-      return randomic >= lower ? randomic : random(lower, upper);
-    }
+      // if the bounds are float, but isFloat === false
+      if (!isFloat) {
+        lower = Math.ceil(lower);
+        upper = Math.floor(upper);
+      }
+      const randomNum = lower + Math.random() * (upper - lower);
+      return !isFloat ? Math.round(randomNum) : randomNum;
+    };
+
+    // it's random, we have to test many times
+    const everyAssert = (testFunc, iterNum = 100) => Array(iterNum).fill(void 0).every(testFunc);
 
     it('_.random(0, 5)', () => {
-      assert(random(0, 5) >= 0 && random(0, 5) <= 5);
+      assert(everyAssert(() => {
+        const randomValue = random(0, 5);
+        return randomValue >= 0 && randomValue <= 5 && Number.isInteger(randomValue);
+      }));
     });
 
     it('_.random(5)', () => {
-      assert(random(5) >= 0 && random(5) <= 5);
+      assert(everyAssert(() => {
+        const randomValue = random(5);
+        return randomValue >= 0 && randomValue <= 5 && Number.isInteger(randomValue);
+      }));
     });
 
     it('_.random(5, true)', () => {
-      assert(random(5, true) >= 0 && random(5, true) <= 5);
+      assert(everyAssert(() => {
+        const randomValue = random(5, true);
+        return randomValue >= 0 && randomValue <= 5;
+      }));
     });
 
     it('_.random(1.2, 5.2)', () => {
-      assert(random(1.2, 5.2) >= 1.2 && random(1,2, 5.2) <= 5.2);
+      assert(everyAssert(() => {
+        const randomValue = random(1.2, 5.2);
+        return randomValue >= 1.2 && randomValue <= 5.2;
+      }));
+    });
+    it('_.random()', () => {
+      assert(everyAssert(() => {
+        const randomValue = random();
+        return randomValue >= 0 && randomValue <= 1;
+      }));
+    });
+    it('_.random(1, 5, true)', () => {
+      assert(everyAssert(() => {
+        const randomValue = random(1, 5, true);
+        return randomValue >= 1 && randomValue <= 5;
+      }));
+    });
+    it('_.random(1.2, 5.2, false)', () => {
+      assert(everyAssert(() => {
+        const randomValue = random(1.2, 5.2, false);
+        return randomValue >= 1.2 && randomValue <= 5.2 && Number.isInteger(randomValue);
+      }));
+    });
+    it('_.random(100000, 100001)', () => {
+      assert(everyAssert(() => {
+        const randomValue = random(100000, 100001);
+        return randomValue >= 100000 && randomValue <= 100001 && Number.isInteger(randomValue);
+      }));
+    });
+    it('_.random(100000, 100000.99)', () => {
+      assert(everyAssert(() => {
+        const randomValue = random(100000, 100000.99);
+        return randomValue >= 100000 && randomValue <= 100000.99;
+      }));
     });
   });
   

@@ -2510,16 +2510,30 @@ Produces a random number between the inclusive lower and upper bounds. If only o
     _.random(1.2, 5.2);
     // => a floating-point number between 1.2 and 5.2
 
-    //Native
-    const random = (lower, upper) => {
-      if(!upper || typeof upper === 'boolean') {
-        upper = lower;
-        lower = 0;
+    //Native ES6
+    const random = (...args) => {
+      let [lower, upper, isFloat] = [0, 1, true];
+      if (args.length === 1) {
+        upper = args[0];
+        isFloat = args[0] % 1;
+      } else if (args.length === 2) {
+        if (typeof args[1] === 'boolean') {
+          [upper, isFloat] = args;
+        } else {
+          [lower, upper] = args;
+          isFloat = args[0] % 1 || args[1] % 1;
+        }
+      } else if (args.length === 3) {
+        [lower, upper, isFloat] = args;
       }
-      
-      let randomic = Math.random() * upper;
-      return randomic >= lower ? randomic : random(lower, upper);
-    }
+      // if the bounds are float, but isFloat === false
+      if (!isFloat) {
+        lower = Math.ceil(lower);
+        upper = Math.floor(upper);
+      }
+      const randomNum = lower + Math.random() * (upper - lower);
+      return !isFloat ? Math.round(randomNum) : randomNum;
+    };
 
     random(0, 5);
     // => an integer between 0 and 5

@@ -348,9 +348,9 @@ describe('code snippet example', () => {
       if (!isFloat) {
         lower = Math.ceil(lower);
         upper = Math.floor(upper);
+        return Math.floor(lower + Math.random() * (upper - lower + 1))
       }
-      const randomNum = lower + Math.random() * (upper - lower);
-      return !isFloat ? Math.round(randomNum) : randomNum;
+      return lower + Math.random() * (upper - lower);
     };
 
     // it's random, we have to test many times

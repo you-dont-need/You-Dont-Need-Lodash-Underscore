@@ -2530,9 +2530,9 @@ Produces a random number between the inclusive lower and upper bounds. If only o
       if (!isFloat) {
         lower = Math.ceil(lower);
         upper = Math.floor(upper);
+        return Math.floor(lower + Math.random() * (upper - lower + 1))
       }
-      const randomNum = lower + Math.random() * (upper - lower);
-      return !isFloat ? Math.round(randomNum) : randomNum;
+      return lower + Math.random() * (upper - lower);
     };
 
     random(0, 5);

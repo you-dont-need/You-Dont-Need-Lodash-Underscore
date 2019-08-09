@@ -278,11 +278,11 @@ Similar to [without](#_without), but returns the values from array that are not 
 
   // Native
   var arrays = [[1, 2, 3, 4, 5], [5, 2, 10]];
-  console.log(array.reduce(function(a, b) {
+  console.log(arrays.reduce(function(a, b) {
     return a.filter(function(value) {
       return !b.includes(value);
     });
-  })));
+  }));
   // output: [1, 3, 4]
 
   // ES6

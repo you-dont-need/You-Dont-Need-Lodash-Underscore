@@ -148,6 +148,12 @@
         "compatible": true,
         "alternative": "Number.isFinite()"
     },
+    "isInteger": {
+        "ruleName": "is-integer",
+        "compatible": true,
+        "alternative": "Number.isInteger()",
+        "ES6": true
+    },
     "isNaN": {
         "ruleName": "is-nan",
         "compatible": true,

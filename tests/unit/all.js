@@ -204,6 +204,32 @@ describe('code snippet example', () => {
       )
     })
   })
+  describe('isInteger', () => {
+    it('_.isInteger(3)', () => {
+       assert.equal(
+        _.isInteger(3),
+        Number.isInteger(3)
+      )
+    })
+    it('_.isInteger("3")', () => {
+       assert.equal(
+        _.isInteger("3"),
+        Number.isInteger("3")
+       )
+    })
+    it('_.isInteger(2.9)', () => {
+       assert.equal(
+        _.isInteger(2.9),
+        Number.isInteger(2.9)
+       )
+    })
+    it('_.isInteger(NaN)', () => {
+       assert.equal(
+        _.isInteger(NaN),
+        Number.isInteger(NaN)
+       )
+    })
+  })
   describe('get', () => {
     const get = (obj, path, defaultValue) => {
       const result = String.prototype.split.call(path, /[,[\].]+?/)

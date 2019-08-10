@@ -141,6 +141,7 @@ then Lodash/Underscore is the better option.*
 1. [_.gte](#_gte)
 1. [_.isEmpty](#_isempty)
 1. [_.isFinite](#_isfinite)
+1. [_.isInteger](#_isInteger)
 1. [_.isNaN](#_isnan)
 1. [_.isNil](#_isnil)
 1. [_.isNull](#_isnull)
@@ -1716,6 +1717,31 @@ Converts value to a finite number.
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |
   19.0 ✔  |  ✔ | 16.0 ✔ |  ✖  |  15.0 ✔ |  9.0 ✔ |
+
+**[⬆ back to top](#quick-links)**
+
+### _.isInteger
+
+Checks if value is an integer.
+
+  ```js
+  // Lodash
+  console.log(_.isInteger(3))
+  // output: true
+  console.log(_.isInteger('3'))
+  // output: false
+
+  // Native
+  console.log(Number.isInteger(3))
+  // output: true
+  console.log(Number.isInteger('3'))
+  // output: false
+  ```
+#### Browser Support for `Number.isInteger()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  |  12 ✔ | 16.0 ✔ |  ✖  |  ✔ |  ✔ |
 
 **[⬆ back to top](#quick-links)**
 

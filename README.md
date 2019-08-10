@@ -2511,41 +2511,42 @@ Produces a random number between the inclusive lower and upper bounds. If only o
     // => a floating-point number between 1.2 and 5.2
 
     //Native ES6
-    const random = (...args) => {
-      let [lower, upper, isFloat] = [0, 1, true];
-      if (args.length === 1) {
-        upper = args[0];
-        isFloat = args[0] % 1;
-      } else if (args.length === 2) {
-        if (typeof args[1] === 'boolean') {
-          [upper, isFloat] = args;
-        } else {
-          [lower, upper] = args;
-          isFloat = args[0] % 1 || args[1] % 1;
-        }
-      } else if (args.length === 3) {
-        [lower, upper, isFloat] = args;
-      }
-      // if the bounds are float, but isFloat === false
-      if (!isFloat) {
-        lower = Math.ceil(lower);
-        upper = Math.floor(upper);
-        return Math.floor(lower + Math.random() * (upper - lower + 1))
-      }
+    const random = (a = 1, b = 0) => {
+      const lower = Math.min(a, b);
+      const upper = Math.max(a, b);
       return lower + Math.random() * (upper - lower);
     };
 
-    random(0, 5);
-    // => an integer between 0 and 5
+    const randomInt = (a = 1, b = 0) => {
+      const lower = Math.ceil(Math.min(a, b));
+      const upper = Math.floor(Math.max(a, b));
+      return Math.floor(lower + Math.random() * (upper - lower + 1))
+    };
+
+    random();
+    // => a floating-point number between 0 and 1
     
     random(5);
-    // => also an integer between 0 and 5
-    
-    random(5, true);
     // => a floating-point number between 0 and 5
+    
+    random(0, 5);
+    // => also a floating-point number between 0 and 5
     
     random(1.2, 5.2);
     // => a floating-point number between 1.2 and 5.2
+
+    randomInt();
+    // => just 0 or 1
+    
+    randomInt(5);
+    // => an integer between 0 and 5
+    
+    randomInt(0, 5);
+    // => also an integer between 0 and 5
+    
+    randomInt(1.2, 5.2);
+    // => an integer between 2 and 5
+
   ```
 
   #### Browser Support for `Math.random()`

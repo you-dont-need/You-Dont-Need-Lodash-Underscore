@@ -385,31 +385,165 @@ describe('code snippet example', () => {
   })
 
   describe('random', () => {
-    
-    const random = (lower, upper) => {
-      if(!upper || typeof upper === 'boolean') {
-        upper = lower;
-        lower = 0;
-      }
-      
-      let randomic = Math.random() * upper;
-      return randomic >= lower ? randomic : random(lower, upper);
-    }
+    const random = (a = 1, b = 0) => {
+      const lower = Math.min(a, b);
+      const upper = Math.max(a, b);
+      return lower + Math.random() * (upper - lower);
+    };
 
-    it('_.random(0, 5)', () => {
-      assert(random(0, 5) >= 0 && random(0, 5) <= 5);
+    const array = Array(1000).fill(0);
+
+    it('random() in range [0, 1]', () => {
+      assert.ok(array.every(() => {
+        const randomValue = random();
+        return randomValue >= 0 && randomValue <= 1;
+      }));
     });
 
-    it('_.random(5)', () => {
-      assert(random(5) >= 0 && random(5) <= 5);
+    it('random() is float', () => {
+      assert.ok(array.some(() => {
+        const randomValue = random();
+        return !Number.isInteger(randomValue);
+      }));
     });
 
-    it('_.random(5, true)', () => {
-      assert(random(5, true) >= 0 && random(5, true) <= 5);
+    it('random(5) in range [0, 5]', () => {
+      assert.ok(array.every(() => {
+        const randomValue = random(5);
+        return randomValue >= 0 && randomValue <= 5;
+      }));
     });
 
-    it('_.random(1.2, 5.2)', () => {
-      assert(random(1.2, 5.2) >= 1.2 && random(1,2, 5.2) <= 5.2);
+    it('random(5) is float', () => {
+      assert.ok(array.some(() => {
+        const randomValue = random(5);
+        return !Number.isInteger(randomValue);
+      }));
+    });
+
+    it('random(-10) supports negative', () => {
+      assert.ok(array.every(() => {
+        const randomValue = random(-10);
+        return randomValue <= 0;
+      }));
+    });
+
+    it('random(10, 5) swap the bounds', () => {
+      assert.ok(array.every(() => {
+        const randomValue = random(10, 5);
+        return randomValue >= 5 && randomValue <= 10;
+      }));
+    });
+
+    it('random(-10, 10) supports negative', () => {
+      assert.ok(array.some(() => {
+        const randomValue = random(-10, 10);
+        return randomValue > 0;
+      }));
+      assert.ok(array.some(() => {
+        const randomValue = random(-10, 10);
+        return randomValue < 0;
+      }));
+    });
+
+    it('random(-10, 10) in range [-10, 10]', () => {
+      assert.ok(array.every(() => {
+        const randomValue = random(-10, 10);
+        return randomValue >= -10 && randomValue <= 10;
+      }));
+    });
+
+    it('random(1.2, 5.2) supports floats', () => {
+      assert.ok(array.every(() => {
+        const randomValue = random(1.2, 5.2);
+        return randomValue >= 1.2 && randomValue <= 5.2;
+      }));
+    });
+
+    it('random(100000, 100001) in range [100000, 100001]', () => {
+      assert.ok(array.every(() => {
+        const randomValue = random(100000, 100001);
+        return randomValue >= 100000 && randomValue <= 100001;
+      }));
+    });
+  });
+
+  describe('randomInt', () => {
+    const randomInt = (a = 1, b = 0) => {
+      const lower = Math.ceil(Math.min(a, b));
+      const upper = Math.floor(Math.max(a, b));
+      return Math.floor(lower + Math.random() * (upper - lower + 1))
+    };
+
+    const array = Array(1000).fill(0);
+
+    const uniq = (arr) => [...new Set(arr)];
+
+    it('randomInt() return `0` or `1`', () => {
+      const randoms = uniq(array.map(() => {
+        return randomInt();
+      })).sort();
+      assert.deepStrictEqual(randoms, [0, 1]);
+    });
+
+    it('randomInt(5) in range [0, 5]', () => {
+      assert.ok(array.every(() => {
+        const randomValue = randomInt(5);
+        return randomValue >= 0 && randomValue <= 5;
+      }));
+    });
+
+    it('randomInt(5) is integer', () => {
+      assert.ok(array.some(() => {
+        const randomValue = randomInt(5);
+        return Number.isInteger(randomValue);
+      }));
+    });
+
+    it('randomInt(-10) supports negative', () => {
+      assert.ok(array.every(() => {
+        const randomValue = randomInt(-10);
+        return randomValue <= 0;
+      }));
+    });
+
+    it('randomInt(10, 5) swap the bounds', () => {
+      assert.ok(array.every(() => {
+        const randomValue = randomInt(10, 5);
+        return randomValue >= 5 && randomValue <= 10;
+      }));
+    });
+
+    it('randomInt(-10, 10) supports negative', () => {
+      assert.ok(array.some(() => {
+        const randomValue = randomInt(-10, 10);
+        return randomValue > 0;
+      }));
+      assert.ok(array.some(() => {
+        const randomValue = randomInt(-10, 10);
+        return randomValue < 0;
+      }));
+    });
+
+    it('randomInt(-10, 10) in range [-10, 10]', () => {
+      assert.ok(array.every(() => {
+        const randomValue = randomInt(-10, 10);
+        return randomValue >= -10 && randomValue <= 10;
+      }));
+    });
+
+    it('randomInt(1.2, 5.2) supports floats', () => {
+      assert.ok(array.every(() => {
+        const randomValue = randomInt(1.2, 5.2);
+        return randomValue >= 2 && randomValue <= 5;
+      }));
+    });
+
+    it('randomInt(100000, 100001) return `100000` or `100001`', () => {
+      const randoms = uniq(array.map(() => {
+        return randomInt(100000, 100001);
+      })).sort();
+      assert.deepStrictEqual(randoms, [100000, 100001]);
     });
   });
   

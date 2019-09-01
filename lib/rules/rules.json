@@ -7,6 +7,10 @@
         "compatible": true,
         "alternative": "Array.prototype.slice()"
     },
+    "dropRight": {
+        "compatible": true,
+        "alternative": "Array.prototype.slice()"
+    },
     "indexOf": {
         "compatible": true,
         "alternative": "Array.prototype.indexOf()"

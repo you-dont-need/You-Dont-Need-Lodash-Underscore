@@ -86,6 +86,7 @@ For more information, see [Configuring the ESLint Plugin](configuring.md)
 1. [_.concat](#_concat)
 1. [_.difference](#_difference)
 1. [_.drop](#_drop)
+1. [_.dropRight](#_dropRight)
 1. [_.fill](#_fill)
 1. [_.find](#_find)
 1. [_.findIndex](#_findindex)
@@ -318,6 +319,34 @@ Creates a slice of array with n elements dropped from the beginning.
   
   [1, 2, 3].slice(2);
   // => [3]
+  ```
+
+#### Browser Support for `Array.prototype.slice()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  1.0 ✔  |  ✔  |  1.0 ✔  |  ✔  |  ✔  | ✔  |
+
+**[⬆ back to top](#quick-links)**
+
+### _.dropRight
+
+Creates a slice of array with n elements dropped at the end.
+
+  ```js
+  // Underscore/Lodash
+  _.dropRight([1, 2, 3]);
+  // => [1, 2]
+
+  _.dropRight([1, 2, 3], 2);
+  // => [1]
+
+  // Native
+  [1, 2, 3].slice(0, -1);
+  // => [1, 2]
+
+  [1, 2, 3].slice(0, -2);
+  // => [1]
   ```
 
 #### Browser Support for `Array.prototype.slice()`

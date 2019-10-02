@@ -527,6 +527,9 @@ Flattens array a single level deep.
   // Native(ES2019)
   const flatten = [1, [2, [3, [4]], 5]].flat()
   // => [1, 2, [3, [4]], 5]
+
+  const flatten = [1, [2, [3, [4]], 5]].flatMap(number => number)
+  // => [1, 2, [3, [4]], 5]
   ```
 
 #### Browser Support for `Array.prototype.reduce()`
@@ -542,6 +545,12 @@ Flattens array a single level deep.
 :-: | :-: | :-: | :-: | :-: | :-: |
 69 ✔ | ✖ | 62 ✔ | ✖ | 56 ✔ | 12 ✔ |
 
+#### Browser Support for `Array.prototype.flatMap()`
+
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image] |
+:-: | :-: | :-: | :-: | :-: | :-: |
+69 ✔ | ✖ | 62 ✔ | ✖ | 56 ✔ | 12 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -566,6 +575,10 @@ Recursively flattens array.
   [1, [2, [3, [4]], 5]].flat(Infinity)
   // => [1, 2, 3, 4, 5]
   
+  const flattenDeep = (arr) => arr.flatMap((subArray, index) => Array.isArray(subArray) ? flattenDeep(subArray) : subArray)
+
+  flattenDeep([1, [[2], [3, [4]], 5]])
+  // => [1, 2, 3, 4, 5]
   ```
 
 #### Browser Support
@@ -580,6 +593,14 @@ Recursively flattens array.
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image] |
 :-: | :-: | :-: | :-: | :-: | :-: |
 69 ✔ | ✖ | 62 ✔ | ✖ | 56 ✔ | 12 ✔ |
+
+
+#### Browser Support for `Array.prototype.flatMap()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image] |
+:-: | :-: | :-: | :-: | :-: | :-: |
+69 ✔ | ✖ | 62 ✔ | ✖ | 56 ✔ | 12 ✔ |
+
 
 **[⬆ back to top](#quick-links)**
 

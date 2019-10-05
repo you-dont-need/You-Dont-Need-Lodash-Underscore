@@ -605,4 +605,31 @@ describe('code snippet example', () => {
       )
     })
   })
+
+  describe('isUndefined', () => {
+    const definedVariable = 1; //defined variable (will return false)
+    let undefinedVariable; //undefined variable (will return true)
+    
+    it('_.isUndefined(definedVariable)', () => {
+      assert.equal(_.isUndefined(definedVariable),
+        (definedVariable === undefined))
+    });
+
+    it('_(definedVariable).isUndefined()', () => {
+      assert.equal(_(definedVariable).isUndefined(),
+        (definedVariable === undefined))
+    });
+
+    it('_.isUndefined(undefinedVariable)', () => {
+      assert.equal(_.isUndefined(undefinedVariable),
+        (undefinedVariable === undefined))
+    });
+
+    it('_(undefinedVariable).isUndefined()', () => {
+      assert.equal(_(undefinedVariable).isUndefined(),
+        (undefinedVariable === undefined))
+    });
+
+  });
+
 })

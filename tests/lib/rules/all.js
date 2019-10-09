@@ -128,16 +128,15 @@ ruleTester.run('_.isUndefined', rules['is-undefined'], {
 /*This is to make sure that You-Dont-Need-Lodash can handle the 
 evaluation of nested functions that had caused an error noted in the comments of
 Pull Request #219*/
-for (let rule in rules) {
-  ruleTester.run(rule, rules[rule], {
-    valid: [
-      `function myNestedFunction(firstInput) {
-        return (secondInput) => {
-          return firstInput + secondInput
-        }
+ruleTester.run('Nested functions', rules['is-undefined'], {
+  valid: [
+    `function myNestedFunction(firstInput) {
+      return (secondInput) => {
+        return firstInput + secondInput
       }
-      myNestedFunction(2)(2)`
-    ],
-    invalid: []
-  });
-}
+    }
+    myNestedFunction(2)(2)`
+  ],
+  invalid: []
+});
+

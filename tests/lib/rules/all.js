@@ -110,3 +110,33 @@ ruleTester.run('_', rules.concat, {
   ],
   invalid: []
 });
+
+ruleTester.run('_.isUndefined', rules['is-undefined'], {
+  valid: [
+    '2 === undefined'
+  ],
+  invalid: [{
+    code: '_.isUndefined(2)',
+    errors: ['Consider using the native value === undefined']
+  },{
+    code: '_(2).isUndefined()',
+    errors: ['Consider using the native value === undefined']
+
+  }]
+});
+
+/*This is to make sure that You-Dont-Need-Lodash can handle the 
+evaluation of nested functions that had caused an error noted in the comments of
+Pull Request #219*/
+ruleTester.run('Nested functions', rules['is-undefined'], {
+  valid: [
+    `function myNestedFunction(firstInput) {
+      return (secondInput) => {
+        return firstInput + secondInput
+      }
+    }
+    myNestedFunction(2)(2)`
+  ],
+  invalid: []
+});
+

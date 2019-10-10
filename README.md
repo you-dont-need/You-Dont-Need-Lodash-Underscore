@@ -911,7 +911,7 @@ Returns the index of the last occurrence of value in the array, or -1 if value i
 **[⬆ back to top](#quick-links)**
 
 ### _.reverse
-
+:heavy_exclamation_mark:`Lodash only`
 Reverses array so that the first element becomes the last, the second element becomes the second to last, and so on.
 
   ```js

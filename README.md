@@ -76,6 +76,10 @@ npm install --save-dev eslint-plugin-you-dont-need-lodash-underscore
 
 For more information, see [Configuring the ESLint Plugin](configuring.md)
 
+*:heavy_exclamation_mark:<b>Important:</b> Note that, while many Lodash methods are null safe (e.g. _.keys, _.entries),
+this is not necessarily the case for their Native equivalent. If null safety is critical for your application, we 
+suggest that you take extra precautions (e.g. consider using the native Object.keys as Object.keys(value || {}).*
+
 
 ## Quick Links
 

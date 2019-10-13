@@ -76,6 +76,10 @@ npm install --save-dev eslint-plugin-you-dont-need-lodash-underscore
 
 For more information, see [Configuring the ESLint Plugin](configuring.md)
 
+*:heavy_exclamation_mark:<b>Important:</b> Note that, while many Lodash methods are null safe (e.g. _.keys, _.entries),
+this is not necessarily the case for their Native equivalent. If null safety is critical for your application, we 
+suggest that you take extra precautions [e.g. consider using the native Object.keys as Object.keys(value || {})].*
+
 
 ## Quick Links
 
@@ -817,7 +821,7 @@ Checks if value is classified as an ArrayBuffer object.
 **[⬆ back to top](#quick-links)**
 
 ### _.join
-:heavy_exclamation_mark:`Lodash only`
+:heavy_exclamation_mark:`Not in Underscore.js`
 Joins a list of elements in an array with a given separator.
 
   ```js
@@ -907,7 +911,7 @@ Returns the index of the last occurrence of value in the array, or -1 if value i
 **[⬆ back to top](#quick-links)**
 
 ### _.reverse
-:heavy_exclamation_mark:`Lodash only`
+:heavy_exclamation_mark:`Not in Underscore.js`
 Reverses array so that the first element becomes the last, the second element becomes the second to last, and so on.
 
   ```js
@@ -960,7 +964,7 @@ Returns a shallow copy of a portion of an array into a new array object selected
 **[⬆ back to top](#quick-links)**
 
 ### _.without
-:heavy_exclamation_mark:`Lodash only`
+:heavy_exclamation_mark:`Not in Underscore.js`
 Returns an array where matching items are filtered.
 
   ```js
@@ -1154,7 +1158,7 @@ Checks if a value is in collection.
 **[⬆ back to top](#quick-links)**
 
 ### _.keyBy
-:heavy_exclamation_mark: `Lodash only`
+:heavy_exclamation_mark: `Not in Underscore.js`
 Creates an object composed of keys generated from the results of running each element of collection through iteratee.
 
   ```js
@@ -1835,7 +1839,7 @@ Voice from the Lodash author:
 **[⬆ back to top](#quick-links)**
 
 ### _.isNil
-:heavy_exclamation_mark:`Lodash only`
+:heavy_exclamation_mark:`Not in Underscore.js`
 Checks if value is null or undefined.
 
 ```js
@@ -2227,7 +2231,7 @@ Retrieves all the given object's own enumerable property values.
 ## String
 
 ### _.padStart and _.padEnd
-:heavy_exclamation_mark:`Lodash only`
+:heavy_exclamation_mark:`Not in Underscore.js`
 Pads the current string with another string (multiple times, if needed) until the resulting string reaches the given length.
 
   ```js
@@ -2255,7 +2259,7 @@ Pads the current string with another string (multiple times, if needed) until th
 **[⬆ back to top](#quick-links)**
 
 ### _.startsWith
-:heavy_exclamation_mark:`Lodash only`
+:heavy_exclamation_mark:`Not in Underscore.js`
 Checks if string starts with the given target string.
 
   ```js
@@ -2279,7 +2283,7 @@ Checks if string starts with the given target string.
 **[⬆ back to top](#quick-links)**
 
 ### _.repeat
-:heavy_exclamation_mark:`Lodash only`
+:heavy_exclamation_mark:`Not in Underscore.js`
 Repeats the given string n times.
 
   ```js
@@ -2330,7 +2334,7 @@ returns a new string with some or all matches of a `pattern` replaced by a `repl
 **[⬆ back to top](#quick-links)**
   
 ### _.split
-:heavy_exclamation_mark:`Lodash only`
+:heavy_exclamation_mark:`Not in Underscore.js`
 Splits string by separator.
 
   ```js
@@ -2381,7 +2385,7 @@ Create a template function.
 **[⬆ back to top](#quick-links)**
 
 ### _.toLower
-:heavy_exclamation_mark:`Lodash only`
+:heavy_exclamation_mark:`Not in Underscore.js`
 Lowercases a given string.
 
   ```js
@@ -2405,7 +2409,7 @@ Lowercases a given string.
 **[⬆ back to top](#quick-links)**
 
 ### _.toUpper
-:heavy_exclamation_mark:`Lodash only`
+:heavy_exclamation_mark:`Not in Underscore.js`
 Uppercases a given string.
 
   ```js
@@ -2429,7 +2433,7 @@ Uppercases a given string.
 **[⬆ back to top](#quick-links)**
 
 ### _.trim
-:heavy_exclamation_mark:`Lodash only`
+:heavy_exclamation_mark:`Not in Underscore.js`
 Removes the leading and trailing whitespace characters from a string.
 
   ```js
@@ -2453,7 +2457,7 @@ Removes the leading and trailing whitespace characters from a string.
 **[⬆ back to top](#quick-links)**
 
 ### _.upperFIrst
-:heavy_exclamation_mark:`Lodash only`
+:heavy_exclamation_mark:`Not in Underscore.js`
 Uppercases the first letter of a given string
 
   ```js

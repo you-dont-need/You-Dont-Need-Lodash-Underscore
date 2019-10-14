@@ -2528,23 +2528,6 @@ Invokes the iteratee n times, returning an array of the results of each invocati
   // output: '[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]'
   
   // Lodash
-  var result = _.times(10,'a')
-  console.log(result)
-  // output  ['a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a' ]
-
-  // Native 
-  function times(iterate,value) {
-    var items = []
-    for (let index = 0; index < iterate; index++) {
-      items.push(value)
-    }
-    return items; 
-  }
-  const result = times(10,'a')
-  console.log(result)
-  // output ['a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a' ]
-  
-  // Lodash
   var result = _.times(10,function(){return 'b'})
   console.log(result)
   // output [ 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b' ]        

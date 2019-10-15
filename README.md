@@ -709,11 +709,11 @@ Returns an array that is the intersection of all the arrays. Each value in the r
 
   // Native
   var arrays = [[1, 2, 3], [101, 2, 1, 10], [2, 1]];
-  console.log(array.reduce(function(a, b) {
+  console.log(arrays.reduce(function(a, b) {
     return a.filter(function(value) {
       return b.includes(value);
     });
-  })));
+  }));
   // output: [1, 2]
 
   // ES6

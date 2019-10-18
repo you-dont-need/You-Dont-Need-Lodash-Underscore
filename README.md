@@ -183,8 +183,9 @@ then Lodash/Underscore is the better option.*
 
 **[Number](#number)**
 
-1. [_.inRange](#_inRange)
-2. [_.random](#_random)
+1. [_.clamp](#clamp)
+2. [_.inRange](#_inRange)
+3. [_.random](#_random)
 
 ## Array
 
@@ -2542,6 +2543,57 @@ Invokes the iteratee n times, returning an array of the results of each invocati
 
 ## Number
 
+### _.clamp
+
+Clamps number within the inclusive lower and upper bounds.
+
+```js
+// Lodash
+_.clamp(-10, -5, 5);
+// => -5
+ 
+_.clamp(10, -5, 5);
+// => 5
+
+_.clamp(10, -5);
+// => -5
+
+_.clamp(10, 99);
+// => 10
+
+// Native
+const clamp = (number, boundOne, boundTwo) => {
+  if (!boundTwo) {
+    return Math.max(number, boundOne) === boundOne ? number : boundOne; 
+  } else if (Math.min(number, boundOne) === number) {
+    return boundOne;
+  } else if (Math.max(number, boundTwo) === number) {
+    return boundTwo;
+  }
+  return number;
+};
+
+clamp(-10, -5, 5);
+// => -5
+ 
+clamp(10, -5, 5);
+// => 5
+
+clamp(10, -5);
+// => -5
+
+clamp(10, 99);
+// => 10
+```
+
+#### Browser Support for `Math.min() and Math.max()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+✔  |  ✔  |  ✔  |  ✔  |  ✔  |  ✔  |
+
+**[⬆ back to top](#quick-links)**
+
 ### _.inRange
 Checks if n is between start and up to, but not including, end. If end is not specified, it's set to start with start then set to 0. If start is greater than end the params are swapped to support negative ranges.
 
@@ -2641,6 +2693,7 @@ Produces a random number between the inclusive lower and upper bounds. If only o
   ✔  |  ✔  |  ✔  |  ✔  |  ✔  |  ✔  |
 
 **[⬆ back to top](#quick-links)**
+
 
 
 ## Inspired by:

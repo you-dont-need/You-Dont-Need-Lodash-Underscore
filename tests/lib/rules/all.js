@@ -157,4 +157,47 @@ ruleTester.run('_.flatten', rules['flatten'], {
   }]
 });
 
+ruleTester.run('_.isUndefined', rules['is-undefined'], {
+  valid: [
+    '2 === undefined'
+  ],
+  invalid: [{
+    code: '_.isUndefined(2)',
+    errors: ['Consider using the native value === undefined']
+  },{
+    code: '_(2).isUndefined()',
+    errors: ['Consider using the native value === undefined']
+
+  }]
+});
+
+ruleTester.run('_.startsWith', rules['starts-with'], {
+  valid: [
+    '"abc".startsWith("a")',
+    '"abc".startsWith("b", 1)'
+  ],
+  invalid: [{
+    code: '_.startsWith("abc", "a")',
+    errors: ['Consider using the native String.prototype.startsWith()']
+  },{
+    code: '_.startsWith("abc", "b", 1)',
+    errors: ['Consider using the native String.prototype.startsWith()']
+
+  }]
+});
+
+ruleTester.run('_.endsWith', rules['ends-with'], {
+  valid: [
+    '"abc".endsWith("c")',
+    '"abc".endsWith("b", 1)'
+  ],
+  invalid: [{
+    code: '_.endsWith("abc", "c")',
+    errors: ['Consider using the native String.prototype.endsWith()']
+  },{
+    code: '_.endsWith("abc", "b", 1)',
+    errors: ['Consider using the native String.prototype.endsWith()']
+
+  }]
+});
 

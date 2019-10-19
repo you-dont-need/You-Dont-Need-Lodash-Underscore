@@ -219,8 +219,14 @@
         "alternative": "String.prototype.split()"
     },
     "startsWith": {
+        "ruleName": "starts-with",
         "compatible": true,
         "alternative": "String.prototype.startsWith()"
+    },
+    "endsWith": {
+        "ruleName": "ends-with",
+        "compatible": true,
+        "alternative": "String.prototype.endsWith()"
     },
     "toLower": {
         "compatible": true,

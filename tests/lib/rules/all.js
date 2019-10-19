@@ -140,3 +140,18 @@ ruleTester.run('Nested functions', rules['is-undefined'], {
   invalid: []
 });
 
+/*Test for new flatten rule*/
+ruleTester.run('_.flatten', rules['flatten'], {
+  valid: [
+    `[1,2,[3,4]].reduce((a,b) => a.concat(b), [])`,
+    `[1,2,[3,4]].flat()`,
+    `[1,2,[3,4]].flatMap(a => a)`
+  ],
+  invalid: [{
+    code: `_.flatten([1,2,[3,4]])`,
+    errors: [`Consider using the native Array.prototype.reduce((a,b) => a.concat(b), [])`]
+  },{
+    code: `_([1,2,[3,4]]).flatten()`,
+    errors: [`Consider using the native Array.prototype.reduce((a,b) => a.concat(b), [])`]
+  }]
+});

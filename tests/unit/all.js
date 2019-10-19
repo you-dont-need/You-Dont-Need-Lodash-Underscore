@@ -632,4 +632,20 @@ describe('code snippet example', () => {
 
   });
 
+  describe('flatten', () => {
+
+    it('_.flatten(twoLayerArray)', () => {
+      const testArray = [1,2[3,4]];
+      assert.deepEqual(_.flatten(testArray),
+        testArray.reduce((a,b) => a.concat(b), []))
+    });
+
+    it('_.flatten(multiLayerArray)', () => {
+      const testArray = [1,2[3,4,[5,6,[7,8]]]];
+      assert.deepEqual(_.flatten(testArray),
+        testArray.reduce((a,b) => a.concat(b), []))
+    });
+
+  });
+
 })

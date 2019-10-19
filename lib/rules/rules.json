@@ -262,5 +262,9 @@
         "compatible": true,
         "alternative": "{a, b, c, ...notOmittedValues}",
         "ES6": true
+    },
+    "flatten": {
+    	"compatible": true,
+    	"alternative": "Array.prototype.reduce((a,b) => a.concat(b), [])"
     }
 }

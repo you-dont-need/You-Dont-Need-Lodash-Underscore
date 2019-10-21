@@ -648,4 +648,46 @@ describe('code snippet example', () => {
 
   });
 
+  describe('forEach', () => {
+    it('_.forEach(array)', () => {
+      const testArray = [1,2,3,4];
+      
+      let lodashOutput = []
+      let nativeOutput = []
+
+      _.forEach(testArray, element => {
+        lodashOutput.push(element);
+      });
+      testArray.forEach(element => {
+        nativeOutput.push(element);
+      });
+
+      assert.deepEqual(lodashOutput,nativeOutput);
+
+    });
+
+    it('_.forEach(object)', () => {
+      const testObject = {
+        'one':1,
+        'two':2,
+        'three':3,
+        'four':4,
+      }
+
+      let lodashOutput = []
+      let nativeOutput = []
+
+      _.forEach(testObject, value => {
+        lodashOutput.push(value);
+      });
+
+      Object.entries(testObject).forEach(([key,value]) => {
+        nativeOutput.push(value);
+      });
+
+      assert.deepEqual(lodashOutput,nativeOutput);
+
+    });
+  });
+
 })

@@ -62,11 +62,11 @@
 
     "each": {
         "compatible": false,
-        "alternative": "Array.prototype.forEach()"
+        "alternative": "Array.prototype.forEach() or Object.entries().forEach()"
     },
     "forEach": {
         "compatible": false,
-        "alternative": "Array.prototype.forEach()"
+        "alternative": "Array.prototype.forEach() or Object.entries().forEach()"
     },
     "every": {
         "compatible": false,

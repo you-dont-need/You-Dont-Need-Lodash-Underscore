@@ -58,11 +58,12 @@ ruleTester.run(`Import lodash.isnan`, rules['is-nan'], {
 
 ruleTester.run('underscore.forEach', rules['for-each'], {
   valid: [
-    '[0, 1].forEach()'
+    '[0, 1].forEach()',
+    "Object.entries({'one':1,'two':2}).forEach()"
   ],
   invalid: [{
     code: 'underscore.forEach()',
-    errors: ['Consider using the native Array.prototype.forEach()']
+    errors: ['Consider using the native Array.prototype.forEach() or Object.entries().forEach()']
   }]
 });
 
@@ -155,3 +156,5 @@ ruleTester.run('_.flatten', rules['flatten'], {
     errors: [`Consider using the native Array.prototype.reduce((a,b) => a.concat(b), [])`]
   }]
 });
+
+

@@ -112,8 +112,8 @@ suggest that you take extra precautions [e.g. consider using the native Object.k
 
 **[Collection*](#collection*)**
 
-*:heavy_exclamation_mark:<b>Important:</b> Note that the native equivalents are array methods,
-and will not work with objects. If this functionality is needed,
+*:heavy_exclamation_mark:<b>Important:</b> Note that most native equivalents are array methods,
+and will not work with objects. If this functionality is needed and no object method is provided,
 then Lodash/Underscore is the better option.*
 
 1. [_.each](#_each)

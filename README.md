@@ -991,8 +991,8 @@ Returns an array where matching items are filtered.
 
 ## Collection*
 
-*:heavy_exclamation_mark:<b>Important:</b> Note that the native equivalents are array methods,
-and will not work with objects. If this functionality is needed,
+*:heavy_exclamation_mark:<b>Important:</b> Note that most native equivalents are array methods,
+and will not work with objects. If this functionality is needed and no object method is provided,
 then Lodash/Underscore is the better option.*
 
 ### _.each

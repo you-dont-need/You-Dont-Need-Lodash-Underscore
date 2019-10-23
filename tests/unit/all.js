@@ -663,7 +663,6 @@ describe('code snippet example', () => {
       });
 
       assert.deepEqual(lodashOutput,nativeOutput);
-
     });
 
     it('_.forEach(object)', () => {
@@ -686,8 +685,48 @@ describe('code snippet example', () => {
       });
 
       assert.deepEqual(lodashOutput,nativeOutput);
-
     });
   });
 
-})
+  describe('startsWith', () => {
+    it(`_.startsWith('abc', 'a')`, () => {
+      assert.deepEqual(
+        _.startsWith('abc', 'a'),
+        'abc'.startsWith('a')
+      );
+    });
+    it(`_.startsWith('abc', 'b')`, () => {
+      assert.deepEqual(
+        _.startsWith('abc', 'b'),
+        'abc'.startsWith('b')
+      );
+    });
+    it(`_.startsWith('abc', 'b', 1)`, () => {
+      assert.deepEqual(
+        _.startsWith('abc', 'b', 1),
+        'abc'.startsWith('b', 1)
+      );
+    });
+  });
+
+  describe('endsWith', () => {
+    it(`_.endsWith('abc', 'c')`, () => {
+      assert.deepEqual(
+        _.endsWith('abc', 'c'),
+        'abc'.endsWith('c')
+      );
+    });
+    it(`_.endsWith('abc', 'b')`, () => {
+      assert.deepEqual(
+        _.endsWith('abc', 'b'),
+        'abc'.endsWith('b')
+      );
+    });
+    it(`_.endsWith('abc', 'b', 2)`, () => {
+      assert.deepEqual(
+        _.endsWith('abc', 'b', 2),
+        'abc'.endsWith('b', 2)
+      );
+    });
+  });
+});

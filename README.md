@@ -2270,7 +2270,7 @@ Checks if string ends with the given target string.
   'abc'.endsWith('c');
   // => true
  
-  'abc'endsWith('b');
+  'abc'.endsWith('b');
   // => false
   
   'abc'.endsWith('b', 2);

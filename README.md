@@ -138,6 +138,7 @@ then Lodash/Underscore is the better option.*
 
 1. [_.after](#_after)
 1. [_.bind](#_bind)
+1. [_.debounce](#_debounce)
 1. [_.partial](#_partial)
 
 **[Lang](#lang)**
@@ -1643,7 +1644,30 @@ Create a new function that calls _func_ with _thisArg_ and _args_.
   7.0 ✔  |  ✔ | 4.0 ✔ |  9.0 ✔ |  11.6 ✔ |  5.1 ✔  |
 
  **[⬆ back to top](#quick-links)**
+ 
+ ### _.bind
+Create a new function that calls _func_ with _thisArg_ and _args_.
 
+  ```js
+ const debounce = (callback, time = 250, interval) => 
+  (...args) => {
+    clearTimeout(interval);
+    interval = setTimeout(() => callback(...args), time);
+  }
+
+// Avoid costly calculations while the window size is in flux.
+jQuery(window).on('resize', debounce(calculateLayout, 150));
+
+  ```
+#### Browser Support for `Function.prototype.bind()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+ :-: | :-: | :-: | :-: | :-: | :-: |
+  7.0 ✔  |  ✔ | 4.0 ✔ |  9.0 ✔ |  11.6 ✔ |  5.1 ✔  |
+
+ **[⬆ back to top](#quick-links)**
+ 
+ 
 ### _.partial
 Create a new function that calls _func_ with _args_.
 

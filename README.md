@@ -1645,7 +1645,7 @@ Create a new function that calls _func_ with _thisArg_ and _args_.
 
  **[⬆ back to top](#quick-links)**
  
- ### _.bind
+ ### _.debounce
 Create a new function that calls _func_ with _thisArg_ and _args_.
 
   ```js

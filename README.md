@@ -1649,11 +1649,18 @@ Create a new function that calls _func_ with _thisArg_ and _args_.
 Create a new function that calls _func_ with _thisArg_ and _args_.
 
   ```js
- const debounce = (callback, time = 250, interval) => 
-  (...args) => {
-    clearTimeout(interval);
-    interval = setTimeout(() => callback(...args), time);
-  }
+ function debounce(func, wait, immediate) {
+	var timeout;
+	return function() {
+		var context = this, args = arguments;
+		clearTimeout(timeout);
+		timeout = setTimeout(function() {
+			timeout = null;
+			if (!immediate) func.apply(context, args);
+		}, wait);
+		if (immediate && !timeout) func.apply(context, args);
+	};
+}
 
 // Avoid costly calculations while the window size is in flux.
 jQuery(window).on('resize', debounce(calculateLayout, 150));

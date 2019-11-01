@@ -1666,7 +1666,7 @@ Create a new function that calls _func_ with _thisArg_ and _args_.
 jQuery(window).on('resize', debounce(calculateLayout, 150));
 
   ```
-#### Browser Support for `Function.prototype.bind()`
+#### Browser Support for `debounce`
 
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
  :-: | :-: | :-: | :-: | :-: | :-: |

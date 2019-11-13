@@ -1716,14 +1716,14 @@ Create a new function that calls _func_ with _args_.
 
 
 ### _.throttle
-Create a new function that calls _func_ a single times.
+Create a new function that limits calls to _func_ to once every given timeframe.
 
   ```js
-  function throttle(func, rate) {
+  function throttle(func, timeFrame) {
     var lastTime = 0;
     return function () {
         var now = new Date();
-        if (now - lastTime >= rate) {
+        if (now - lastTime >= timeFrame) {
             func();
             lastTime = now;
         }

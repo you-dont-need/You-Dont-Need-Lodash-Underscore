@@ -142,6 +142,7 @@ then Lodash/Underscore is the better option.*
 1. [_.bind](#_bind)
 1. [_.debounce](#_debounce)
 1. [_.partial](#_partial)
+1. [_.throttle](#_throttle)
 
 **[Lang](#lang)**
 
@@ -1647,7 +1648,7 @@ Create a new function that calls _func_ with _thisArg_ and _args_.
 
  **[⬆ back to top](#quick-links)**
  
- ### _.debounce
+### _.debounce
 Create a new function that calls _func_ with _thisArg_ and _args_.
 
   ```js
@@ -1714,6 +1715,35 @@ Create a new function that calls _func_ with _args_.
   46.0 ✔ | 12.0 ✔ | 16.0 ✔ |  ✖  |  37.0 ✔ |  8.0 ✔ |
 
 **[⬆ back to top](#quick-links)**
+
+
+### _.throttle
+Create a new function that limits calls to _func_ to once every given timeframe.
+
+  ```js
+  function throttle(func, timeFrame) {
+    var lastTime = 0;
+    return function () {
+        var now = new Date();
+        if (now - lastTime >= timeFrame) {
+            func();
+            lastTime = now;
+        }
+    };
+  }
+
+  // Avoid running the same function twice within the specified timeframe.
+  jQuery(window).on('resize', throttle(calculateLayout, 150));
+
+  ```
+#### Browser Support for `throttle`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+ :-: | :-: | :-: | :-: | :-: | :-: |
+  5.0 ✔  |  12.0 ✔ | 3.0 ✔ |  9.0 ✔ |  10.5 ✔ |  4.0 ✔  |
+
+ **[⬆ back to top](#quick-links)**
+ 
 
 ## Lang
 

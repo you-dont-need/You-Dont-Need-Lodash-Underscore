@@ -729,4 +729,28 @@ describe('code snippet example', () => {
       );
     });
   });
+
+  describe('throttle', () => {
+    function throttle(func, timeFrame) {
+      var lastTime = 0;
+      return function () {
+        var now = new Date();
+        if (now - lastTime >= timeFrame) {
+          func();
+          lastTime = now;
+        }
+      };
+    }
+
+    it('throttle is not called more than once within timeframe', () => {
+      let callCount = 0;
+      const fn = throttle(() => callCount++, 100);
+
+      fn();
+      fn();
+      fn();
+
+      assert.equal(callCount, 1);
+    });
+  })
 });

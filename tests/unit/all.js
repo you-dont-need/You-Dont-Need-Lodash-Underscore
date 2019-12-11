@@ -752,5 +752,56 @@ describe('code snippet example', () => {
 
       assert.equal(callCount, 1);
     });
-  })
+  });
+
+  describe('debounce', () => {
+    function debounce(func, wait, immediate) {
+      var timeout;
+      return function() {
+        var context = this, args = arguments;
+        if (immediate && !timeout) func.apply(context, args);
+        clearTimeout(timeout);
+        timeout = setTimeout(function() {
+          timeout = null;
+          if (!immediate) func.apply(context, args);
+        }, wait);
+      };
+    }
+
+    it('debouncedFn is called once per beat when immediate is false', (done) => {
+      let callCount = 0;
+      let intervalCount = 0;
+      const fn = debounce(() => callCount++, 50, false);
+
+      const beat1 = setInterval(() => {
+        if (++intervalCount >= 3) clearInterval(beat1);
+        fn();
+      }, 10);
+
+      const beat2 = setTimeout(fn, 100);
+
+      setTimeout(() => {
+        if (callCount === 2 && intervalCount === 3) done();
+        else done(`callCount = ${callCount}`);
+      }, 200);
+    });
+
+    it('debouncedFn is called once per beat when immediate is true', (done) => {
+      let callCount = 0;
+      let intervalCount = 0;
+      const fn = debounce(() => callCount++, 50, true);
+
+      const beat1 = setInterval(() => {
+        if (++intervalCount >= 3) clearInterval(beat1);
+        fn();
+      }, 10);
+
+      const beat2 = setTimeout(fn, 100);
+
+      setTimeout(() => {
+        if (callCount === 2 && intervalCount === 3) done();
+        else done(`callCount = ${callCount}`);
+      }, 200);
+    });
+  });
 });

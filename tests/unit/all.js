@@ -148,12 +148,19 @@ describe('code snippet example', () => {
     }
     Foo.prototype.d = 4;
     Bar.prototype.f = 6;
+
     const extend = (target, ...sources) => {
-      let source = [];
-      sources.forEach(src => {
-        source = source.concat([src, Object.getPrototypeOf(src)])
-      })
-      return Object.assign(target, ...source)
+      const length = sources.length;
+
+      if (length < 1 || target == null) return target;
+      for (let i = 0; i < length; i++) {
+        const source = sources[i];
+
+        for (const key in source) {
+          target[key] = source[key];
+        }
+      }
+      return target;
     };
 
     it("_.extend({}, new Foo, new Bar);", () => {

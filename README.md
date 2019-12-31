@@ -171,6 +171,7 @@ then Lodash/Underscore is the better option.*
 **[String](#string)**
 
 1. [_.endsWith](#_endsWith)
+1. [_.isString](#_isString)
 1. [_.padStart and _.padEnd](#_padstart-and-_padend)
 1. [_.repeat](#_repeat)
 1. [_.replace](#_replace)
@@ -2338,6 +2339,44 @@ Checks if string ends with the given target string.
   
   'abc'.endsWith('b', 2);
   // => true
+  ```
+
+#### Browser Support for `String.prototype.endsWith()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  41.0 ✔  |  ✔ | 17.0 ✔ |  ✖  |  28.0 ✔ |  9.0 ✔ |
+
+**[⬆ back to top](#quick-links)**
+
+### _.isString
+:heavy_exclamation_mark:`Not in Underscore.js`
+Checks if string ends with the given target string.
+
+  ```js
+  // Lodash
+  _.isString('abc');
+  // => true
+ 
+  _.isString(123);
+  // => false
+  
+  _.endsWith('abc', 'b', 2);
+  // => true
+
+  // Native
+  function isString(str){
+    if (str && typeof str.valueOf() === "string") {
+      return true
+      }
+      return false
+  }
+ 
+  isString('abc');
+  // => true
+ 
+  isString(123);
+  // => false
   ```
 
 #### Browser Support for `String.prototype.endsWith()`

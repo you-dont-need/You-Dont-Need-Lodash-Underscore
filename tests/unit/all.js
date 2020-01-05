@@ -606,6 +606,30 @@ describe('code snippet example', () => {
     })
   })
 
+
+
+  describe('isString', () => {
+    function isString(str) {
+      if (str && typeof str.valueOf() === "string") {
+        return true
+      }
+      return false
+    }
+
+    it('_.isString(abc)', () => {
+      assert.deepEqual(_.isString("abc"),
+        isString("abc"))
+    });
+
+    it('_.isString(1)', () => {
+      assert.deepEqual(_.isString(1),
+        isString(1))
+    });
+
+
+  });
+
+
   describe('isUndefined', () => {
     const definedVariable = 1; //defined variable (will return false)
     let undefinedVariable; //undefined variable (will return true)

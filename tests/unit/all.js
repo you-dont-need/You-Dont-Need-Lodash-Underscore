@@ -232,12 +232,21 @@ describe('code snippet example', () => {
   })
   describe('get', () => {
     const get = (obj, path, defaultValue) => {
-      const result = String.prototype.split.call(path, /[,[\].]+?/)
-        .filter(Boolean)
-        .reduce((res, key) => (res !== null && res !== undefined) ? res[key] : res, obj);
-      return (result === undefined || result === obj) ? defaultValue : result;
-    }
-    var obj = { aa: [{ b: { c: 0 }, 1: 0 }], dd: { ee: { ff: 2 } } };
+      const travel = regexp =>
+        String.prototype.split
+          .call(path, regexp)
+          .filter(Boolean)
+          .reduce((res, key) => (res !== null && res !== undefined ? res[key] : res), obj);
+      const result = travel(/[,[\]]+?/) || travel(/[,[\].]+?/);
+      return result === undefined || result === obj ? defaultValue : result;
+    };
+    var obj = {
+      aa: [{ b: { c: 0 }, 1: 0 }],
+      dd: { ee: { ff: 2 } },
+      gg: { h: 2 },
+      "gg.h": 1,
+      "kk.ll": { "mm.n": [3, 4, { "oo.p": 5 }] }
+    };
 
     it ("should handle falsey values", () => {
       var val = _.get(obj, 'aa[0].b.c', 1)
@@ -299,6 +308,18 @@ describe('code snippet example', () => {
     it ("should handle undefined obj", () => {
       var val = _.get(undefined, 'aa')
       assert.strictEqual(val, get(undefined, 'aa'))
+    })
+    it ("should handle path contains a key with dots", () => {
+      var val = _.get(obj, 'gg.h')
+      assert.strictEqual(val, get(obj, 'gg.h'))
+      assert.strictEqual(val, 1)
+    })
+    it ("should handle array path of keys with dots", () => {
+      var val = _.get(obj, ["kk.ll", "mm.n", 0, "oo.p"])
+      assert.strictEqual(
+        val,
+        get(obj, ["kk.ll", "mm.n", 0, "oo.p"])
+      );
     })
   })
   describe('split', () => {

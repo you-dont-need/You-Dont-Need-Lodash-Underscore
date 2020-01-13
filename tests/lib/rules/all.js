@@ -56,7 +56,7 @@ ruleTester.run(`Import lodash.isnan`, rules['is-nan'], {
   }]
 });
 
-ruleTester.run(`Import lodash-es.isnan`, rules['is-nan'], {
+ruleTester.run(`Import { isNaN } from lodash-es`, rules['is-nan'], {
   valid: [`{ x: require('lodash-es') }`],
   invalid: [{
     code: `import { isNaN } from 'lodash-es';`,

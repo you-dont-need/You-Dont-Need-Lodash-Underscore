@@ -2118,11 +2118,14 @@ Gets the value at path of object.
   
   // Native
   const get = (obj, path, defaultValue) => {
-    const result = String.prototype.split.call(path, /[,[\].]+?/)
-      .filter(Boolean)
-      .reduce((res, key) => (res !== null && res !== undefined) ? res[key] : res, obj);
-    return (result === undefined || result === obj) ? defaultValue : result;
-  }
+    const travel = regexp =>
+      String.prototype.split
+        .call(path, regexp)
+        .filter(Boolean)
+        .reduce((res, key) => (res !== null && res !== undefined ? res[key] : res), obj);
+    const result = travel(/[,[\]]+?/) || travel(/[,[\].]+?/);
+    return result === undefined || result === obj ? defaultValue : result;
+  };
   
   var object = { a: [{ b: { c: 3 } }] };
   var result = get(object, 'a[0].b.c', 1); 

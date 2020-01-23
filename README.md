@@ -2577,7 +2577,7 @@ Removes the leading and trailing whitespace characters from a string.
 
 **[⬆ back to top](#quick-links)**
 
-### _.upperFIrst
+### _.upperFirst
 :heavy_exclamation_mark:`Not in Underscore.js`
 Uppercases the first letter of a given string
 

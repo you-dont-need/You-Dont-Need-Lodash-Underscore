@@ -2363,9 +2363,6 @@ Checks if string ends with the given target string.
  
   _.isString(123);
   // => false
-  
-  _.endsWith('abc', 'b', 2);
-  // => true
 
   // Native
   function isString(str){
@@ -2386,7 +2383,7 @@ Checks if string ends with the given target string.
 
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |
-  41.0 ✔  |  ✔ | 17.0 ✔ |  ✖  |  28.0 ✔ |  9.0 ✔ |
+  41.0 ✔  |  ✔ | 17.0 ✔ |  ✔   |  28.0 ✔ |  9.0 ✔ |
 
 **[⬆ back to top](#quick-links)**
 

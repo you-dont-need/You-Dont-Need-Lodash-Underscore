@@ -651,6 +651,35 @@ describe('code snippet example', () => {
   });
 
 
+
+  describe('isFunction', () => {
+    function isFunction(obj) {
+      return 'function' === typeof obj;
+    }
+
+    const myFunc = function () {
+      console.log("test")
+    };
+
+    it('_.isFunction(myFunc)', () => {
+      assert.deepEqual(_.isFunction(myFunc),
+        isFunction(myFunc))
+    });
+
+    it('_.isFunction(1)', () => {
+      assert.deepEqual(_.isFunction(1),
+        isFunction(1))
+    });
+
+    it('_.isFunction(abc)', () => {
+      assert.deepEqual(_.isFunction("abc"),
+        isFunction("abc"))
+    });
+
+
+  });
+
+
   describe('isUndefined', () => {
     const definedVariable = 1; //defined variable (will return false)
     let undefinedVariable; //undefined variable (will return true)

@@ -1795,7 +1795,8 @@ console.log(3 >= 1);
 ### _.isEmpty
 
 Checks if value is an empty object or collection.
-:heavy_exclamation_mark:`Note this is not evaluating a Set or a Map`
+
+:heavy_exclamation_mark:`Note that the Native version does not support evaluating a Set or a Map`
 
   ```js
   // Lodash
@@ -2613,7 +2614,7 @@ Removes the leading and trailing whitespace characters from a string.
 
 **[⬆ back to top](#quick-links)**
 
-### _.upperFIrst
+### _.upperFirst
 :heavy_exclamation_mark:`Not in Underscore.js`
 Uppercases the first letter of a given string
 

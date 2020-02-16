@@ -155,6 +155,7 @@ then Lodash/Underscore is the better option.*
 1. [_.isNil](#_isnil)
 1. [_.isNull](#_isnull)
 1. [_.isUndefined](#_isundefined)
+1. [_.isFunction](#_isfunction)
 
 **[Object](#object)**
 
@@ -1993,6 +1994,37 @@ console.log(_.isUndefined(a))
 console.log(typeof a === 'undefined');
 // output: true
 console.log(a === undefined);
+// output: true
+```
+
+#### Browser Support
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  | ✔ | 1 ✔ |  ✔  | ✔ | ✔ |
+
+**[⬆ back to top](#quick-links)**
+
+
+### _.isFunction
+
+Checks if value is function.
+
+```js
+
+ const myFunc = function () {
+      console.log("test")
+    };
+
+// Underscore/Lodash
+console.log(_.isFunction(myFunc))
+// output: true
+
+// Native
+  function isFunction(obj) {
+      return 'function' === typeof obj;
+    }
+console.log(isFunction(myFunc));
 // output: true
 ```
 

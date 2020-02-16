@@ -2023,7 +2023,7 @@ console.log(_.isFunction(myFunc))
 // Native
   function isFunction(obj) {
       return 'function' === typeof obj;
-    }
+  }
 console.log(isFunction(myFunc));
 // output: true
 ```

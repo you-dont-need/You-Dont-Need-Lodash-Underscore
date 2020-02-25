@@ -2081,11 +2081,17 @@ The method is used to copy the values of all enumerable own and inherited proper
 
   //Or using a function
   const extend = (target, ...sources) => {
-    let source = [];
-    sources.forEach(src => {
-      source = source.concat([src, Object.getPrototypeOf(src)])
-    })
-    return Object.assign(target, ...source)
+   const length = sources.length;
+
+    if (length < 1 || target == null) return target;
+    for (let i = 0; i < length; i++) {
+      const source = sources[i];
+
+      for (const key in source) {
+        target[key] = source[key];
+      }
+    }
+    return target;
   };
   console.log(extend({}, new Foo, new Bar));
   // output: { 'c': 3, 'd': 4, 'e': 5, 'f': 6 }

@@ -575,6 +575,28 @@ describe('code snippet example', () => {
     });
   });
   
+  describe('clamp', () => {
+    const clamp = (number, boundOne, boundTwo) => {
+      if (!boundTwo) {
+        return Math.max(number, boundOne) === boundOne ? number : boundOne; 
+      } else if (Math.min(number, boundOne) === number) {
+        return boundOne;
+      } else if (Math.max(number, boundTwo) === number) {
+        return boundTwo;
+      }
+      return number;
+    };
+    it('clamp(-10, -5, 5) returns lower bound if number is less than it', () => {
+      assert.deepStrictEqual(clamp(-10, -5, 5), -5);
+    });
+    it('clamp(10, -5, 5) returns upper bound if number is greater than it', () => {
+      assert.deepStrictEqual(clamp(10, -5, 5), 10);
+    });
+    it('clamp(10, -5) treats second parameter as upper bound', () => {
+      assert.deepStrictEqual(clamp(10, -5), -5);
+    });
+  });
+
   describe('padStart', () => {
     it('_.padStart("123", 5, "0")', () => {
       assert.equal(

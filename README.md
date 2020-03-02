@@ -653,7 +653,7 @@ Returns an object composed from key-value pairs.
 
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |
-  73.0 ✔  | ✖ | 63.0 ✔ |  ✖  |  60 ✔ |  12.1 ✔ |
+  73.0 ✔  | 79.0 ✔ | 63.0 ✔ |  ✖  |  60 ✔ |  12.1 ✔ |
 
 **[⬆ back to top](#quick-links)**
 

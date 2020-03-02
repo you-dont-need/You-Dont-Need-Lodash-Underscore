@@ -171,6 +171,7 @@ then Lodash/Underscore is the better option.*
 **[String](#string)**
 
 1. [_.endsWith](#_endsWith)
+1. [_.isString](#_isString)
 1. [_.padStart and _.padEnd](#_padstart-and-_padend)
 1. [_.repeat](#_repeat)
 1. [_.replace](#_replace)
@@ -188,8 +189,9 @@ then Lodash/Underscore is the better option.*
 
 **[Number](#number)**
 
-1. [_.inRange](#_inRange)
-2. [_.random](#_random)
+1. [_.clamp](#clamp)
+2. [_.inRange](#_inRange)
+3. [_.random](#_random)
 
 ## Array
 
@@ -1794,7 +1796,8 @@ console.log(3 >= 1);
 ### _.isEmpty
 
 Checks if value is an empty object or collection.
-:heavy_exclamation_mark:`Note this is not evaluating a Set or a Map`
+
+:heavy_exclamation_mark:`Note that the Native version does not support evaluating a Set or a Map`
 
   ```js
   // Lodash
@@ -2079,11 +2082,17 @@ The method is used to copy the values of all enumerable own and inherited proper
 
   //Or using a function
   const extend = (target, ...sources) => {
-    let source = [];
-    sources.forEach(src => {
-      source = source.concat([src, Object.getPrototypeOf(src)])
-    })
-    return Object.assign(target, ...source)
+   const length = sources.length;
+
+    if (length < 1 || target == null) return target;
+    for (let i = 0; i < length; i++) {
+      const source = sources[i];
+
+      for (const key in source) {
+        target[key] = source[key];
+      }
+    }
+    return target;
   };
   console.log(extend({}, new Foo, new Bar));
   // output: { 'c': 3, 'd': 4, 'e': 5, 'f': 6 }
@@ -2117,11 +2126,14 @@ Gets the value at path of object.
   
   // Native
   const get = (obj, path, defaultValue) => {
-    const result = String.prototype.split.call(path, /[,[\].]+?/)
-      .filter(Boolean)
-      .reduce((res, key) => (res !== null && res !== undefined) ? res[key] : res, obj);
-    return (result === undefined || result === obj) ? defaultValue : result;
-  }
+    const travel = regexp =>
+      String.prototype.split
+        .call(path, regexp)
+        .filter(Boolean)
+        .reduce((res, key) => (res !== null && res !== undefined ? res[key] : res), obj);
+    const result = travel(/[,[\]]+?/) || travel(/[,[\].]+?/);
+    return result === undefined || result === obj ? defaultValue : result;
+  };
   
   var object = { a: [{ b: { c: 3 } }] };
   var result = get(object, 'a[0].b.c', 1); 
@@ -2345,6 +2357,41 @@ Checks if string ends with the given target string.
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |
   41.0 ✔  |  ✔ | 17.0 ✔ |  ✖  |  28.0 ✔ |  9.0 ✔ |
+
+**[⬆ back to top](#quick-links)**
+
+### _.isString
+:heavy_exclamation_mark:`Not in Underscore.js`
+Checks if string ends with the given target string.
+
+  ```js
+  // Lodash
+  _.isString('abc');
+  // => true
+ 
+  _.isString(123);
+  // => false
+
+  // Native
+  function isString(str){
+    if (str && typeof str.valueOf() === "string") {
+      return true
+      }
+      return false
+  }
+ 
+  isString('abc');
+  // => true
+ 
+  isString(123);
+  // => false
+  ```
+
+#### Browser Support for `String.prototype.endsWith()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  41.0 ✔  |  ✔ | 17.0 ✔ |  ✔   |  28.0 ✔ |  9.0 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -2574,7 +2621,7 @@ Removes the leading and trailing whitespace characters from a string.
 
 **[⬆ back to top](#quick-links)**
 
-### _.upperFIrst
+### _.upperFirst
 :heavy_exclamation_mark:`Not in Underscore.js`
 Uppercases the first letter of a given string
 
@@ -2659,6 +2706,57 @@ Invokes the iteratee n times, returning an array of the results of each invocati
 **[⬆ back to top](#quick-links)**
 
 ## Number
+
+### _.clamp
+
+Clamps number within the inclusive lower and upper bounds.
+
+```js
+// Lodash
+_.clamp(-10, -5, 5);
+// => -5
+ 
+_.clamp(10, -5, 5);
+// => 5
+
+_.clamp(10, -5);
+// => -5
+
+_.clamp(10, 99);
+// => 10
+
+// Native
+const clamp = (number, boundOne, boundTwo) => {
+  if (!boundTwo) {
+    return Math.max(number, boundOne) === boundOne ? number : boundOne; 
+  } else if (Math.min(number, boundOne) === number) {
+    return boundOne;
+  } else if (Math.max(number, boundTwo) === number) {
+    return boundTwo;
+  }
+  return number;
+};
+
+clamp(-10, -5, 5);
+// => -5
+ 
+clamp(10, -5, 5);
+// => 5
+
+clamp(10, -5);
+// => -5
+
+clamp(10, 99);
+// => 10
+```
+
+#### Browser Support for `Math.min() and Math.max()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+✔  |  ✔  |  ✔  |  ✔  |  ✔  |  ✔  |
+
+**[⬆ back to top](#quick-links)**
 
 ### _.inRange
 Checks if n is between start and up to, but not including, end. If end is not specified, it's set to start with start then set to 0. If start is greater than end the params are swapped to support negative ranges.
@@ -2759,6 +2857,7 @@ Produces a random number between the inclusive lower and upper bounds. If only o
   ✔  |  ✔  |  ✔  |  ✔  |  ✔  |  ✔  |
 
 **[⬆ back to top](#quick-links)**
+
 
 
 ## Inspired by:

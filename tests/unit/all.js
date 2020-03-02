@@ -148,12 +148,19 @@ describe('code snippet example', () => {
     }
     Foo.prototype.d = 4;
     Bar.prototype.f = 6;
+
     const extend = (target, ...sources) => {
-      let source = [];
-      sources.forEach(src => {
-        source = source.concat([src, Object.getPrototypeOf(src)])
-      })
-      return Object.assign(target, ...source)
+      const length = sources.length;
+
+      if (length < 1 || target == null) return target;
+      for (let i = 0; i < length; i++) {
+        const source = sources[i];
+
+        for (const key in source) {
+          target[key] = source[key];
+        }
+      }
+      return target;
     };
 
     it("_.extend({}, new Foo, new Bar);", () => {
@@ -232,12 +239,21 @@ describe('code snippet example', () => {
   })
   describe('get', () => {
     const get = (obj, path, defaultValue) => {
-      const result = String.prototype.split.call(path, /[,[\].]+?/)
-        .filter(Boolean)
-        .reduce((res, key) => (res !== null && res !== undefined) ? res[key] : res, obj);
-      return (result === undefined || result === obj) ? defaultValue : result;
-    }
-    var obj = { aa: [{ b: { c: 0 }, 1: 0 }], dd: { ee: { ff: 2 } } };
+      const travel = regexp =>
+        String.prototype.split
+          .call(path, regexp)
+          .filter(Boolean)
+          .reduce((res, key) => (res !== null && res !== undefined ? res[key] : res), obj);
+      const result = travel(/[,[\]]+?/) || travel(/[,[\].]+?/);
+      return result === undefined || result === obj ? defaultValue : result;
+    };
+    var obj = {
+      aa: [{ b: { c: 0 }, 1: 0 }],
+      dd: { ee: { ff: 2 } },
+      gg: { h: 2 },
+      "gg.h": 1,
+      "kk.ll": { "mm.n": [3, 4, { "oo.p": 5 }] }
+    };
 
     it ("should handle falsey values", () => {
       var val = _.get(obj, 'aa[0].b.c', 1)
@@ -299,6 +315,18 @@ describe('code snippet example', () => {
     it ("should handle undefined obj", () => {
       var val = _.get(undefined, 'aa')
       assert.strictEqual(val, get(undefined, 'aa'))
+    })
+    it ("should handle path contains a key with dots", () => {
+      var val = _.get(obj, 'gg.h')
+      assert.strictEqual(val, get(obj, 'gg.h'))
+      assert.strictEqual(val, 1)
+    })
+    it ("should handle array path of keys with dots", () => {
+      var val = _.get(obj, ["kk.ll", "mm.n", 0, "oo.p"])
+      assert.strictEqual(
+        val,
+        get(obj, ["kk.ll", "mm.n", 0, "oo.p"])
+      );
     })
   })
   describe('split', () => {
@@ -547,6 +575,28 @@ describe('code snippet example', () => {
     });
   });
   
+  describe('clamp', () => {
+    const clamp = (number, boundOne, boundTwo) => {
+      if (!boundTwo) {
+        return Math.max(number, boundOne) === boundOne ? number : boundOne; 
+      } else if (Math.min(number, boundOne) === number) {
+        return boundOne;
+      } else if (Math.max(number, boundTwo) === number) {
+        return boundTwo;
+      }
+      return number;
+    };
+    it('clamp(-10, -5, 5) returns lower bound if number is less than it', () => {
+      assert.deepStrictEqual(clamp(-10, -5, 5), -5);
+    });
+    it('clamp(10, -5, 5) returns upper bound if number is greater than it', () => {
+      assert.deepStrictEqual(clamp(10, -5, 5), 10);
+    });
+    it('clamp(10, -5) treats second parameter as upper bound', () => {
+      assert.deepStrictEqual(clamp(10, -5), -5);
+    });
+  });
+
   describe('padStart', () => {
     it('_.padStart("123", 5, "0")', () => {
       assert.equal(
@@ -605,6 +655,30 @@ describe('code snippet example', () => {
       )
     })
   })
+
+
+
+  describe('isString', () => {
+    function isString(str) {
+      if (str && typeof str.valueOf() === "string") {
+        return true
+      }
+      return false
+    }
+
+    it('_.isString(abc)', () => {
+      assert.deepEqual(_.isString("abc"),
+        isString("abc"))
+    });
+
+    it('_.isString(1)', () => {
+      assert.deepEqual(_.isString(1),
+        isString(1))
+    });
+
+
+  });
+
 
   describe('isUndefined', () => {
     const definedVariable = 1; //defined variable (will return false)

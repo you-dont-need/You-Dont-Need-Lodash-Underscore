@@ -39,11 +39,11 @@ describe('code snippet example', () => {
   })
 
   it('pickBy', () => {
-    var object = { 'a': 1, 'b': null, 'c': 3, 'd': false, 'e': undefined };
+    var object = { 'a': 1, 'b': null, 'c': 3, 'd': false, 'e': undefined, 'f': '', 'g': 0 };
     function pickBy(object) {
       const obj = {};
       for (const key in object) {
-        if (object[key] !== null && object[key] !== false && object[key] !== undefined) {
+        if (object[key]) {
           obj[key] = object[key];
         }
       }

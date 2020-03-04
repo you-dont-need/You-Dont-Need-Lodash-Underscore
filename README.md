@@ -2266,7 +2266,7 @@ Creates an object composed of the object properties predicate returns truthy for
   function pickBy(object) {
       const obj = {};
       for (const key in object) {
-          if (object[key] !== null && object[key] !== false && object[key] !== undefined) {
+          if (object[key]) {
               obj[key] = object[key];
           }
       }

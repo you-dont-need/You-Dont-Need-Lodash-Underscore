@@ -189,7 +189,7 @@ then Lodash/Underscore is the better option.*
 
 **[Number](#number)**
 
-1. [_.clamp](#clamp)
+1. [_.clamp](#_clamp)
 2. [_.inRange](#_inRange)
 3. [_.random](#_random)
 

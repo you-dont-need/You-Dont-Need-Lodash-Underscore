@@ -160,6 +160,7 @@ then Lodash/Underscore is the better option.*
 
 1. [_.assign](#_assign)
 1. [_.extend](#_extend)
+1. [_.has](#_has)
 1. [_.get](#_get)
 1. [_.keys](#_keys)
 1. [_.omit](#_omit)
@@ -2115,6 +2116,36 @@ The method is used to copy the values of all enumerable own and inherited proper
   45.0 ✔  | ✔ | 34.0 ✔ |  ✖  |  32.0 ✔ |  9.0 ✔  |
 
  **[⬆ back to top](#quick-links)**
+
+ ### _.has
+
+Checks if `key` is a direct property of `object`.
+
+  ```js
+  // Lodash
+  var object = { a: 1, b: 'settings' };
+  var result = _.has(object, 'a');
+  console.log(result);
+  // output: true
+
+  // Native
+  const has = function (obj, key) {
+    return obj != null && hasOwnProperty.call(obj, key)
+  };
+  
+  var object = { a: 1, b: 'settings' };
+  var result = has(object, 'a'); 
+  // output: true
+  ```
+
+#### Browser Support for Object .hasOwnProperty
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  | 12 ✔ |  ✔ |  5.5 ✔ |  5 ✔ |  3 ✔ |
+
+  **[⬆ back to top](#quick-links)**
+
 
  ### _.get
 

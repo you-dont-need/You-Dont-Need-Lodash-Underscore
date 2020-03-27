@@ -111,6 +111,7 @@ suggest that you take extra precautions [e.g. consider using the native Object.k
 1. [_.reverse](#_reverse)
 1. [_.slice](#_slice)
 1. [_.without](#_without)
+1. [_.pull](#_pull)
 
 **[Collection*](#collection*)**
 
@@ -1003,6 +1004,44 @@ Returns an array where matching items are filtered.
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |
   1.0 ✔  | ✔ | 1.5 ✔ |  9 ✔ |  ✔ |  ✔  |
+
+**[⬆ back to top](#quick-links)**
+
+### _.pull
+
+Removes all provided values from the given array using strict equality for comparisons, i.e. ===.
+
+  ```js
+  // Lodash
+  var array = [1, 2, 3, 1, 2, 3];
+  _.pull(array, 2, 3);
+  console.log(array)
+  // output: [1, 1]
+  
+  // Native
+  var array = [1, 2, 3, 1, 2, 3];
+  function pull(arr, ...removeList){
+      var removeSet = new Set(removeList) 
+      return arr.filter(function(el){
+          return !removeSet.has(el)
+      })
+  }
+  console.log(pull(array, 2, 3))
+  // output: [1, 1]
+  ```
+
+#### Browser Support for `Array.prototype.filter()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  1.0 ✔  | ✔ | 1.5 ✔ |  9 ✔ |  ✔ |  ✔  |
+
+
+#### Browser Support for `Set.prototype.has()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image] |
+:-: | :-: | :-: | :-: | :-: | :-: |
+38 ✔ | 12 ✔ | 13 ✔ | 11 ✔ | 25 ✔ | 8 ✔ |
 
 **[⬆ back to top](#quick-links)**
 

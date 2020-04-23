@@ -2130,8 +2130,14 @@ Gets the value at path of object.
 
   // Native (ES6 - IE not supported)
   var object = { a: [{ b: { c: 3 } }] };
-  var { a: [{ b: { c: result2 = 1 } }] } = object;
-  console.log(result2);
+  var { a: [{ b: { c: result = 1 } = {} } = {}] = [] } = object;
+  console.log(result);
+  // output: 3
+
+  // Native (ES11)
+  var object = { a: [{ b: { c: 3 } }] };
+  var result = object?.a?.[0]?.b?.c ?? 1;
+  console.log(result);
   // output: 3
   
   // Native
@@ -2156,6 +2162,18 @@ Gets the value at path of object.
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |
   49.0 ✔  | 14.0 ✔ |  41.0 ✔ |  ✖  |  41.0 ✔ |  8.0 ✔ |
+
+#### Browser Support for optional chaining `?.`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  80.0 ✔  | 80.0 ✔ |  74.0 ✔ |  ✖  |  67.0 ✔ |  13.1 ✔ |
+
+#### Browser Support for nullish coalescing operator `??`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  80.0 ✔  | 80.0 ✔ |  72.0 ✔ |  ✖  |  ✖ |  13.1 ✔ |
 
   **[⬆ back to top](#quick-links)**
 

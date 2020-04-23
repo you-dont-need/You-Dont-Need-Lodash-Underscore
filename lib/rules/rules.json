@@ -214,6 +214,11 @@
         "alternative": "Object.entries()",
         "ES6": true
     },
+    "get": {
+        "compatible": false,
+        "alternative": "optional chaining to get nested values and nullish coalescing operator for fallback values",
+        "ES11": true
+    },
     "split": {
         "compatible": true,
         "alternative": "String.prototype.split()"

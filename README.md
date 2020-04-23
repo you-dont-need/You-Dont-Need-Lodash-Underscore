@@ -2135,7 +2135,7 @@ Gets the value at path of object.
   // output: 3
   
   // Native
-  const get = (obj, path, defaultValue) => {
+  const get = (obj, path, defaultValue = undefined) => {
     const travel = regexp =>
       String.prototype.split
         .call(path, regexp)

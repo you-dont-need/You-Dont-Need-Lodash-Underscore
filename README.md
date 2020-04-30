@@ -112,12 +112,15 @@ suggest that you take extra precautions [e.g. consider using the native Object.k
 1. [_.slice](#_slice)
 1. [_.without](#_without)
 1. [_.initial](#_initial)
+1. [_.pull](#_pull)
 
 **[Collection*](#collection*)**
 
 *:heavy_exclamation_mark:<b>Important:</b> Note that most native equivalents are array methods,
 and will not work with objects. If this functionality is needed and no object method is provided,
-then Lodash/Underscore is the better option.*
+then Lodash/Underscore might be the better option. Bear in mind however, that all iterable
+objects can easily be converted to an array by use of the
+[spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax).*
 
 1. [_.each](#_each)
 1. [_.every](#_every)
@@ -1028,6 +1031,43 @@ Returns everything but the last entry of the array. Pass n to exclude the last n
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |
   1.0 ✔  |  ✔  |  1.0 ✔  |  ✔  |  ✔  | ✔  |
+
+**[⬆ back to top](#quick-links)**
+
+### _.pull
+
+Removes all provided values from the given array using strict equality for comparisons, i.e. ===.
+
+  ```js
+  // Lodash
+  var array = [1, 2, 3, 1, 2, 3];
+  _.pull(array, 2, 3);
+  console.log(array)
+  // output: [1, 1]
+  
+  // Native
+  var array = [1, 2, 3, 1, 2, 3];
+  function pull(arr, ...removeList){
+      var removeSet = new Set(removeList) 
+      return arr.filter(function(el){
+          return !removeSet.has(el)
+      })
+  }
+  console.log(pull(array, 2, 3))
+  // output: [1, 1]
+  ```
+
+#### Browser Support for `Array.prototype.filter()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  1.0 ✔  | ✔ | 1.5 ✔ |  9 ✔ |  ✔ |  ✔  |
+
+#### Browser Support for `Set.prototype.has()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image] |
+:-: | :-: | :-: | :-: | :-: | :-: |
+38 ✔ | 12 ✔ | 13 ✔ | 11 ✔ | 25 ✔ | 8 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -2160,7 +2200,7 @@ Gets the value at path of object.
   // output: 3
   
   // Native
-  const get = (obj, path, defaultValue) => {
+  const get = (obj, path, defaultValue = undefined) => {
     const travel = regexp =>
       String.prototype.split
         .call(path, regexp)

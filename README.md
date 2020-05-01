@@ -111,6 +111,7 @@ suggest that you take extra precautions [e.g. consider using the native Object.k
 1. [_.reverse](#_reverse)
 1. [_.slice](#_slice)
 1. [_.without](#_without)
+1. [_.initial](#_initial)
 1. [_.pull](#_pull)
 
 **[Collection*](#collection*)**
@@ -1009,6 +1010,30 @@ Returns an array where matching items are filtered.
 
 **[⬆ back to top](#quick-links)**
 
+### _.initial
+
+Returns everything but the last entry of the array. Pass n to exclude the last n elements from the result.
+
+  ```js
+  // Underscore
+  var array = [5, 4, 3, 2, 1]
+  console.log(_.initial(array, 2))
+  // output: [5, 4, 3]
+
+  // Native
+  var array = [5, 4, 3, 2, 1]
+  console.log(array.slice(0, -2););
+  // output: [5, 4, 3]
+  ```
+
+#### Browser Support for `Array.prototype.slice()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  1.0 ✔  |  ✔  |  1.0 ✔  |  ✔  |  ✔  | ✔  |
+
+**[⬆ back to top](#quick-links)**
+
 ### _.pull
 
 Removes all provided values from the given array using strict equality for comparisons, i.e. ===.
@@ -1037,7 +1062,6 @@ Removes all provided values from the given array using strict equality for compa
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |
   1.0 ✔  | ✔ | 1.5 ✔ |  9 ✔ |  ✔ |  ✔  |
-
 
 #### Browser Support for `Set.prototype.has()`
 

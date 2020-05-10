@@ -2119,18 +2119,29 @@ The method is used to copy the values of all enumerable own and inherited proper
 
  ### _.has
 
-Checks if `key` is a direct property of `object`.
+Checks if `key` is a direct property of `object`. Key may be a path of a value separated by `.`
 
   ```js
   // Lodash
-  var object = { a: 1, b: 'settings' };
-  var result = _.has(object, 'a');
-  console.log(result);
+  var object = { a: 1, b: 'settings', c: { d: 'test' } };
+    
+  var hasA = _.has(object, 'a');
+  var hasCWhichHasD = _.has(object, 'c.d')
+
+  console.log(hasA);
+  // output: true
+  console.log(hasCWhichHasD);
   // output: true
 
   // Native
   const has = function (obj, key) {
-    return obj != null && hasOwnProperty.call(obj, key)
+    var keyParts = key.split('.');
+
+    return !!obj && (
+      keyParts.length > 1
+        ? has(obj[key.split('.')[0]], keyParts.slice(1).join('.'))
+        : hasOwnProperty.call(obj, key)
+    );
   };
   
   var object = { a: 1, b: 'settings' };

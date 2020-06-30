@@ -2437,7 +2437,7 @@ Checks if string ends with the given target string.
 
 ### _.isString
 :heavy_exclamation_mark:`Not in Underscore.js`
-Checks if string ends with the given target string.
+Checks if value is classified as a String primitive or object.
 
   ```js
   // Lodash

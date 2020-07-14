@@ -1,9 +1,11 @@
 language: node_js
+
 node_js:
   - 6
   - 8
   - 10
   - 12
-after_success:
+
+script:
   - npm run coveralls
   - npm run test:unit

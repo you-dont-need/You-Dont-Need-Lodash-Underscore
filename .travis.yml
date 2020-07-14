@@ -6,6 +6,8 @@ node_js:
   - 14
 
 script:
-  - npm run test:unit
-  - npm run test
-  - npm run coveralls
+  - yarn test
+  - yarn test:unit
+
+after_success:
+  - yarn coveralls

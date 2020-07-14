@@ -145,6 +145,7 @@ objects can easily be converted to an array by use of the
 1. [_.after](#_after)
 1. [_.bind](#_bind)
 1. [_.debounce](#_debounce)
+1. [_.isFunction](#_isFunction)
 1. [_.partial](#_partial)
 1. [_.throttle](#_throttle)
 
@@ -1725,7 +1726,43 @@ Create a new function that calls _func_ with _thisArg_ and _args_.
 
  **[⬆ back to top](#quick-links)**
  
+### _.isFunction
+
+Checks if value is classified as a _Function_ object.
+
+```js
+// Lodash
+_.isFunction(console.log);
+// => true
+
+_.isFunction(/abc/);
+// => false
+
+// Native
+function isFunction(func) {
+  if (func && typeof func === "function") {
+    return true
+  }
+  return false
+}
+
+isFunction(setTimeout);
+// => true
+
+isFunction(123);
+// => false
+```
+
+#### Browser Support
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+ :-: | :-: | :-: | :-: | :-: | :-: |
+ ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+
+ **[⬆ back to top](#quick-links)**
+ 
 ### _.debounce
+
 Create a new function that calls _func_ with _thisArg_ and _args_.
 
   ```js
@@ -1754,7 +1791,7 @@ jQuery(window).on('resize', debounce(calculateLayout, 150));
 
  **[⬆ back to top](#quick-links)**
  
- 
+
 ### _.partial
 Create a new function that calls _func_ with _args_.
 

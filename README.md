@@ -2437,6 +2437,8 @@ Checks if string ends with the given target string.
 
 ### _.isString
 
+Checks if value is classified as a String primitive or object.
+
   ```js
   // Lodash
   _.isString('abc');

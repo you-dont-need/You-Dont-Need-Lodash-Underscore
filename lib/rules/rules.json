@@ -211,6 +211,11 @@
         "alternative": "Object.entries()",
         "ES6": true
     },
+    "get": {
+        "compatible": false,
+        "alternative": "optional chaining to get nested values and nullish coalescing operator for fallback values",
+        "ES11": true
+    },
     "split": {
         "compatible": true,
         "alternative": "String.prototype.split()"
@@ -275,6 +280,10 @@
         "alternative": "Example of native implementation: https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore#_throttle"
     },
     "isString": {
+        "compatible": true,
+        "alternative": "str && typeof str.valueOf() === \"string\""
+    },
+    "isFunction": {
         "compatible": true,
         "alternative": "typeof func === \"function\""
     }

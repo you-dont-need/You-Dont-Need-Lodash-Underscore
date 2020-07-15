@@ -135,6 +135,7 @@ objects can easily be converted to an array by use of the
 1. [_.range](#_range)
 1. [_.reduce](#_reduce)
 1. [_.reduceRight](#_reduceright)
+1. [_.reject](#_reject)
 1. [_.size](#_size)
 1. [_.some](#_some)
 1. [_.sortBy](#_sortby-and-_orderby)
@@ -165,6 +166,7 @@ objects can easily be converted to an array by use of the
 
 1. [_.assign](#_assign)
 1. [_.extend](#_extend)
+1. [_.has](#_has)
 1. [_.get](#_get)
 1. [_.keys](#_keys)
 1. [_.omit](#_omit)
@@ -1511,6 +1513,41 @@ This method is like _.reduce except that it iterates over elements of collection
 
 **[⬆ back to top](#quick-links)**
 
+### _.reject
+
+The opposite of _.filter; this method returns the elements of collection that predicate does not return truthy for.
+
+  ```js
+  // Underscore/Lodash
+  var array = [1, 2, 3, 4, 5];
+  var result = _.reject(array, function (x) {
+    return x % 2 === 0;
+  });
+  // output: [1, 3, 5]
+
+  // Native
+  var array = [1, 2, 3, 4, 5];
+  
+  var reject = function (arr, predicate) {
+    var complement = function (f) {
+      return function (x) {
+        return !f(x);
+      }
+    };
+
+    return arr.filter(complement(predicate));
+  };
+  // output: [1, 3, 5]
+  ```
+
+#### Browser Support for `Array.prototype.filter()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  | 12 ✔ | 1.5 ✔ |  9.0 ✔  |  9.5 ✔ |  3.0 ✔ |
+
+**[⬆ back to top](#quick-links)**
+
 ### _.sample
 
 Gets a random element from `array`.
@@ -2218,6 +2255,47 @@ The method is used to copy the values of all enumerable own and inherited proper
 
  **[⬆ back to top](#quick-links)**
 
+ ### _.has
+
+Checks if `key` is a direct property of `object`. Key may be a path of a value separated by `.`
+
+  ```js
+  // Lodash
+  var object = { a: 1, b: 'settings', c: { d: 'test' } };
+    
+  var hasA = _.has(object, 'a');
+  var hasCWhichHasD = _.has(object, 'c.d')
+
+  console.log(hasA);
+  // output: true
+  console.log(hasCWhichHasD);
+  // output: true
+
+  // Native
+  const has = function (obj, key) {
+    var keyParts = key.split('.');
+
+    return !!obj && (
+      keyParts.length > 1
+        ? has(obj[key.split('.')[0]], keyParts.slice(1).join('.'))
+        : hasOwnProperty.call(obj, key)
+    );
+  };
+  
+  var object = { a: 1, b: 'settings' };
+  var result = has(object, 'a'); 
+  // output: true
+  ```
+
+#### Browser Support for Object .hasOwnProperty
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  | 12 ✔ |  ✔ |  5.5 ✔ |  5 ✔ |  3 ✔ |
+
+  **[⬆ back to top](#quick-links)**
+
+
  ### _.get
 
 Gets the value at path of object.
@@ -2232,8 +2310,14 @@ Gets the value at path of object.
 
   // Native (ES6 - IE not supported)
   var object = { a: [{ b: { c: 3 } }] };
-  var { a: [{ b: { c: result2 = 1 } }] } = object;
-  console.log(result2);
+  var { a: [{ b: { c: result = 1 } = {} } = {}] = [] } = object;
+  console.log(result);
+  // output: 3
+
+  // Native (ES11)
+  var object = { a: [{ b: { c: 3 } }] };
+  var result = object?.a?.[0]?.b?.c ?? 1;
+  console.log(result);
   // output: 3
   
   // Native
@@ -2258,6 +2342,18 @@ Gets the value at path of object.
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |
   49.0 ✔  | 14.0 ✔ |  41.0 ✔ |  ✖  |  41.0 ✔ |  8.0 ✔ |
+
+#### Browser Support for optional chaining `?.`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  80.0 ✔  | 80.0 ✔ |  74.0 ✔ |  ✖  |  67.0 ✔ |  13.1 ✔ |
+
+#### Browser Support for nullish coalescing operator `??`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  80.0 ✔  | 80.0 ✔ |  72.0 ✔ |  ✖  |  ✖ |  13.1 ✔ |
 
   **[⬆ back to top](#quick-links)**
 
@@ -2473,8 +2569,8 @@ Checks if string ends with the given target string.
 **[⬆ back to top](#quick-links)**
 
 ### _.isString
-:heavy_exclamation_mark:`Not in Underscore.js`
-Checks if string ends with the given target string.
+
+Checks if value is classified as a String primitive or object.
 
   ```js
   // Lodash
@@ -2488,8 +2584,8 @@ Checks if string ends with the given target string.
   function isString(str){
     if (str && typeof str.valueOf() === "string") {
       return true
-      }
-      return false
+    }
+    return false
   }
  
   isString('abc');
@@ -2499,11 +2595,11 @@ Checks if string ends with the given target string.
   // => false
   ```
 
-#### Browser Support for `String.prototype.endsWith()`
+#### Browser Support
 
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |
-  41.0 ✔  |  ✔ | 17.0 ✔ |  ✔   |  28.0 ✔ |  9.0 ✔ |
+ ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
 
 **[⬆ back to top](#quick-links)**
 

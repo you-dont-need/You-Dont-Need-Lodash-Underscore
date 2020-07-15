@@ -590,7 +590,7 @@ describe('code snippet example', () => {
       assert.deepStrictEqual(clamp(-10, -5, 5), -5);
     });
     it('clamp(10, -5, 5) returns upper bound if number is greater than it', () => {
-      assert.deepStrictEqual(clamp(10, -5, 5), 10);
+      assert.deepStrictEqual(clamp(10, -5, 5), 5);
     });
     it('clamp(10, -5) treats second parameter as upper bound', () => {
       assert.deepStrictEqual(clamp(10, -5), -5);

@@ -1,9 +1,13 @@
 language: node_js
+
 node_js:
-  - 6
-  - 8
   - 10
   - 12
+  - 14
+
+script:
+  - yarn test
+  - yarn test:unit
+
 after_success:
-  - npm run coveralls
-  - npm run test:unit
+  - yarn coveralls

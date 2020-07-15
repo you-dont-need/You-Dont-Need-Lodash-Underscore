@@ -135,6 +135,7 @@ objects can easily be converted to an array by use of the
 1. [_.range](#_range)
 1. [_.reduce](#_reduce)
 1. [_.reduceRight](#_reduceright)
+1. [_.reject](#_reject)
 1. [_.size](#_size)
 1. [_.some](#_some)
 1. [_.sortBy](#_sortby-and-_orderby)
@@ -1507,6 +1508,41 @@ This method is like _.reduce except that it iterates over elements of collection
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |
   ✔  | ✔ | 3.0 ✔ |  9.0 ✔  |  10.5 ✔ |  4.0 ✔ |
+
+**[⬆ back to top](#quick-links)**
+
+### _.reject
+
+The opposite of _.filter; this method returns the elements of collection that predicate does not return truthy for.
+
+  ```js
+  // Underscore/Lodash
+  var array = [1, 2, 3, 4, 5];
+  var result = _.reject(array, function (x) {
+    return x % 2 === 0;
+  });
+  // output: [1, 3, 5]
+
+  // Native
+  var array = [1, 2, 3, 4, 5];
+  
+  var reject = function (arr, predicate) {
+    var complement = function (f) {
+      return function (x) {
+        return !f(x);
+      }
+    };
+
+    return arr.filter(complement(predicate));
+  };
+  // output: [1, 3, 5]
+  ```
+
+#### Browser Support for `Array.prototype.filter()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  | 12 ✔ | 1.5 ✔ |  9.0 ✔  |  9.5 ✔ |  3.0 ✔ |
 
 **[⬆ back to top](#quick-links)**
 

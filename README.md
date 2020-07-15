@@ -2532,8 +2532,8 @@ Checks if string ends with the given target string.
 **[⬆ back to top](#quick-links)**
 
 ### _.isString
-:heavy_exclamation_mark:`Not in Underscore.js`
-Checks if string ends with the given target string.
+
+Checks if value is classified as a String primitive or object.
 
   ```js
   // Lodash
@@ -2547,8 +2547,8 @@ Checks if string ends with the given target string.
   function isString(str){
     if (str && typeof str.valueOf() === "string") {
       return true
-      }
-      return false
+    }
+    return false
   }
  
   isString('abc');
@@ -2558,11 +2558,11 @@ Checks if string ends with the given target string.
   // => false
   ```
 
-#### Browser Support for `String.prototype.endsWith()`
+#### Browser Support
 
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |
-  41.0 ✔  |  ✔ | 17.0 ✔ |  ✔   |  28.0 ✔ |  9.0 ✔ |
+ ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
 
 **[⬆ back to top](#quick-links)**
 

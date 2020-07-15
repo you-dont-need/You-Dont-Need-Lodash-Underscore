@@ -59,7 +59,6 @@
         "compatible": true,
         "alternative": "Array.isArray()"
     },
-
     "each": {
         "compatible": false,
         "alternative": "Array.prototype.forEach() or Object.entries().forEach()"
@@ -142,7 +141,6 @@
         "compatible": false,
         "alternative": "Array.prototype.slice()"
     },
-
     "bind": {
         "ruleName": "bind",
         "compatible": true,
@@ -179,7 +177,6 @@
         "compatible": true,
         "alternative": "value === undefined"
     },
-
     "keys": {
         "compatible": true,
         "alternative": "Object.keys()"
@@ -275,11 +272,15 @@
         "ES6": true
     },
     "flatten": {
-    	"compatible": true,
-    	"alternative": "Array.prototype.reduce((a,b) => a.concat(b), [])"
+        "compatible": true,
+        "alternative": "Array.prototype.reduce((a,b) => a.concat(b), [])"
     },
     "throttle": {
         "compatible": true,
         "alternative": "Example of native implementation: https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore#_throttle"
+    },
+    "isString": {
+        "compatible": true,
+        "alternative": "str && typeof str.valueOf() === \"string\""
     }
 }

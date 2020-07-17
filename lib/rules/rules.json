@@ -282,5 +282,9 @@
     "isString": {
         "compatible": true,
         "alternative": "str && typeof str.valueOf() === \"string\""
+    },
+    "castArray": {
+        "compatible": true,
+        "alternative": "Array.isArray(arr) ? arr : [arr]"
     }
 }

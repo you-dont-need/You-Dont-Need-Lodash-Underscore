@@ -1867,7 +1867,7 @@ Create a new function that limits calls to _func_ to once every given timeframe.
 Puts the value into an array of length one if it is not already an array.
 
 ```js
-// Underscore/Lodash
+// Underscore
 console.log(_.castArray(5))
 // output: [5]
 console.log(_.castArray([2]))

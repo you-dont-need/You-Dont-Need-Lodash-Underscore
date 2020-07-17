@@ -496,6 +496,7 @@ Returns the first element of an array. Passing n will return the first n element
   _.first([1, 2, 3, 4, 5]);
   // => 1
 
+  // Underscore
   _.first([1, 2, 3, 4, 5], 2);
   // => [1, 2]
 
@@ -877,6 +878,7 @@ Returns the last element of an array. Passing n will return the last n elements 
   _.last(numbers);
   // => 5
 
+  // Underscore
   _.last(numbers, 2);
   // => [4, 5]
 

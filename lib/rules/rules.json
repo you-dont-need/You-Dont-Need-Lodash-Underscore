@@ -286,5 +286,9 @@
     "castArray": {
         "compatible": true,
         "alternative": "Array.isArray(arr) ? arr : [arr]"
+    },
+    "isFunction": {
+        "compatible": true,
+        "alternative": "typeof func === \"function\""
     }
 }

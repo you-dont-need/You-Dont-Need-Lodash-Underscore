@@ -827,4 +827,31 @@ describe('code snippet example', () => {
       assert.equal(callCount, 1);
     });
   })
+
+
+  describe('isFunction', () => {
+    function isFunction(func) {
+      if (func && typeof func === "function") {
+        return true
+      }
+      return false
+    }
+
+    it('_.isFunction(setTimeout)', () => {
+      assert.deepEqual(_.isFunction(setTimeout),
+        isFunction(setTimeout))
+    });
+
+    it('_.isFunction(1)', () => {
+      assert.deepEqual(_.isFunction(1),
+        isFunction(1))
+    });
+
+    it('_.isFunction(abc)', () => {
+      assert.deepEqual(_.isFunction("abc"),
+        isFunction("abc"))
+    });
+
+
+  });
 });

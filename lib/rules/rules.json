@@ -282,5 +282,9 @@
     "isString": {
         "compatible": true,
         "alternative": "str && typeof str.valueOf() === \"string\""
+    },
+    "isFunction": {
+        "compatible": true,
+        "alternative": "typeof func === \"function\""
     }
 }

@@ -2020,7 +2020,7 @@ Checks if value is an empty object or collection.
 
 ### _.isFinite
 
-Converts value to a finite number.
+Checks if value is a finite primitive number.
 
   ```js
   // Lodash

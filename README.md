@@ -1877,10 +1877,10 @@ Create a new function that limits calls to _func_ to once every given timeframe.
   ```js
   function throttle(func, timeFrame) {
     var lastTime = 0;
-    return function () {
+    return function (...args) {
         var now = new Date();
         if (now - lastTime >= timeFrame) {
-            func();
+            func(...args);
             lastTime = now;
         }
     };

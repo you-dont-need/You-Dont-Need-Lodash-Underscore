@@ -152,6 +152,7 @@ objects can easily be converted to an array by use of the
 
 **[Lang](#lang)**
 
+1. [_.castArray](#_castarray)
 1. [_.gt](#_gt)
 1. [_.gte](#_gte)
 1. [_.isEmpty](#_isempty)
@@ -1899,6 +1900,36 @@ Create a new function that limits calls to _func_ to once every given timeframe.
  
 
 ## Lang
+
+### _.castArray
+
+Puts the value into an array of length one if it is not already an array.
+
+```js
+// Underscore
+console.log(_.castArray(5))
+// output: [5]
+console.log(_.castArray([2]))
+// output: [2]
+
+// Native
+function castArray(arr) {
+  return Array.isArray(arr) ? arr : [arr]
+}
+// output: true
+console.log(castArray(5));
+// output: [5]
+console.log(castArray([2]));
+// output: [2]
+```
+
+#### Browser Support for `Array.isArray()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+5.0 ✔  |  ✔  | 4.0 ✔  |  9.0 ✔  |  10.5 ✔  | 5.0 ✔  |
+
+**[⬆ back to top](#quick-links)**
 
 ### _.gt
 

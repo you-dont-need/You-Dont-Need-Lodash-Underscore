@@ -159,7 +159,7 @@ describe('code snippet example', () => {
       if (Array.isArray(src)) { // for arrays
         return src.map(recursiveClone)
       }
-      if (typeof src !== 'object') { // for primitives / functions / non-references/pointers
+      if (src === null || typeof src !== 'object') { // for primitives / functions / non-references/pointers
         return src
       }
       return Object.fromEntries(

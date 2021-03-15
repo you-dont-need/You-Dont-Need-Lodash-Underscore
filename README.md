@@ -140,6 +140,7 @@ objects can easily be converted to an array by use of the
 1. [_.some](#_some)
 1. [_.sortBy](#_sortby-and-_orderby)
 1. [_.uniq](#_uniq)
+1. [_.cloneDeep](#_cloneDeep)
 
 **[Function](#function)**
 
@@ -1701,6 +1702,84 @@ Produces a duplicate-free version of the array, using === to test object equalit
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |
  46.0  ✔  | 12.0 ✔ | 16.0 ✔ |  ✖  |  37.0 ✔  |  8.0 ✔  |
+
+**[⬆ back to top](#quick-links)**
+
+### _.cloneDeep
+
+Produces an exact replica of the original (source) array or object. Unlike, JSON.stringify+parse this will retain functions.
+The intention of cloneDeep is to be able to modify values without effecting the original object on the heap.
+```js
+var original = {
+  method: (inp1, inp2) => inp1*inp2,
+  nestedObject: {
+    someKey: {
+      someValues: [
+        {obj: 1},
+        {obj: {
+          furtherNested: { moreNested: { extremelyNested: (inp1, inp2) => inp1 ** inp2}}
+          }
+        }
+      ]
+    }
+  }
+} // or [original, original]
+
+// Lodash/Underscore
+var result = _.cloneDeep(original)
+console.log(result) 
+// output: 
+// {
+//   method: (inp1, inp2) => inp1*inp2,
+//   nestedObject: {
+//     someKey: {
+//       someValues: [
+//         {obj: 1},
+//         {obj: {
+//           furtherNested: { moreNested: { extremelyNested: (inp1, inp2) => inp1 ** inp2}}
+//           }
+//         }
+//       ]
+//     }
+//   }
+// }
+
+// Native
+const recursiveClone = (src) => {
+  if (Array.isArray(src)) { // for arrays
+    return src.map(recursiveClone)
+  }
+  if (typeof src !== 'object') { // for primitives / functions / non-references/pointers
+    return src
+  }
+  return Object.fromEntries(
+    Object.entries(src).map(
+      ([key, val]) => ([key, recursiveClone(val)])
+    )
+  )
+}
+const result = recursiveClone(original)
+// output: 
+// {
+//   method: (inp1, inp2) => inp1*inp2,
+//   nestedObject: {
+//     someKey: {
+//       someValues: [
+//         {obj: 1},
+//         {obj: {
+//           furtherNested: { moreNested: { extremelyNested: (inp1, inp2) => inp1 ** inp2}}
+//           }
+//         }
+//       ]
+//     }
+//   }
+// }
+```
+#### Browser Support for Object.fromEntries (Object.entries is much earlier) can also be polyfilled
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+ 73.0  ✔  | 79.0 ✔ | 63.0 ✔ |  ✖  |  60.0 ✔  |  12.1 ✔  |
 
 **[⬆ back to top](#quick-links)**
 

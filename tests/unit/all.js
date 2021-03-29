@@ -15,8 +15,8 @@ describe('code snippet example', () => {
     const lodashArray = [1]
     const lodashResult = _.concat(lodashArray, 2, [3], [[4]])
 
-    const nativehArray = [1]
-    const nativeResult = nativehArray.concat(2, [3], [[4]])
+    const nativeArray = [1]
+    const nativeResult = nativeArray.concat(2, [3], [[4]])
 
     assert.deepEqual(lodashResult, nativeResult)
   })
@@ -255,7 +255,7 @@ describe('code snippet example', () => {
       "kk.ll": { "mm.n": [3, 4, { "oo.p": 5 }] }
     };
 
-    it ("should handle falsey values", () => {
+    it ("should handle falsy values", () => {
       var val = _.get(obj, 'aa[0].b.c', 1)
       assert.strictEqual(val, get(obj, 'aa[0].b.c', 1))
       assert.notEqual(val, 1)
@@ -354,49 +354,49 @@ describe('code snippet example', () => {
       }
       return (num >= Math.min(init, final) && num < Math.max(init, final));
     }
-    
+
     it('_.inRange(3, 2, 4)', () => {
       assert.equal(
         _.inRange(3, 2, 4),
         inRange(3, 2, 4)
       )
     });
- 
+
     it('_.inRange(4, 8)', () => {
       assert.equal(
         _.inRange(4, 8),
         inRange(4, 8)
       )
     });
-    
+
     it('_.inRange(4, 2)', () => {
       assert.equal(
         _.inRange(4, 2),
         inRange(4, 2)
       )
     });
-    
+
     it('_.inRange(2, 2)', () => {
       assert.equal(
         _.inRange(2, 2),
         inRange(2, 2)
       )
     });
-    
+
     it('_.inRange(1.2, 2)', () => {
       assert.equal(
         _.inRange(1.2, 2),
         inRange(1.2, 2)
       )
     });
-    
+
     it('_.inRange(5.2, 4)', () => {
       assert.equal(
         _.inRange(5.2, 4),
         inRange(5.2, 4)
       )
     });
-    
+
     it('_.inRange(-3, -2, -6)', () => {
       assert.equal(
         _.inRange(-3, -2, -6),
@@ -574,11 +574,11 @@ describe('code snippet example', () => {
       assert.deepStrictEqual(randoms, [100000, 100001]);
     });
   });
-  
+
   describe('clamp', () => {
     const clamp = (number, boundOne, boundTwo) => {
       if (!boundTwo) {
-        return Math.max(number, boundOne) === boundOne ? number : boundOne; 
+        return Math.max(number, boundOne) === boundOne ? number : boundOne;
       } else if (Math.min(number, boundOne) === number) {
         return boundOne;
       } else if (Math.max(number, boundTwo) === number) {
@@ -683,7 +683,7 @@ describe('code snippet example', () => {
   describe('isUndefined', () => {
     const definedVariable = 1; //defined variable (will return false)
     let undefinedVariable; //undefined variable (will return true)
-    
+
     it('_.isUndefined(definedVariable)', () => {
       assert.equal(_.isUndefined(definedVariable),
         (definedVariable === undefined))
@@ -725,7 +725,7 @@ describe('code snippet example', () => {
   describe('forEach', () => {
     it('_.forEach(array)', () => {
       const testArray = [1,2,3,4];
-      
+
       let lodashOutput = []
       let nativeOutput = []
 
@@ -828,13 +828,9 @@ describe('code snippet example', () => {
     });
   })
 
-
   describe('isFunction', () => {
     function isFunction(func) {
-      if (func && typeof func === "function") {
-        return true
-      }
-      return false
+      return (func && typeof func === "function")
     }
 
     it('_.isFunction(setTimeout)', () => {
@@ -851,7 +847,6 @@ describe('code snippet example', () => {
       assert.deepEqual(_.isFunction("abc"),
         isFunction("abc"))
     });
-
 
   });
 });

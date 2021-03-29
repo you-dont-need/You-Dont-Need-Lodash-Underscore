@@ -8,7 +8,7 @@ You are welcome to contribute with more items provided below.
 
 * If you are targeting legacy JavaScript engine with those ES5 methods, you can use [es5-shim](https://github.com/es-shims/es5-shim)
 
-* Please note that, the examples used below are just showing you the native alternative of performing certain tasks. For some of the functions, Lodash provides you more options than native built-ins. This list is not a 1:1 comparison.
+* Please note that, the examples used below are just showing you the native alternative of performing certain tasks. For some functions, Lodash provides you more options than native built-ins. This list is not a 1:1 comparison.
 
 * Please send a PR if you want to add or modify the code. No need to open an issue unless it's something big and you want to discuss.
 
@@ -1028,7 +1028,7 @@ Returns everything but the last entry of the array. Pass n to exclude the last n
 
   // Native
   var array = [5, 4, 3, 2, 1]
-  console.log(array.slice(0, -2););
+  console.log(array.slice(0, -2));
   // output: [5, 4, 3]
   ```
 
@@ -1273,9 +1273,9 @@ Creates an object composed of keys generated from the results of running each el
   // Lodash
   console.log(_.keyBy(['a', 'b', 'c']))
   // output: { a: 'a', b: 'b', c: 'c' }
-  console.log(_.keyBy([{ id: 'a1', title: 'abc' }, { id: 'b2', title: 'def' }], 'id')
+  console.log(_.keyBy([{ id: 'a1', title: 'abc' }, { id: 'b2', title: 'def' }], 'id'))
   // output: { a1: { id: 'a1', title: 'abc' }, b2: { id: 'b2', title: 'def' } }
-  console.log(_.keyBy({ data: { id: 'a1', title: 'abc' }}, 'id')
+  console.log(_.keyBy({ data: { id: 'a1', title: 'abc' }}, 'id'))
   // output: { a1: { id: 'a1', title: 'abc' }}
 
   // keyBy for array only
@@ -1284,9 +1284,9 @@ Creates an object composed of keys generated from the results of running each el
   // Native
   console.log(keyBy(['a', 'b', 'c']))
   // output: { a: 'a', b: 'b', c: 'c' }
-  console.log(keyBy([{ id: 'a1', title: 'abc' }, { id: 'b2', title: 'def' }], 'id')
+  console.log(keyBy([{ id: 'a1', title: 'abc' }, { id: 'b2', title: 'def' }], 'id'))
   // output: { a1: { id: 'a1', title: 'abc' }, b2: { id: 'b2', title: 'def' } }
-  console.log(keyBy(Object.values({ data: { id: 'a1', title: 'abc' }}), 'id')
+  console.log(keyBy(Object.values({ data: { id: 'a1', title: 'abc' }}), 'id'))
   // output: { a1: { id: 'a1', title: 'abc' }}
 
   // keyBy for array and object
@@ -1983,29 +1983,29 @@ Checks if value is an empty object or collection.
 
   ```js
   // Lodash
-  console.log(_.isEmpty(null)
+  console.log(_.isEmpty(null))
   // output: true
-  console.log(_.isEmpty('')
+  console.log(_.isEmpty(''))
   // output: true
-  console.log(_.isEmpty({})
+  console.log(_.isEmpty({}))
   // output: true
-  console.log(_.isEmpty([])
+  console.log(_.isEmpty([]))
   // output: true
-  console.log(_.isEmpty({a: '1'})
+  console.log(_.isEmpty({a: '1'}))
   // output: false
 
   // Native
   const isEmpty = obj => [Object, Array].includes((obj || {}).constructor) && !Object.entries((obj || {})).length;
 
-  console.log(isEmpty(null)
+  console.log(isEmpty(null))
   // output: true
-  console.log(isEmpty('')
+  console.log(isEmpty(''))
   // output: true
-  console.log(isEmpty({})
+  console.log(isEmpty({}))
   // output: true
-  console.log(isEmpty([])
+  console.log(isEmpty([]))
   // output: true
-  console.log(isEmpty({a: '1'})
+  console.log(isEmpty({a: '1'}))
   // output: false
   ```
 
@@ -2332,7 +2332,7 @@ Checks if `key` is a direct property of `object`. Key may be a path of a value s
  ### _.get
 
 Gets the value at path of object.
-*Note: If provided path does not exists inside the object js will generate error.*
+*Note: If provided path does not exist inside the object js will generate error.*
 
   ```js
   // Lodash

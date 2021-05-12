@@ -19,7 +19,7 @@
     "Patrick McElhaney <pmcelhaney@gmail.com> (http://patrickmcelhaney.com)",
     "Steve Mao <maochenyan@gmail.com> (https://github.com/stevemao)"
   ],
-  "main": "lib/index.js",
+  "main": "index.js",
   "scripts": {
     "coveralls": "cat ./coverage/lcov.info | coveralls",
     "test": "istanbul cover tests",

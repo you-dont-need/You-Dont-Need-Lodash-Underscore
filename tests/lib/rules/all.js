@@ -8,7 +8,7 @@ const ruleTester = new RuleTester({
   parserOptions: { ecmaVersion: 2018, sourceType: "module" }
 });
 
-// Only a couple of smoke tests because otherwise it would get very reduntant
+// Only a couple of smoke tests because otherwise it would get very redundant
 
 ruleTester.run('_.concat', rules.concat, {
   valid: [

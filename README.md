@@ -114,7 +114,7 @@ suggest that you take extra precautions [e.g. consider using the native Object.k
 1. [_.initial](#_initial)
 1. [_.pull](#_pull)
 
-**[Collection*](#collection*)**
+**[Collection*](#collection)**
 
 *:heavy_exclamation_mark:<b>Important:</b> Note that most native equivalents are array methods,
 and will not work with objects. If this functionality is needed and no object method is provided,
@@ -191,7 +191,7 @@ objects can easily be converted to an array by use of the
 1. [_.trim](#_trim)
 1. [_.upperFirst](#_upperFirst)
 
-**[Util](#string)**
+**[Util](#util)**
 
 1. [_.times](#_times)
 
@@ -2664,30 +2664,6 @@ Pads the current string with another string (multiple times, if needed) until th
 
 **[⬆ back to top](#quick-links)**
 
-### _.startsWith
-:heavy_exclamation_mark:`Not in Underscore.js`
-Checks if string starts with the given target string.
-
-  ```js
-  // Lodash
-  var result = _.startsWith('abc', 'b', 1)
-  console.log(result)
-  // output: true
-
-  // Native
-  var result = 'abc'.startsWith('b', 1)
-  console.log(result)
-  // output: true
-  ```
-
-#### Browser Support for `String.prototype.startsWith()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  41.0 ✔  |  ✔ | 17.0 ✔ |  ✖  |  28.0 ✔ |  9.0 ✔ |
-
-**[⬆ back to top](#quick-links)**
-
 ### _.repeat
 :heavy_exclamation_mark:`Not in Underscore.js`
 Repeats the given string n times.
@@ -2760,6 +2736,30 @@ Splits string by separator.
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |
   ✔  | ✔ |  1.0 ✔ |  ✔  | ✔ | ✔ |
+
+**[⬆ back to top](#quick-links)**
+
+### _.startsWith
+:heavy_exclamation_mark:`Not in Underscore.js`
+Checks if string starts with the given target string.
+
+  ```js
+  // Lodash
+  var result = _.startsWith('abc', 'b', 1)
+  console.log(result)
+  // output: true
+
+  // Native
+  var result = 'abc'.startsWith('b', 1)
+  console.log(result)
+  // output: true
+  ```
+
+#### Browser Support for `String.prototype.startsWith()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  41.0 ✔  |  ✔ | 17.0 ✔ |  ✖  |  28.0 ✔ |  9.0 ✔ |
 
 **[⬆ back to top](#quick-links)**
 

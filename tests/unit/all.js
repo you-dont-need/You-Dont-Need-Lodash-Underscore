@@ -849,4 +849,27 @@ describe('code snippet example', () => {
     });
 
   });
+
+  describe('unionBy', () => {
+    function unionBy(...arrays) {
+      const iteratee = (arrays).pop();
+
+      if (Array.isArray(iteratee)) {
+        return []; // return empty if iteratee is missing
+      }
+
+      return [...arrays].flat().filter(
+        (set => (o) => set.has(iteratee(o)) ? false : set.add(iteratee(o)))(new Set()),
+      );
+    };
+
+    it('should take an iteratee function', () => {
+      assert.deepStrictEqual(_.unionBy([2.1], [1.2, 2.3], Math.floor), unionBy([2.1], [1.2, 2.3], Math.floor));
+    });
+
+    it('should output values from the first possible array', () => {
+      assert.deepStrictEqual(_.unionBy([{ x: 1, y: 1 }], [{ x: 1, y: 2 }], (x) => x.x),
+        unionBy([{ x: 1, y: 1 }], [{ x: 1, y: 2 }], (x) => x.x));
+    });
+  })
 });

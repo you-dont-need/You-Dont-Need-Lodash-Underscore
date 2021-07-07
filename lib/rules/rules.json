@@ -290,5 +290,10 @@
     "isFunction": {
         "compatible": true,
         "alternative": "typeof func === \"function\""
+    },
+    "unionBy": {
+        "compatible": true,
+        "alternative": "Example of native implementation: https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore#_unionBy",
+        "ES10": true
     }
 }

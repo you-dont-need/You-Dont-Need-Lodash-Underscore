@@ -290,5 +290,9 @@
     "isFunction": {
         "compatible": true,
         "alternative": "typeof func === \"function\""
+    },
+    "capitalize": {
+        "compatible": true,
+        "alternative": "string.charAt(0).toUpperCase() + string.slice(1).toLowerCase()"
     }
 }

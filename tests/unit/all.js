@@ -849,4 +849,26 @@ describe('code snippet example', () => {
     });
 
   });
+
+  describe('capitalize', () => {
+    function capitalize(string) {
+      return string ? string.charAt(0).toUpperCase() + string.slice(1).toLowerCase() : '';
+    }
+
+    it('_.capitalize("FRED")', () => {
+      assert.deepStrictEqual(_.capitalize("FRED"), capitalize("FRED"));
+    });
+
+    it('_.capitalize("fred")', () => {
+      assert.deepStrictEqual(_.capitalize("fred"), capitalize("fred"));
+    });
+
+    it('_.capitalize("HELLO WORLD")', () => {
+      assert.deepStrictEqual(_.capitalize("HELLO WORLD"), capitalize("HELLO WORLD"));
+    });
+
+    it('_.capitalize("hello world")', () => {
+      assert.deepStrictEqual(_.capitalize("hello world"), capitalize("hello world"));
+    });
+  });
 });

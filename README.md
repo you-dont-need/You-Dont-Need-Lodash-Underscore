@@ -1081,6 +1081,7 @@ Removes all provided values from the given array using strict equality for compa
 ### _.unionBy
 
 Creates an array of unique values, taking an `iteratee` to compute uniqueness with
+(note that to iterate by a key in an object you must use `x => x.key` instead of `key` for the `iteratee`)
 
   ```js
   // Lodash

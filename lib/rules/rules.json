@@ -292,7 +292,7 @@
         "alternative": "typeof func === \"function\""
     },
     "unionBy": {
-        "compatible": true,
+        "compatible": false,
         "alternative": "Example of native implementation: https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore#_unionBy",
         "ES10": true
     }

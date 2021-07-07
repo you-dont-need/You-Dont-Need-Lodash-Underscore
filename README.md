@@ -178,6 +178,7 @@ objects can easily be converted to an array by use of the
 
 **[String](#string)**
 
+1. [_.capitalize](#_capitalize)
 1. [_.endsWith](#_endsWith)
 1. [_.isString](#_isString)
 1. [_.padStart and _.padEnd](#_padstart-and-_padend)

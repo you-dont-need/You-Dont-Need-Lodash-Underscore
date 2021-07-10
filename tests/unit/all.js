@@ -871,5 +871,27 @@ describe('code snippet example', () => {
       assert.deepStrictEqual(_.unionBy([{ x: 1, y: 1 }], [{ x: 1, y: 2 }], (x) => x.x),
         unionBy([{ x: 1, y: 1 }], [{ x: 1, y: 2 }], (x) => x.x));
     });
-  })
+  });
+
+  describe('capitalize', () => {
+    function capitalize(string) {
+      return string ? string.charAt(0).toUpperCase() + string.slice(1).toLowerCase() : '';
+    }
+
+    it('_.capitalize("FRED")', () => {
+      assert.deepStrictEqual(_.capitalize("FRED"), capitalize("FRED"));
+    });
+
+    it('_.capitalize("fred")', () => {
+      assert.deepStrictEqual(_.capitalize("fred"), capitalize("fred"));
+    });
+
+    it('_.capitalize("HELLO WORLD")', () => {
+      assert.deepStrictEqual(_.capitalize("HELLO WORLD"), capitalize("HELLO WORLD"));
+    });
+
+    it('_.capitalize("hello world")', () => {
+      assert.deepStrictEqual(_.capitalize("hello world"), capitalize("hello world"));
+    });
+  });
 });

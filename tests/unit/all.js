@@ -894,4 +894,28 @@ describe('code snippet example', () => {
       assert.deepStrictEqual(_.capitalize("hello world"), capitalize("hello world"));
     });
   });
+
+  describe('defaults', () => {
+    it('sets up default values the same way', () => {
+      const defaultValues = { a: 1, b: 2, c: 3 };
+      const givenValues = { b: 4 };
+
+      const lodashObject = _.defaults(givenValues, defaultValues);
+      const vanillaObject = Object.assign({}, defaultValues, givenValues);
+
+      assert.deepStrictEqual(vanillaObject, { a: 1, b: 4, c: 3});
+      assert.deepStrictEqual(vanillaObject, lodashObject);
+    });
+
+    it('should handle nested values equally', () => {
+      const defaultValues = { a: 1, b: 2, c: { x: 3, y: 4 } };
+      const givenValues = { c: { x: 5 } };
+
+      const lodashObject = _.defaults(givenValues, defaultValues);
+      const vanillaObject = Object.assign({}, defaultValues, givenValues);
+
+      assert.deepStrictEqual(vanillaObject, { a: 1, b: 2, c: { x: 5 } })
+      assert.deepStrictEqual(vanillaObject, lodashObject);
+    });
+  });
 });

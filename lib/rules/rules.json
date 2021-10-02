@@ -299,5 +299,10 @@
     "capitalize": {
         "compatible": true,
         "alternative": "string.charAt(0).toUpperCase() + string.slice(1).toLowerCase()"
+    },
+    "defaults": {
+        "compatible": true,
+        "alternative": "Object.assign({}, defaultValues, newValues)",
+        "ES6": true
     }
 }

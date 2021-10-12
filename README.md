@@ -3028,27 +3028,6 @@ Uppercases the first letter of a given string
 * [Underscore.js](http://underscorejs.org)
 * [Lodash.js](https://lodash.com/docs)
 
-### _.uniq
-Removes all duplicates entries from an array.
-
-  ```js
-  // Underscore/Lodash
-  var result = _.uniq([1, 2, 1, 4, 1, 3]);
-  console.log(result)
-  // output: [1, 2, 4, 3]
-
-  // Native
-  var result = [... new Set([1, 2, 1, 4, 1, 3])]
-  console.log(result)
-  // output: [1, 2, 4, 3]
-  ```
-
-#### Browser Support for `new Set()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  38.0 ✔  | ✔ 12.0 | 13.0 ✔ |  11.0 ✔  |  25.0 ✔ |  7.1 ✔  |
-
 **[⬆ back to top](#quick-links)**
 
 ## Util

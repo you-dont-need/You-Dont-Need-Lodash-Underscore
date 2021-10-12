@@ -660,13 +660,13 @@ describe('code snippet example', () => {
 
   describe('isString', () => {
     function isString(str) {
-      if (str && typeof str.valueOf() === "string") {
+      if (str != null && typeof str.valueOf() === "string") {
         return true
       }
       return false
     }
 
-    it('_.isString(abc)', () => {
+    it('_.isString("abc")', () => {
       assert.deepEqual(_.isString("abc"),
         isString("abc"))
     });
@@ -676,7 +676,10 @@ describe('code snippet example', () => {
         isString(1))
     });
 
-
+    it('_.isString("")', () => {
+      assert.deepEqual(_.isString(''),
+        isString(''))
+    })
   });
 
 

@@ -2750,7 +2750,7 @@ Checks if value is classified as a String primitive or object.
 
   // Native
   function isString(str){
-    if (str && typeof str.valueOf() === "string") {
+    if (str != null && typeof str.valueOf() === "string") {
       return true
     }
     return false

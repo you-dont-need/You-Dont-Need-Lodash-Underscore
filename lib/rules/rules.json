@@ -281,7 +281,7 @@
     },
     "isString": {
         "compatible": true,
-        "alternative": "str && typeof str.valueOf() === \"string\""
+        "alternative": "str != null && typeof str.valueOf() === \"string\""
     },
     "castArray": {
         "compatible": true,

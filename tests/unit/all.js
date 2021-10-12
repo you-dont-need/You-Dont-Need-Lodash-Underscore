@@ -139,6 +139,48 @@ describe('code snippet example', () => {
       )
     })
   })
+
+  describe('cloneDeep', () => {
+    const original = {
+      method: (inp1, inp2) => inp1*inp2,
+      nestedObject: {
+        someKey: {
+          someValues: [
+            {obj: 1},
+            {obj: {
+              furtherNested: { moreNested: { extremelyNested: (inp1, inp2) => inp1 ** inp2}}
+              }
+            }
+          ]
+        }
+      }
+    }
+    const recursiveClone = (src) => {
+      if (Array.isArray(src)) { // for arrays
+        return src.map(recursiveClone)
+      }
+      if (src === null || typeof src !== 'object') { // for primitives / functions / non-references/pointers
+        return src
+      }
+      return Object.fromEntries(
+        Object.entries(src).map(
+          ([key, val]) => ([key, recursiveClone(val)])
+        )
+      )
+    }
+    const result = recursiveClone(original)
+    
+    // check equality
+    assert.deepEqual(original, result)
+
+    // check methods
+    assert.equal(original.method(232, 59), result.method(232, 59))
+    assert.equal(original.nestedObject.someKey.someValues[0][1].obj.furtherNested.moreNested.extremelyNested(232, 4), result.nestedObject.someKey.someValues[0][1].obj.furtherNested.moreNested.extremelyNested(232, 4))
+
+    // check modifying reference
+    result.nestedObject.someKey.someValues[0].obj = 99
+    assert.equals(original.nestedObject.someKey.someValues.obj, 1)
+  })
   describe('extend', () => {
     function Foo() {
       this.c = 3;

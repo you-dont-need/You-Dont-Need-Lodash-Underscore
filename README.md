@@ -2617,23 +2617,24 @@ Creates an object composed of the object properties predicate returns truthy for
 
   ```js
   var object = { 'a': 1, 'b': null, 'c': 3, 'd': false, 'e': undefined };
+  var isTruthy = (x) => Boolean(x);
 
   // Underscore/Lodash
-  var result = _.pickBy(object);
+  var result = _.pickBy(object, isTruthy);
   console.log(result)
   // output: {a: 1, c: 3}
 
   // Native
-  function pickBy(object) {
+  function pickBy(object, predicate) {
       const obj = {};
       for (const key in object) {
-          if (object[key]) {
+          if (predicate(object[key], key)) {
               obj[key] = object[key];
           }
       }
       return obj;
   }
-  var result = pickBy(object);
+  var result = pickBy(object, isTruthy);
   console.log(result)
   // output: {a: 1, c: 3}
   ```

@@ -176,6 +176,29 @@ describe('code snippet example', () => {
       )
     })
   })
+  describe('isDate', () => {
+    const isDate = (obj) => {
+      return (obj ? Object.prototype.toString.call(obj) === "[object Date]" : false);
+    };
+    it ('_.Date(null)', () => {
+      assert.equal(
+        _.isDate(null),
+        isDate(null)
+      )
+    })
+    it ("_.Date('Mon April 23 2012')", () => {
+      assert.equal(
+        _.isDate('Mon April 23 2012'),
+        isDate('Mon April 23 2012')
+      )
+    })
+    it ('_.Date(new Date)', () => {
+      assert.equal(
+        _.isDate(new Date),
+        isDate(new Date)
+      )
+    })
+  })
   describe('isEmpty', () => {
     const isEmpty = (obj) => {
       return (obj ? [Object, Array].includes(obj.constructor) && !Object.entries(obj).length : true);

@@ -1860,7 +1860,7 @@ _.isFunction(/abc/);
 
 // Native
 function isFunction(func) {
-  return (typeof func === "function");
+  return typeof func === "function";
 }
 
 isFunction(setTimeout);

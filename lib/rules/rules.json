@@ -308,5 +308,9 @@
         "compatible": true,
         "alternative": "Object.assign({}, defaultValues, newValues)",
         "ES6": true
+    },
+    "isArrayBuffer": {
+        "compatible": false,
+        "alternative": "value instanceof ArrayBuffer"
     }
 }

@@ -48,7 +48,7 @@
     },
     "first": {
         "compatible": true,
-        "alternative": "Array.prototype.slice()"
+        "alternative": "Array.prototype.slice() or arr[0]"
     },
     "findIndex": {
         "compatible": false,

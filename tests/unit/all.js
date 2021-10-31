@@ -706,6 +706,34 @@ describe('code snippet example', () => {
   });
 
 
+  describe('lowerFirst', () => {
+    const lowerFirst = (string) => {
+      return string ? string.charAt(0).toLowerCase() + string.slice(1) : ''
+    }
+
+    it('_.lowerFirst("Fred")', () => {
+      assert.equal(
+        _.lowerFirst('fred'),
+        lowerFirst('fred')
+      )
+    })
+
+    it('_.lowerFirst(null)', () => {
+      assert.equal(
+        _.lowerFirst(null),
+        lowerFirst(null)
+      )
+    })
+
+    it('_.lowerFirst("")', () => {
+      assert.equal(
+        _.lowerFirst(''),
+        lowerFirst('')
+      )
+    })
+  })
+
+
   describe('isUndefined', () => {
     const definedVariable = 1; //defined variable (will return false)
     let undefinedVariable; //undefined variable (will return true)

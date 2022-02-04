@@ -3116,14 +3116,6 @@ Uppercases the first letter of a given string
 
 **[⬆ back to top](#quick-links)**
 
-## Reference
-
-* [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
-* [Underscore.js](http://underscorejs.org)
-* [Lodash.js](https://lodash.com/docs)
-
-**[⬆ back to top](#quick-links)**
-
 ## Util
 
 ### _.times
@@ -3308,7 +3300,13 @@ Produces a random number between the inclusive lower and upper bounds. If only o
 
 **[⬆ back to top](#quick-links)**
 
+## Reference
 
+* [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
+* [Underscore.js](http://underscorejs.org)
+* [Lodash.js](https://lodash.com/docs)
+
+**[⬆ back to top](#quick-links)**
 
 ## Inspired by:
 

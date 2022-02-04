@@ -3243,7 +3243,8 @@ Checks if n is between start and up to, but not including, end. If end is not sp
 
 **[⬆ back to top](#quick-links)**
 
-  ### _.random
+### _.random
+
 Produces a random number between the inclusive lower and upper bounds. If only one argument is provided a number between 0 and the given number is returned. If floating is true, or either lower or upper are floats, a floating-point number is returned instead of an integer.
 
   ```js
@@ -3299,7 +3300,7 @@ Produces a random number between the inclusive lower and upper bounds. If only o
 
   ```
 
-  #### Browser Support for `Math.random()`
+#### Browser Support for `Math.random()`
 
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |

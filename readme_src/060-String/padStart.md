@@ -13,10 +13,4 @@ Pads the current string with another string (multiple times, if needed) until th
   // output: '00123'
   ```
 
-#### Browser Support for `String.prototype.padStart()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  57.0 ✔  |  15.0 ✔ | 48.0 ✔ |  ✖  |  44.0 ✔ |  10.0 ✔ |
-
-**[⬆ back to top](#quick-links)**
+<!-- caniuse: pad-start-end -->

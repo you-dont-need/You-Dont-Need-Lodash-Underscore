@@ -29,22 +29,11 @@ Creates an array of unique values, taking an `iteratee` to compute uniqueness wi
   // output: [2.1, 1.2]
   ```
 
-#### Browser Support for `Array.prototype.flat()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image] |
-:-: | :-: | :-: | :-: | :-: | :-: |
-69 ✔ | ✖ | 62 ✔ | ✖ | 56 ✔ | 12 ✔ |
-
-#### Browser Support for `Array.isArray()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-5.0 ✔  |  ✔  | 4.0 ✔  |  9.0 ✔  |  10.5 ✔  | 5.0 ✔  |
-
 #### Browser Support for `Set.prototype.has()`
 
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image] |
 :-: | :-: | :-: | :-: | :-: | :-: |
 38 ✔ | 12 ✔ | 13 ✔ | 11 ✔ | 25 ✔ | 8 ✔ |
 
-**[⬆ back to top](#quick-links)**
+<!-- caniuse: array-flat -->
+<!-- caniuse: es6 -->

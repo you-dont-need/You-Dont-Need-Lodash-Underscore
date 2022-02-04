@@ -21,11 +21,3 @@ isFunction(setTimeout);
 isFunction(123);
 // => false
 ```
-
-#### Browser Support
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
- :-: | :-: | :-: | :-: | :-: | :-: |
- ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-
- **[⬆ back to top](#quick-links)**

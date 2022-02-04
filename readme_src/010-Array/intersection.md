@@ -21,10 +21,4 @@ Returns an array that is the intersection of all the arrays. Each value in the r
   // output: [1, 2]
   ```
 
-#### Browser Support for `Array.prototype.reduce()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  |  ✔ | 3.0 ✔ |  9.0 ✔  |  10.5 ✔ |  4.0 ✔ |
-
-**[⬆ back to top](#quick-links)**
+<!-- caniuse: es6 -->

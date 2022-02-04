@@ -28,10 +28,4 @@ chunk(['a', 'b', 'c', 'd'], 3);
 
 ```
 
-#### Browser Support for Spread in array literals
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-   46.0 ✔  | 12.0 ✔ | 16.0 ✔ |  ✖ |  37.0 ✔ |  8.0 ✔  |
-
-**[⬆ back to top](#quick-links)**
+<!-- caniuse: es6 -->

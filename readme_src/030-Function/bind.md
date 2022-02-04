@@ -20,10 +20,4 @@ Create a new function that calls _func_ with _thisArg_ and _args_.
   var boundOffsetX = objA.offsetX.bind(objB, 0);
   ```
 
-#### Browser Support for `Function.prototype.bind()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
- :-: | :-: | :-: | :-: | :-: | :-: |
-  7.0 ✔  |  ✔ | 4.0 ✔ |  9.0 ✔ |  11.6 ✔ |  5.1 ✔  |
-
- **[⬆ back to top](#quick-links)**
+<!-- caniuse: es5 -->

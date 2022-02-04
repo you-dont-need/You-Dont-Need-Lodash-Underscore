@@ -16,10 +16,4 @@ Returns an array where matching items are filtered.
   // output: [1, 3]
   ```
 
-#### Browser Support for `Array.prototype.filter()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  1.0 ✔  | ✔ | 1.5 ✔ |  9 ✔ |  ✔ |  ✔  |
-
-**[⬆ back to top](#quick-links)**
+<!-- caniuse: es6 -->

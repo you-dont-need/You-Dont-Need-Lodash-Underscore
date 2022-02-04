@@ -18,10 +18,4 @@ Creates a new array concatenating array with any additional arrays and/or values
   // output: [1, 2, 3, [4]]
   ```
 
-#### Browser Support for `Array.prototype.concat()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-1.0  ✔  | ✔  |  1.0 ✔ |  5.5 ✔  |  ✔  |  ✔  |
-
-**[⬆ back to top](#quick-links)**
+<!-- caniuse: es5 -->

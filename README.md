@@ -168,6 +168,8 @@ suggest that you take extra precautions [e.g. consider using the native Object.k
 1. [_.assign](#_assign)
 1. [_.defaults](#_defaults)
 1. [_.extend](#_extend)
+1. [_.get](#_get)
+1. [_.has](#_has)
 1. [_.keys](#_keys)
 1. [_.omit](#_omit)
 1. [_.pick](#_pick)
@@ -236,11 +238,19 @@ chunk(['a', 'b', 'c', 'd'], 3);
 
 ```
 
-#### Browser Support for Spread in array literals
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-   46.0 ✔  | 12.0 ✔ | 16.0 ✔ |  ✖ |  37.0 ✔ |  8.0 ✔  |
+#### Browser Support for `ECMAScript 2015 (ES6)`
+
+[ES6 New features: overview and comparisons](http://es6-features.org)  
+[Exploring ES6 (book)](https://exploringjs.com/es6/)  
+[Polyfill for all possible ES2015 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  51 ✔  | 54 ✔  | 15 ✔  | 10 ✔  | 38 ✔  | 97 ✔  | 10 ✔  |  ✖  | 5 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -256,11 +266,18 @@ Creates an array with all falsy values removed.
   [0, 1, false, 2, '', 3].filter(Boolean)
   ```
 
-#### Browser Support for `array.prototype.filter`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-   ✔  |  ✔ |  1.5 ✔ |  9.0 ✔ |  ✔ |  ✔  |
+#### Browser Support for `ECMAScript 2015 (ES6)`
+
+[ES6 New features: overview and comparisons](http://es6-features.org)  
+[Exploring ES6 (book)](https://exploringjs.com/es6/)  
+[Polyfill for all possible ES2015 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  51 ✔  | 54 ✔  | 15 ✔  | 10 ✔  | 38 ✔  | 97 ✔  | 10 ✔  |  ✖  | 5 ✔  |
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -284,11 +301,20 @@ Creates a new array concatenating array with any additional arrays and/or values
   // output: [1, 2, 3, [4]]
   ```
 
-#### Browser Support for `Array.prototype.concat()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-1.0  ✔  | ✔  |  1.0 ✔ |  5.5 ✔  |  ✔  |  ✔  |
+#### Browser Support for `ECMAScript 5`
+
+[Detailed compatibility tables & tests](https://kangax.github.io/compat-table/es5/)  
+[Overview of objects & properties](https://johnresig.com/blog/ecmascript-5-objects-and-properties/)  
+[ES5 polyfill](https://github.com/es-shims/es5-shim)  
+[Polyfill for all possible ES5 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  23 ✔  | 21 ✔  | 12 ✔  | 6 ✔  | 15 ✔  | 4.4 ✔  | 6 ✔  | 10 ✔  | 4 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -315,11 +341,31 @@ Similar to [without](#_without), but returns the values from array that are not 
   // output: [1, 3, 4]
   ```
 
-#### Browser Support for `Array.prototype.reduce()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-   ✔  |  ✔ | 3.0 ✔ |  9.0 ✔  |  10.5 ✔ |  4.0 ✔ |
+#### Browser Support for `Array.prototype.includes`
+
+[MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes#Browser_compatibility)  
+[Polyfill for this feature is available in the core-js library](https://github.com/zloirock/core-js#ecmascript-array)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  47 ✔  | 43 ✔  | 14 ✔  | 9 ✔  | 34 ✔  | 97 ✔  | 9 ✔  |  ✖  | 5 ✔  |
+
+
+
+#### Browser Support for `ECMAScript 5`
+
+[Detailed compatibility tables & tests](https://kangax.github.io/compat-table/es5/)  
+[Overview of objects & properties](https://johnresig.com/blog/ecmascript-5-objects-and-properties/)  
+[ES5 polyfill](https://github.com/es-shims/es5-shim)  
+[Polyfill for all possible ES5 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  23 ✔  | 21 ✔  | 12 ✔  | 6 ✔  | 15 ✔  | 4.4 ✔  | 6 ✔  | 10 ✔  | 4 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -343,11 +389,20 @@ Creates a slice of array with n elements dropped from the beginning.
   // => [3]
   ```
 
-#### Browser Support for `Array.prototype.slice()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  1.0 ✔  |  ✔  |  1.0 ✔  |  ✔  |  ✔  | ✔  |
+#### Browser Support for `ECMAScript 5`
+
+[Detailed compatibility tables & tests](https://kangax.github.io/compat-table/es5/)  
+[Overview of objects & properties](https://johnresig.com/blog/ecmascript-5-objects-and-properties/)  
+[ES5 polyfill](https://github.com/es-shims/es5-shim)  
+[Polyfill for all possible ES5 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  23 ✔  | 21 ✔  | 12 ✔  | 6 ✔  | 15 ✔  | 4.4 ✔  | 6 ✔  | 10 ✔  | 4 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -371,11 +426,20 @@ Creates a slice of array with n elements dropped at the end.
   // => [1]
   ```
 
-#### Browser Support for `Array.prototype.slice()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  1.0 ✔  |  ✔  |  1.0 ✔  |  ✔  |  ✔  | ✔  |
+#### Browser Support for `ECMAScript 5`
+
+[Detailed compatibility tables & tests](https://kangax.github.io/compat-table/es5/)  
+[Overview of objects & properties](https://johnresig.com/blog/ecmascript-5-objects-and-properties/)  
+[ES5 polyfill](https://github.com/es-shims/es5-shim)  
+[Polyfill for all possible ES5 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  23 ✔  | 21 ✔  | 12 ✔  | 6 ✔  | 15 ✔  | 4.4 ✔  | 6 ✔  | 10 ✔  | 4 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -414,11 +478,19 @@ Fills elements of array with value from start up to, but not including, end.
   // output: [4, '*', '*', 10]
   ```
 
-#### Browser Support for `Array.prototype.fill()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  45.0 ✔ | ✔  | 31.0 ✔ |  ✖  |  32.0 ✔ |  8 ✔ |
+#### Browser Support for `ECMAScript 2015 (ES6)`
+
+[ES6 New features: overview and comparisons](http://es6-features.org)  
+[Exploring ES6 (book)](https://exploringjs.com/es6/)  
+[Polyfill for all possible ES2015 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  51 ✔  | 54 ✔  | 15 ✔  | 10 ✔  | 38 ✔  | 97 ✔  | 10 ✔  |  ✖  | 5 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -448,11 +520,18 @@ Returns the value of the first element in the array that satisfies the provided 
   // output: object for 'barney'
   ```
 
-#### Browser Support for `Array.prototype.find()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  45.0 ✔ | ✔ | 25.0 ✔ |  ✖  |  32.0 ✔ |  7.1 ✔ |
+#### Browser Support for `Array.prototype.find`
+
+[MDN article](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find)  
+[Polyfill for this feature is available in the core-js library](https://github.com/zloirock/core-js#ecmascript-array)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  45 ✔  | 25 ✔  | 15 ✔  | 7.1 ✔  | 32 ✔  | 97 ✔  | 8 ✔  |  ✖  | 5 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -484,11 +563,18 @@ Returns the index of the first element in the array that satisfies the provided 
   // output: 1
   ```
 
-#### Browser Support for `Array.prototype.findIndex()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  45.0 ✔ | ✔ | 25.0 ✔ |  ✖  |  32.0 ✔ |  7.1 ✔ |
+#### Browser Support for `Array.prototype.findIndex`
+
+[MDN article](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex)  
+[Polyfill for this feature is available in the core-js library](https://github.com/zloirock/core-js#ecmascript-array)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  45 ✔  | 25 ✔  | 12 ✔  | 7.1 ✔  | 32 ✔  | 97 ✔  | 8 ✔  |  ✖  | 5 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -523,11 +609,19 @@ Returns the first element of an array. Passing n will return the first n element
   // => [1, 2]
   ```
 
-#### Browser Support for `Array.prototype.slice()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  1.0 ✔  |  ✔  |  1.0 ✔  |  ✔  |  ✔  | ✔  |
+#### Browser Support for `ECMAScript 2015 (ES6)`
+
+[ES6 New features: overview and comparisons](http://es6-features.org)  
+[Exploring ES6 (book)](https://exploringjs.com/es6/)  
+[Polyfill for all possible ES2015 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  51 ✔  | 54 ✔  | 15 ✔  | 10 ✔  | 38 ✔  | 97 ✔  | 10 ✔  |  ✖  | 5 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -555,25 +649,33 @@ Flattens array a single level deep.
   // => [1, 2, [3, [4]], 5]
   ```
 
-#### Browser Support for `Array.prototype.reduce()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |  :-: |
-  46.0 ✔ |  ✔ | 3.0 ✔ |  9.0 ✔  |  10.5 ✔ |  4 ✔ |
+#### Browser Support for `ECMAScript 2015 (ES6)`
 
-#### Browser Support for `Array.prototype.flat()`
+[ES6 New features: overview and comparisons](http://es6-features.org)  
+[Exploring ES6 (book)](https://exploringjs.com/es6/)  
+[Polyfill for all possible ES2015 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
 
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image] |
-:-: | :-: | :-: | :-: | :-: | :-: |
-69 ✔ | ✖ | 62 ✔ | ✖ | 56 ✔ | 12 ✔ |
-
-#### Browser Support for `Array.prototype.flatMap()`
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  51 ✔  | 54 ✔  | 15 ✔  | 10 ✔  | 38 ✔  | 97 ✔  | 10 ✔  |  ✖  | 5 ✔  |
 
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image] |
-:-: | :-: | :-: | :-: | :-: | :-: |
-69 ✔ | ✖ | 62 ✔ | ✖ | 56 ✔ | 12 ✔ |
+
+#### Browser Support for `flat & flatMap array methods`
+
+[MDN article on Array.prototype.flat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat)  
+[MDN article on Array.prototype.flatMap](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap)  
+[Article on the history of the `flat` methods](https://developers.google.com/web/updates/2018/03/smooshgate)  
+[Polyfill for flat & flatMap](https://github.com/jonathantneal/array-flat-polyfill)  
+[Polyfill for this feature is available in the core-js library](https://github.com/zloirock/core-js#ecmascript-array)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  69 ✔  | 62 ✔  | 79 ✔  | 12 ✔  | 56 ✔  | 97 ✔  | 12 ✔  |  ✖  | 10.1 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -604,25 +706,32 @@ Recursively flattens array.
   // => [1, 2, 3, 4, 5]
   ```
 
-#### Browser Support
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  46.0 ✔ |  ✔ | 16.0 ✔ |  ✖  |  37.0 ✔ |  7.1 ✔ |
+#### Browser Support for `ECMAScript 2015 (ES6)`
 
+[ES6 New features: overview and comparisons](http://es6-features.org)  
+[Exploring ES6 (book)](https://exploringjs.com/es6/)  
+[Polyfill for all possible ES2015 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
 
-#### Browser Support for `Array.prototype.flat()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image] |
-:-: | :-: | :-: | :-: | :-: | :-: |
-69 ✔ | ✖ | 62 ✔ | ✖ | 56 ✔ | 12 ✔ |
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  51 ✔  | 54 ✔  | 15 ✔  | 10 ✔  | 38 ✔  | 97 ✔  | 10 ✔  |  ✖  | 5 ✔  |
 
 
-#### Browser Support for `Array.prototype.flatMap()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image] |
-:-: | :-: | :-: | :-: | :-: | :-: |
-69 ✔ | ✖ | 62 ✔ | ✖ | 56 ✔ | 12 ✔ |
+#### Browser Support for `flat & flatMap array methods`
+
+[MDN article on Array.prototype.flat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat)  
+[MDN article on Array.prototype.flatMap](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap)  
+[Article on the history of the `flat` methods](https://developers.google.com/web/updates/2018/03/smooshgate)  
+[Polyfill for flat & flatMap](https://github.com/jonathantneal/array-flat-polyfill)  
+[Polyfill for this feature is available in the core-js library](https://github.com/zloirock/core-js#ecmascript-array)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  69 ✔  | 62 ✔  | 79 ✔  | 12 ✔  | 56 ✔  | 97 ✔  | 12 ✔  |  ✖  | 10.1 ✔  |
+
+
 
 
 **[⬆ back to top](#quick-links)**
@@ -655,17 +764,25 @@ Returns an object composed from key-value pairs.
   // => { 'a': 1, 'b': 2 }
   ```
 
-#### Browser Support for `Array.prototype.reduce()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  |  ✔ | 3.0 ✔ |  9.0 ✔  |  10.5 ✔ |  4.0 ✔ |
+#### Browser Support for `ECMAScript 2015 (ES6)`
+
+[ES6 New features: overview and comparisons](http://es6-features.org)  
+[Exploring ES6 (book)](https://exploringjs.com/es6/)  
+[Polyfill for all possible ES2015 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  51 ✔  | 54 ✔  | 15 ✔  | 10 ✔  | 38 ✔  | 97 ✔  | 10 ✔  |  ✖  | 5 ✔  |
+
+
 
 #### Browser Support for `Object.fromEntries()`
 
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |
   73.0 ✔  | 79.0 ✔ | 63.0 ✔ |  ✖  |  60 ✔ |  12.1 ✔ |
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -686,11 +803,19 @@ Gets the first element or all but the first element.
   // output: 1
   ```
 
-#### Browser Support for Spread in array literals
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  46.0 ✔  | 12.0 ✔ |  16.0 ✔ |  ✖ |  37.0 ✔ | 8.0 ✔  |
+#### Browser Support for `ECMAScript 2015 (ES6)`
+
+[ES6 New features: overview and comparisons](http://es6-features.org)  
+[Exploring ES6 (book)](https://exploringjs.com/es6/)  
+[Polyfill for all possible ES2015 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  51 ✔  | 54 ✔  | 15 ✔  | 10 ✔  | 38 ✔  | 97 ✔  | 10 ✔  |  ✖  | 5 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -712,11 +837,19 @@ Returns the first index at which a given element can be found in the array, or -
   // output: 0
   ```
 
-#### Browser Support for `Array.prototype.indexOf()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  | ✔  |  1.5 ✔ |  9.0 ✔  |  ✔  |  ✔  |
+#### Browser Support for `ECMAScript 2015 (ES6)`
+
+[ES6 New features: overview and comparisons](http://es6-features.org)  
+[Exploring ES6 (book)](https://exploringjs.com/es6/)  
+[Polyfill for all possible ES2015 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  51 ✔  | 54 ✔  | 15 ✔  | 10 ✔  | 38 ✔  | 97 ✔  | 10 ✔  |  ✖  | 5 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -736,11 +869,19 @@ Returns everything but the last entry of the array. Pass n to exclude the last n
   // output: [5, 4, 3]
   ```
 
-#### Browser Support for `Array.prototype.slice()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  1.0 ✔  |  ✔  |  1.0 ✔  |  ✔  |  ✔  | ✔  |
+#### Browser Support for `ECMAScript 2015 (ES6)`
+
+[ES6 New features: overview and comparisons](http://es6-features.org)  
+[Exploring ES6 (book)](https://exploringjs.com/es6/)  
+[Polyfill for all possible ES2015 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  51 ✔  | 54 ✔  | 15 ✔  | 10 ✔  | 38 ✔  | 97 ✔  | 10 ✔  |  ✖  | 5 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -767,11 +908,19 @@ Returns an array that is the intersection of all the arrays. Each value in the r
   // output: [1, 2]
   ```
 
-#### Browser Support for `Array.prototype.reduce()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  |  ✔ | 3.0 ✔ |  9.0 ✔  |  10.5 ✔ |  4.0 ✔ |
+#### Browser Support for `ECMAScript 2015 (ES6)`
+
+[ES6 New features: overview and comparisons](http://es6-features.org)  
+[Exploring ES6 (book)](https://exploringjs.com/es6/)  
+[Polyfill for all possible ES2015 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  51 ✔  | 54 ✔  | 15 ✔  | 10 ✔  | 38 ✔  | 97 ✔  | 10 ✔  |  ✖  | 5 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -791,11 +940,20 @@ Returns true if given value is an array.
   // output: true
   ```
 
-  #### Browser Support for `Array.isArray()`
 
- ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
- :-: | :-: | :-: | :-: | :-: | :-: |
-  5.0 ✔  |  ✔  | 4.0 ✔  |  9.0 ✔  |  10.5 ✔  | 5.0 ✔  |
+#### Browser Support for `ECMAScript 5`
+
+[Detailed compatibility tables & tests](https://kangax.github.io/compat-table/es5/)  
+[Overview of objects & properties](https://johnresig.com/blog/ecmascript-5-objects-and-properties/)  
+[ES5 polyfill](https://github.com/es-shims/es5-shim)  
+[Polyfill for all possible ES5 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  23 ✔  | 21 ✔  | 12 ✔  | 6 ✔  | 15 ✔  | 4.4 ✔  | 6 ✔  | 10 ✔  | 4 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -815,11 +973,18 @@ Checks if value is classified as an ArrayBuffer object.
 
   :warning: You will get the wrong result if you get `ArrayBuffer` from another realm. [See details.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/instanceof#instanceof_and_multiple_context_e.g._frames_or_windows)
 
-  #### Browser Support for `instanceof`
 
- ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
- :-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  |  ✔  | 1.0 ✔  | ✔  | ✔  | ✔  |
+#### Browser Support for `Shared Array Buffer`
+
+[MDN article](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer)  
+[Mozilla Hacks article on safely reviving shared memory](https://hacks.mozilla.org/2020/07/safely-reviving-shared-memory/)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  68 ✔  | 79 ✔  | 79 ✔  | 15.2 ✔  | 64 ✔  |  ✖  | 15.2 ✔  |  ✖  |  ✖  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -840,11 +1005,19 @@ Joins a list of elements in an array with a given separator.
   // output: 'one--two--three'
   ```
 
-#### Browser Support for `Array.prototype.join()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  1.0 ✔  |   ✔  | 1.0 ✔ |  5.5 ✔  |  ✔ |  ✔  |
+#### Browser Support for `ECMAScript 2015 (ES6)`
+
+[ES6 New features: overview and comparisons](http://es6-features.org)  
+[Exploring ES6 (book)](https://exploringjs.com/es6/)  
+[Polyfill for all possible ES2015 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  51 ✔  | 54 ✔  | 15 ✔  | 10 ✔  | 38 ✔  | 97 ✔  | 10 ✔  |  ✖  | 5 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -881,11 +1054,32 @@ Returns the last element of an array. Passing n will return the last n elements 
   // => [4, 5]
   ```
 
-#### Browser Support for `Array.prototype.concat()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  1.0 ✔  |  ✔  | 1.0 ✔  | 5.5 ✔  |  ✔  | ✔  |
+#### Browser Support for `ECMAScript 2015 (ES6)`
+
+[ES6 New features: overview and comparisons](http://es6-features.org)  
+[Exploring ES6 (book)](https://exploringjs.com/es6/)  
+[Polyfill for all possible ES2015 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  51 ✔  | 54 ✔  | 15 ✔  | 10 ✔  | 38 ✔  | 97 ✔  | 10 ✔  |  ✖  | 5 ✔  |
+
+
+
+#### Browser Support for `ECMAScript 5`
+
+[Detailed compatibility tables & tests](https://kangax.github.io/compat-table/es5/)  
+[Overview of objects & properties](https://johnresig.com/blog/ecmascript-5-objects-and-properties/)  
+[ES5 polyfill](https://github.com/es-shims/es5-shim)  
+[Polyfill for all possible ES5 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  23 ✔  | 21 ✔  | 12 ✔  | 6 ✔  | 15 ✔  | 4.4 ✔  | 6 ✔  | 10 ✔  | 4 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -907,11 +1101,20 @@ Returns the index of the last occurrence of value in the array, or -1 if value i
   // output: 2
   ```
 
-#### Browser Support for `Array.prototype.lastIndexOf()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  |  ✔ | 1.5 ✔  | 9.0 ✔  |  ✔  |  ✔  |
+#### Browser Support for `ECMAScript 5`
+
+[Detailed compatibility tables & tests](https://kangax.github.io/compat-table/es5/)  
+[Overview of objects & properties](https://johnresig.com/blog/ecmascript-5-objects-and-properties/)  
+[ES5 polyfill](https://github.com/es-shims/es5-shim)  
+[Polyfill for all possible ES5 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  23 ✔  | 21 ✔  | 12 ✔  | 6 ✔  | 15 ✔  | 4.4 ✔  | 6 ✔  | 10 ✔  | 4 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -950,17 +1153,25 @@ Removes all provided values from the given array using strict equality for compa
   console.log(array); // still [1, 2, 3, 1, 2, 3]. This is not in place, unlike lodash!
   ```
 
-#### Browser Support for `Array.prototype.filter()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  1.0 ✔  | ✔ | 1.5 ✔ |  9 ✔ |  ✔ |  ✔  |
+#### Browser Support for `ECMAScript 2015 (ES6)`
+
+[ES6 New features: overview and comparisons](http://es6-features.org)  
+[Exploring ES6 (book)](https://exploringjs.com/es6/)  
+[Polyfill for all possible ES2015 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  51 ✔  | 54 ✔  | 15 ✔  | 10 ✔  | 38 ✔  | 97 ✔  | 10 ✔  |  ✖  | 5 ✔  |
+
+
 
 #### Browser Support for `Set.prototype.has()`
 
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image] |
 :-: | :-: | :-: | :-: | :-: | :-: |
 38 ✔ | 12 ✔ | 13 ✔ | 11 ✔ | 25 ✔ | 8 ✔ |
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -987,11 +1198,19 @@ Voice from the Lodash author:
 It's exposed on _ because previously, like `Underscore`, it was only exposed in the chaining syntax.
 >--- [jdalton](https://github.com/cht8687/You-Dont-Need-Lodash-Underscore/commit/22c4bcf2be48dd415d2b073759805562e520b615#)
 
-#### Browser Support for `Array.prototype.reverse()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  | ✔ | 1.5 ✔ |  9 ✔ |  ✔ |  ✔  |
+#### Browser Support for `ECMAScript 2015 (ES6)`
+
+[ES6 New features: overview and comparisons](http://es6-features.org)  
+[Exploring ES6 (book)](https://exploringjs.com/es6/)  
+[Polyfill for all possible ES2015 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  51 ✔  | 54 ✔  | 15 ✔  | 10 ✔  | 38 ✔  | 97 ✔  | 10 ✔  |  ✖  | 5 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -1011,11 +1230,19 @@ Returns a shallow copy of a portion of an array into a new array object selected
   // output: [2, 3]
   ```
 
-#### Browser Support for `Array.prototype.slice()`
 
- ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
- :-: | :-: | :-: | :-: | :-: | :-: |
-  1.0 ✔  |  ✔  |  1.0 ✔  |  ✔  |  ✔  |  ✔  |
+#### Browser Support for `ECMAScript 2015 (ES6)`
+
+[ES6 New features: overview and comparisons](http://es6-features.org)  
+[Exploring ES6 (book)](https://exploringjs.com/es6/)  
+[Polyfill for all possible ES2015 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  51 ✔  | 54 ✔  | 15 ✔  | 10 ✔  | 38 ✔  | 97 ✔  | 10 ✔  |  ✖  | 5 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -1038,11 +1265,19 @@ Gets the first element or all but the first element.
   // output [2, 3]
   ```
 
-#### Browser Support for Spread in array literals
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  46.0 ✔  | 12.0 ✔ |  16.0 ✔ |  ✖ |  37.0 ✔ | 8.0 ✔  |
+#### Browser Support for `ECMAScript 2015 (ES6)`
+
+[ES6 New features: overview and comparisons](http://es6-features.org)  
+[Exploring ES6 (book)](https://exploringjs.com/es6/)  
+[Polyfill for all possible ES2015 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  51 ✔  | 54 ✔  | 15 ✔  | 10 ✔  | 38 ✔  | 97 ✔  | 10 ✔  |  ✖  | 5 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -1083,11 +1318,19 @@ Creates a slice of array with n elements taken from the end.
   // => [1, 2, 3]
   ```
 
-#### Browser Support for `Array.prototype.slice()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  1.0 ✔  |  ✔  |  1.0 ✔  |  ✔  |  ✔  | ✔  |
+#### Browser Support for `ECMAScript 2015 (ES6)`
+
+[ES6 New features: overview and comparisons](http://es6-features.org)  
+[Exploring ES6 (book)](https://exploringjs.com/es6/)  
+[Polyfill for all possible ES2015 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  51 ✔  | 54 ✔  | 15 ✔  | 10 ✔  | 38 ✔  | 97 ✔  | 10 ✔  |  ✖  | 5 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -1122,23 +1365,39 @@ Creates an array of unique values, taking an `iteratee` to compute uniqueness wi
   // output: [2.1, 1.2]
   ```
 
-#### Browser Support for `Array.prototype.flat()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image] |
-:-: | :-: | :-: | :-: | :-: | :-: |
-69 ✔ | ✖ | 62 ✔ | ✖ | 56 ✔ | 12 ✔ |
-
-#### Browser Support for `Array.isArray()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-5.0 ✔  |  ✔  | 4.0 ✔  |  9.0 ✔  |  10.5 ✔  | 5.0 ✔  |
-
 #### Browser Support for `Set.prototype.has()`
 
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image] |
 :-: | :-: | :-: | :-: | :-: | :-: |
 38 ✔ | 12 ✔ | 13 ✔ | 11 ✔ | 25 ✔ | 8 ✔ |
+
+
+#### Browser Support for `flat & flatMap array methods`
+
+[MDN article on Array.prototype.flat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat)  
+[MDN article on Array.prototype.flatMap](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap)  
+[Article on the history of the `flat` methods](https://developers.google.com/web/updates/2018/03/smooshgate)  
+[Polyfill for flat & flatMap](https://github.com/jonathantneal/array-flat-polyfill)  
+[Polyfill for this feature is available in the core-js library](https://github.com/zloirock/core-js#ecmascript-array)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  69 ✔  | 62 ✔  | 79 ✔  | 12 ✔  | 56 ✔  | 97 ✔  | 12 ✔  |  ✖  | 10.1 ✔  |
+
+
+
+#### Browser Support for `ECMAScript 2015 (ES6)`
+
+[ES6 New features: overview and comparisons](http://es6-features.org)  
+[Exploring ES6 (book)](https://exploringjs.com/es6/)  
+[Polyfill for all possible ES2015 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  51 ✔  | 54 ✔  | 15 ✔  | 10 ✔  | 38 ✔  | 97 ✔  | 10 ✔  |  ✖  | 5 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -1160,11 +1419,19 @@ Returns an array where matching items are filtered.
   // output: [1, 3]
   ```
 
-#### Browser Support for `Array.prototype.filter()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  1.0 ✔  | ✔ | 1.5 ✔ |  9 ✔ |  ✔ |  ✔  |
+#### Browser Support for `ECMAScript 2015 (ES6)`
+
+[ES6 New features: overview and comparisons](http://es6-features.org)  
+[Exploring ES6 (book)](https://exploringjs.com/es6/)  
+[Polyfill for all possible ES2015 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  51 ✔  | 54 ✔  | 15 ✔  | 10 ✔  | 38 ✔  | 97 ✔  | 10 ✔  |  ✖  | 5 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -1208,17 +1475,19 @@ Iterates over a list of elements, yielding each in turn to an iteratee function.
   //output: 1 2 3
   ```
 
-#### Browser Support for `Array.prototype.forEach()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  | ✔ | 1.5 ✔ |  9.0 ✔  |  ✔  |  ✔  |
+#### Browser Support for `ECMAScript 2015 (ES6)`
 
-#### Browser Support for `Object.entries().forEach()`
+[ES6 New features: overview and comparisons](http://es6-features.org)  
+[Exploring ES6 (book)](https://exploringjs.com/es6/)  
+[Polyfill for all possible ES2015 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  54 ✔  | 14 ✔ | 47 ✔ |  ✖  |  41 ✔  |  10.1✔  |
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  51 ✔  | 54 ✔  | 15 ✔  | 10 ✔  | 38 ✔  | 97 ✔  | 10 ✔  |  ✖  | 5 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -1247,11 +1516,20 @@ Tests whether all elements in the array pass the test implemented by the provide
   // output: true
   ```
 
-#### Browser Support fpr `Array.prototype.every()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  | ✔ | 1.5 ✔ |  9.0 ✔  |  ✔  |  ✔  |
+#### Browser Support for `ECMAScript 5`
+
+[Detailed compatibility tables & tests](https://kangax.github.io/compat-table/es5/)  
+[Overview of objects & properties](https://johnresig.com/blog/ecmascript-5-objects-and-properties/)  
+[ES5 polyfill](https://github.com/es-shims/es5-shim)  
+[Polyfill for all possible ES5 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  23 ✔  | 21 ✔  | 12 ✔  | 6 ✔  | 15 ✔  | 4.4 ✔  | 6 ✔  | 10 ✔  | 4 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -1279,11 +1557,19 @@ Creates a new array with all elements that pass the test implemented by the prov
   // output: [12, 130, 44]
   ```
 
-#### Browser Support for `Array.prototype.filter()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  | ✔ | 1.5 ✔ |  9 ✔  |  ✔  |  ✔  |
+#### Browser Support for `ECMAScript 2015 (ES6)`
+
+[ES6 New features: overview and comparisons](http://es6-features.org)  
+[Exploring ES6 (book)](https://exploringjs.com/es6/)  
+[Polyfill for all possible ES2015 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  51 ✔  | 54 ✔  | 15 ✔  | 10 ✔  | 38 ✔  | 97 ✔  | 10 ✔  |  ✖  | 5 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -1315,11 +1601,19 @@ Group items by key.
   // output: {1: [1.3], 2: [2.1, 2.4]}
   ```
 
-#### Browser Support for `Array.prototype.reduce()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  | ✔  | 3.0 ✔ |  9.0 ✔  |  10.5 ✔ |  4.0 ✔ |
+#### Browser Support for `ECMAScript 2015 (ES6)`
+
+[ES6 New features: overview and comparisons](http://es6-features.org)  
+[Exploring ES6 (book)](https://exploringjs.com/es6/)  
+[Polyfill for all possible ES2015 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  51 ✔  | 54 ✔  | 15 ✔  | 10 ✔  | 38 ✔  | 97 ✔  | 10 ✔  |  ✖  | 5 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -1344,17 +1638,31 @@ Checks if a value is in collection.
   // output: true
   ```
 
+
 #### Browser Support for `Array.prototype.includes`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  47.0 ✔  | 14.0 ✔ | 43.0 ✔ |  ✖  |  34.0 ✔ |  9.0 ✔ |
+[MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes#Browser_compatibility)  
+[Polyfill for this feature is available in the core-js library](https://github.com/zloirock/core-js#ecmascript-array)  
 
-#### Browser Support for `Array.prototype.indexOf`
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  47 ✔  | 43 ✔  | 14 ✔  | 9 ✔  | 34 ✔  | 97 ✔  | 9 ✔  |  ✖  | 5 ✔  |
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔ | ✔ | 1.5 ✔ | 9.0 ✔ | ✔ | ✔ |
+
+
+#### Browser Support for `ECMAScript 5`
+
+[Detailed compatibility tables & tests](https://kangax.github.io/compat-table/es5/)  
+[Overview of objects & properties](https://johnresig.com/blog/ecmascript-5-objects-and-properties/)  
+[ES5 polyfill](https://github.com/es-shims/es5-shim)  
+[Polyfill for all possible ES5 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  23 ✔  | 21 ✔  | 12 ✔  | 6 ✔  | 15 ✔  | 4.4 ✔  | 6 ✔  | 10 ✔  | 4 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -1389,11 +1697,19 @@ Creates an object composed of keys generated from the results of running each el
   }
   ```
 
-#### Browser Support for `Array.prototype.reduce()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  | 12.0 ✔ | 3.0 ✔ |  9.0 ✔  |  10.5 ✔ |  4.0 ✔ |
+#### Browser Support for `ECMAScript 2015 (ES6)`
+
+[ES6 New features: overview and comparisons](http://es6-features.org)  
+[Exploring ES6 (book)](https://exploringjs.com/es6/)  
+[Polyfill for all possible ES2015 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  51 ✔  | 54 ✔  | 15 ✔  | 10 ✔  | 38 ✔  | 97 ✔  | 10 ✔  |  ✖  | 5 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -1437,17 +1753,31 @@ Translates all items in an array or object to new array of items.
   // output: [2, 4, 6]
   ```
 
-#### Browser Support for `Object.entries()` and destructuring
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  | ✔ | 1.5 ✔ |  ✖ |  ✔ |  ✔ |
+#### Browser Support for `Object.entries`
 
-#### Browser Support for `Array.prototype.map()`
+[MDN article](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries)  
+[ES2017 spec-compliant shim for Object.entries](https://github.com/es-shims/Object.entries)  
+[Polyfill for this feature is available in the core-js library](https://github.com/zloirock/core-js#ecmascript-object)  
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  | ✔ | 1.5 ✔ |  9.0 ✔  |  ✔ |  ✔ |
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  54 ✔  | 47 ✔  | 14 ✔  | 10.1 ✔  | 41 ✔  | 97 ✔  | 10.3 ✔  |  ✖  | 6.2 ✔  |
+
+
+
+#### Browser Support for `ECMAScript 2015 (ES6)`
+
+[ES6 New features: overview and comparisons](http://es6-features.org)  
+[Exploring ES6 (book)](https://exploringjs.com/es6/)  
+[Polyfill for all possible ES2015 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  51 ✔  | 54 ✔  | 15 ✔  | 10 ✔  | 38 ✔  | 97 ✔  | 10 ✔  |  ✖  | 5 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -1494,11 +1824,19 @@ Extract a functor and use es2015 for better code
   // output: { value: 6 }
   ```
 
-#### Browser Support for `Array.prototype.reduce()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  | ✔ | 3.0 ✔ |  9.0 ✔  |  10.5 ✔ |  4.0 ✔ |
+#### Browser Support for `ECMAScript 2015 (ES6)`
+
+[ES6 New features: overview and comparisons](http://es6-features.org)  
+[Exploring ES6 (book)](https://exploringjs.com/es6/)  
+[Polyfill for all possible ES2015 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  51 ✔  | 54 ✔  | 15 ✔  | 10 ✔  | 38 ✔  | 97 ✔  | 10 ✔  |  ✖  | 5 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -1545,11 +1883,19 @@ Extract a functor and use es2015 for better code
   // output: { value: 2 }
   ```
 
-#### Browser Support for `Array.prototype.reduce()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  | ✔ | 3.0 ✔ |  9.0 ✔  |  10.5 ✔ |  4.0 ✔ |
+#### Browser Support for `ECMAScript 2015 (ES6)`
+
+[ES6 New features: overview and comparisons](http://es6-features.org)  
+[Exploring ES6 (book)](https://exploringjs.com/es6/)  
+[Polyfill for all possible ES2015 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  51 ✔  | 54 ✔  | 15 ✔  | 10 ✔  | 38 ✔  | 97 ✔  | 10 ✔  |  ✖  | 5 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -1580,11 +1926,19 @@ Sorts an array of object based on an object key provided by a parameter (note th
   // => [{name:"apple", amount: 4}, {name:"banana", amount: 2}, {name:"mango", amount: 1}, {name:"pineapple", amount: 2}]
   ```
 
-#### Browser Support for `Array.prototype.concat()` and `Array.prototype.sort()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  1.0 ✔  | ✔ | 1.0 ✔ |  5.5 ✔  |  ✔  |  ✔  |
+#### Browser Support for `ECMAScript 2015 (ES6)`
+
+[ES6 New features: overview and comparisons](http://es6-features.org)  
+[Exploring ES6 (book)](https://exploringjs.com/es6/)  
+[Polyfill for all possible ES2015 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  51 ✔  | 54 ✔  | 15 ✔  | 10 ✔  | 38 ✔  | 97 ✔  | 10 ✔  |  ✖  | 5 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -1608,11 +1962,20 @@ Sorts an array of object based on an object key provided by a parameter (note th
   // output: ["Alice", "Bob", "Jeremy"]
   ```
 
-#### Browser Support for `Array.prototype.map()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  |  ✔ | 1.5 ✔ |  9.0 ✔  |  ✔  |  ✔  |
+#### Browser Support for `ECMAScript 5`
+
+[Detailed compatibility tables & tests](https://kangax.github.io/compat-table/es5/)  
+[Overview of objects & properties](https://johnresig.com/blog/ecmascript-5-objects-and-properties/)  
+[ES5 polyfill](https://github.com/es-shims/es5-shim)  
+[Polyfill for all possible ES5 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  23 ✔  | 21 ✔  | 12 ✔  | 6 ✔  | 15 ✔  | 4.4 ✔  | 6 ✔  | 10 ✔  | 4 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -1647,11 +2010,19 @@ Creates an array of numbers progressing from start up to.
 :-: | :-: | :-: | :-: | :-: | :-: |
  45.0 ✔  |  ✔ |  32.0 ✔ |  ✖   |  ✔ |  9.0 ✔ |
 
-#### Browser Support for keys and spread in Array literals
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
- 46.0 ✔  |  12.0 ✔ |  16.0 ✔ |  ✖ | 37.0 ✔ |  7.1 ✔ |
+#### Browser Support for `ECMAScript 2015 (ES6)`
+
+[ES6 New features: overview and comparisons](http://es6-features.org)  
+[Exploring ES6 (book)](https://exploringjs.com/es6/)  
+[Polyfill for all possible ES2015 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  51 ✔  | 54 ✔  | 15 ✔  | 10 ✔  | 38 ✔  | 97 ✔  | 10 ✔  |  ✖  | 5 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -1677,11 +2048,19 @@ Applies a function against an accumulator and each value of the array (from left
   // output: 10
   ```
 
-#### Browser Support for `Array.prototype.reduce()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] |  ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  | ✔ | 3.0 ✔ |  9.0 ✔  |  10.5 ✔ |  4.0 ✔ |
+#### Browser Support for `ECMAScript 2015 (ES6)`
+
+[ES6 New features: overview and comparisons](http://es6-features.org)  
+[Exploring ES6 (book)](https://exploringjs.com/es6/)  
+[Polyfill for all possible ES2015 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  51 ✔  | 54 ✔  | 15 ✔  | 10 ✔  | 38 ✔  | 97 ✔  | 10 ✔  |  ✖  | 5 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -1707,11 +2086,20 @@ This method is like _.reduce except that it iterates over elements of collection
   // output: -2
   ```
 
-#### Browser Support for `Array.prototype.reduceRight()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  | ✔ | 3.0 ✔ |  9.0 ✔  |  10.5 ✔ |  4.0 ✔ |
+#### Browser Support for `ECMAScript 5`
+
+[Detailed compatibility tables & tests](https://kangax.github.io/compat-table/es5/)  
+[Overview of objects & properties](https://johnresig.com/blog/ecmascript-5-objects-and-properties/)  
+[ES5 polyfill](https://github.com/es-shims/es5-shim)  
+[Polyfill for all possible ES5 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  23 ✔  | 21 ✔  | 12 ✔  | 6 ✔  | 15 ✔  | 4.4 ✔  | 6 ✔  | 10 ✔  | 4 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -1742,11 +2130,19 @@ The opposite of _.filter; this method returns the elements of collection that pr
   // output: [1, 3, 5]
   ```
 
-#### Browser Support for `Array.prototype.filter()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  | 12 ✔ | 1.5 ✔ |  9.0 ✔  |  9.5 ✔ |  3.0 ✔ |
+#### Browser Support for `ECMAScript 2015 (ES6)`
+
+[ES6 New features: overview and comparisons](http://es6-features.org)  
+[Exploring ES6 (book)](https://exploringjs.com/es6/)  
+[Polyfill for all possible ES2015 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  51 ✔  | 54 ✔  | 15 ✔  | 10 ✔  | 38 ✔  | 97 ✔  | 10 ✔  |  ✖  | 5 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -1773,11 +2169,20 @@ Gets a random element from `array`.
   // output: 2
   ```
 
-#### Browser Support for `Array.prototype.length()` and `Math.random()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  | ✔ | 1.0 ✔ |  ✔  |  ✔ |  ✔ |
+#### Browser Support for `ECMAScript 5`
+
+[Detailed compatibility tables & tests](https://kangax.github.io/compat-table/es5/)  
+[Overview of objects & properties](https://johnresig.com/blog/ecmascript-5-objects-and-properties/)  
+[ES5 polyfill](https://github.com/es-shims/es5-shim)  
+[Polyfill for all possible ES5 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  23 ✔  | 21 ✔  | 12 ✔  | 6 ✔  | 15 ✔  | 4.4 ✔  | 6 ✔  | 10 ✔  | 4 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -1797,11 +2202,20 @@ Returns the number of values in the collection.
   // output: 3
   ```
 
-#### Browser Support for `Object.keys()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  5.0 ✔  | ✔ | 4.0 ✔ |  9.0 ✔ |  12.0 ✔ |  5.0 ✔ |
+#### Browser Support for `ECMAScript 5`
+
+[Detailed compatibility tables & tests](https://kangax.github.io/compat-table/es5/)  
+[Overview of objects & properties](https://johnresig.com/blog/ecmascript-5-objects-and-properties/)  
+[ES5 polyfill](https://github.com/es-shims/es5-shim)  
+[Polyfill for all possible ES5 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  23 ✔  | 21 ✔  | 12 ✔  | 6 ✔  | 15 ✔  | 4.4 ✔  | 6 ✔  | 10 ✔  | 4 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -1836,6 +2250,7 @@ Tests whether any of the elements in the array pass the test implemented by the 
 :-: | :-: | :-: | :-: | :-: | :-: |
   ✔  | ✔ | 1.5 ✔ |  ✔ 9.0  |  ✔  | ✔  |
 
+
 **[⬆ back to top](#quick-links)**
 
 ### _.sortBy
@@ -1865,11 +2280,19 @@ Sorts an array of object based on an object key provided by a parameter (note th
   // => [{name:"apple", amount: 4}, {name:"banana", amount: 2}, {name:"mango", amount: 1}, {name:"pineapple", amount: 2}]
   ```
 
-#### Browser Support for `Array.prototype.concat()` and `Array.prototype.sort()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  1.0 ✔  | ✔ | 1.0 ✔ |  5.5 ✔  |  ✔  |  ✔  |
+#### Browser Support for `ECMAScript 2015 (ES6)`
+
+[ES6 New features: overview and comparisons](http://es6-features.org)  
+[Exploring ES6 (book)](https://exploringjs.com/es6/)  
+[Polyfill for all possible ES2015 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  51 ✔  | 54 ✔  | 15 ✔  | 10 ✔  | 38 ✔  | 97 ✔  | 10 ✔  |  ✖  | 5 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -1891,11 +2314,19 @@ Produces a duplicate-free version of the array, using === to test object equalit
   // output: [1, 2, 4, 3]
   ```
 
-#### Browser Support for Spread in array literals
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
- 46.0  ✔  | 12.0 ✔ | 16.0 ✔ |  ✖  |  37.0 ✔  |  8.0 ✔  |
+#### Browser Support for `ECMAScript 2015 (ES6)`
+
+[ES6 New features: overview and comparisons](http://es6-features.org)  
+[Exploring ES6 (book)](https://exploringjs.com/es6/)  
+[Polyfill for all possible ES2015 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  51 ✔  | 54 ✔  | 15 ✔  | 10 ✔  | 38 ✔  | 97 ✔  | 10 ✔  |  ✖  | 5 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -1924,11 +2355,19 @@ similar to _.uniq except that it accepts comparator which is invoked to compare 
   // output: [{ x: 1, y: 2 }, { x: 2, y: 1 }]
   ```
 
-#### Browser Support for `Array.prototype.filter()` and `Array.prototype.findIndex()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
- 45.0  ✔  | 12.0 ✔ | 25.0 ✔ |  ✖  |  32.0 ✔  |  8.0 ✔  |
+#### Browser Support for `ECMAScript 2015 (ES6)`
+
+[ES6 New features: overview and comparisons](http://es6-features.org)  
+[Exploring ES6 (book)](https://exploringjs.com/es6/)  
+[Polyfill for all possible ES2015 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  51 ✔  | 54 ✔  | 15 ✔  | 10 ✔  | 38 ✔  | 97 ✔  | 10 ✔  |  ✖  | 5 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -1956,13 +2395,8 @@ Creates a version of the function that will only be run after first being called
   })
   ```
 
-#### Browser Support for `Array.prototype.forEach()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
- :-: | :-: | :-: | :-: | :-: | :-: |
-   ✔  |  ✔ |  1.5 ✔ |  9.0 ✔ |  ✔  | ✔  |
-
- **[⬆ back to top](#quick-links)**
+**[⬆ back to top](#quick-links)**
 
 ### _.bind
 Create a new function that calls _func_ with _thisArg_ and _args_.
@@ -1986,13 +2420,22 @@ Create a new function that calls _func_ with _thisArg_ and _args_.
   var boundOffsetX = objA.offsetX.bind(objB, 0);
   ```
 
-#### Browser Support for `Function.prototype.bind()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
- :-: | :-: | :-: | :-: | :-: | :-: |
-  7.0 ✔  |  ✔ | 4.0 ✔ |  9.0 ✔ |  11.6 ✔ |  5.1 ✔  |
+#### Browser Support for `ECMAScript 5`
 
- **[⬆ back to top](#quick-links)**
+[Detailed compatibility tables & tests](https://kangax.github.io/compat-table/es5/)  
+[Overview of objects & properties](https://johnresig.com/blog/ecmascript-5-objects-and-properties/)  
+[ES5 polyfill](https://github.com/es-shims/es5-shim)  
+[Polyfill for all possible ES5 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  23 ✔  | 21 ✔  | 12 ✔  | 6 ✔  | 15 ✔  | 4.4 ✔  | 6 ✔  | 10 ✔  | 4 ✔  |
+
+
+
+
+**[⬆ back to top](#quick-links)**
 
 ### _.debounce
 
@@ -2022,8 +2465,9 @@ jQuery(window).on('resize', debounce(calculateLayout, 150));
  :-: | :-: | :-: | :-: | :-: | :-: |
   7.0 ✔  |  ✔ | 4.0 ✔ |  9.0 ✔ |  11.6 ✔ |  5.1 ✔  |
 
- **[⬆ back to top](#quick-links)**
 
+
+**[⬆ back to top](#quick-links)**
 
 ### _.isFunction
 
@@ -2049,13 +2493,8 @@ isFunction(123);
 // => false
 ```
 
-#### Browser Support
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
- :-: | :-: | :-: | :-: | :-: | :-: |
- ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-
- **[⬆ back to top](#quick-links)**
+**[⬆ back to top](#quick-links)**
 
 ### _.partial
 Create a new function that calls _func_ with _args_.
@@ -2087,14 +2526,31 @@ Create a new function that calls _func_ with _args_.
   // output: 'Hello Jose'
   ```
 
-#### Browser Support for Spread
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  46.0 ✔ | 12.0 ✔ | 16.0 ✔ |  ✖  |  37.0 ✔ |  8.0 ✔ |
+#### Browser Support for `Rest parameters`
+
+[Rest parameters and defaults](https://hacks.mozilla.org/2015/05/es6-in-depth-rest-parameters-and-defaults/)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  47 ✔  | 15 ✔  | 12 ✔  | 10 ✔  | 34 ✔  | 97 ✔  | 10 ✔  |  ✖  | 5 ✔  |
+
+
+
+#### Browser Support for `ECMAScript 2015 (ES6)`
+
+[ES6 New features: overview and comparisons](http://es6-features.org)  
+[Exploring ES6 (book)](https://exploringjs.com/es6/)  
+[Polyfill for all possible ES2015 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  51 ✔  | 54 ✔  | 15 ✔  | 10 ✔  | 38 ✔  | 97 ✔  | 10 ✔  |  ✖  | 5 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
-
 
 ### _.throttle
 Create a new function that limits calls to _func_ to once every given timeframe.
@@ -2121,8 +2577,9 @@ Create a new function that limits calls to _func_ to once every given timeframe.
  :-: | :-: | :-: | :-: | :-: | :-: |
   5.0 ✔  |  12.0 ✔ | 3.0 ✔ |  9.0 ✔ |  10.5 ✔ |  4.0 ✔  |
 
- **[⬆ back to top](#quick-links)**
 
+
+**[⬆ back to top](#quick-links)**
 
 ## Lang
 
@@ -2148,11 +2605,19 @@ console.log(castArray([2]));
 // output: [2]
 ```
 
-#### Browser Support for `Array.isArray()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-5.0 ✔  |  ✔  | 4.0 ✔  |  9.0 ✔  |  10.5 ✔  | 5.0 ✔  |
+#### Browser Support for `ECMAScript 5`
+
+[Detailed compatibility tables & tests](https://kangax.github.io/compat-table/es5/)  
+[Overview of objects & properties](https://johnresig.com/blog/ecmascript-5-objects-and-properties/)  
+[ES5 polyfill](https://github.com/es-shims/es5-shim)  
+[Polyfill for all possible ES5 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  23 ✔  | 21 ✔  | 12 ✔  | 6 ✔  | 15 ✔  | 4.4 ✔  | 6 ✔  | 10 ✔  | 4 ✔  |
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -2170,11 +2635,6 @@ console.log(3 > 1);
 // output: true
 ```
 
-#### Browser Support
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  | ✔ | ✔ |  ✔  | ✔ | ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -2192,11 +2652,6 @@ console.log(3 >= 1);
 // output: true
 ```
 
-#### Browser Support
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  | ✔ | ✔ |  ✔  | ✔ | ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -2214,11 +2669,6 @@ console.log(Object.prototype.toString.call(new Date) === "[object Date]");
 // output: true
 ```
 
-#### Browser Support for `String.prototype.toString.call()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  | ✔ | ✔ |  ✔  | ✔ | ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -2256,14 +2706,21 @@ Checks if value is an empty object or collection.
   // output: false
   ```
 
-#### Browser Support for `Array.prototype.includes()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-   47.0 ✔  | 14.0 ✔ | 43.0 ✔ |  ✖ |  34.0 ✔ |  9.0 ✔  |
+#### Browser Support for `ECMAScript 2015 (ES6)`
+
+[ES6 New features: overview and comparisons](http://es6-features.org)  
+[Exploring ES6 (book)](https://exploringjs.com/es6/)  
+[Polyfill for all possible ES2015 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  51 ✔  | 54 ✔  | 15 ✔  | 10 ✔  | 38 ✔  | 97 ✔  | 10 ✔  |  ✖  | 5 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
-
 
 ### _.isFinite
 
@@ -2282,11 +2739,7 @@ Checks if value is a finite primitive number.
   console.log(Number.isFinite(3))
   // output: true
   ```
-#### Browser Support for `Number.isFinite()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  19.0 ✔  |  ✔ | 16.0 ✔ |  ✖  |  15.0 ✔ |  9.0 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -2307,11 +2760,7 @@ Checks if value is an integer.
   console.log(Number.isInteger('3'))
   // output: false
   ```
-#### Browser Support for `Number.isInteger()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  |  12 ✔ | 16.0 ✔ |  ✖  |  ✔ |  ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -2340,17 +2789,18 @@ Voice from the Lodash author:
 >Lodash's `_.isNaN` is equiv to ES6 `Number.isNaN` which is different than the global `isNaN`.
 >--- [jdalton](https://github.com/cht8687/You-Dont-Need-Lodash-Underscore/commit/b8559a603dccaaa2449b5a68a2d8325cf1fb29cd#)
 
-#### Browser Support for `isNaN`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  | ✔ |  1.0 ✔ |  ✔ |  ✔ |  ✔  |
+#### Browser Support for `ES6 Number`
 
-#### Browser Support for `Number.isNaN`
+[New number and Math features in ES6](http://www.2ality.com/2015/04/numbers-math-es6.html)  
+[Polyfill for those features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript-number)  
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  25.0 ✔ | ✔ |  15.0 ✔ |  ✖ |  ✔ |  9.0 ✔ |
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  34 ✔  | 32 ✔  | 12 ✔  | 9 ✔  | 21 ✔  | 97 ✔  | 9 ✔  |  ✖  | 4 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -2376,11 +2826,6 @@ console.log(undefined == null)
 // output: true
 ```
 
-#### Browser Support
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  |  ✔ | ✔ |  ✔  | ✔ | ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -2402,11 +2847,6 @@ console.log(void 0 === null);
 // output: false
 ```
 
-#### Browser Support
-
-![Chrome][chrome-image] |  ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  |  ✔ | ✔ |  ✔  | ✔ | ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -2426,11 +2866,6 @@ console.log(a === undefined);
 // output: true
 ```
 
-#### Browser Support
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  | ✔ | 1 ✔ |  ✔  | ✔ | ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -2469,13 +2904,21 @@ The method is used to copy the values of all enumerable own properties from one 
   // output: { 'c': 3, 'e': 5 }
   ```
 
-#### Browser Support for `Object.assign()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  45.0 ✔  | ✔ | 34.0 ✔ |  ✖  |  32.0 ✔ |  9.0 ✔  |
+#### Browser Support for `ECMAScript 2015 (ES6)`
 
- **[⬆ back to top](#quick-links)**
+[ES6 New features: overview and comparisons](http://es6-features.org)  
+[Exploring ES6 (book)](https://exploringjs.com/es6/)  
+[Polyfill for all possible ES2015 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  51 ✔  | 54 ✔  | 15 ✔  | 10 ✔  | 38 ✔  | 97 ✔  | 10 ✔  |  ✖  | 5 ✔  |
+
+
+
+
+**[⬆ back to top](#quick-links)**
 
 ### _.defaults
 
@@ -2497,13 +2940,21 @@ The method is used to apply new values over an object with default values for ke
   // output { a: 3, b: 2 }
   ```
 
-#### Browser Support for `Object.assign()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  45.0 ✔  | ✔ | 34.0 ✔ |  ✖  |  32.0 ✔ |  9.0 ✔  |
+#### Browser Support for `ECMAScript 2015 (ES6)`
 
- **[⬆ back to top](#quick-links)**
+[ES6 New features: overview and comparisons](http://es6-features.org)  
+[Exploring ES6 (book)](https://exploringjs.com/es6/)  
+[Polyfill for all possible ES2015 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  51 ✔  | 54 ✔  | 15 ✔  | 10 ✔  | 38 ✔  | 97 ✔  | 10 ✔  |  ✖  | 5 ✔  |
+
+
+
+
+**[⬆ back to top](#quick-links)**
 
 ### _.extend
 
@@ -2555,56 +3006,23 @@ The method is used to copy the values of all enumerable own and inherited proper
   // output: { 'c': 3, 'd': 4, 'e': 5, 'f': 6 }
   ```
 
-#### Browser Support for `Object.assign()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  45.0 ✔  | ✔ | 34.0 ✔ |  ✖  |  32.0 ✔ |  9.0 ✔  |
+#### Browser Support for `ECMAScript 2015 (ES6)`
 
- **[⬆ back to top](#quick-links)**
+[ES6 New features: overview and comparisons](http://es6-features.org)  
+[Exploring ES6 (book)](https://exploringjs.com/es6/)  
+[Polyfill for all possible ES2015 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
 
- ### _.has
-
-Checks if `key` is a direct property of `object`. Key may be a path of a value separated by `.`
-
-  ```js
-  // Lodash
-  var object = { a: 1, b: 'settings', c: { d: 'test' } };
-
-  var hasA = _.has(object, 'a');
-  var hasCWhichHasD = _.has(object, 'c.d')
-
-  console.log(hasA);
-  // output: true
-  console.log(hasCWhichHasD);
-  // output: true
-
-  // Native
-  const has = function (obj, key) {
-    var keyParts = key.split('.');
-
-    return !!obj && (
-      keyParts.length > 1
-        ? has(obj[key.split('.')[0]], keyParts.slice(1).join('.'))
-        : hasOwnProperty.call(obj, key)
-    );
-  };
-
-  var object = { a: 1, b: 'settings' };
-  var result = has(object, 'a');
-  // output: true
-  ```
-
-#### Browser Support for Object .hasOwnProperty
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  | 12 ✔ |  ✔ |  5.5 ✔ |  5 ✔ |  3 ✔ |
-
-  **[⬆ back to top](#quick-links)**
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  51 ✔  | 54 ✔  | 15 ✔  | 10 ✔  | 38 ✔  | 97 ✔  | 10 ✔  |  ✖  | 5 ✔  |
 
 
- ### _.get
+
+
+**[⬆ back to top](#quick-links)**
+
+### _.get
 
 Gets the value at path of object.
 *Note: If provided path does not exist inside the object js will generate error.*
@@ -2645,12 +3063,6 @@ Gets the value at path of object.
 
   ```
 
-#### Browser Support for Object destructing
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  49.0 ✔  | 14.0 ✔ |  41.0 ✔ |  ✖  |  41.0 ✔ |  8.0 ✔ |
-
 #### Browser Support for optional chaining `?.`
 
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
@@ -2663,7 +3075,63 @@ Gets the value at path of object.
 :-: | :-: | :-: | :-: | :-: | :-: |
   80.0 ✔  | 80.0 ✔ |  72.0 ✔ |  ✖  |  ✖ |  13.1 ✔ |
 
-  **[⬆ back to top](#quick-links)**
+
+#### Browser Support for `ECMAScript 2015 (ES6)`
+
+[ES6 New features: overview and comparisons](http://es6-features.org)  
+[Exploring ES6 (book)](https://exploringjs.com/es6/)  
+[Polyfill for all possible ES2015 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  51 ✔  | 54 ✔  | 15 ✔  | 10 ✔  | 38 ✔  | 97 ✔  | 10 ✔  |  ✖  | 5 ✔  |
+
+
+
+
+**[⬆ back to top](#quick-links)**
+
+
+### _.has
+
+Checks if `key` is a direct property of `object`. Key may be a path of a value separated by `.`
+
+  ```js
+  // Lodash
+  var object = { a: 1, b: 'settings', c: { d: 'test' } };
+
+  var hasA = _.has(object, 'a');
+  var hasCWhichHasD = _.has(object, 'c.d')
+
+  console.log(hasA);
+  // output: true
+  console.log(hasCWhichHasD);
+  // output: true
+
+  // Native
+  const has = function (obj, key) {
+    var keyParts = key.split('.');
+
+    return !!obj && (
+      keyParts.length > 1
+        ? has(obj[key.split('.')[0]], keyParts.slice(1).join('.'))
+        : hasOwnProperty.call(obj, key)
+    );
+  };
+
+  var object = { a: 1, b: 'settings' };
+  var result = has(object, 'a');
+  // output: true
+  ```
+
+#### Browser Support for Object .hasOwnProperty
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  | 12 ✔ |  ✔ |  5.5 ✔ |  5 ✔ |  3 ✔ |
+
+
+**[⬆ back to top](#quick-links)**
 
 ### _.keys
 
@@ -2681,11 +3149,20 @@ Retrieves all the names of the object's own enumerable properties.
   // output: ["one", "two", "three"]
   ```
 
-#### Browser Support for `Object.keys()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |  :-: |
-  5.0 ✔  | ✔ | 4.0 ✔ |  9.0 ✔ |  12.0 ✔ |  5.0 ✔ |
+#### Browser Support for `ECMAScript 5`
+
+[Detailed compatibility tables & tests](https://kangax.github.io/compat-table/es5/)  
+[Overview of objects & properties](https://johnresig.com/blog/ecmascript-5-objects-and-properties/)  
+[ES5 polyfill](https://github.com/es-shims/es5-shim)  
+[Polyfill for all possible ES5 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  23 ✔  | 21 ✔  | 12 ✔  | 6 ✔  | 15 ✔  | 4.4 ✔  | 6 ✔  | 10 ✔  | 4 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -2707,11 +3184,19 @@ Returns a copy of the object, filtered to omit the keys specified.
   // output: { 'b': '2' }
   ```
 
-#### Browser Support for Spread in object literals
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  60.0 ✔ | ✖ | 55.0 ✔ |  ✖ |  37.0 ✔ | ✖ |
+#### Browser Support for `ECMAScript 2015 (ES6)`
+
+[ES6 New features: overview and comparisons](http://es6-features.org)  
+[Exploring ES6 (book)](https://exploringjs.com/es6/)  
+[Polyfill for all possible ES2015 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  51 ✔  | 54 ✔  | 15 ✔  | 10 ✔  | 38 ✔  | 97 ✔  | 10 ✔  |  ✖  | 5 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -2754,6 +3239,7 @@ Creates an object composed of the object properties predicate returns truthy for
 :-: | :-: | :-: | :-: | :-: | :-: |
   38.0 ✔ | ✔ | 13.0 ✔ |  12.0 ✔  |  25.0 ✔ | 7.1 ✔ |
 
+
 **[⬆ back to top](#quick-links)**
 
 ### _.pickBy
@@ -2783,11 +3269,6 @@ Creates an object composed of the object properties predicate returns truthy for
   // output: {a: 1, c: 3}
   ```
 
-#### Browser Support
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |  :-: |
-  ✔  | ✔ |  ✔ | 6.0 ✔  | ✔ | ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -2808,11 +3289,19 @@ Retrieves all the given object's own enumerable property `[ key, value ]` pairs.
   // output: [["one", 1], ["two", 2], ["three", 3]]
   ```
 
-#### Browser Support for `Object.entries()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  54.0 ✔  | 14.0 ✔  | 47.0 ✔ |  ✖  |  41.0 ✔ |  10.1 ✔ |
+#### Browser Support for `Object.entries`
+
+[MDN article](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries)  
+[ES2017 spec-compliant shim for Object.entries](https://github.com/es-shims/Object.entries)  
+[Polyfill for this feature is available in the core-js library](https://github.com/zloirock/core-js#ecmascript-object)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  54 ✔  | 47 ✔  | 14 ✔  | 10.1 ✔  | 41 ✔  | 97 ✔  | 10.3 ✔  |  ✖  | 6.2 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -2832,11 +3321,19 @@ Retrieves all the given object's own enumerable property values.
   // output: [1, 2, 3]
   ```
 
-#### Browser Support for `Object.values()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  54.0 ✔  | 14.0 ✔ |  47.0 ✔ |  ✖  |  41.0 ✔ |  10.1 ✔ |
+#### Browser Support for `ECMAScript 2015 (ES6)`
+
+[ES6 New features: overview and comparisons](http://es6-features.org)  
+[Exploring ES6 (book)](https://exploringjs.com/es6/)  
+[Polyfill for all possible ES2015 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  51 ✔  | 54 ✔  | 15 ✔  | 10 ✔  | 38 ✔  | 97 ✔  | 10 ✔  |  ✖  | 5 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -2863,11 +3360,20 @@ Converts the first character of string to upper case and the remaining to lower 
   // => 'Fred'
   ```
 
-#### Browser Support
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
- ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+#### Browser Support for `ECMAScript 5`
+
+[Detailed compatibility tables & tests](https://kangax.github.io/compat-table/es5/)  
+[Overview of objects & properties](https://johnresig.com/blog/ecmascript-5-objects-and-properties/)  
+[ES5 polyfill](https://github.com/es-shims/es5-shim)  
+[Polyfill for all possible ES5 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  23 ✔  | 21 ✔  | 12 ✔  | 6 ✔  | 15 ✔  | 4.4 ✔  | 6 ✔  | 10 ✔  | 4 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -2897,11 +3403,19 @@ Checks if string ends with the given target string.
   // => true
   ```
 
-#### Browser Support for `String.prototype.endsWith()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  41.0 ✔  |  ✔ | 17.0 ✔ |  ✖  |  28.0 ✔ |  9.0 ✔ |
+#### Browser Support for `ECMAScript 2015 (ES6)`
+
+[ES6 New features: overview and comparisons](http://es6-features.org)  
+[Exploring ES6 (book)](https://exploringjs.com/es6/)  
+[Polyfill for all possible ES2015 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  51 ✔  | 54 ✔  | 15 ✔  | 10 ✔  | 38 ✔  | 97 ✔  | 10 ✔  |  ✖  | 5 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -2932,11 +3446,6 @@ Checks if value is classified as a String primitive or object.
   // => false
   ```
 
-#### Browser Support
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
- ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -2959,9 +3468,21 @@ Converts the first character of string to lower case.
   console.log(result)
   // output: 'fred'
   ```
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  | ✔ |  ✔ |  ✔  |  ✔ |  ✔  |
+
+
+#### Browser Support for `ECMAScript 5`
+
+[Detailed compatibility tables & tests](https://kangax.github.io/compat-table/es5/)  
+[Overview of objects & properties](https://johnresig.com/blog/ecmascript-5-objects-and-properties/)  
+[ES5 polyfill](https://github.com/es-shims/es5-shim)  
+[Polyfill for all possible ES5 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  23 ✔  | 21 ✔  | 12 ✔  | 6 ✔  | 15 ✔  | 4.4 ✔  | 6 ✔  | 10 ✔  | 4 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -2979,11 +3500,19 @@ Pads the current string with another string (multiple times, if needed) until th
   // output: '12300'
   ```
 
-#### Browser Support for `String.prototype.padEnd()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  57.0 ✔  |  15.0 ✔ | 48.0 ✔ |  ✖  |  44.0 ✔ |  10.0 ✔ |
+#### Browser Support for `String.prototype.padStart(), String.prototype.padEnd()`
+
+[MDN Web Docs - padStart()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart)  
+[MDN Web Docs - padEnd()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padEnd)  
+[Polyfill for this feature is available in the core-js library](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  57 ✔  | 48 ✔  | 15 ✔  | 10 ✔  | 44 ✔  | 97 ✔  | 10 ✔  |  ✖  | 7.2 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -3002,11 +3531,19 @@ Pads the current string with another string (multiple times, if needed) until th
   // output: '00123'
   ```
 
-#### Browser Support for `String.prototype.padStart()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  57.0 ✔  |  15.0 ✔ | 48.0 ✔ |  ✖  |  44.0 ✔ |  10.0 ✔ |
+#### Browser Support for `String.prototype.padStart(), String.prototype.padEnd()`
+
+[MDN Web Docs - padStart()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart)  
+[MDN Web Docs - padEnd()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padEnd)  
+[Polyfill for this feature is available in the core-js library](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  57 ✔  | 48 ✔  | 15 ✔  | 10 ✔  | 44 ✔  | 97 ✔  | 10 ✔  |  ✖  | 7.2 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -3026,11 +3563,19 @@ Repeats the given string n times.
   // output: 'abcabc'
   ```
 
-#### Browser Support for `String.prototype.repeat()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  41.0 ✔  | ✔ | 24.0 ✔ |  ✖  |  28.0 ✔ |  9.0 ✔ |
+#### Browser Support for `ECMAScript 2015 (ES6)`
+
+[ES6 New features: overview and comparisons](http://es6-features.org)  
+[Exploring ES6 (book)](https://exploringjs.com/es6/)  
+[Polyfill for all possible ES2015 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  51 ✔  | 54 ✔  | 15 ✔  | 10 ✔  | 38 ✔  | 97 ✔  | 10 ✔  |  ✖  | 5 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -3053,11 +3598,20 @@ returns a new string with some or all matches of a `pattern` replaced by a `repl
   // output: 'oranges are round, and oranges are juicy.'
   ```
 
-#### Browser Support for `String.prototype.replace()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  | ✔ | 1.0 ✔ |  ✔  |  ✔ |  ✔  |
+#### Browser Support for `ECMAScript 5`
+
+[Detailed compatibility tables & tests](https://kangax.github.io/compat-table/es5/)  
+[Overview of objects & properties](https://johnresig.com/blog/ecmascript-5-objects-and-properties/)  
+[ES5 polyfill](https://github.com/es-shims/es5-shim)  
+[Polyfill for all possible ES5 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  23 ✔  | 21 ✔  | 12 ✔  | 6 ✔  | 15 ✔  | 4.4 ✔  | 6 ✔  | 10 ✔  | 4 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -3077,11 +3631,20 @@ Splits string by separator.
   // output: ['a','b']
   ```
 
-#### Browser Support for `String.prototype.split()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  | ✔ |  1.0 ✔ |  ✔  | ✔ | ✔ |
+#### Browser Support for `ECMAScript 5`
+
+[Detailed compatibility tables & tests](https://kangax.github.io/compat-table/es5/)  
+[Overview of objects & properties](https://johnresig.com/blog/ecmascript-5-objects-and-properties/)  
+[ES5 polyfill](https://github.com/es-shims/es5-shim)  
+[Polyfill for all possible ES5 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  23 ✔  | 21 ✔  | 12 ✔  | 6 ✔  | 15 ✔  | 4.4 ✔  | 6 ✔  | 10 ✔  | 4 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -3101,11 +3664,19 @@ Checks if string starts with the given target string.
   // output: true
   ```
 
-#### Browser Support for `String.prototype.startsWith()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  41.0 ✔  |  ✔ | 17.0 ✔ |  ✖  |  28.0 ✔ |  9.0 ✔ |
+#### Browser Support for `ECMAScript 2015 (ES6)`
+
+[ES6 New features: overview and comparisons](http://es6-features.org)  
+[Exploring ES6 (book)](https://exploringjs.com/es6/)  
+[Polyfill for all possible ES2015 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  51 ✔  | 54 ✔  | 15 ✔  | 10 ✔  | 38 ✔  | 97 ✔  | 10 ✔  |  ✖  | 5 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -3128,11 +3699,18 @@ Create a template function.
   // output: 'hello fred'
   ```
 
-#### Browser Support for String (template) literals
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  41.0 ✔  | 12.0 ✔ | 34.0 ✔ |  ✖  |  28.0 ✔ |  9.0 ✔  |
+#### Browser Support for `ES6 Template Literals (Template Strings)`
+
+[MDN Web Docs - Template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)  
+[ES6 Template Literals in Depth](https://ponyfoo.com/articles/es6-template-strings-in-depth)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  41 ✔  | 34 ✔  | 13 ✔  | 9.1 ✔  | 29 ✔  | 97 ✔  | 9 ✔  |  ✖  | 4 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -3153,11 +3731,20 @@ Lowercases a given string.
   // output: 'foobar'
   ```
 
-#### Browser Support for `String.prototype.toLowerCase()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  |  ✔ | 1.0 ✔ |  ✔  |  ✔ |  ✔  |
+#### Browser Support for `ECMAScript 5`
+
+[Detailed compatibility tables & tests](https://kangax.github.io/compat-table/es5/)  
+[Overview of objects & properties](https://johnresig.com/blog/ecmascript-5-objects-and-properties/)  
+[ES5 polyfill](https://github.com/es-shims/es5-shim)  
+[Polyfill for all possible ES5 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  23 ✔  | 21 ✔  | 12 ✔  | 6 ✔  | 15 ✔  | 4.4 ✔  | 6 ✔  | 10 ✔  | 4 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -3177,11 +3764,20 @@ Uppercases a given string.
   // output: 'FOOBAR'
   ```
 
-#### Browser Support for `String.prototype.toUpperCase()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  |  ✔ | 1.0 ✔ |  ✔  |  ✔ |  ✔  |
+#### Browser Support for `ECMAScript 5`
+
+[Detailed compatibility tables & tests](https://kangax.github.io/compat-table/es5/)  
+[Overview of objects & properties](https://johnresig.com/blog/ecmascript-5-objects-and-properties/)  
+[ES5 polyfill](https://github.com/es-shims/es5-shim)  
+[Polyfill for all possible ES5 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  23 ✔  | 21 ✔  | 12 ✔  | 6 ✔  | 15 ✔  | 4.4 ✔  | 6 ✔  | 10 ✔  | 4 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -3201,11 +3797,20 @@ Removes the leading and trailing whitespace characters from a string.
   // output: 'abc'
   ```
 
-#### Browser Support for `String.prototype.trim()`
 
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  5.0 ✔  | ✔ |  3.5 ✔ |  9.0 ✔  |  10.5 ✔ |  5.0 ✔  |
+#### Browser Support for `ECMAScript 5`
+
+[Detailed compatibility tables & tests](https://kangax.github.io/compat-table/es5/)  
+[Overview of objects & properties](https://johnresig.com/blog/ecmascript-5-objects-and-properties/)  
+[ES5 polyfill](https://github.com/es-shims/es5-shim)  
+[Polyfill for all possible ES5 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  23 ✔  | 21 ✔  | 12 ✔  | 6 ✔  | 15 ✔  | 4.4 ✔  | 6 ✔  | 10 ✔  | 4 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -3228,9 +3833,21 @@ Uppercases the first letter of a given string
   console.log(result)
   // output: 'George'
   ```
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  | ✔ |  ✔ |  ✔  |  ✔ |  ✔  |
+
+
+#### Browser Support for `ECMAScript 5`
+
+[Detailed compatibility tables & tests](https://kangax.github.io/compat-table/es5/)  
+[Overview of objects & properties](https://johnresig.com/blog/ecmascript-5-objects-and-properties/)  
+[ES5 polyfill](https://github.com/es-shims/es5-shim)  
+[Polyfill for all possible ES5 features is available in the core-js library](https://github.com/zloirock/core-js#ecmascript)  
+
+![Chrome](/docs/pic/chrome.png) | ![Firefox](/docs/pic/firefox.png) | ![Edge](/docs/pic/edge.png) | ![Safari](/docs/pic/safari.png) | ![Opera](/docs/pic/opera.png) | ![Android](/docs/pic/android.png) | ![iOS](/docs/pic/ios_saf.png) | ![IE](/docs/pic/ie.png) | ![Samsung](/docs/pic/samsung.png)
+:-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  | :-:  |
+  23 ✔  | 21 ✔  | 12 ✔  | 6 ✔  | 15 ✔  | 4.4 ✔  | 6 ✔  | 10 ✔  | 4 ✔  |
+
+
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -3261,6 +3878,7 @@ Invokes the iteratee n times, returning an array of the results of each invocati
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |
   45.0 ✔  | ✔ |  32.0 ✔ |  ✖  |  ✔ | 9.0 ✔  |
+
 
 **[⬆ back to top](#quick-links)**
 
@@ -3309,11 +3927,6 @@ clamp(10, 99);
 // => 10
 ```
 
-#### Browser Support for `Math.min() and Math.max()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-✔  |  ✔  |  ✔  |  ✔  |  ✔  |  ✔  |
 
 **[⬆ back to top](#quick-links)**
 
@@ -3345,11 +3958,6 @@ Checks if n is between start and up to, but not including, end. If end is not sp
     // output: true
   ```
 
-  #### Browser Support for `Math.min() and Math.max()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-✔  |  ✔  |  ✔  |  ✔  |  ✔  |  ✔  |
 
 **[⬆ back to top](#quick-links)**
 
@@ -3410,11 +4018,6 @@ Produces a random number between the inclusive lower and upper bounds. If only o
 
   ```
 
-#### Browser Support for `Math.random()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  |  ✔  |  ✔  |  ✔  |  ✔  |  ✔  |
 
 **[⬆ back to top](#quick-links)**
 

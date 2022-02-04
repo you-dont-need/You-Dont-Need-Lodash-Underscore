@@ -23,5 +23,3 @@ Create a new function that limits calls to _func_ to once every given timeframe.
  :-: | :-: | :-: | :-: | :-: | :-: |
   5.0 ✔  |  12.0 ✔ | 3.0 ✔ |  9.0 ✔ |  10.5 ✔ |  4.0 ✔  |
 
- **[⬆ back to top](#quick-links)**
-

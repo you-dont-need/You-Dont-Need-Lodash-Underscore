@@ -15,10 +15,4 @@ Joins a list of elements in an array with a given separator.
   // output: 'one--two--three'
   ```
 
-#### Browser Support for `Array.prototype.join()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  1.0 ✔  |   ✔  | 1.0 ✔ |  5.5 ✔  |  ✔ |  ✔  |
-
-**[⬆ back to top](#quick-links)**
+<!-- caniuse: es6 -->

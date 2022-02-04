@@ -21,10 +21,4 @@ Gets a random element from `array`.
   // output: 2
   ```
 
-#### Browser Support for `Array.prototype.length()` and `Math.random()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  | ✔ | 1.0 ✔ |  ✔  |  ✔ |  ✔ |
-
-**[⬆ back to top](#quick-links)**
+<!-- caniuse: es5 -->

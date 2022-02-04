@@ -16,10 +16,4 @@ Returns the first index at which a given element can be found in the array, or -
   // output: 0
   ```
 
-#### Browser Support for `Array.prototype.indexOf()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  | ✔  |  1.5 ✔ |  9.0 ✔  |  ✔  |  ✔  |
-
-**[⬆ back to top](#quick-links)**
+<!-- caniuse: es6 -->

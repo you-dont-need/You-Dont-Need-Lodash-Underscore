@@ -28,5 +28,3 @@ Tests whether any of the elements in the array pass the test implemented by the 
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |
   ✔  | ✔ | 1.5 ✔ |  ✔ 9.0  |  ✔  | ✔  |
-
-**[⬆ back to top](#quick-links)**

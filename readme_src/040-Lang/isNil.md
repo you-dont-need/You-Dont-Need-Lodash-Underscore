@@ -19,11 +19,3 @@ console.log(NaN == null);
 console.log(undefined == null)
 // output: true
 ```
-
-#### Browser Support
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  |  ✔ | ✔ |  ✔  | ✔ | ✔ |
-
-**[⬆ back to top](#quick-links)**

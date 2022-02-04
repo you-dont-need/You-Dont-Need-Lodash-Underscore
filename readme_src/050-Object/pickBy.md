@@ -24,11 +24,3 @@ Creates an object composed of the object properties predicate returns truthy for
   console.log(result)
   // output: {a: 1, c: 3}
   ```
-
-#### Browser Support
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: |  :-: |
-  ✔  | ✔ |  ✔ | 6.0 ✔  | ✔ | ✔ |
-
-**[⬆ back to top](#quick-links)**

@@ -25,10 +25,4 @@ Sorts an array of object based on an object key provided by a parameter (note th
   // => [{name:"apple", amount: 4}, {name:"banana", amount: 2}, {name:"mango", amount: 1}, {name:"pineapple", amount: 2}]
   ```
 
-#### Browser Support for `Array.prototype.concat()` and `Array.prototype.sort()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  1.0 ✔  | ✔ | 1.0 ✔ |  5.5 ✔  |  ✔  |  ✔  |
-
-**[⬆ back to top](#quick-links)**
+<!-- caniuse: es6 -->

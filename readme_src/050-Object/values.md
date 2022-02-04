@@ -14,10 +14,4 @@ Retrieves all the given object's own enumerable property values.
   // output: [1, 2, 3]
   ```
 
-#### Browser Support for `Object.values()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  54.0 ✔  | 14.0 ✔ |  47.0 ✔ |  ✖  |  41.0 ✔ |  10.1 ✔ |
-
-**[⬆ back to top](#quick-links)**
+<!-- caniuse: es6 -->

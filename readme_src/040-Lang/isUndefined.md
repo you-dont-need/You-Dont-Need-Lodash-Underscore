@@ -13,11 +13,3 @@ console.log(typeof a === 'undefined');
 console.log(a === undefined);
 // output: true
 ```
-
-#### Browser Support
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  | ✔ | 1 ✔ |  ✔  | ✔ | ✔ |
-
-**[⬆ back to top](#quick-links)**

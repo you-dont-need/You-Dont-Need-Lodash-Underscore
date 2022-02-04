@@ -29,10 +29,4 @@ Creates an array of numbers progressing from start up to.
 :-: | :-: | :-: | :-: | :-: | :-: |
  45.0 ✔  |  ✔ |  32.0 ✔ |  ✖   |  ✔ |  9.0 ✔ |
 
-#### Browser Support for keys and spread in Array literals
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
- 46.0 ✔  |  12.0 ✔ |  16.0 ✔ |  ✖ | 37.0 ✔ |  7.1 ✔ |
-
-**[⬆ back to top](#quick-links)**
+<!-- caniuse: es6 -->

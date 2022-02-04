@@ -26,5 +26,3 @@ jQuery(window).on('resize', debounce(calculateLayout, 150));
  :-: | :-: | :-: | :-: | :-: | :-: |
   7.0 ✔  |  ✔ | 4.0 ✔ |  9.0 ✔ |  11.6 ✔ |  5.1 ✔  |
 
- **[⬆ back to top](#quick-links)**
-

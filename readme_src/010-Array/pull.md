@@ -33,16 +33,10 @@ Removes all provided values from the given array using strict equality for compa
   console.log(array); // still [1, 2, 3, 1, 2, 3]. This is not in place, unlike lodash!
   ```
 
-#### Browser Support for `Array.prototype.filter()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  1.0 ✔  | ✔ | 1.5 ✔ |  9 ✔ |  ✔ |  ✔  |
+<!-- caniuse: es6 -->
 
 #### Browser Support for `Set.prototype.has()`
 
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image] |
 :-: | :-: | :-: | :-: | :-: | :-: |
 38 ✔ | 12 ✔ | 13 ✔ | 11 ✔ | 25 ✔ | 8 ✔ |
-
-**[⬆ back to top](#quick-links)**

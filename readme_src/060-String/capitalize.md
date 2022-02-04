@@ -19,10 +19,4 @@ Converts the first character of string to upper case and the remaining to lower 
   // => 'Fred'
   ```
 
-#### Browser Support
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
- ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-
-**[⬆ back to top](#quick-links)**
+<!-- caniuse: es5 -->

@@ -21,10 +21,4 @@ Voice from the Lodash author:
 It's exposed on _ because previously, like `Underscore`, it was only exposed in the chaining syntax.
 >--- [jdalton](https://github.com/cht8687/You-Dont-Need-Lodash-Underscore/commit/22c4bcf2be48dd415d2b073759805562e520b615#)
 
-#### Browser Support for `Array.prototype.reverse()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  | ✔ | 1.5 ✔ |  9 ✔ |  ✔ |  ✔  |
-
-**[⬆ back to top](#quick-links)**
+<!-- caniuse: es6 -->

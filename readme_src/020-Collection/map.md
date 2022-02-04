@@ -38,16 +38,5 @@ Translates all items in an array or object to new array of items.
   // output: [2, 4, 6]
   ```
 
-#### Browser Support for `Object.entries()` and destructuring
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  | ✔ | 1.5 ✔ |  ✖ |  ✔ |  ✔ |
-
-#### Browser Support for `Array.prototype.map()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  | ✔ | 1.5 ✔ |  9.0 ✔  |  ✔ |  ✔ |
-
-**[⬆ back to top](#quick-links)**
+<!-- caniuse: object-entries -->
+<!-- caniuse: es6 -->

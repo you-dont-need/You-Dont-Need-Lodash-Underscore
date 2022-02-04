@@ -16,10 +16,4 @@ Returns the index of the last occurrence of value in the array, or -1 if value i
   // output: 2
   ```
 
-#### Browser Support for `Array.prototype.lastIndexOf()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  |  ✔ | 1.5 ✔  | 9.0 ✔  |  ✔  |  ✔  |
-
-**[⬆ back to top](#quick-links)**
+<!-- caniuse: es5 -->

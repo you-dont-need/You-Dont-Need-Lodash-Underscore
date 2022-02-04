@@ -30,6 +30,8 @@
     "kebab-case": "^1.0.0"
   },
   "devDependencies": {
+    "caniuse-api": "^3.0.0",
+    "caniuse-db": "^1.0.30001307",
     "coveralls": "^2.11.9",
     "eslint": "^4.18.2",
     "istanbul": "^0.4.4",

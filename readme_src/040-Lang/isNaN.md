@@ -23,16 +23,4 @@ Voice from the Lodash author:
 >Lodash's `_.isNaN` is equiv to ES6 `Number.isNaN` which is different than the global `isNaN`.
 >--- [jdalton](https://github.com/cht8687/You-Dont-Need-Lodash-Underscore/commit/b8559a603dccaaa2449b5a68a2d8325cf1fb29cd#)
 
-#### Browser Support for `isNaN`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  | ✔ |  1.0 ✔ |  ✔ |  ✔ |  ✔  |
-
-#### Browser Support for `Number.isNaN`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  25.0 ✔ | ✔ |  15.0 ✔ |  ✖ |  ✔ |  9.0 ✔ |
-
-**[⬆ back to top](#quick-links)**
+<!-- caniuse: es6-number -->

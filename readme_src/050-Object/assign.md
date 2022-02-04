@@ -31,10 +31,4 @@ The method is used to copy the values of all enumerable own properties from one 
   // output: { 'c': 3, 'e': 5 }
   ```
 
-#### Browser Support for `Object.assign()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  45.0 ✔  | ✔ | 34.0 ✔ |  ✖  |  32.0 ✔ |  9.0 ✔  |
-
- **[⬆ back to top](#quick-links)**
+<!-- caniuse: es6 -->

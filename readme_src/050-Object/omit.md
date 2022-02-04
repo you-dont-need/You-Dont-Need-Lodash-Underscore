@@ -16,10 +16,4 @@ Returns a copy of the object, filtered to omit the keys specified.
   // output: { 'b': '2' }
   ```
 
-#### Browser Support for Spread in object literals
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  60.0 ✔ | ✖ | 55.0 ✔ |  ✖ |  37.0 ✔ | ✖ |
-
-**[⬆ back to top](#quick-links)**
+<!-- caniuse: es6 -->

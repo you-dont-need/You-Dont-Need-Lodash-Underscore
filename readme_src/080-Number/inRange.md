@@ -25,11 +25,3 @@ Checks if n is between start and up to, but not including, end. If end is not sp
     inRange(-3, -2, -6);
     // output: true
   ```
-
-  #### Browser Support for `Math.min() and Math.max()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-✔  |  ✔  |  ✔  |  ✔  |  ✔  |  ✔  |
-
-**[⬆ back to top](#quick-links)**

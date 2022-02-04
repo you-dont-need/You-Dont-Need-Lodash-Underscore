@@ -40,11 +40,3 @@ clamp(10, -5);
 clamp(10, 99);
 // => 10
 ```
-
-#### Browser Support for `Math.min() and Math.max()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-✔  |  ✔  |  ✔  |  ✔  |  ✔  |  ✔  |
-
-**[⬆ back to top](#quick-links)**

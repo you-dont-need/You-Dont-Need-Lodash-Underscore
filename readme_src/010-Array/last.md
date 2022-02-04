@@ -31,10 +31,5 @@ Returns the last element of an array. Passing n will return the last n elements 
   // => [4, 5]
   ```
 
-#### Browser Support for `Array.prototype.concat()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  1.0 ✔  |  ✔  | 1.0 ✔  | 5.5 ✔  |  ✔  | ✔  |
-
-**[⬆ back to top](#quick-links)**
+<!-- caniuse: es6 -->
+<!-- caniuse: es5 -->

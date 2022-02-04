@@ -20,10 +20,4 @@ This method is like _.reduce except that it iterates over elements of collection
   // output: -2
   ```
 
-#### Browser Support for `Array.prototype.reduceRight()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  | ✔ | 3.0 ✔ |  9.0 ✔  |  10.5 ✔ |  4.0 ✔ |
-
-**[⬆ back to top](#quick-links)**
+<!-- caniuse: es5 -->

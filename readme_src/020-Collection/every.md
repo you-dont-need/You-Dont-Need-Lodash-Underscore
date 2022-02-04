@@ -23,10 +23,4 @@ Tests whether all elements in the array pass the test implemented by the provide
   // output: true
   ```
 
-#### Browser Support fpr `Array.prototype.every()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  | ✔ | 1.5 ✔ |  9.0 ✔  |  ✔  |  ✔  |
-
-**[⬆ back to top](#quick-links)**
+<!-- caniuse: es5 -->

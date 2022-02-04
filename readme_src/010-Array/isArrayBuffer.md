@@ -14,10 +14,4 @@ Checks if value is classified as an ArrayBuffer object.
 
   :warning: You will get the wrong result if you get `ArrayBuffer` from another realm. [See details.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/instanceof#instanceof_and_multiple_context_e.g._frames_or_windows)
 
-  #### Browser Support for `instanceof`
-
- ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
- :-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  |  ✔  | 1.0 ✔  | ✔  | ✔  | ✔  |
-
-**[⬆ back to top](#quick-links)**
+<!-- caniuse: sharedarraybuffer -->

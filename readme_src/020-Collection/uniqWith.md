@@ -23,10 +23,4 @@ similar to _.uniq except that it accepts comparator which is invoked to compare 
   // output: [{ x: 1, y: 2 }, { x: 2, y: 1 }]
   ```
 
-#### Browser Support for `Array.prototype.filter()` and `Array.prototype.findIndex()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
- 45.0  ✔  | 12.0 ✔ | 25.0 ✔ |  ✖  |  32.0 ✔  |  8.0 ✔  |
-
-**[⬆ back to top](#quick-links)**
+<!-- caniuse: es6 -->

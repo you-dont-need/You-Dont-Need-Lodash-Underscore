@@ -54,11 +54,3 @@ Produces a random number between the inclusive lower and upper bounds. If only o
     // => an integer between 2 and 5
 
   ```
-
-#### Browser Support for `Math.random()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  |  ✔  |  ✔  |  ✔  |  ✔  |  ✔  |
-
-**[⬆ back to top](#quick-links)**

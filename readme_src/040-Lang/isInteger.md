@@ -15,10 +15,3 @@ Checks if value is an integer.
   console.log(Number.isInteger('3'))
   // output: false
   ```
-#### Browser Support for `Number.isInteger()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  |  12 ✔ | 16.0 ✔ |  ✖  |  ✔ |  ✔ |
-
-**[⬆ back to top](#quick-links)**

@@ -33,10 +33,4 @@ Fills elements of array with value from start up to, but not including, end.
   // output: [4, '*', '*', 10]
   ```
 
-#### Browser Support for `Array.prototype.fill()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  45.0 ✔ | ✔  | 31.0 ✔ |  ✖  |  32.0 ✔ |  8 ✔ |
-
-**[⬆ back to top](#quick-links)**
+<!-- caniuse: es6 -->

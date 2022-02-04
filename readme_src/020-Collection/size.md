@@ -14,10 +14,4 @@ Returns the number of values in the collection.
   // output: 3
   ```
 
-#### Browser Support for `Object.keys()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  5.0 ✔  | ✔ | 4.0 ✔ |  9.0 ✔ |  12.0 ✔ |  5.0 ✔ |
-
-**[⬆ back to top](#quick-links)**
+<!-- caniuse: es5 -->

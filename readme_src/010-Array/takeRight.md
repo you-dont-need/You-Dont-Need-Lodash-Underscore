@@ -35,10 +35,4 @@ Creates a slice of array with n elements taken from the end.
   // => [1, 2, 3]
   ```
 
-#### Browser Support for `Array.prototype.slice()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  1.0 ✔  |  ✔  |  1.0 ✔  |  ✔  |  ✔  | ✔  |
-
-**[⬆ back to top](#quick-links)**
+<!-- caniuse: es6 -->

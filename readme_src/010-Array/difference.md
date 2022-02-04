@@ -21,10 +21,5 @@ Similar to [without](#_without), but returns the values from array that are not 
   // output: [1, 3, 4]
   ```
 
-#### Browser Support for `Array.prototype.reduce()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-   ✔  |  ✔ | 3.0 ✔ |  9.0 ✔  |  10.5 ✔ |  4.0 ✔ |
-
-**[⬆ back to top](#quick-links)**
+<!-- caniuse: array-includes -->
+<!-- caniuse: es5 -->

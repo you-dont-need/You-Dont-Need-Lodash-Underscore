@@ -17,10 +17,4 @@ returns a new string with some or all matches of a `pattern` replaced by a `repl
   // output: 'oranges are round, and oranges are juicy.'
   ```
 
-#### Browser Support for `String.prototype.replace()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  | ✔ | 1.0 ✔ |  ✔  |  ✔ |  ✔  |
-
-**[⬆ back to top](#quick-links)**
+<!-- caniuse: es5 -->

@@ -17,8 +17,5 @@ Uppercases the first letter of a given string
   console.log(result)
   // output: 'George'
   ```
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  | ✔ |  ✔ |  ✔  |  ✔ |  ✔  |
 
-**[⬆ back to top](#quick-links)**
+<!-- caniuse: es5 -->

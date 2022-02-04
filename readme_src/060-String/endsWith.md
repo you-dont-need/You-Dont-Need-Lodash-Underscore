@@ -24,10 +24,4 @@ Checks if string ends with the given target string.
   // => true
   ```
 
-#### Browser Support for `String.prototype.endsWith()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  41.0 ✔  |  ✔ | 17.0 ✔ |  ✖  |  28.0 ✔ |  9.0 ✔ |
-
-**[⬆ back to top](#quick-links)**
+<!-- caniuse: es6 -->

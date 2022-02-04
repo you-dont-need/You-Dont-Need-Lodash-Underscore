@@ -14,10 +14,4 @@ Removes the leading and trailing whitespace characters from a string.
   // output: 'abc'
   ```
 
-#### Browser Support for `String.prototype.trim()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  5.0 ✔  | ✔ |  3.5 ✔ |  9.0 ✔  |  10.5 ✔ |  5.0 ✔  |
-
-**[⬆ back to top](#quick-links)**
+<!-- caniuse: es5 -->

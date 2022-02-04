@@ -82,7 +82,6 @@ For more information, see [Configuring the ESLint Plugin](configuring.md)
 this is not necessarily the case for their Native equivalent. If null safety is critical for your application, we
 suggest that you take extra precautions [e.g. consider using the native Object.keys as Object.keys(value || {})].*
 
-
 ## Quick Links
 
 **[Array](#array)**
@@ -92,7 +91,7 @@ suggest that you take extra precautions [e.g. consider using the native Object.k
 1. [_.concat](#_concat)
 1. [_.difference](#_difference)
 1. [_.drop](#_drop)
-1. [_.dropRight](#_dropRight)
+1. [_.dropRight](#_dropright)
 1. [_.fill](#_fill)
 1. [_.find](#_find)
 1. [_.findIndex](#_findindex)
@@ -100,55 +99,53 @@ suggest that you take extra precautions [e.g. consider using the native Object.k
 1. [_.flatten](#_flatten)
 1. [_.flattenDeep](#_flattendeep)
 1. [_.fromPairs](#_frompairs)
-1. [_.head and _.tail](#_head-and-_tail)
+1. [_.head](#_head)
 1. [_.indexOf](#_indexof)
+1. [_.initial](#_initial)
 1. [_.intersection](#_intersection)
 1. [_.isArray](#_isarray)
 1. [_.isArrayBuffer](#_isarraybuffer)
 1. [_.join](#_join)
 1. [_.last](#_last)
 1. [_.lastIndexOf](#_lastindexof)
+1. [_.pull](#_pull)
 1. [_.reverse](#_reverse)
 1. [_.slice](#_slice)
+1. [_.tail](#_tail)
+1. [_.takeRight](#_takeright)
+1. [_.unionBy](#_unionby)
 1. [_.without](#_without)
-1. [_.initial](#_initial)
-1. [_.pull](#_pull)
-1. [_.unionBy](#_unionBy)
 
-**[Collection*](#collection)**
-
-*:heavy_exclamation_mark:<b>Important:</b> Note that most native equivalents are array methods,
-and will not work with objects. If this functionality is needed and no object method is provided,
-then Lodash/Underscore might be the better option. Bear in mind however, that all iterable
-objects can easily be converted to an array by use of the
-[spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax).*
+**[Collection](#collection)**
 
 1. [_.each](#_each)
 1. [_.every](#_every)
 1. [_.filter](#_filter)
 1. [_.groupBy](#_groupby)
 1. [_.includes](#_includes)
-1. [_.keyBy](#_keyBy)
+1. [_.keyBy](#_keyby)
 1. [_.map](#_map)
-1. [_.minBy and _.maxBy](#_minby-and-_maxby)
-1. [_.orderBy](#_sortby-and-_orderby)
+1. [_.maxBy](#_maxby)
+1. [_.minBy](#_minby)
+1. [_.orderBy](#_orderby)
 1. [_.pluck](#_pluck)
 1. [_.range](#_range)
 1. [_.reduce](#_reduce)
 1. [_.reduceRight](#_reduceright)
 1. [_.reject](#_reject)
+1. [_.sample](#_sample)
 1. [_.size](#_size)
 1. [_.some](#_some)
-1. [_.sortBy](#_sortby-and-_orderby)
+1. [_.sortBy](#_sortby)
 1. [_.uniq](#_uniq)
-1. [_.uniqWith](#_uniqWith)
+1. [_.uniqWith](#_uniqwith)
 
 **[Function](#function)**
 
 1. [_.after](#_after)
 1. [_.bind](#_bind)
 1. [_.debounce](#_debounce)
-1. [_.isFunction](#_isFunction)
+1. [_.isFunction](#_isfunction)
 1. [_.partial](#_partial)
 1. [_.throttle](#_throttle)
 
@@ -160,7 +157,7 @@ objects can easily be converted to an array by use of the
 1. [_.isDate](#_isdate)
 1. [_.isEmpty](#_isempty)
 1. [_.isFinite](#_isfinite)
-1. [_.isInteger](#_isInteger)
+1. [_.isInteger](#_isinteger)
 1. [_.isNaN](#_isnan)
 1. [_.isNil](#_isnil)
 1. [_.isNull](#_isnull)
@@ -171,8 +168,6 @@ objects can easily be converted to an array by use of the
 1. [_.assign](#_assign)
 1. [_.defaults](#_defaults)
 1. [_.extend](#_extend)
-1. [_.has](#_has)
-1. [_.get](#_get)
 1. [_.keys](#_keys)
 1. [_.omit](#_omit)
 1. [_.pick](#_pick)
@@ -183,19 +178,20 @@ objects can easily be converted to an array by use of the
 **[String](#string)**
 
 1. [_.capitalize](#_capitalize)
-1. [_.endsWith](#_endsWith)
-1. [_.isString](#_isString)
-1. [_.lowerFirst](#_lowerFirst)
-1. [_.padStart and _.padEnd](#_padstart-and-_padend)
+1. [_.endsWith](#_endswith)
+1. [_.isString](#_isstring)
+1. [_.lowerFirst](#_lowerfirst)
+1. [_.padEnd](#_padend)
+1. [_.padStart](#_padstart)
 1. [_.repeat](#_repeat)
 1. [_.replace](#_replace)
 1. [_.split](#_split)
-1. [_.startsWith](#_startsWith)
+1. [_.startsWith](#_startswith)
 1. [_.template](#_template)
 1. [_.toLower](#_tolower)
 1. [_.toUpper](#_toupper)
 1. [_.trim](#_trim)
-1. [_.upperFirst](#_upperFirst)
+1. [_.upperFirst](#_upperfirst)
 
 **[Util](#util)**
 
@@ -204,8 +200,9 @@ objects can easily be converted to an array by use of the
 **[Number](#number)**
 
 1. [_.clamp](#_clamp)
-2. [_.inRange](#_inRange)
-3. [_.random](#_random)
+1. [_.inRange](#_inrange)
+1. [_.random](#_random)
+
 
 ## Array
 
@@ -672,7 +669,7 @@ Returns an object composed from key-value pairs.
 
 **[⬆ back to top](#quick-links)**
 
-### _.head and _.tail
+### _.head
 Gets the first element or all but the first element.
 
   ```js
@@ -683,18 +680,10 @@ Gets the first element or all but the first element.
   _.head(array)
   // output: 1
 
-  // Underscore: _.rest, _.tail, _.drop
-  // Lodash: _.tail
-  _.tail(array)
-  // output: [2, 3]
-
-
   // Native
   const [ head, ...tail ] = array
   console.log(head)
   // output: 1
-  console.log(tail)
-  // output [2, 3]
   ```
 
 #### Browser Support for Spread in array literals
@@ -731,6 +720,30 @@ Returns the first index at which a given element can be found in the array, or -
 
 **[⬆ back to top](#quick-links)**
 
+### _.initial
+
+Returns everything but the last entry of the array. Pass n to exclude the last n elements from the result.
+
+  ```js
+  // Underscore
+  var array = [5, 4, 3, 2, 1]
+  console.log(_.initial(array, 2))
+  // output: [5, 4, 3]
+
+  // Native
+  var array = [5, 4, 3, 2, 1]
+  console.log(array.slice(0, -2));
+  // output: [5, 4, 3]
+  ```
+
+#### Browser Support for `Array.prototype.slice()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  1.0 ✔  |  ✔  |  1.0 ✔  |  ✔  |  ✔  | ✔  |
+
+**[⬆ back to top](#quick-links)**
+
 ### _.intersection
 Returns an array that is the intersection of all the arrays. Each value in the result is present in each of the arrays.
 
@@ -762,52 +775,8 @@ Returns an array that is the intersection of all the arrays. Each value in the r
 
 **[⬆ back to top](#quick-links)**
 
-### _.takeRight
-
-Creates a slice of array with n elements taken from the end.
-:heavy_exclamation_mark: Native slice does not behave entirely the same as the `Lodash` method. See example below to understand why.
-
-  ```js
-  // Underscore/Lodash
-  _.takeRight([1, 2, 3]);
-  // => [3]
-
-  _.takeRight([1, 2, 3], 2);
-  // => [2, 3]
-
-  _.takeRight([1, 2, 3], 5);
-  // => [1, 2, 3]
-
-  // Native
-  [1, 2, 3].slice(-1);
-  // => [3]
-
-  [1, 2, 3].slice(-2);
-  // => [2, 3]
-
-  [1, 2, 3].slice(-5);
-  // => [1, 2, 3]
-
-  // Difference in compatibility
-
-  // Lodash
-  _.takeRight([1, 2, 3], 0);
-  // => []
-
-  // Native
-  [1, 2, 3].slice(0);
-  // => [1, 2, 3]
-  ```
-
-#### Browser Support for `Array.prototype.slice()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  1.0 ✔  |  ✔  |  1.0 ✔  |  ✔  |  ✔  | ✔  |
-
-**[⬆ back to top](#quick-links)**
-
 ### _.isArray
+
 Returns true if given value is an array.
 
   ```js
@@ -855,6 +824,7 @@ Checks if value is classified as an ArrayBuffer object.
 **[⬆ back to top](#quick-links)**
 
 ### _.join
+
 :heavy_exclamation_mark:`Not in Underscore.js`
 Joins a list of elements in an array with a given separator.
 
@@ -945,109 +915,6 @@ Returns the index of the last occurrence of value in the array, or -1 if value i
 
 **[⬆ back to top](#quick-links)**
 
-### _.reverse
-:heavy_exclamation_mark:`Not in Underscore.js`
-Reverses array so that the first element becomes the last, the second element becomes the second to last, and so on.
-
-  ```js
-  // Lodash
-  var array = [1, 2, 3]
-  console.log(_.reverse(array))
-  // output: [3, 2, 1]
-
-  // Native
-  var array = [1, 2, 3]
-  console.log(array.reverse())
-  // output: [3, 2, 1]
-  ```
-
-Voice from the Lodash author:
-
->Lodash's `_.reverse` just calls `Array#reverse` and enables composition like `_.map(arrays, _.reverse).`
-It's exposed on _ because previously, like `Underscore`, it was only exposed in the chaining syntax.
->--- [jdalton](https://github.com/cht8687/You-Dont-Need-Lodash-Underscore/commit/22c4bcf2be48dd415d2b073759805562e520b615#)
-
-#### Browser Support for `Array.prototype.reverse()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  | ✔ | 1.5 ✔ |  9 ✔ |  ✔ |  ✔  |
-
-**[⬆ back to top](#quick-links)**
-
-### _.slice
-Returns a shallow copy of a portion of an array into a new array object selected from `begin` to `end` (`end` not included)
-
-  ```js
-  // Lodash
-  var array = [1, 2, 3, 4]
-  console.log(_.slice(array, 1, 3))
-  // output: [2, 3]
-
-  // Native
-  var array = [1, 2, 3, 4]
-  console.log(array.slice(1, 3));
-  // output: [2, 3]
-  ```
-
-#### Browser Support for `Array.prototype.slice()`
-
- ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
- :-: | :-: | :-: | :-: | :-: | :-: |
-  1.0 ✔  |  ✔  |  1.0 ✔  |  ✔  |  ✔  |  ✔  |
-
-**[⬆ back to top](#quick-links)**
-
-### _.without
-:heavy_exclamation_mark:`Not in Underscore.js`
-Returns an array where matching items are filtered.
-
-  ```js
-  // Lodash
-  var array = [1, 2, 3]
-  console.log(_.without(array, 2))
-  // output: [1, 3]
-
-  // Native
-  var array = [1, 2, 3]
-  console.log(array.filter(function(value) {
-    return value !== 2;
-  }));
-  // output: [1, 3]
-  ```
-
-#### Browser Support for `Array.prototype.filter()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  1.0 ✔  | ✔ | 1.5 ✔ |  9 ✔ |  ✔ |  ✔  |
-
-**[⬆ back to top](#quick-links)**
-
-### _.initial
-
-Returns everything but the last entry of the array. Pass n to exclude the last n elements from the result.
-
-  ```js
-  // Underscore
-  var array = [5, 4, 3, 2, 1]
-  console.log(_.initial(array, 2))
-  // output: [5, 4, 3]
-
-  // Native
-  var array = [5, 4, 3, 2, 1]
-  console.log(array.slice(0, -2));
-  // output: [5, 4, 3]
-  ```
-
-#### Browser Support for `Array.prototype.slice()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  1.0 ✔  |  ✔  |  1.0 ✔  |  ✔  |  ✔  | ✔  |
-
-**[⬆ back to top](#quick-links)**
-
 ### _.pull
 
 Removes all provided values from the given array using strict equality for comparisons, i.e. ===.
@@ -1094,6 +961,133 @@ Removes all provided values from the given array using strict equality for compa
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image] |
 :-: | :-: | :-: | :-: | :-: | :-: |
 38 ✔ | 12 ✔ | 13 ✔ | 11 ✔ | 25 ✔ | 8 ✔ |
+
+**[⬆ back to top](#quick-links)**
+
+### _.reverse
+
+:heavy_exclamation_mark:`Not in Underscore.js`
+Reverses array so that the first element becomes the last, the second element becomes the second to last, and so on.
+
+  ```js
+  // Lodash
+  var array = [1, 2, 3]
+  console.log(_.reverse(array))
+  // output: [3, 2, 1]
+
+  // Native
+  var array = [1, 2, 3]
+  console.log(array.reverse())
+  // output: [3, 2, 1]
+  ```
+
+Voice from the Lodash author:
+
+>Lodash's `_.reverse` just calls `Array#reverse` and enables composition like `_.map(arrays, _.reverse).`
+It's exposed on _ because previously, like `Underscore`, it was only exposed in the chaining syntax.
+>--- [jdalton](https://github.com/cht8687/You-Dont-Need-Lodash-Underscore/commit/22c4bcf2be48dd415d2b073759805562e520b615#)
+
+#### Browser Support for `Array.prototype.reverse()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  | ✔ | 1.5 ✔ |  9 ✔ |  ✔ |  ✔  |
+
+**[⬆ back to top](#quick-links)**
+
+### _.slice
+
+Returns a shallow copy of a portion of an array into a new array object selected from `begin` to `end` (`end` not included)
+
+  ```js
+  // Lodash
+  var array = [1, 2, 3, 4]
+  console.log(_.slice(array, 1, 3))
+  // output: [2, 3]
+
+  // Native
+  var array = [1, 2, 3, 4]
+  console.log(array.slice(1, 3));
+  // output: [2, 3]
+  ```
+
+#### Browser Support for `Array.prototype.slice()`
+
+ ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+ :-: | :-: | :-: | :-: | :-: | :-: |
+  1.0 ✔  |  ✔  |  1.0 ✔  |  ✔  |  ✔  |  ✔  |
+
+**[⬆ back to top](#quick-links)**
+
+### _.tail
+
+Gets the first element or all but the first element.
+
+  ```js
+  const array = [1, 2, 3]
+
+  // Underscore: _.rest, _.tail, _.drop
+  // Lodash: _.tail
+  _.tail(array)
+  // output: [2, 3]
+
+
+  // Native
+  const [ head, ...tail ] = array
+  console.log(tail)
+  // output [2, 3]
+  ```
+
+#### Browser Support for Spread in array literals
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  46.0 ✔  | 12.0 ✔ |  16.0 ✔ |  ✖ |  37.0 ✔ | 8.0 ✔  |
+
+**[⬆ back to top](#quick-links)**
+
+### _.takeRight
+
+Creates a slice of array with n elements taken from the end.
+:heavy_exclamation_mark: Native slice does not behave entirely the same as the `Lodash` method. See example below to understand why.
+
+  ```js
+  // Underscore/Lodash
+  _.takeRight([1, 2, 3]);
+  // => [3]
+
+  _.takeRight([1, 2, 3], 2);
+  // => [2, 3]
+
+  _.takeRight([1, 2, 3], 5);
+  // => [1, 2, 3]
+
+  // Native
+  [1, 2, 3].slice(-1);
+  // => [3]
+
+  [1, 2, 3].slice(-2);
+  // => [2, 3]
+
+  [1, 2, 3].slice(-5);
+  // => [1, 2, 3]
+
+  // Difference in compatibility
+
+  // Lodash
+  _.takeRight([1, 2, 3], 0);
+  // => []
+
+  // Native
+  [1, 2, 3].slice(0);
+  // => [1, 2, 3]
+  ```
+
+#### Browser Support for `Array.prototype.slice()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  1.0 ✔  |  ✔  |  1.0 ✔  |  ✔  |  ✔  | ✔  |
 
 **[⬆ back to top](#quick-links)**
 
@@ -1148,11 +1142,39 @@ Creates an array of unique values, taking an `iteratee` to compute uniqueness wi
 
 **[⬆ back to top](#quick-links)**
 
+### _.without
+:heavy_exclamation_mark:`Not in Underscore.js`
+Returns an array where matching items are filtered.
+
+  ```js
+  // Lodash
+  var array = [1, 2, 3]
+  console.log(_.without(array, 2))
+  // output: [1, 3]
+
+  // Native
+  var array = [1, 2, 3]
+  console.log(array.filter(function(value) {
+    return value !== 2;
+  }));
+  // output: [1, 3]
+  ```
+
+#### Browser Support for `Array.prototype.filter()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  1.0 ✔  | ✔ | 1.5 ✔ |  9 ✔ |  ✔ |  ✔  |
+
+**[⬆ back to top](#quick-links)**
+
 ## Collection*
 
 *:heavy_exclamation_mark:<b>Important:</b> Note that most native equivalents are array methods,
 and will not work with objects. If this functionality is needed and no object method is provided,
-then Lodash/Underscore is the better option.*
+then Lodash/Underscore might be the better option. Bear in mind however, that all iterable
+objects can easily be converted to an array by use of the
+[spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax).*
 
 ### _.each
 
@@ -1429,7 +1451,58 @@ Translates all items in an array or object to new array of items.
 
 **[⬆ back to top](#quick-links)**
 
-### _.minBy and _.maxBy
+### _.maxBy
+
+Use Array#reduce for find the maximum or minimum collection item
+
+  ```js
+  // Underscore/Lodash
+  var data = [{ value: 6 }, { value: 2 }, { value: 4 }]
+  var maxItem = _.maxBy(data, 'value')
+  console.log(maxItem)
+  // output: { value: 6 }
+
+  // Native
+  var data = [{ value: 6 }, { value: 2 }, { value: 4 }]
+  var maxItem = data.reduce(function(a, b) { return a.value >= b.value ? a : b }, {})
+  console.log(maxItem)
+  // output: { value: 6 }
+  ```
+
+Extract a functor and use es2015 for better code
+
+  ```js
+  // utils
+  const makeSelect = (comparator) => (a, b) => comparator(a, b) ? a : b
+  const maxByValue = makeSelect((a, b) => a.value >= b.value)
+
+  // main logic
+  const data = [{ value: 6 }, { value: 2 }, { value: 4 }]
+  const maxItem = data.reduce(maxByValue, {})
+
+  console.log(maxItem)
+  // output: { value: 6 }
+
+  // or also more universal and little slower variant of minBy
+  const maxBy = (collection, key) => {
+    // slower because need to create a lambda function for each call...
+    const select = (a, b) => a[key] >= b[key] ? a : b
+    return collection.reduce(select, {})
+  }
+
+  console.log(maxBy(data, 'value'))
+  // output: { value: 6 }
+  ```
+
+#### Browser Support for `Array.prototype.reduce()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  | ✔ | 3.0 ✔ |  9.0 ✔  |  10.5 ✔ |  4.0 ✔ |
+
+**[⬆ back to top](#quick-links)**
+
+### _.minBy
 
 Use Array#reduce for find the maximum or minimum collection item
 
@@ -1437,16 +1510,14 @@ Use Array#reduce for find the maximum or minimum collection item
   // Underscore/Lodash
   var data = [{ value: 6 }, { value: 2 }, { value: 4 }]
   var minItem = _.minBy(data, 'value')
-  var maxItem = _.maxBy(data, 'value')
-  console.log(minItem, maxItem)
-  // output: { value: 2 } { value: 6 }
+  console.log(minItem)
+  // output: { value: 2 }
 
   // Native
   var data = [{ value: 6 }, { value: 2 }, { value: 4 }]
   var minItem = data.reduce(function(a, b) { return a.value <= b.value ? a : b }, {})
-  var maxItem = data.reduce(function(a, b) { return a.value >= b.value ? a : b }, {})
   console.log(minItem, maxItem)
-  // output: { value: 2 }, { value: 6 }
+  // output: { value: 2 }
   ```
 
 Extract a functor and use es2015 for better code
@@ -1455,15 +1526,13 @@ Extract a functor and use es2015 for better code
   // utils
   const makeSelect = (comparator) => (a, b) => comparator(a, b) ? a : b
   const minByValue = makeSelect((a, b) => a.value <= b.value)
-  const maxByValue = makeSelect((a, b) => a.value >= b.value)
 
   // main logic
   const data = [{ value: 6 }, { value: 2 }, { value: 4 }]
   const minItem = data.reduce(minByValue, {})
-  const maxItem = data.reduce(maxByValue, {})
 
   console.log(minItem, maxItem)
-  // output: { value: 2 }, { value: 6 }
+  // output: { value: 2 }
 
   // or also more universal and little slower variant of minBy
   const minBy = (collection, key) => {
@@ -1481,6 +1550,41 @@ Extract a functor and use es2015 for better code
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |
   ✔  | ✔ | 3.0 ✔ |  9.0 ✔  |  10.5 ✔ |  4.0 ✔ |
+
+**[⬆ back to top](#quick-links)**
+
+### _.orderBy
+
+Sorts an array of object based on an object key provided by a parameter (note this is more limited than Lodash).
+
+  ```js
+  const fruits = [
+    {name:"banana", amount: 2},
+    {name:"apple", amount: 4},
+    {name:"pineapple", amount: 2},
+    {name:"mango", amount: 1}
+  ];
+
+  // Lodash
+  _.orderBy(fruits, ['name'],['asc']);
+  // => [{name:"apple", amount: 4}, {name:"banana", amount: 2}, {name:"mango", amount: 1}, {name:"pineapple", amount: 2}]
+
+  // Native
+  const orderBy = (key) => {
+    return (a, b) => (a[key] > b[key]) ? 1 : ((b[key] > a[key]) ? -1 : 0);
+  };
+
+  // The native sort modifies the array in place. `_.orderBy` and `_.orderBy` do not, so we use `.concat()` to
+  // copy the array, then sort.
+  fruits.concat().sort(orderBy("name"));
+  // => [{name:"apple", amount: 4}, {name:"banana", amount: 2}, {name:"mango", amount: 1}, {name:"pineapple", amount: 2}]
+  ```
+
+#### Browser Support for `Array.prototype.concat()` and `Array.prototype.sort()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  1.0 ✔  | ✔ | 1.0 ✔ |  5.5 ✔  |  ✔  |  ✔  |
 
 **[⬆ back to top](#quick-links)**
 
@@ -1509,36 +1613,6 @@ Extract a functor and use es2015 for better code
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |
   ✔  |  ✔ | 1.5 ✔ |  9.0 ✔  |  ✔  |  ✔  |
-
-**[⬆ back to top](#quick-links)**
-
-### _.reduce
-
-Applies a function against an accumulator and each value of the array (from left-to-right) to reduce it to a single value.
-
-  ```js
-  // Underscore/Lodash
-  var array = [0, 1, 2, 3, 4]
-  var result = _.reduce(array, function (previousValue, currentValue, currentIndex, array) {
-    return previousValue + currentValue
-  })
-  console.log(result)
-  // output: 10
-
-  // Native
-  var array = [0, 1, 2, 3, 4]
-  var result = array.reduce(function (previousValue, currentValue, currentIndex, array) {
-    return previousValue + currentValue
-  })
-  console.log(result)
-  // output: 10
-  ```
-
-#### Browser Support for `Array.prototype.reduce()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] |  ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  | ✔ | 3.0 ✔ |  9.0 ✔  |  10.5 ✔ |  4.0 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -1578,6 +1652,36 @@ Creates an array of numbers progressing from start up to.
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |
  46.0 ✔  |  12.0 ✔ |  16.0 ✔ |  ✖ | 37.0 ✔ |  7.1 ✔ |
+
+**[⬆ back to top](#quick-links)**
+
+### _.reduce
+
+Applies a function against an accumulator and each value of the array (from left-to-right) to reduce it to a single value.
+
+  ```js
+  // Underscore/Lodash
+  var array = [0, 1, 2, 3, 4]
+  var result = _.reduce(array, function (previousValue, currentValue, currentIndex, array) {
+    return previousValue + currentValue
+  })
+  console.log(result)
+  // output: 10
+
+  // Native
+  var array = [0, 1, 2, 3, 4]
+  var result = array.reduce(function (previousValue, currentValue, currentIndex, array) {
+    return previousValue + currentValue
+  })
+  console.log(result)
+  // output: 10
+  ```
+
+#### Browser Support for `Array.prototype.reduce()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] |  ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  | ✔ | 3.0 ✔ |  9.0 ✔  |  10.5 ✔ |  4.0 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -1734,9 +1838,9 @@ Tests whether any of the elements in the array pass the test implemented by the 
 
 **[⬆ back to top](#quick-links)**
 
-### _.sortBy and _.orderBy
+### _.sortBy
 
-Sorts an array of object based on an object key provided by a parameter (note this is more limited than Underscore/Lodash).
+Sorts an array of object based on an object key provided by a parameter (note this is more limited than Underscore).
 
   ```js
   const fruits = [
@@ -1748,10 +1852,6 @@ Sorts an array of object based on an object key provided by a parameter (note th
 
   // Underscore
   _.sortBy(fruits, 'name');
-  // => [{name:"apple", amount: 4}, {name:"banana", amount: 2}, {name:"mango", amount: 1}, {name:"pineapple", amount: 2}]
-
-  // Lodash
-  _.orderBy(fruits, ['name'],['asc']);
   // => [{name:"apple", amount: 4}, {name:"banana", amount: 2}, {name:"mango", amount: 1}, {name:"pineapple", amount: 2}]
 
   // Native
@@ -1894,6 +1994,37 @@ Create a new function that calls _func_ with _thisArg_ and _args_.
 
  **[⬆ back to top](#quick-links)**
 
+### _.debounce
+
+Create a new function that calls _func_ with _thisArg_ and _args_.
+
+  ```js
+ function debounce(func, wait, immediate) {
+	var timeout;
+	return function() {
+		var context = this, args = arguments;
+		clearTimeout(timeout);
+		timeout = setTimeout(function() {
+			timeout = null;
+			if (!immediate) func.apply(context, args);
+		}, wait);
+		if (immediate && !timeout) func.apply(context, args);
+	};
+}
+
+// Avoid costly calculations while the window size is in flux.
+jQuery(window).on('resize', debounce(calculateLayout, 150));
+
+  ```
+#### Browser Support for `debounce`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+ :-: | :-: | :-: | :-: | :-: | :-: |
+  7.0 ✔  |  ✔ | 4.0 ✔ |  9.0 ✔ |  11.6 ✔ |  5.1 ✔  |
+
+ **[⬆ back to top](#quick-links)**
+
+
 ### _.isFunction
 
 Checks if value is classified as a _Function_ object.
@@ -1925,37 +2056,6 @@ isFunction(123);
  ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
 
  **[⬆ back to top](#quick-links)**
-
-### _.debounce
-
-Create a new function that calls _func_ with _thisArg_ and _args_.
-
-  ```js
- function debounce(func, wait, immediate) {
-	var timeout;
-	return function() {
-		var context = this, args = arguments;
-		clearTimeout(timeout);
-		timeout = setTimeout(function() {
-			timeout = null;
-			if (!immediate) func.apply(context, args);
-		}, wait);
-		if (immediate && !timeout) func.apply(context, args);
-	};
-}
-
-// Avoid costly calculations while the window size is in flux.
-jQuery(window).on('resize', debounce(calculateLayout, 150));
-
-  ```
-#### Browser Support for `debounce`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
- :-: | :-: | :-: | :-: | :-: | :-: |
-  7.0 ✔  |  ✔ | 4.0 ✔ |  9.0 ✔ |  11.6 ✔ |  5.1 ✔  |
-
- **[⬆ back to top](#quick-links)**
-
 
 ### _.partial
 Create a new function that calls _func_ with _args_.
@@ -2056,28 +2156,6 @@ console.log(castArray([2]));
 
 **[⬆ back to top](#quick-links)**
 
-### _.isDate
-
-Checks if value is classified as a Date object.
-
-```js
-// Lodash
-console.log(_.isDate(new Date));
-// output: true
-
-// Native
-console.log(Object.prototype.toString.call(new Date) === "[object Date]");
-// output: true
-```
-
-#### Browser Support for `String.prototype.toString.call()`
-
-![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
-:-: | :-: | :-: | :-: | :-: | :-: |
-  ✔  | ✔ | ✔ |  ✔  | ✔ | ✔ |
-
-**[⬆ back to top](#quick-links)**
-
 ### _.gt
 
 Checks if value is greater than other.
@@ -2115,6 +2193,28 @@ console.log(3 >= 1);
 ```
 
 #### Browser Support
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  | ✔ | ✔ |  ✔  | ✔ | ✔ |
+
+**[⬆ back to top](#quick-links)**
+
+### _.isDate
+
+Checks if value is classified as a Date object.
+
+```js
+// Lodash
+console.log(_.isDate(new Date));
+// output: true
+
+// Native
+console.log(Object.prototype.toString.call(new Date) === "[object Date]");
+// output: true
+```
+
+#### Browser Support for `String.prototype.toString.call()`
 
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |
@@ -2865,7 +2965,29 @@ Converts the first character of string to lower case.
 
 **[⬆ back to top](#quick-links)**
 
-### _.padStart and _.padEnd
+### _.padEnd
+:heavy_exclamation_mark:`Not in Underscore.js`
+Pads the current string with another string (multiple times, if needed) until the resulting string reaches the given length.
+
+  ```js
+  // Lodash
+  console.log(_.padEnd('123', 5, '0'))
+  // output: '12300'
+
+  // Native
+  console.log('123'.padEnd(5, '0'))
+  // output: '12300'
+  ```
+
+#### Browser Support for `String.prototype.padEnd()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  57.0 ✔  |  15.0 ✔ | 48.0 ✔ |  ✖  |  44.0 ✔ |  10.0 ✔ |
+
+**[⬆ back to top](#quick-links)**
+
+### _.padStart
 :heavy_exclamation_mark:`Not in Underscore.js`
 Pads the current string with another string (multiple times, if needed) until the resulting string reaches the given length.
 
@@ -2874,18 +2996,13 @@ Pads the current string with another string (multiple times, if needed) until th
   console.log(_.padStart('123', 5, '0'))
   // output: '00123'
 
-  console.log(_.padEnd('123', 5, '0'))
-  // output: '12300'
 
   // Native
   console.log('123'.padStart(5, '0'))
   // output: '00123'
-
-  console.log('123'.padEnd(5, '0'))
-  // output: '12300'
   ```
 
-#### Browser Support for `String.prototype.padStart()` and `String.prototype.padEnd()`
+#### Browser Support for `String.prototype.padStart()`
 
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |
@@ -3020,6 +3137,7 @@ Create a template function.
 **[⬆ back to top](#quick-links)**
 
 ### _.toLower
+
 :heavy_exclamation_mark:`Not in Underscore.js`
 Lowercases a given string.
 

@@ -23,7 +23,8 @@
   "scripts": {
     "coveralls": "cat ./coverage/lcov.info | coveralls",
     "test": "istanbul cover tests",
-    "test:unit": "mocha tests/unit"
+    "test:unit": "mocha tests/unit",
+    "build-readme": "node ./scripts/build-readme.js"
   },
   "dependencies": {
     "kebab-case": "^1.0.0"

@@ -902,6 +902,9 @@ Returns the last element of an array. Passing n will return the last n elements 
   //or
   [].concat(numbers).pop()
   // => 5
+  //or
+  numbers.at(-1);
+  // => 5
 
   // Native (works even with potentially undefined/null)
   [].concat(undefined).pop()
@@ -916,6 +919,12 @@ Returns the last element of an array. Passing n will return the last n elements 
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |
   1.0 ✔  |  ✔  | 1.0 ✔  | 5.5 ✔  |  ✔  | ✔  |
+
+#### Browser Support for `Array.prototype.at()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  92 ✔  |  92 ✔  | 90 ✔  | ✖  | 78 ✔  | 15.4 ✔  |
 
 **[⬆ back to top](#quick-links)**
 

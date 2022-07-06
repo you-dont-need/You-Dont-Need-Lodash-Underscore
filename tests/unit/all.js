@@ -972,4 +972,10 @@ describe('code snippet example', () => {
       assert.deepStrictEqual(vanillaObject, lodashObject);
     });
   });
+
+  describe('last', () => {
+    it('_.last([1,2,3,4,5])', () => {
+      assert.deepEqual(_.last([1,2,3,4,5]), [1,2,3,4,5].at(-1));
+    });
+  });
 });

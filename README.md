@@ -2262,7 +2262,7 @@ console.log(undefined == null)
 
 ### _.isNull
 
-Checks if value is null or undefined.
+Checks if value is null.
 
 ```js
 // Underscore/Lodash

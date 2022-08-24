@@ -23,12 +23,15 @@
   "scripts": {
     "coveralls": "cat ./coverage/lcov.info | coveralls",
     "test": "istanbul cover tests",
-    "test:unit": "mocha tests/unit"
+    "test:unit": "mocha tests/unit",
+    "build-readme": "node ./scripts/build-readme.js"
   },
   "dependencies": {
     "kebab-case": "^1.0.0"
   },
   "devDependencies": {
+    "caniuse-api": "^3.0.0",
+    "caniuse-db": "^1.0.30001307",
     "coveralls": "^2.11.9",
     "eslint": "^4.18.2",
     "istanbul": "^0.4.4",

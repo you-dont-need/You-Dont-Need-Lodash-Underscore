@@ -37,6 +37,28 @@ describe('code snippet example', () => {
       invert(object)
     )
   })
+  
+  it('mapKeys', () => {
+    var object = { 'a': 1, 'b': 2 };
+    function mapKeys(object, cb) {
+      var obj = {};
+      for (var key in object) {
+        if (object.hasOwnProperty(key)) {
+          var newKey = cb(object[key], key, object);
+          obj[newKey] = object[key];
+        }
+      }
+      return obj;
+    }
+    assert.deepEqual(
+      _.mapKeys(object, function (value, key) {
+        return key + value;
+      }),
+      mapKeys(object, function (value, key) {
+        return key + value;
+      })
+    )
+  })
 
   it('pick', () => {
     var object = { 'a': 1, 'b': '2', 'c': 3 };

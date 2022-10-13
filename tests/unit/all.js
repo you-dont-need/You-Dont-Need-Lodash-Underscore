@@ -21,6 +21,23 @@ describe('code snippet example', () => {
     assert.deepEqual(lodashResult, nativeResult)
   })
 
+  it('invert', () => {
+    var object = { 'a': 1, 'b': '2', 'c': 3 };
+    function invert(object) {
+      var obj = {};
+      for (var key in object) {
+        if (object.hasOwnProperty(key)) {
+          obj[object[key]] = key;
+        }
+      }
+      return obj;
+    }
+    assert.deepEqual(
+      _.invert(object),
+      invert(object)
+    )
+  })
+
   it('pick', () => {
     var object = { 'a': 1, 'b': '2', 'c': 3 };
     function pick(object, paths) {
@@ -37,7 +54,7 @@ describe('code snippet example', () => {
       pick(object, ['a', 'c'])
     )
   })
-
+  
   it('pickBy', () => {
     var object = { 'a': 1, 'b': null, 'c': 3, 'd': false, 'e': undefined, 'f': '', 'g': 0 };
     function pickBy(object) {

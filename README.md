@@ -173,6 +173,7 @@ objects can easily be converted to an array by use of the
 1. [_.extend](#_extend)
 1. [_.has](#_has)
 1. [_.get](#_get)
+1. [_.invert](#_invert)
 1. [_.keys](#_keys)
 1. [_.omit](#_omit)
 1. [_.pick](#_pick)
@@ -2540,6 +2541,54 @@ Gets the value at path of object.
   80.0 ✔  | 80.0 ✔ |  72.0 ✔ |  ✖  |  ✖ |  13.1 ✔ |
 
   **[⬆ back to top](#quick-links)**
+
+### _.invert
+
+Creates an object composed of the inverted keys and values of object. If object contains duplicate values, subsequent values overwrite property assignments of previous values.
+
+  ```js
+  var object = { 'a': 1, 'b': 2, 'c': 1 };
+
+  // Underscore/Lodash
+  var result = _.invert(object);
+  console.log(result)
+  // output: { '1': 'c', '2': 'b' }
+
+  // Native (IE6)
+  function invert(object) {
+    var obj = {};
+    for (var key in object) {
+      if (object.hasOwnProperty(key)) {
+        obj[object[key]] = key;
+      }
+    }
+    return obj;
+  }
+  var result = invert(object);
+  console.log(result)
+  // output: { '1': 'c', '2': 'b' }
+
+  // Native (IE not supported)
+  const invert = object => Object.entries(object)
+    .reduce((acc, current) => {
+      acc[current[1]] = current[0];
+      return acc;
+    }, {}
+  );
+  ```
+#### Browser Support
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  4.0 ✔ | ✔ | 2.0 ✔ |  6.0 ✔  |  10.0 ✔ | 3.1 ✔ |
+
+#### Browser Support for `Object.entries()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  54.0 ✔  | 14.0 ✔  | 47.0 ✔ |  ✖  |  41.0 ✔ |  10.1 ✔ |
+
+**[⬆ back to top](#quick-links)**
 
 ### _.keys
 

@@ -108,10 +108,10 @@ ruleTester.run('_.first', rules['first'], {
   ],
   invalid: [{
       code: '_.first([0, 1, 3])',
-      errors: ['Consider using the native Array.prototype.slice()']
+      errors: ['Consider using the native Array.prototype.slice() or arr[0]']
   }, {
     code: '_.first([0, 1, 3], 2)',
-    errors: ['Consider using the native Array.prototype.slice()']
+    errors: ['Consider using the native Array.prototype.slice() or arr[0]']
   }]
 });
 

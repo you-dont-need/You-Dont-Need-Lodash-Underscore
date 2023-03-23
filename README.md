@@ -54,10 +54,6 @@ You are welcome to contribute with more items provided below.
     <img src="https://img.shields.io/coveralls/you-dont-need/You-Dont-Need-Lodash-Underscore/master.svg?style=flat-square"
       alt="Coverage Status" />
   </a>
-  <a href="https://david-dm.org/you-dont-need/You-Dont-Need-Lodash-Underscore">
-    <img src="https://img.shields.io/david/you-dont-need/You-Dont-Need-Lodash-Underscore.svg?style=flat-square"
-         alt="Dependency Status">
-  </a>
 </p>
 
 If you're using [ESLint](http://eslint.org/), you can install a

@@ -567,14 +567,14 @@ Flattens array a single level deep.
 
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image] |
 :-: | :-: | :-: | :-: | :-: | :-: |
-69 ✔ | ✖ | 62 ✔ | ✖ | 56 ✔ | 12 ✔ |
+69 ✔ | 79 ✔ | 62 ✔ | ✖ | 56 ✔ | 12 ✔ |
 
 #### Browser Support for `Array.prototype.flatMap()`
 
 
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image] |
 :-: | :-: | :-: | :-: | :-: | :-: |
-69 ✔ | ✖ | 62 ✔ | ✖ | 56 ✔ | 12 ✔ |
+69 ✔ | 79 ✔ | 62 ✔ | ✖ | 56 ✔ | 12 ✔ |
 
 **[⬆ back to top](#quick-links)**
 
@@ -616,14 +616,14 @@ Recursively flattens array.
 
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image] |
 :-: | :-: | :-: | :-: | :-: | :-: |
-69 ✔ | ✖ | 62 ✔ | ✖ | 56 ✔ | 12 ✔ |
+69 ✔ | 79 ✔ | 62 ✔ | ✖ | 56 ✔ | 12 ✔ |
 
 
 #### Browser Support for `Array.prototype.flatMap()`
 
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image] |
 :-: | :-: | :-: | :-: | :-: | :-: |
-69 ✔ | ✖ | 62 ✔ | ✖ | 56 ✔ | 12 ✔ |
+69 ✔ | 79 ✔ | 62 ✔ | ✖ | 56 ✔ | 12 ✔ |
 
 
 **[⬆ back to top](#quick-links)**
@@ -1139,7 +1139,7 @@ Creates an array of unique values, taking an `iteratee` to compute uniqueness wi
 
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image] |
 :-: | :-: | :-: | :-: | :-: | :-: |
-69 ✔ | ✖ | 62 ✔ | ✖ | 56 ✔ | 12 ✔ |
+69 ✔ | 79 ✔ | 62 ✔ | ✖ | 56 ✔ | 12 ✔ |
 
 #### Browser Support for `Array.isArray()`
 
@@ -2585,7 +2585,7 @@ Returns a copy of the object, filtered to omit the keys specified.
 
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |
-  60.0 ✔ | ✖ | 55.0 ✔ |  ✖ |  37.0 ✔ | ✖ |
+  60.0 ✔ | 79 ✔ | 55.0 ✔ |  ✖ |  37.0 ✔ | ✖ |
 
 **[⬆ back to top](#quick-links)**
 

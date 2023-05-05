@@ -47,8 +47,8 @@
         "ES6": true
     },
     "first": {
-      "compatible": true,
-      "alternative": "Array.prototype.slice()"
+        "compatible": true,
+        "alternative": "Array.prototype.slice() or arr[0]"
     },
     "findIndex": {
         "compatible": false,

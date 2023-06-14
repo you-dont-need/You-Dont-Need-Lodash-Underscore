@@ -1908,13 +1908,13 @@ Create a new function that calls _func_ with _thisArg_ and _args_.
  function debounce(func, wait, immediate) {
 	var timeout;
 	return function() {
-		var context = this, args = arguments;
+		var args = arguments;
 		clearTimeout(timeout);
 		timeout = setTimeout(function() {
 			timeout = null;
-			if (!immediate) func.apply(context, args);
+			if (!immediate) func.apply(this, args);
 		}, wait);
-		if (immediate && !timeout) func.apply(context, args);
+		if (immediate && !timeout) func.apply(this, args);
 	};
 }
 

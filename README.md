@@ -221,9 +221,14 @@ _.chunk(['a', 'b', 'c', 'd'], 3);
 
 const chunk = (input, size) => {
   return input.reduce((arr, item, idx) => {
-    return idx % size === 0
-      ? [...arr, [item]]
-      : [...arr.slice(0, -1), [...arr.slice(-1)[0], item]];
+    if (idx % size === 0) {
+      arr.push([item]);
+    }
+    else {
+      arr[arr.length - 1].push(item);
+    }
+    
+    return arr;
   }, []);
 };
 

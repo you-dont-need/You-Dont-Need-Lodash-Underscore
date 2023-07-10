@@ -522,6 +522,13 @@ Returns the first element of an array. Passing n will return the first n element
 
   [1, 2, 3, 4, 5].slice(0, 2);
   // => [1, 2]
+
+  // Native with ES13
+  [1, 2, 3, 4, 5].at(0)
+  // => 1
+  //or
+  [].at(0)
+  // => undefined
   ```
 
 #### Browser Support for `Array.prototype.slice()`
@@ -529,6 +536,12 @@ Returns the first element of an array. Passing n will return the first n element
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |
   1.0 ✔  |  ✔  |  1.0 ✔  |  ✔  |  ✔  | ✔  |
+
+#### Browser Support for `Array.prototype.at()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  92 ✔  |  92 ✔  | 90 ✔  | ✖  | 78 ✔  | 15.4 ✔  |
 
 **[⬆ back to top](#quick-links)**
 
@@ -693,6 +706,10 @@ Gets the first element or all but the first element.
   // output: 1
   console.log(tail)
   // output [2, 3]
+
+  // Native replacement for _.head in ES13
+  array.at(0)
+  // output: 1
   ```
 
 #### Browser Support for Spread in array literals
@@ -700,6 +717,12 @@ Gets the first element or all but the first element.
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |
   46.0 ✔  | 12.0 ✔ |  16.0 ✔ |  ✖ |  37.0 ✔ | 8.0 ✔  |
+
+#### Browser Support for `Array.prototype.at()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  92 ✔  |  92 ✔  | 90 ✔  | ✖  | 78 ✔  | 15.4 ✔  |
 
 **[⬆ back to top](#quick-links)**
 

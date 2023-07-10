@@ -977,5 +977,24 @@ describe('code snippet example', () => {
     it('_.last([1,2,3,4,5])', () => {
       assert.deepEqual(_.last([1,2,3,4,5]), [1,2,3,4,5].at(-1));
     });
+    it('_.last([])', () => {
+      assert.deepEqual(_.last([]), [].at(-1));
+    });
   });
+  describe('first', () => {
+    it('_.first([1,2,3,4,5])', () => {
+      assert.deepEqual(_.first([1,2,3,4,5]), [1,2,3,4,5].at(0));
+    });
+    it('_.first([])', () => {
+      assert.deepEqual(_.first([]), [].at(0));
+    });
+  })
+  describe('head', () => {
+    it('_.head([1,2,3,4,5])', () => {
+      assert.deepEqual(_.head([1,2,3,4,5]), [1,2,3,4,5].at(0));
+    });
+    it('_.head([])', () => {
+      assert.deepEqual(_.head([]), [].at(0));
+    });
+  })
 });

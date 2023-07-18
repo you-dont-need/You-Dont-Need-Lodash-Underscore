@@ -104,28 +104,30 @@ ruleTester.run('underscore.isNaN', rules['is-nan'], {
 ruleTester.run('_.first', rules['first'], {
   valid: [
     '[0, 1, 3][0]',
+    '[0, 1, 3].at(0)',
     '[0, 1, 3].slice(0, 2)'
   ],
   invalid: [{
       code: '_.first([0, 1, 3])',
-      errors: ['Consider using the native Array.prototype.slice() or arr[0]']
+      errors: ['Consider using the native Array.prototype.at(0) or Array.prototype.slice()']
   }, {
     code: '_.first([0, 1, 3], 2)',
-    errors: ['Consider using the native Array.prototype.slice() or arr[0]']
+    errors: ['Consider using the native Array.prototype.at(0) or Array.prototype.slice()']
   }]
 });
 
 ruleTester.run('_.last', rules['last'], {
   valid: [
     'var numbers = [0, 1, 3]; numbers[numbers.length - 1]',
+    '[0, 1, 3].at(-1)',
     '[0, 1, 3].slice(-2)'
   ],
   invalid: [{
       code: '_.last([0, 1, 3])',
-      errors: ['Consider using the native Array.prototype.slice()']
+      errors: ['Consider using the native Array.prototype.at(-1) or Array.prototype.slice()']
   }, {
     code: '_.last([0, 1, 3], 2)',
-    errors: ['Consider using the native Array.prototype.slice()']
+    errors: ['Consider using the native Array.prototype.at(-1) or Array.prototype.slice()']
   }]
 });
 
@@ -222,6 +224,16 @@ ruleTester.run('_.endsWith', rules['ends-with'], {
     code: '_.endsWith("abc", "b", 1)',
     errors: ['Consider using the native String.prototype.endsWith()']
 
+  }]
+});
+
+ruleTester.run('_.head', rules['head'], {
+  valid: [
+    '[0, 1, 3].at(0)',
+  ],
+  invalid: [{
+      code: '_.head([0, 1, 3])',
+      errors: ['Consider using the native Array.prototype.at(0)']
   }]
 });
 

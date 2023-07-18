@@ -21,7 +21,8 @@
     },
     "last": {
         "compatible": true,
-        "alternative": "Array.prototype.slice()"
+        "alternative": "Array.prototype.at(-1) or Array.prototype.slice()",
+        "ES13": true
     },
     "lastIndexOf": {
         "compatible": true,
@@ -48,7 +49,8 @@
     },
     "first": {
         "compatible": true,
-        "alternative": "Array.prototype.slice() or arr[0]"
+        "alternative": "Array.prototype.at(0) or Array.prototype.slice()",
+        "ES13": true
     },
     "findIndex": {
         "compatible": false,
@@ -312,5 +314,10 @@
     "isArrayBuffer": {
         "compatible": false,
         "alternative": "value instanceof ArrayBuffer"
+    },
+    "head": {
+        "compatible": true,
+        "alternative": "Array.prototype.at(0)",
+        "ES13": true
     }
 }

@@ -33,7 +33,7 @@
     "eslint": "^4.18.2",
     "istanbul": "^0.4.4",
     "lodash": "^4.17.4",
-    "mocha": "^4.1.0"
+    "mocha": "^10.2.0"
   },
   "engines": {
     "node": ">=4.0"

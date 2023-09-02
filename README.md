@@ -1,4 +1,5 @@
 # [You don't (may not) need Lodash/Underscore](https://you-dont-need.github.io/You-Dont-Need-Lodash-Underscore/#/)
+
 [![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/you-dont-need/lodash-underscore)
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/cht8687/You-Dont-Need-Lodash-Underscore)
 
@@ -37,47 +38,37 @@ You are welcome to contribute with more items provided below.
 
 ## ESLint Plugin
 
-<p align="center">
-  <a href="https://www.npmjs.com/package/eslint-plugin-you-dont-need-lodash-underscore">
-    <img src="https://img.shields.io/npm/v/eslint-plugin-you-dont-need-lodash-underscore.svg?style=flat-square"
-      alt="NPM Version">
-  </a>
-  <a href="https://www.npmjs.org/package/eslint-plugin-you-dont-need-lodash-underscore">
-    <img src="http://img.shields.io/npm/dm/eslint-plugin-you-dont-need-lodash-underscore.svg?style=flat-square"
-      alt="Downloads">
-  </a>
-  <a href="https://travis-ci.org/you-dont-need/You-Dont-Need-Lodash-Underscore">
-    <img src="https://img.shields.io/travis/you-dont-need/You-Dont-Need-Lodash-Underscore/master.svg?style=flat-square"
-      alt="Build Status">
-  </a>
-  <a href="https://coveralls.io/github/you-dont-need/You-Dont-Need-Lodash-Underscore?branch=master">
-    <img src="https://img.shields.io/coveralls/you-dont-need/You-Dont-Need-Lodash-Underscore/master.svg?style=flat-square"
-      alt="Coverage Status" />
-  </a>
-</p>
+<div align="center">
+
+[![NPM Version](https://img.shields.io/npm/v/eslint-plugin-you-dont-need-lodash-underscore.svg?style=flat-square)](https://www.npmjs.com/package/eslint-plugin-you-dont-need-lodash-underscore)
+[![Downloads](http://img.shields.io/npm/dm/eslint-plugin-you-dont-need-lodash-underscore.svg?style=flat-square)](https://www.npmjs.org/package/eslint-plugin-you-dont-need-lodash-underscore)
+[![Build Status](https://img.shields.io/travis/you-dont-need/You-Dont-Need-Lodash-Underscore/master.svg?style=flat-square)](https://travis-ci.org/you-dont-need/You-Dont-Need-Lodash-Underscore)
+[![Coverage Status](https://img.shields.io/coveralls/you-dont-need/You-Dont-Need-Lodash-Underscore/master.svg?style=flat-square)](https://coveralls.io/github/you-dont-need/You-Dont-Need-Lodash-Underscore?branch=master)
+
+</div>
 
 If you're using [ESLint](http://eslint.org/), you can install a
 [plugin](http://eslint.org/docs/user-guide/configuring#using-the-configuration-from-a-plugin) that
 will help you identify places in your codebase where you don't (may not) need Lodash/Underscore.
 
-Install the plugin...
+Install the plugin ...
 
 ```sh
 npm install --save-dev eslint-plugin-you-dont-need-lodash-underscore
 ```
 
-...then update your config
+... then update your config
 
-```js
+```json
 "extends" : ["plugin:you-dont-need-lodash-underscore/compatible"],
 ```
 
 For more information, see [Configuring the ESLint Plugin](configuring.md)
 
-*:heavy_exclamation_mark:<b>Important:</b> Note that, while many Lodash methods are null safe (e.g. _.keys, _.entries),
-this is not necessarily the case for their Native equivalent. If null safety is critical for your application, we
-suggest that you take extra precautions [e.g. consider using the native Object.keys as Object.keys(value || {})].*
-
+> [!IMPORTANT]
+> Note that, while many Lodash methods are null safe (e.g. _.keys, _.entries),
+> this is not necessarily the case for their Native equivalent. If null safety is critical for your application, we
+> suggest that you take extra precautions [e.g. consider using the native `Object.keys` as `Object.keys(value || {})`].
 
 ## Quick Links
 

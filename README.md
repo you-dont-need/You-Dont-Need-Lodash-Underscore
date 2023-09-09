@@ -104,11 +104,12 @@ For more information, see [Configuring the ESLint Plugin](configuring.md)
 
 **[Collection*](#collection)**
 
-*:heavy_exclamation_mark:<b>Important:</b> Note that most native equivalents are array methods,
-and will not work with objects. If this functionality is needed and no object method is provided,
-then Lodash/Underscore might be the better option. Bear in mind however, that all iterable
-objects can easily be converted to an array by use of the
-[spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax).*
+> [!IMPORTANT]
+> Note that most native equivalents are array methods,
+> and will not work with objects. If this functionality is needed and no object method is provided,
+> then Lodash/Underscore might be the better option. Bear in mind however, that all iterable
+> objects can easily be converted to an array by use of the
+> [spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax).
 
 1. [_.each](#_each)
 1. [_.every](#_every)
@@ -223,7 +224,6 @@ chunk(['a', 'b', 'c', 'd'], 2);
 
 chunk(['a', 'b', 'c', 'd'], 3);
 // => [['a', 'b', 'c'], ['d']]
-
 ```
 
 #### Browser Support for Spread in array literals
@@ -285,6 +285,7 @@ Creates a new array concatenating array with any additional arrays and/or values
 **[⬆ back to top](#quick-links)**
 
 ### _.difference
+
 Similar to [without](#_without), but returns the values from array that are not present in the other arrays.
 
   ```js
@@ -374,7 +375,9 @@ Creates a slice of array with n elements dropped at the end.
 ### _.fill
 
 Fills elements of array with value from start up to, but not including, end.
-*Note that `fill` is a mutable method in both native and Lodash/Underscore.*
+
+> [!NOTE]
+> `fill` is a mutable method in both native and Lodash/Underscore.
 
   ```js
   // Underscore/Lodash
@@ -568,13 +571,11 @@ Flattens array a single level deep.
 
 #### Browser Support for `Array.prototype.flat()`
 
-
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image] |
 :-: | :-: | :-: | :-: | :-: | :-: |
 69 ✔ | 79 ✔ | 62 ✔ | ✖ | 56 ✔ | 12 ✔ |
 
 #### Browser Support for `Array.prototype.flatMap()`
-
 
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image] |
 :-: | :-: | :-: | :-: | :-: | :-: |
@@ -675,6 +676,7 @@ Returns an object composed from key-value pairs.
 **[⬆ back to top](#quick-links)**
 
 ### _.head and _.tail
+
 Gets the first element or all but the first element.
 
   ```js
@@ -744,6 +746,7 @@ Returns the first index at which a given element can be found in the array, or -
 **[⬆ back to top](#quick-links)**
 
 ### _.intersection
+
 Returns an array that is the intersection of all the arrays. Each value in the result is present in each of the arrays.
 
   ```js
@@ -777,7 +780,9 @@ Returns an array that is the intersection of all the arrays. Each value in the r
 ### _.takeRight
 
 Creates a slice of array with n elements taken from the end.
-:heavy_exclamation_mark: Native slice does not behave entirely the same as the `Lodash` method. See example below to understand why.
+
+> [!IMPORTANT]
+> Native slice does not behave entirely the same as the `Lodash` method. See example below to understand why.
 
   ```js
   // Underscore/Lodash
@@ -820,6 +825,7 @@ Creates a slice of array with n elements taken from the end.
 **[⬆ back to top](#quick-links)**
 
 ### _.isArray
+
 Returns true if given value is an array.
 
   ```js
@@ -834,10 +840,10 @@ Returns true if given value is an array.
   // output: true
   ```
 
-  #### Browser Support for `Array.isArray()`
+#### Browser Support for `Array.isArray()`
 
- ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
- :-: | :-: | :-: | :-: | :-: | :-: |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
   5.0 ✔  |  ✔  | 4.0 ✔  |  9.0 ✔  |  10.5 ✔  | 5.0 ✔  |
 
 **[⬆ back to top](#quick-links)**
@@ -856,18 +862,23 @@ Checks if value is classified as an ArrayBuffer object.
   // output: true
   ```
 
-  :warning: You will get the wrong result if you get `ArrayBuffer` from another realm. [See details.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/instanceof#instanceof_and_multiple_context_e.g._frames_or_windows)
+> [!WARNING]
+> You will get the wrong result if you get `ArrayBuffer` from another realm.
+> [See details](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/instanceof#instanceof_and_multiple_context_e.g._frames_or_windows).
 
-  #### Browser Support for `instanceof`
+#### Browser Support for `instanceof`
 
- ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
- :-: | :-: | :-: | :-: | :-: | :-: |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
   ✔  |  ✔  | 1.0 ✔  | ✔  | ✔  | ✔  |
 
 **[⬆ back to top](#quick-links)**
 
 ### _.join
-:heavy_exclamation_mark:`Not in Underscore.js`
+
+> [!IMPORTANT]
+> Not in Underscore.js
+
 Joins a list of elements in an array with a given separator.
 
   ```js
@@ -967,7 +978,10 @@ Returns the index of the last occurrence of value in the array, or -1 if value i
 **[⬆ back to top](#quick-links)**
 
 ### _.reverse
-:heavy_exclamation_mark:`Not in Underscore.js`
+
+> [!IMPORTANT]
+> Not in Underscore.js
+
 Reverses array so that the first element becomes the last, the second element becomes the second to last, and so on.
 
   ```js
@@ -984,9 +998,9 @@ Reverses array so that the first element becomes the last, the second element be
 
 Voice from the Lodash author:
 
->Lodash's `_.reverse` just calls `Array#reverse` and enables composition like `_.map(arrays, _.reverse).`
-It's exposed on _ because previously, like `Underscore`, it was only exposed in the chaining syntax.
->--- [jdalton](https://github.com/cht8687/You-Dont-Need-Lodash-Underscore/commit/22c4bcf2be48dd415d2b073759805562e520b615#)
+> Lodash's `_.reverse` just calls `Array#reverse` and enables composition like `_.map(arrays, _.reverse).`
+> It's exposed on _ because previously, like `Underscore`, it was only exposed in the chaining syntax.
+> --- [jdalton](https://github.com/cht8687/You-Dont-Need-Lodash-Underscore/commit/22c4bcf2be48dd415d2b073759805562e520b615#)
 
 #### Browser Support for `Array.prototype.reverse()`
 
@@ -997,6 +1011,7 @@ It's exposed on _ because previously, like `Underscore`, it was only exposed in 
 **[⬆ back to top](#quick-links)**
 
 ### _.slice
+
 Returns a shallow copy of a portion of an array into a new array object selected from `begin` to `end` (`end` not included)
 
   ```js
@@ -1013,14 +1028,17 @@ Returns a shallow copy of a portion of an array into a new array object selected
 
 #### Browser Support for `Array.prototype.slice()`
 
- ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
- :-: | :-: | :-: | :-: | :-: | :-: |
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
   1.0 ✔  |  ✔  |  1.0 ✔  |  ✔  |  ✔  |  ✔  |
 
 **[⬆ back to top](#quick-links)**
 
 ### _.without
-:heavy_exclamation_mark:`Not in Underscore.js`
+
+> [!IMPORTANT]
+> Not in Underscore.js
+
 Returns an array where matching items are filtered.
 
   ```js
@@ -1171,9 +1189,10 @@ Creates an array of unique values, taking an `iteratee` to compute uniqueness wi
 
 ## Collection*
 
-*:heavy_exclamation_mark:<b>Important:</b> Note that most native equivalents are array methods,
-and will not work with objects. If this functionality is needed and no object method is provided,
-then Lodash/Underscore is the better option.*
+> [!IMPORTANT]
+> Most native equivalents are array methods,
+> and will not work with objects. If this functionality is needed and no object method is provided,
+> then Lodash/Underscore is the better option.
 
 ### _.each
 
@@ -1358,7 +1377,10 @@ Checks if a value is in collection.
 **[⬆ back to top](#quick-links)**
 
 ### _.keyBy
-:heavy_exclamation_mark: `Not in Underscore.js`
+
+> [!WARNING]
+> Not in Underscore.js
+
 Creates an object composed of keys generated from the results of running each element of collection through iteratee.
 
   ```js
@@ -1452,7 +1474,7 @@ Translates all items in an array or object to new array of items.
 
 ### _.minBy and _.maxBy
 
-Use Array#reduce for find the maximum or minimum collection item
+Use `Array.prototype.reduce()` for find the maximum or minimum collection item
 
   ```js
   // Underscore/Lodash
@@ -1507,7 +1529,9 @@ Extract a functor and use es2015 for better code
 
 ### _.pluck
 
-  `array.map` or `_.map` can also be used to replace `_.pluck`. Lodash v4.0 removed `_.pluck` in favor of `_.map` with iteratee shorthand. Details can be found in [Changelog](https://github.com/lodash/lodash/wiki/Changelog)
+`array.map` or `_.map` can also be used to replace `_.pluck`.
+Lodash v4.0 removed `_.pluck` in favor of `_.map` with iteratee shorthand.
+Details can be found in [Changelog](https://github.com/lodash/lodash/wiki/Changelog)
 
   ```js
   // Underscore/Lodash
@@ -1823,7 +1847,10 @@ Produces a duplicate-free version of the array, using === to test object equalit
 ## Function
 
 ### _.after
-:heavy_exclamation_mark:`Note this is an alternative implementation`
+
+> [!WARNING]
+> This is an alternative implementation
+
 Creates a version of the function that will only be run after first being called count times. Useful for grouping asynchronous responses, where you want to be sure that all the async calls have finished, before proceeding.
 
   ```js
@@ -1853,6 +1880,7 @@ Creates a version of the function that will only be run after first being called
  **[⬆ back to top](#quick-links)**
 
 ### _.bind
+
 Create a new function that calls _func_ with _thisArg_ and _args_.
 
   ```js
@@ -1877,10 +1905,10 @@ Create a new function that calls _func_ with _thisArg_ and _args_.
 #### Browser Support for `Function.prototype.bind()`
 
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
- :-: | :-: | :-: | :-: | :-: | :-: |
+:-: | :-: | :-: | :-: | :-: | :-: |
   7.0 ✔  |  ✔ | 4.0 ✔ |  9.0 ✔ |  11.6 ✔ |  5.1 ✔  |
 
- **[⬆ back to top](#quick-links)**
+**[⬆ back to top](#quick-links)**
 
 ### _.isFunction
 
@@ -1909,17 +1937,17 @@ isFunction(123);
 #### Browser Support
 
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
- :-: | :-: | :-: | :-: | :-: | :-: |
+:-: | :-: | :-: | :-: | :-: | :-: |
  ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
 
- **[⬆ back to top](#quick-links)**
+**[⬆ back to top](#quick-links)**
 
 ### _.debounce
 
-Create a new function that calls _func_ with _thisArg_ and _args_.
+Create a new function that calls `func` with `thisArg` and `args`.
 
   ```js
- function debounce(func, wait, immediate) {
+  function debounce(func, wait, immediate) {
 	var timeout;
 	return function() {
 		var context = this, args = arguments;
@@ -1930,23 +1958,24 @@ Create a new function that calls _func_ with _thisArg_ and _args_.
 			if (!immediate) func.apply(context, args);
 		}, wait);
 	};
-}
+  }
 
-// Avoid costly calculations while the window size is in flux.
-jQuery(window).on('resize', debounce(calculateLayout, 150));
-
+  // Avoid costly calculations while the window size is in flux.
+  jQuery(window).on('resize', debounce(calculateLayout, 150));
   ```
+
 #### Browser Support for `debounce`
 
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
- :-: | :-: | :-: | :-: | :-: | :-: |
+:-: | :-: | :-: | :-: | :-: | :-: |
   7.0 ✔  |  ✔ | 4.0 ✔ |  9.0 ✔ |  11.6 ✔ |  5.1 ✔  |
 
- **[⬆ back to top](#quick-links)**
+**[⬆ back to top](#quick-links)**
 
 
 ### _.partial
-Create a new function that calls _func_ with _args_.
+
+Create a new function that calls `func` with `args`.
 
   ```js
   // Lodash
@@ -1983,9 +2012,9 @@ Create a new function that calls _func_ with _args_.
 
 **[⬆ back to top](#quick-links)**
 
-
 ### _.throttle
-Create a new function that limits calls to _func_ to once every given timeframe.
+
+Create a new function that limits calls to `func` to once every given timeframe.
 
   ```js
   function throttle(func, timeFrame) {
@@ -2001,15 +2030,15 @@ Create a new function that limits calls to _func_ to once every given timeframe.
 
   // Avoid running the same function twice within the specified timeframe.
   jQuery(window).on('resize', throttle(calculateLayout, 150));
-
   ```
+
 #### Browser Support for `throttle`
 
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
- :-: | :-: | :-: | :-: | :-: | :-: |
+:-: | :-: | :-: | :-: | :-: | :-: |
   5.0 ✔  |  12.0 ✔ | 3.0 ✔ |  9.0 ✔ |  10.5 ✔ |  4.0 ✔  |
 
- **[⬆ back to top](#quick-links)**
+**[⬆ back to top](#quick-links)**
 
 
 ## Lang
@@ -2114,7 +2143,8 @@ console.log(3 >= 1);
 
 Checks if value is an empty object or collection.
 
-:heavy_exclamation_mark:`Note that the Native version does not support evaluating a Set or a Map`
+> [!WARNING]
+> The Native version does not support evaluating a Set or a Map
 
   ```js
   // Lodash
@@ -2152,7 +2182,6 @@ Checks if value is an empty object or collection.
 
 **[⬆ back to top](#quick-links)**
 
-
 ### _.isFinite
 
 Checks if value is a finite primitive number.
@@ -2170,6 +2199,7 @@ Checks if value is a finite primitive number.
   console.log(Number.isFinite(3))
   // output: true
   ```
+
 #### Browser Support for `Number.isFinite()`
 
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
@@ -2195,6 +2225,7 @@ Checks if value is an integer.
   console.log(Number.isInteger('3'))
   // output: false
   ```
+
 #### Browser Support for `Number.isInteger()`
 
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
@@ -2220,13 +2251,14 @@ Checks if a value is NaN.
   console.log(Number.isNaN(NaN))
   // output: true
   ```
+
 MDN:
->In comparison to the global `isNaN()` function, `Number.isNaN()` doesn't suffer the problem of forcefully converting the parameter to a number. This means it is now safe to pass values that would normally convert to `NaN`, but aren't actually the same value as `NaN`. This also means that only values of the type number, that are also `NaN`, return true. [Number.isNaN()](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN)
+> In comparison to the global `isNaN()` function, `Number.isNaN()` doesn't suffer the problem of forcefully converting the parameter to a number. This means it is now safe to pass values that would normally convert to `NaN`, but aren't actually the same value as `NaN`. This also means that only values of the type number, that are also `NaN`, return true. [Number.isNaN()](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN)
 
 Voice from the Lodash author:
 
->Lodash's `_.isNaN` is equiv to ES6 `Number.isNaN` which is different than the global `isNaN`.
->--- [jdalton](https://github.com/cht8687/You-Dont-Need-Lodash-Underscore/commit/b8559a603dccaaa2449b5a68a2d8325cf1fb29cd#)
+> Lodash's `_.isNaN` is equiv to ES6 `Number.isNaN` which is different than the global `isNaN`.
+> --- [jdalton](https://github.com/cht8687/You-Dont-Need-Lodash-Underscore/commit/b8559a603dccaaa2449b5a68a2d8325cf1fb29cd#)
 
 #### Browser Support for `isNaN`
 
@@ -2243,7 +2275,10 @@ Voice from the Lodash author:
 **[⬆ back to top](#quick-links)**
 
 ### _.isNil
-:heavy_exclamation_mark:`Not in Underscore.js`
+
+> [!WARNING]
+> Not in Underscore.js
+
 Checks if value is null or undefined.
 
 ```js
@@ -2363,7 +2398,7 @@ The method is used to copy the values of all enumerable own properties from one 
 :-: | :-: | :-: | :-: | :-: | :-: |
   45.0 ✔  | ✔ | 34.0 ✔ |  ✖  |  32.0 ✔ |  9.0 ✔  |
 
- **[⬆ back to top](#quick-links)**
+**[⬆ back to top](#quick-links)**
 
 ### _.defaults
 
@@ -2449,9 +2484,9 @@ The method is used to copy the values of all enumerable own and inherited proper
 :-: | :-: | :-: | :-: | :-: | :-: |
   45.0 ✔  | ✔ | 34.0 ✔ |  ✖  |  32.0 ✔ |  9.0 ✔  |
 
- **[⬆ back to top](#quick-links)**
+**[⬆ back to top](#quick-links)**
 
- ### _.has
+### _.has
 
 Checks if `key` is a direct property of `object`. Key may be a path of a value separated by `.`
 
@@ -2489,13 +2524,14 @@ Checks if `key` is a direct property of `object`. Key may be a path of a value s
 :-: | :-: | :-: | :-: | :-: | :-: |
   ✔  | 12 ✔ |  ✔ |  5.5 ✔ |  5 ✔ |  3 ✔ |
 
-  **[⬆ back to top](#quick-links)**
+**[⬆ back to top](#quick-links)**
 
-
- ### _.get
+### _.get
 
 Gets the value at path of object.
-*Note: If provided path does not exist inside the object js will generate error.*
+
+> [!NOTE]
+> If provided path does not exist inside the object js will generate error.
 
   ```js
   // Lodash
@@ -2530,7 +2566,6 @@ Gets the value at path of object.
   var object = { a: [{ b: { c: 3 } }] };
   var result = get(object, 'a[0].b.c', 1);
   // output: 3
-
   ```
 
 #### Browser Support for Object destructing
@@ -2551,7 +2586,7 @@ Gets the value at path of object.
 :-: | :-: | :-: | :-: | :-: | :-: |
   80.0 ✔  | 80.0 ✔ |  72.0 ✔ |  ✖  |  ✖ |  13.1 ✔ |
 
-  **[⬆ back to top](#quick-links)**
+**[⬆ back to top](#quick-links)**
 
 ### _.keys
 
@@ -2732,7 +2767,9 @@ Retrieves all the given object's own enumerable property values.
 
 ### _.capitalize
 
-:heavy_exclamation_mark:`Not in Underscore.js`
+> [!WARNING]
+> Not in Underscore.js
+
 Converts the first character of string to upper case and the remaining to lower case.
 
   ```js
@@ -2760,7 +2797,10 @@ Converts the first character of string to upper case and the remaining to lower 
 **[⬆ back to top](#quick-links)**
 
 ### _.endsWith
-:heavy_exclamation_mark:`Not in Underscore.js`
+
+> [!WARNING]
+> Not in Underscore.js
+
 Checks if string ends with the given target string.
 
   ```js
@@ -2829,7 +2869,10 @@ Checks if value is classified as a String primitive or object.
 **[⬆ back to top](#quick-links)**
 
 ### _.lowerFirst
-:heavy_exclamation_mark:`Not in Underscore.js`
+
+> [!WARNING]
+> Not in Underscore.js
+
 Converts the first character of string to lower case.
 
   ```js
@@ -2854,7 +2897,10 @@ Converts the first character of string to lower case.
 **[⬆ back to top](#quick-links)**
 
 ### _.padStart and _.padEnd
-:heavy_exclamation_mark:`Not in Underscore.js`
+
+> [!WARNING]
+> Not in Underscore.js
+
 Pads the current string with another string (multiple times, if needed) until the resulting string reaches the given length.
 
   ```js
@@ -2882,7 +2928,10 @@ Pads the current string with another string (multiple times, if needed) until th
 **[⬆ back to top](#quick-links)**
 
 ### _.repeat
-:heavy_exclamation_mark:`Not in Underscore.js`
+
+> [!WARNING]
+> Not in Underscore.js
+
 Repeats the given string n times.
 
   ```js
@@ -2906,7 +2955,8 @@ Repeats the given string n times.
 **[⬆ back to top](#quick-links)**
 
 ### _.replace
-returns a new string with some or all matches of a `pattern` replaced by a `replacement`
+
+Returns a new string with some or all matches of a `pattern` replaced by a `replacement`.
 
   ```js
   // Lodash
@@ -2933,7 +2983,10 @@ returns a new string with some or all matches of a `pattern` replaced by a `repl
 **[⬆ back to top](#quick-links)**
 
 ### _.split
-:heavy_exclamation_mark:`Not in Underscore.js`
+
+> [!WARNING]
+> Not in Underscore.js
+
 Splits string by separator.
 
   ```js
@@ -2957,7 +3010,10 @@ Splits string by separator.
 **[⬆ back to top](#quick-links)**
 
 ### _.startsWith
-:heavy_exclamation_mark:`Not in Underscore.js`
+
+> [!WARNING]
+> Not in Underscore.js
+
 Checks if string starts with the given target string.
 
   ```js
@@ -2981,7 +3037,9 @@ Checks if string starts with the given target string.
 **[⬆ back to top](#quick-links)**
 
 ### _.template
-:heavy_exclamation_mark: *Note this is an alternative implementation. Native template literals not escape html.*
+
+> [!NOTE]
+> This is an alternative implementation. Native template literals not escape html.
 
 Create a template function.
 
@@ -3008,7 +3066,10 @@ Create a template function.
 **[⬆ back to top](#quick-links)**
 
 ### _.toLower
-:heavy_exclamation_mark:`Not in Underscore.js`
+
+> [!WARNING]
+> Not in Underscore.js
+
 Lowercases a given string.
 
   ```js
@@ -3032,7 +3093,10 @@ Lowercases a given string.
 **[⬆ back to top](#quick-links)**
 
 ### _.toUpper
-:heavy_exclamation_mark:`Not in Underscore.js`
+
+> [!WARNING]
+> Not in Underscore.js
+
 Uppercases a given string.
 
   ```js
@@ -3056,7 +3120,10 @@ Uppercases a given string.
 **[⬆ back to top](#quick-links)**
 
 ### _.trim
-:heavy_exclamation_mark:`Not in Underscore.js`
+
+> [!WARNING]
+> Not in Underscore.js
+
 Removes the leading and trailing whitespace characters from a string.
 
   ```js
@@ -3080,8 +3147,11 @@ Removes the leading and trailing whitespace characters from a string.
 **[⬆ back to top](#quick-links)**
 
 ### _.upperFirst
-:heavy_exclamation_mark:`Not in Underscore.js`
-Uppercases the first letter of a given string
+
+> [!WARNING]
+> Not in Underscore.js
+
+Uppercases the first letter of a given string.
 
   ```js
   // Lodash
@@ -3114,7 +3184,7 @@ Uppercases the first letter of a given string
 
 ### _.uniqWith
 
-similar to _.uniq except that it accepts comparator which is invoked to compare elements of array. The order of result values is determined by the order they occur in the array.
+Similar to `_.uniq` except that it accepts comparator which is invoked to compare elements of array. The order of result values is determined by the order they occur in the array.
 
   ```js
   // Lodash
@@ -3148,6 +3218,7 @@ similar to _.uniq except that it accepts comparator which is invoked to compare 
 ## Util
 
 ### _.times
+
 Invokes the iteratee n times, returning an array of the results of each invocation.
 
   ```js
@@ -3229,6 +3300,7 @@ clamp(10, 99);
 **[⬆ back to top](#quick-links)**
 
 ### _.inRange
+
 Checks if n is between start and up to, but not including, end. If end is not specified, it's set to start with start then set to 0. If start is greater than end the params are swapped to support negative ranges.
 
   ```js
@@ -3256,7 +3328,7 @@ Checks if n is between start and up to, but not including, end. If end is not sp
     // output: true
   ```
 
-  #### Browser Support for `Math.min() and Math.max()`
+#### Browser Support for `Math.min() and Math.max()`
 
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |
@@ -3264,7 +3336,8 @@ Checks if n is between start and up to, but not including, end. If end is not sp
 
 **[⬆ back to top](#quick-links)**
 
-  ### _.random
+### _.random
+
 Produces a random number between the inclusive lower and upper bounds. If only one argument is provided a number between 0 and the given number is returned. If floating is true, or either lower or upper are floats, a floating-point number is returned instead of an integer.
 
   ```js
@@ -3320,7 +3393,7 @@ Produces a random number between the inclusive lower and upper bounds. If only o
 
   ```
 
-  #### Browser Support for `Math.random()`
+#### Browser Support for `Math.random()`
 
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |
@@ -3329,22 +3402,19 @@ Produces a random number between the inclusive lower and upper bounds. If only o
 **[⬆ back to top](#quick-links)**
 
 
-
 ## Inspired by:
 
 * [You-Dont-Need-jQuery](https://github.com/oneuijs/You-Dont-Need-jQuery)
 * [Rui's blog](http://ktei.github.io/2016/01/07/some-general-js-tips-1.html)
 
 
-# License
+## License
 
 MIT
-
 
 [chrome-image]: https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png
 [firefox-image]: https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png
 [ie-image]: https://raw.githubusercontent.com/alrra/browser-logos/master/src/archive/internet-explorer_9-11/internet-explorer_9-11_48x48.png
 [opera-image]: https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png
 [safari-image]: https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png
-[edge-image]:
-https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png
+[edge-image]: https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png

@@ -143,6 +143,7 @@ For more information, see [Configuring the ESLint Plugin](configuring.md)
 **[Lang](#lang)**
 
 1. [_.castArray](#_castarray)
+1. [.cloneDeep](#_clonedeep)
 1. [_.gt](#_gt)
 1. [_.gte](#_gte)
 1. [_.isDate](#_isdate)
@@ -2072,6 +2073,33 @@ console.log(castArray([2]));
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |
 5.0 ✔  |  ✔  | 4.0 ✔  |  9.0 ✔  |  10.5 ✔  | 5.0 ✔  |
+
+**[⬆ back to top](#quick-links)**
+
+### _.cloneDeep
+Creates a deep copy by recursively cloning the value.
+
+```js
+// Lodash
+var objects = [{ 'a': 1 }, { 'b': 2 }];
+
+var clone = _.cloneDeep(objects);
+console.log(clone[0] === objects[0]);
+// output: false
+
+// Native
+var objects = [{ 'a': 1 }, { 'b': 2 }];
+
+var clone = structuredClone(objects);
+console.log(clone[0] === objects[0]);
+// output: false
+```
+
+#### Browser Support for `structuredClone()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  98.0 ✔  | 98.0 ✔ | 94.0 ✔ |  ✖  |  84.0 ✔ |  15.4 ✔ |
 
 **[⬆ back to top](#quick-links)**
 

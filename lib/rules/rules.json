@@ -289,6 +289,10 @@
         "compatible": true,
         "alternative": "Array.isArray(arr) ? arr : [arr]"
     },
+    "cloneDeep": {
+        "compatible": true,
+        "alternative": "structuredClone()"
+    },
     "isFunction": {
         "compatible": true,
         "alternative": "typeof func === \"function\""

@@ -299,6 +299,69 @@ describe('code snippet example', () => {
        )
     })
   })
+  describe('isPlainObject', () => {
+    function isPlainObject(value) {
+      if (typeof value !== 'object' || value === null) return false
+  
+      if (Object.prototype.toString.call(value) !== '[object Object]') return false
+  
+      const proto = Object.getPrototypeOf(value);
+      if (proto === null) return true
+  
+      const Ctor = Object.prototype.hasOwnProperty.call(proto, 'constructor') && proto.constructor;
+      return (
+          typeof Ctor === 'function' &&
+          Ctor instanceof Ctor && Function.prototype.call(Ctor) === Function.prototype.call(value)
+      );
+    }
+
+    function Foo() {
+      this.a = 1;
+    }
+
+    it('_.isPlainObject(NaN)', () => {
+      assert.equal(
+      _.isPlainObject(NaN),
+      isPlainObject(NaN)
+      )
+    })
+    it('_.isPlainObject([1, 2, 3])', () => {
+      assert.equal(
+      _.isPlainObject([1, 2, 3]),
+      isPlainObject([1, 2, 3])
+      )
+    })
+    it('_.isPlainObject(null)', () => {
+      assert.equal(
+      _.isPlainObject(null),
+      isPlainObject(null)
+      )
+    })
+    it("_.isPlainObject({ 'x': 0, 'y': 0 })", () => {
+      assert.equal(
+      _.isPlainObject({ 'x': 0, 'y': 0 }),
+      isPlainObject({ 'x': 0, 'y': 0 })
+      )
+    })
+    it("_.isPlainObject(Object.create(null))", () => {
+      assert.equal(
+      _.isPlainObject(Object.create(null)),
+      isPlainObject(Object.create(null))
+      )
+    })
+    it("_.isPlainObject(Object.create(new Foo()))", () => {
+      assert.equal(
+      _.isPlainObject(Object.create(new Foo())),
+      isPlainObject(Object.create(new Foo()))
+      )
+    })
+    it("_.isPlainObject(Object.create(new Date()))", () => {
+      assert.equal(
+      _.isPlainObject(Object.create(new Date())),
+      isPlainObject(Object.create(new Date()))
+      )
+    })
+  })
   describe('get', () => {
     const get = (obj, path, defaultValue) => {
       const travel = regexp =>

@@ -163,6 +163,7 @@ For more information, see [Configuring the ESLint Plugin](configuring.md)
 1. [_.has](#_has)
 1. [_.get](#_get)
 1. [_.invert](#_invert)
+1. [_.isPlainObject](#_isplainobject)
 1. [_.keys](#_keys)
 1. [_.mapKeys](#_mapKeys)
 1. [_.omit](#_omit)
@@ -2261,6 +2262,46 @@ Checks if value is an integer.
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |
   ✔  |  12 ✔ | 16.0 ✔ |  ✖  |  ✔ |  ✔ |
+
+**[⬆ back to top](#quick-links)**
+
+### _.isPlainObject
+
+Checks if value is a plain object, that is, an object created by the Object constructor or one with a [[Prototype]] of null.
+
+  ```js
+  var object = { 'a': 1, 'b': 2, 'c': 1 };
+
+  // Underscore/Lodash
+  var result = _.isPlainObject(object);
+  console.log(result)
+  // output: true
+
+  function isPlainObject(value) {
+    if (typeof value !== 'object' || value === null) return false
+
+    if (Object.prototype.toString.call(value) !== '[object Object]') return false
+
+    const proto = Object.getPrototypeOf(value);
+    if (proto === null) return true
+
+    const Ctor = Object.prototype.hasOwnProperty.call(proto, 'constructor') && proto.constructor;
+    return (
+        typeof Ctor === 'function' &&
+        Ctor instanceof Ctor && Function.prototype.call(Ctor) === Function.prototype.call(value)
+    );
+
+    var result = invert(object);
+    console.log(result)
+    // output: true
+    }
+  ```
+
+#### Browser Support for `Object.getPrototypeOf()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  5.0 ✔  | 12.0 ✔  | 3.5 ✔ |  ✖  |  12.1 ✔ |  5.0 ✔ |
 
 **[⬆ back to top](#quick-links)**
 

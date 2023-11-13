@@ -2290,11 +2290,7 @@ Checks if value is a plain object, that is, an object created by the Object cons
         typeof Ctor === 'function' &&
         Ctor instanceof Ctor && Function.prototype.call(Ctor) === Function.prototype.call(value)
     );
-
-    var result = invert(object);
-    console.log(result)
-    // output: true
-    }
+  }
   ```
 
 #### Browser Support for `Object.getPrototypeOf()`

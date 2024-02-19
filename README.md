@@ -2818,16 +2818,9 @@ Creates an object composed of the object properties predicate returns truthy for
   var object = { 'a': 1, 'b': '2', 'c': 3 };
 
   // Underscore/Lodash
-  var result = _.pick(object, ['a', 'c']);
+  var result = _.pick(object, ['a', 'c', 'x']);
   console.log(result)
   // output: {a: 1, c: 3}
-
-  // Native
-  const { a, c } = object;
-  const result = { a, c};
-  console.log(result);
-  // output: {a: 1, c: 3}
-  // for an array of this object --> array.map(({a, c}) => ({a, c}));
 
   // Native
   function pick(object, keys) {
@@ -2838,7 +2831,7 @@ Creates an object composed of the object properties predicate returns truthy for
        return obj;
      }, {});
   }
-  var result = pick(object, ['a', 'c']);
+  var result = pick(object, ['a', 'c', 'x']);
   console.log(result)
   // output: {a: 1, c: 3}
   ```

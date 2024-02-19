@@ -62,18 +62,17 @@ describe('code snippet example', () => {
 
   it('pick', () => {
     var object = { 'a': 1, 'b': '2', 'c': 3 };
-    function pick(object, paths) {
-      const obj = {};
-      for (const path of paths) {
-        if (object[path]) {
-          obj[path] = object[path]
+    function pick(object, keys) {
+      return keys.reduce((obj, key) => {
+        if (object && object.hasOwnProperty(key)) {
+          obj[key] = object[key];
         }
-      }
-      return obj;
+        return obj;
+      }, {});
     }
     assert.deepEqual(
-      _.pick(object, ['a', 'c']),
-      pick(object, ['a', 'c'])
+      _.pick(object, ['a', 'c', 'x']),
+      pick(object, ['a', 'c', 'x'])
     )
   })
   

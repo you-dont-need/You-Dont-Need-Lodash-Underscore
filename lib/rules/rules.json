@@ -264,6 +264,11 @@
         "alternative": "[... new Set(arr)]",
         "ES6": true
     },
+    "uniqBy": {
+        "compatible": true,
+        "alternative": "Example of native implementation: https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore#_uniqBy",
+        "ES6": true
+    },
     "replace": {
         "compatible": true,
         "alternative": "String.prototype.replace()"

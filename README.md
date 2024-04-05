@@ -129,6 +129,7 @@ For more information, see [Configuring the ESLint Plugin](configuring.md)
 1. [_.some](#_some)
 1. [_.sortBy](#_sortby-and-_orderby)
 1. [_.uniq](#_uniq)
+1. [_.uniqBy](#_uniqBy)
 1. [_.uniqWith](#_uniqWith)
 
 **[Function](#function)**
@@ -1852,6 +1853,33 @@ Produces a duplicate-free version of the array, using === to test object equalit
   var result = [...new Set(array)];
   console.log(result)
   // output: [1, 2, 4, 3]
+  ```
+
+#### Browser Support for Spread in array literals
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+ 46.0  ✔  | 12.0 ✔ | 16.0 ✔ |  ✖  |  37.0 ✔  |  8.0 ✔  |
+
+**[⬆ back to top](#quick-links)**
+
+### _.uniqBy
+
+Like `_.uniq` but compares the elements using the provided function or object key.
+
+  ```js
+  // Lodash: _.uniqBy
+  // Underscore: _.uniq
+  _.uniqBy([2.1, 1.2, 2.3], Math.floor);
+  // => [2.1, 1.2]
+  _.uniqBy([{ 'x': 1 }, { 'x': 2 }, { 'x': 1 }], 'x');
+  // => [{ 'x': 1 }, { 'x': 2 }]
+
+  // Native
+  [...new Map([2.1, 1.2, 2.3].map(v => [Math.floor(v), v]).reverse()).values()];
+  // => [2.1, 1.2]
+  [...new Map([{ 'x': 1 }, { 'x': 2 }, { 'x': 1 }].map(o => [o.x, o]).reverse()).values()];
+  // => [{ 'x': 1 }, { 'x': 2 }]
   ```
 
 #### Browser Support for Spread in array literals

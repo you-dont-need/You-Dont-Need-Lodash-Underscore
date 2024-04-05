@@ -136,6 +136,25 @@ describe('code snippet example', () => {
       )
     })
   })
+  describe('chunk (Object.groupBy version)', () => {
+    function chunk(input, size) {
+      return Object.values(
+        Object.groupBy(input, (_, i) => Math.floor(i / size))
+      );
+    }
+    it("_.chunk(['a', 'b', 'c', 'd'], 2);", () => {
+      assert.deepEqual(
+        _.chunk(['a', 'b', 'c', 'd'], 2),
+        chunk(['a', 'b', 'c', 'd'], 2)
+      );
+    })
+    it("_.chunk(['a', 'b', 'c', 'd'], 3);", () => {
+      assert.deepEqual(
+        _.chunk(['a', 'b', 'c', 'd'], 3),
+        chunk(['a', 'b', 'c', 'd'], 3)
+      );
+    })
+  })
   describe('times', () => {
     const times = (n, fn = (_, x) => x) => {
       return Array.from(Array(n), fn)
@@ -1096,6 +1115,61 @@ describe('code snippet example', () => {
     });
     it('_.head([])', () => {
       assert.deepEqual(_.head([]), [].at(0));
+    });
+  })
+
+  describe('countBy', () => {
+    function countBy(input, fn) {
+      return Object.fromEntries(
+        Object.entries(Object.groupBy(input, fn)).map(([k, v]) => [k, v.length])
+      );
+    }
+
+    it('_.countBy([6.1, 4.2, 6.3], Math.floor)', () => {
+      const lo = _.countBy([6.1, 4.2, 6.3], Math.floor);
+      const native = countBy([6.1, 4.2, 6.3], Math.floor);
+      assert.deepEqual(lo, native);
+    });
+    it("_.countBy(['one', 'two', 'three'], 'length')", () => {
+      const lo = _.countBy(['one', 'two', 'three'], 'length');
+      const native = countBy(['one', 'two', 'three'], (x) => x.length);
+      assert.deepEqual(lo, native);
+    });
+  });
+
+  describe('partition', () => {
+    // Underscore/Lodash
+    var users = [
+      { 'user': 'barney', 'age': 36, 'active': false },
+      { 'user': 'fred', 'age': 40, 'active': true },
+      { 'user': 'pebbles', 'age': 1, 'active': false }
+    ];
+
+    function partition(input, fn) {
+      const results = Object.groupBy(input, (x) => Boolean(fn(x)))
+      return [results.true ?? [], results.false ?? []]
+    }
+
+    it("_.partition(users, function (o) { return o.active; });", () => {
+      const lo = _.partition(users, function (o) { return o.active; });
+      const native = partition(users, (x) => x.active);
+
+      assert.deepEqual(lo, native);
+    });
+    it("_.partition(users, { 'age': 1, 'active': false });", () => {
+      const lo = _.partition(users, { 'age': 1, 'active': false });
+      const native =  partition(users, (x) => x.age === 1 && !x.active);
+      assert.deepEqual(lo, native);
+    });
+    it("_.partition(users, ['active', false]);", () => {
+      const lo = _.partition(users, ['active', false]);
+      const native =  partition(users, (x) => !x.active);
+      assert.deepEqual(lo, native);
+    });
+    it("_.partition(users, 'active');", () => {
+      const lo = _.partition(users, 'active');
+      const native =  partition(users, (x) => x.active);
+      assert.deepEqual(lo, native);
     });
   })
 });

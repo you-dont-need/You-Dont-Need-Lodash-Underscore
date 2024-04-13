@@ -7,9 +7,6 @@ on:
       - edited
       - synchronize
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
 # Sets the GITHUB_TOKEN permissions to allow deployment to GitHub Pages
 permissions:
   contents: write
@@ -21,7 +18,6 @@ jobs:
   test:
     name: Test
     runs-on: ubuntu-latest
-    environment: testing
     steps:
       - name: 👌🏻 Checkout
         uses: actions/checkout@v3

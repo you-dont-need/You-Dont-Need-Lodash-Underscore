@@ -48,3 +48,7 @@ module.exports.configs = {
     )
   }
 }
+
+// ================ 新添加的代码 ================ //
+// 从 lib/shuffle.js 导入 shuffle 函数
+module.exports.shuffle = require('./lib/shuffle').shuffle;

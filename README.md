@@ -1424,7 +1424,7 @@ Creates an object composed of keys generated from the results of running each el
   // keyBy for array and object
   const collectionKeyBy = (collection, key) => {
     const c = collection || {};
-    return c.isArray() ? keyBy(c, key) : keyBy(Object.values(c), key);
+    return Array.isArray(c) ? keyBy(c, key) : keyBy(Object.values(c), key);
   }
   ```
 

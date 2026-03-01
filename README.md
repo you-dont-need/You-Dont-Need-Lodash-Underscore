@@ -248,7 +248,7 @@ Creates an array with all falsy values removed.
   // output: [1, 2, 3]
 
   // Native
-  [0, 1, false, 2, '', 3].filter(Boolean)
+  [0, 1, false, 2, '', 3].filter((e) => e)
   // output: [1, 2, 3]
   ```
 
@@ -2638,7 +2638,7 @@ Gets the value at path of object.
     const travel = regexp =>
       String.prototype.split
         .call(path, regexp)
-        .filter(Boolean)
+        .filter((e) => e)
         .reduce((res, key) => (res !== null && res !== undefined ? res[key] : res), obj);
     const result = travel(/[,[\]]+?/) || travel(/[,[\].]+?/);
     return result === undefined || result === obj ? defaultValue : result;

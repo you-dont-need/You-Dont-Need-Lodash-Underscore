@@ -251,7 +251,15 @@ Creates an array with all falsy values removed.
   [0, 1, false, 2, '', 3].filter(Boolean)
   // output: [1, 2, 3]
   ```
+### [`_.shuffle`](https://lodash.com/docs/4.17.15#shuffle)
+Shuffles array elements
 
+```javascript
+const { shuffle } = require('you-dont-need-lodash-underscore');
+
+const arr = [1, 2, 3, 4, 5];
+shuffle(arr); // => [3, 1, 4, 2, 5] (随机顺序)
+```
 #### Browser Support for `array.prototype.filter`
 
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]

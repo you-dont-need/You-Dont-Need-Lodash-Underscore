@@ -13,7 +13,9 @@ npm install --save-dev eslint
 npm install --save-dev eslint-plugin-you-dont-need-lodash-underscore
 ```
 
-### Add the plugin to your .eslintrc.js file
+### Add the plugin to your ESLint configuration
+
+#### Legacy config (.eslintrc.js)
 
 ```js
 "plugins": ["you-dont-need-lodash-underscore"],
@@ -24,6 +26,23 @@ If you already have plugins installed, just add to the array.
 ```js
 "plugins": ["react", "you-dont-need-lodash-underscore"],
 ```
+
+#### Flat config (eslint.config.js)
+
+At the top of the file, import the plugin using the appropriate style
+```js
+// ESM
+import youDontNeedLodashUnderscore from 'eslint-plugin-you-dont-need-lodash-underscore';
+
+// CommonJS
+const youDontNeedLodashUnderscore = require( 'eslint-plugin-you-dont-need-lodash-underscore' );
+```
+
+Then add it to your plugins object:
+```js
+"plugins": { 'you-dont-need-lodash-underscore': youDontNeedLodashUnderscore },
+```
+If you already have plugins installed, just add the key to the existing object.
 
 ### Now configure your plugin.
 
@@ -42,7 +61,17 @@ To save the trouble of configuring each rule individually, you can start by exte
 default configurations, and then override individual rules as desired.
 
 ```js
+// eslintrc
 "extends" : ["plugin:you-dont-need-lodash-underscore/compatible"],
+
+// flat config
+youDontNeedLodashUnderscore.flatConfigs.compatible,
+
+// flat config using defineConfig's string extends
+{
+    "plugins": { "you-dont-need-lodash-underscore": youDontNeedLodashUnderscore },
+    "extends": [ "you-dont-need-lodash-underscore/flat/compatible" ],
+}
 ```
 
 The following options are available:

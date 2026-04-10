@@ -1098,4 +1098,17 @@ describe('code snippet example', () => {
       assert.deepEqual(_.head([]), [].at(0));
     });
   })
+  describe('omitBy', () => {
+    function omitBy(object, predicate) {
+      return Object.fromEntries(
+        Object.entries(object).filter(([key, value]) => !predicate(value, key)),
+      );
+    }
+
+    it('should omit properties by predicate', () => {
+      const object = { a: 1, b: '2', c: 3 };
+      const predicate = (value) => typeof value === 'number';
+      assert.deepStrictEqual(_.omitBy(object, predicate), omitBy(object, predicate));
+    });
+  })
 });

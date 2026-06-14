@@ -983,6 +983,64 @@ describe('code snippet example', () => {
     });
   })
 
+  describe('curry', () => {
+    function curry(func, arity = func.length) {
+      return function curried(...args) {
+        if (args.length >= arity) {
+          return func(...args);
+        }
+        return (...nextArgs) => curried(...args, ...nextArgs);
+      };
+    }
+
+    function abc(a, b, c) {
+      return [a, b, c];
+    }
+
+    it('_.curry(abc)(1)(2)(3)', () => {
+      assert.deepEqual(
+        _.curry(abc)(1)(2)(3),
+        curry(abc)(1)(2)(3)
+      )
+    });
+
+    it('_.curry(abc)(1, 2)(3)', () => {
+      assert.deepEqual(
+        _.curry(abc)(1, 2)(3),
+        curry(abc)(1, 2)(3)
+      )
+    });
+  });
+
+  describe('curryRight', () => {
+    function curryRight(func, arity = func.length) {
+      return function curried(...args) {
+        if (args.length >= arity) {
+          return func(...args);
+        }
+        return (...nextArgs) => curried(...nextArgs, ...args);
+      };
+    }
+
+    function abc(a, b, c) {
+      return [a, b, c];
+    }
+
+    it('_.curryRight(abc)(3)(2)(1)', () => {
+      assert.deepEqual(
+        _.curryRight(abc)(3)(2)(1),
+        curryRight(abc)(3)(2)(1)
+      )
+    });
+
+    it('_.curryRight(abc)(2, 3)(1)', () => {
+      assert.deepEqual(
+        _.curryRight(abc)(2, 3)(1),
+        curryRight(abc)(2, 3)(1)
+      )
+    });
+  });
+
   describe('isFunction', () => {
     function isFunction(func) {
       return (func && typeof func === "function")

@@ -135,6 +135,8 @@ For more information, see [Configuring the ESLint Plugin](configuring.md)
 
 1. [_.after](#_after)
 1. [_.bind](#_bind)
+1. [_.curry](#_curry)
+1. [_.curryRight](#_curryright)
 1. [_.debounce](#_debounce)
 1. [_.isFunction](#_isFunction)
 1. [_.partial](#_partial)
@@ -1925,6 +1927,94 @@ Create a new function that calls _func_ with _thisArg_ and _args_.
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |
   7.0 ✔  |  ✔ | 4.0 ✔ |  9.0 ✔ |  11.6 ✔ |  5.1 ✔  |
+
+**[⬆ back to top](#quick-links)**
+
+### _.curry
+
+> [!WARNING]
+> This is an alternative implementation. It does not support Lodash placeholders.
+
+Creates a function that accepts arguments for `func` until enough arguments have been provided, then calls `func`.
+
+  ```js
+  function abc(a, b, c) {
+    return [a, b, c];
+  }
+
+  // Lodash
+  var curried = _.curry(abc);
+  curried(1)(2)(3);
+  // => [1, 2, 3]
+  curried(1, 2)(3);
+  // => [1, 2, 3]
+
+  // Native
+  function curry(func, arity = func.length) {
+    return function curried(...args) {
+      if (args.length >= arity) {
+        return func(...args);
+      }
+      return (...nextArgs) => curried(...args, ...nextArgs);
+    };
+  }
+
+  var curried = curry(abc);
+  curried(1)(2)(3);
+  // => [1, 2, 3]
+  curried(1, 2)(3);
+  // => [1, 2, 3]
+  ```
+
+#### Browser Support for Rest Parameters and Spread
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  47.0 ✔ | 12.0 ✔ | 15.0 ✔ |  ✖  |  34.0 ✔ |  10.0 ✔ |
+
+**[⬆ back to top](#quick-links)**
+
+### _.curryRight
+
+> [!WARNING]
+> This is an alternative implementation. It does not support Lodash placeholders.
+
+Like `_.curry`, but arguments are applied from right to left.
+
+  ```js
+  function abc(a, b, c) {
+    return [a, b, c];
+  }
+
+  // Lodash
+  var curried = _.curryRight(abc);
+  curried(3)(2)(1);
+  // => [1, 2, 3]
+  curried(2, 3)(1);
+  // => [1, 2, 3]
+
+  // Native
+  function curryRight(func, arity = func.length) {
+    return function curried(...args) {
+      if (args.length >= arity) {
+        return func(...args);
+      }
+      return (...nextArgs) => curried(...nextArgs, ...args);
+    };
+  }
+
+  var curried = curryRight(abc);
+  curried(3)(2)(1);
+  // => [1, 2, 3]
+  curried(2, 3)(1);
+  // => [1, 2, 3]
+  ```
+
+#### Browser Support for Rest Parameters and Spread
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  47.0 ✔ | 12.0 ✔ | 15.0 ✔ |  ✖  |  34.0 ✔ |  10.0 ✔ |
 
 **[⬆ back to top](#quick-links)**
 

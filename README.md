@@ -921,24 +921,8 @@ Returns the last element of an array. Passing n will return the last n elements 
 
   // Native
   const numbers = [1, 2, 3, 4, 5];
-  numbers[numbers.length - 1];
-  // => 5
-  //or
-  numbers.slice(-1)[0];
-  // => 5
-  //or
-  [].concat(numbers).pop()
-  // => 5
-  //or
   numbers.at(-1);
   // => 5
-
-  // Native (works even with potentially undefined/null)
-  [].concat(undefined).pop()
-  // => undefined
-
-  numbers.slice(-2);
-  // => [4, 5]
   ```
 
 #### Browser Support for `Array.prototype.concat()`

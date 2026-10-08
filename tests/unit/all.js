@@ -1028,6 +1028,21 @@ describe('code snippet example', () => {
     });
   });
 
+  describe('uniqBy', () => {
+    function uniqBy(arr, iteratee) {
+      return [...new Map(arr.map(v => [typeof iteratee === 'function' ? iteratee(v) : v[iteratee], v]).reverse()).values()];
+    };
+
+    it('should take an iteratee function', () => {
+      assert.deepStrictEqual(_.uniqBy([2.1, 1.2, 2.3], Math.floor), uniqBy([2.1, 1.2, 2.3], Math.floor));
+    });
+
+    it('should take an object key', () => {
+      assert.deepStrictEqual(_.uniqBy([{ 'x': 1 }, { 'x': 2 }, { 'x': 1 }], 'x'),
+        uniqBy([{ 'x': 1 }, { 'x': 2 }, { 'x': 1 }], 'x'));
+    });
+  });
+
   describe('capitalize', () => {
     function capitalize(string) {
       return string ? string.charAt(0).toUpperCase() + string.slice(1).toLowerCase() : '';

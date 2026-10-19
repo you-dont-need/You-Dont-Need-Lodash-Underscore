@@ -1,8 +1,7 @@
 'use strict';
 const kebabCase = require('kebab-case');
 const rules = require('./lib/rules/rules.json')
-
-module.exports.rules = require('./lib/rules/all');
+const { name, version } = require('./package.json')
 
 const all = Object.keys(rules);
 const compatible = Object.keys(rules).filter(rule => rules[rule].compatible);
@@ -16,35 +15,54 @@ const configure = (list, level) => (
     { ['you-dont-need-lodash-underscore/' + (rules[rule].ruleName || kebabCase(rule))]: level })), {})
 )
 
-module.exports.configs = {
-  'all-warn': {
-    plugins: [
-      'you-dont-need-lodash-underscore'
-    ],
-    rules: configure(all, WARN)
-  },
+const plugin = {
+    meta: {
+        name,
+        version,
+    },
+    rules: require('./lib/rules/all'),
+    configs: {},
+    flatConfigs: {},
+};
 
-  'all': {
-    plugins: [
-      'you-dont-need-lodash-underscore'
-    ],
-    rules: configure(all, ERROR)
-  },
+Object.assign( plugin.flatConfigs, {
+    'all-warn': {
+        plugins: {
+            'you-dont-need-lodash-underscore': plugin,
+        },
+        rules: configure(all, WARN)
+    },
 
-  'compatible-warn': {
-    plugins: [
-      'you-dont-need-lodash-underscore'
-    ],
-    rules: configure(compatible, WARN)
-  },
+    'all': {
+        plugins: {
+            'you-dont-need-lodash-underscore': plugin,
+        },
+        rules: configure(all, ERROR)
+    },
 
-  'compatible': {
-    plugins: [
-      'you-dont-need-lodash-underscore'
-    ],
-    rules: Object.assign(
-      configure(compatible, ERROR),
-      configure(incompatible, WARN)
-    )
-  }
+    'compatible-warn': {
+        plugins: {
+            'you-dont-need-lodash-underscore': plugin,
+        },
+        rules: configure(compatible, WARN)
+    },
+
+    'compatible': {
+        plugins: {
+            'you-dont-need-lodash-underscore': plugin,
+        },
+        rules: Object.assign(
+            configure(compatible, ERROR),
+            configure(incompatible, WARN)
+        )
+    }
+} );
+
+for ( const [ key, config ] of Object.entries( plugin.flatConfigs ) ) {
+    plugin.configs[ key ] = Object.assign( {}, config, {
+        plugins: [ 'you-dont-need-lodash-underscore' ],
+    } );
+    plugin.configs[ 'flat/' + key ] = config;
 }
+
+module.exports = plugin;

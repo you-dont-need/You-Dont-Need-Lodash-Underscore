@@ -101,6 +101,8 @@ For more information, see [Configuring the ESLint Plugin](configuring.md)
 1. [_.initial](#_initial)
 1. [_.pull](#_pull)
 1. [_.unionBy](#_unionBy)
+1. [_.unzip](#_unzip)
+1. [_.zip](#_zip)
 
 **[Collection*](#collection)**
 
@@ -1190,6 +1192,93 @@ Creates an array of unique values, taking an `iteratee` to compute uniqueness wi
 38 ✔ | 12 ✔ | 13 ✔ | 11 ✔ | 25 ✔ | 8 ✔ |
 
 **[⬆ back to top](#quick-links)**
+
+### _.unzip
+This method is like _.zip except that it accepts an array of grouped elements and creates an array regrouping the elements to their pre-zip configuration.
+
+```
+// Lodash
+const a1 = [1, 2, 3]
+const a2 = ["a", "b", "c"]
+const zipped = _.zip(a1, a2)
+console.log(zipped)
+// => [[1, 'a'], [2, 'b'], [3, 'c']]
+
+// Native
+const zip = (...arrays) => {
+    const zippedArray = []
+    arrays.forEach( (array, j) => {
+        array.forEach( (item, i) => {
+            if (zippedArray[i] === undefined) {
+                zippedArray[i] = []
+                zippedArray[i].length = arrays.length
+                zippedArray[i].fill(undefined, arrays.length)
+            }
+            zippedArray[i][j] = item
+        })
+    })
+    return zippedArray
+}
+
+const a1 = [1, 2, 3]
+const a2 = ["a", "b", "c"]
+const zipped = zip(a1, a2)
+console.log(zipped)
+// => [[1, 'a'], [2, 'b'], [3, 'c']]
+```
+
+#### Browser Support for `Array.prototype.forEach()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  | ✔ | 1.5 ✔ |  9.0 ✔  |  ✔  |  ✔  |
+
+### _.zip
+Creates an array of grouped elements, the first of which contains the first elements of the given arrays, the second of which contains the second elements of the given arrays, and so on.
+
+```
+
+// Lodash
+const zipped = [
+    [1, 'a'],
+    [2, 'b'],
+    [3, 'c']
+]
+const unzipped = _.unzip(zipped)
+console.log(unzipped)
+// [0, 2, 3]
+// ['a', 'b', 'c']
+
+// Native
+const unzip = (zippedArray) => {
+    const unzippedArray = []
+    zippedArray.forEach( (array, j) => {
+        array.forEach( (item, i) => {
+            if (unzippedArray[i] === undefined) {
+                unzippedArray[i] = []
+            }
+            unzippedArray[i][j] = item
+        })
+    })
+    return unzippedArray
+}
+
+const zipped = [
+    [1, 'a'],
+    [2, 'b'],
+    [3, 'c']
+]
+const unzipped = unzip(zipped)
+console.log(unzipped)
+// [0, 2, 3]
+// ['a', 'b', 'c']
+```
+
+#### Browser Support for `Array.prototype.forEach()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  ✔  | ✔ | 1.5 ✔ |  9.0 ✔  |  ✔  |  ✔  |
 
 ## Collection*
 

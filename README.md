@@ -174,6 +174,7 @@ For more information, see [Configuring the ESLint Plugin](configuring.md)
 
 **[String](#string)**
 
+1. [_.camelCase](#_camelCase)
 1. [_.capitalize](#_capitalize)
 1. [_.endsWith](#_endsWith)
 1. [_.isString](#_isString)
@@ -2943,6 +2944,40 @@ Retrieves all the given object's own enumerable property values.
 **[⬆ back to top](#quick-links)**
 
 ## String
+### _.camelCase
+
+> [!WARNING]
+> Not in Underscore.js
+
+Converts string to camel case.
+
+```js
+// Lodash
+var result = _.camelCase("This is a test");
+console.log(result);
+// => 'thisIsATest'
+
+// Native
+const camelCase = (str) => {
+  return str
+    .replace(/(?:^\w|[A-Z]|\b\w)/g, function (word, index) {
+      return index == 0 ? word.toLowerCase() : word.toUpperCase();
+    })
+    .replace(/[^a-zA-Z]+/g, "");
+};
+
+var result = camelCase("This is a test");
+console.log(result);
+// => 'thisIsATest'
+```
+
+#### Browser Support
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+ ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+
+**[⬆ back to top](#quick-links)**
 
 ### _.capitalize
 

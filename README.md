@@ -111,6 +111,7 @@ For more information, see [Configuring the ESLint Plugin](configuring.md)
 > objects can easily be converted to an array by use of the
 > [spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax).
 
+1. [_.countBy](#_countBy)
 1. [_.each](#_each)
 1. [_.every](#_every)
 1. [_.filter](#_filter)
@@ -120,6 +121,7 @@ For more information, see [Configuring the ESLint Plugin](configuring.md)
 1. [_.map](#_map)
 1. [_.minBy and _.maxBy](#_minby-and-_maxby)
 1. [_.orderBy](#_sortby-and-_orderby)
+1. [_.partition](#_partition)
 1. [_.pluck](#_pluck)
 1. [_.range](#_range)
 1. [_.reduce](#_reduce)
@@ -204,6 +206,7 @@ For more information, see [Configuring the ESLint Plugin](configuring.md)
 ### _.chunk
 
 Creates an array of elements split into groups the length of size.
+
 ```js
 // Underscore/Lodash
 _.chunk(['a', 'b', 'c', 'd'], 2);
@@ -212,10 +215,21 @@ _.chunk(['a', 'b', 'c', 'd'], 2);
 _.chunk(['a', 'b', 'c', 'd'], 3);
 // => [['a', 'b', 'c'], ['d']]
 
-
 // Native
+function chunk(input, size) {
+  return Object.values(
+    Object.groupBy(input, (_, i) => Math.floor(i / size))
+  );
+}
 
-const chunk = (input, size) => {
+chunk(['a', 'b', 'c', 'd'], 2);
+// => [['a', 'b'], ['c', 'd']]
+
+chunk(['a', 'b', 'c', 'd'], 3);
+// => [['a', 'b', 'c'], ['d']]
+
+// Native #2 (if `Object.groupBy` unavailable)
+const chunkReduce = (input, size) => {
   return input.reduce((arr, item, idx) => {
     return idx % size === 0
       ? [...arr, [item]]
@@ -223,12 +237,18 @@ const chunk = (input, size) => {
   }, []);
 };
 
-chunk(['a', 'b', 'c', 'd'], 2);
+chunkReduce(['a', 'b', 'c', 'd'], 2);
 // => [['a', 'b'], ['c', 'd']]
 
-chunk(['a', 'b', 'c', 'd'], 3);
+chunkReduce(['a', 'b', 'c', 'd'], 3);
 // => [['a', 'b', 'c'], ['d']]
 ```
+
+#### Browser Support for `Object.groupBy()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  117.0 ✔  | 117.0 ✔ | 119.0 ✔ |  ✖  |  103.0 ✔ |  16.4 ✔ |
 
 #### Browser Support for Spread in array literals
 
@@ -1198,6 +1218,40 @@ Creates an array of unique values, taking an `iteratee` to compute uniqueness wi
 > and will not work with objects. If this functionality is needed and no object method is provided,
 > then Lodash/Underscore is the better option.
 
+### _.countBy
+
+```js
+// Underscore/Lodash
+_.countBy([6.1, 4.2, 6.3], Math.floor);
+// => { '4': 1, '6': 2 }
+
+// The `_.property` iteratee shorthand.
+_.countBy(['one', 'two', 'three'], 'length');
+// => { '3': 2, '5': 1 }
+
+// Native
+function countBy(input, fn) {
+  return Object.fromEntries(
+    Object.entries(Object.groupBy(input, fn)).map(([k, v]) => [k, v.length])
+  );
+}
+
+countBy([6.1, 4.2, 6.3], Math.floor);
+// => { '4': 1, '6': 2 }
+
+// Use explicit callback instead of property name
+countBy(['one', 'two', 'three'], (x) => x.length);
+// => { '3': 2, '5': 1 }
+```
+
+#### Browser Support for `Object.groupBy()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  117.0 ✔  | 117.0 ✔ | 119.0 ✔ |  ✖  |  103.0 ✔ |  16.4 ✔ |
+
+**[⬆ back to top](#quick-links)**
+
 ### _.each
 
 Iterates over a list of elements, yielding each in turn to an iteratee function.
@@ -1542,6 +1596,61 @@ Extract a functor and use es2015 for better code
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |
   ✔  | ✔ | 3.0 ✔ |  9.0 ✔  |  10.5 ✔ |  4.0 ✔ |
+
+**[⬆ back to top](#quick-links)**
+
+### _.partition
+
+```js
+// Underscore/Lodash
+var users = [
+  { 'user': 'barney', 'age': 36, 'active': false },
+  { 'user': 'fred', 'age': 40, 'active': true },
+  { 'user': 'pebbles', 'age': 1, 'active': false }
+];
+
+_.partition(users, function (o) { return o.active; });
+// => objects for [['fred'], ['barney', 'pebbles']]
+
+// The `_.matches` iteratee shorthand.
+_.partition(users, { 'age': 1, 'active': false });
+// => objects for [['pebbles'], ['barney', 'fred']]
+
+// The `_.matchesProperty` iteratee shorthand.
+_.partition(users, ['active', false]);
+// => objects for [['barney', 'pebbles'], ['fred']]
+
+// The `_.property` iteratee shorthand.
+_.partition(users, 'active');
+// => objects for [['fred'], ['barney', 'pebbles']]
+
+// Native
+function partition(input, fn) {
+  const results = Object.groupBy(input, (x) => Boolean(fn(x)))
+  return [results.true ?? [], results.false ?? []]
+}
+
+partition(users, (x) => x.active);
+// => objects for [['fred'], ['barney', 'pebbles']]
+
+// Use explicit callback instead of object partial
+partition(users, (x) => x.age === 1 && !x.active);
+// => objects for [['pebbles'], ['barney', 'fred']]
+
+// Use explicit callback instead of [key, val] tuple
+partition(users, (x) => !x.active);
+// => objects for [['barney', 'pebbles'], ['fred']]
+
+// Use explicit callback instead of property key
+partition(users, (x) => x.active);
+// => objects for [['fred'], ['barney', 'pebbles']]
+```
+
+#### Browser Support for `Object.groupBy()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  117.0 ✔  | 117.0 ✔ | 119.0 ✔ |  ✖  |  103.0 ✔ |  16.4 ✔ |
 
 **[⬆ back to top](#quick-links)**
 

@@ -167,6 +167,7 @@ For more information, see [Configuring the ESLint Plugin](configuring.md)
 1. [_.keys](#_keys)
 1. [_.mapKeys](#_mapKeys)
 1. [_.omit](#_omit)
+1. [_.omitBy](#_omitBy)
 1. [_.pick](#_pick)
 1. [_.pickBy](#_pickby)
 1. [_.toPairs](#_topairs)
@@ -2821,6 +2822,45 @@ Returns a copy of the object, filtered to omit the keys specified.
 ![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
 :-: | :-: | :-: | :-: | :-: | :-: |
   60.0 ✔ | 79 ✔ | 55.0 ✔ |  ✖ |  37.0 ✔ | ✖ |
+
+**[⬆ back to top](#quick-links)**
+
+### _.omitBy
+
+Creates an object composed of the object properties that predicate doesn't return truthy for.
+
+  ```js
+  const object = { 'a': 1, 'b': '2', 'c': 3 };
+
+  // Lodash
+  const result = _.omitBy(object);
+  console.log(result)
+  // output: { 'b': '2' }
+
+  // Native
+  function omitBy(object, predicate) {
+    return Object.fromEntries(
+      Object.entries(object).filter(([key, value]) => !predicate(value, key)),
+    );
+  }
+
+  const object = { 'a': 1, 'b': '2', 'c': 3 };
+  const predicate = (value) => typeof value === 'number';
+
+  console.log(omitBy(object, predicate))
+  // output: { 'b': '2' }
+  ```
+
+#### Browser Support for `Object.entries()`
+
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  54.0 ✔  | 14.0 ✔  | 47.0 ✔ |  ✖  |  41.0 ✔ |  10.1 ✔ |
+
+#### Browser Support for `Object.fromEntries()`
+![Chrome][chrome-image] | ![Edge][edge-image] | ![Firefox][firefox-image] | ![IE][ie-image] | ![Opera][opera-image] | ![Safari][safari-image]
+:-: | :-: | :-: | :-: | :-: | :-: |
+  73.0 ✔  | 79.0 ✔  | 63.0 ✔ |  ✖  |  60.0 ✔ |  12.1 ✔ |
 
 **[⬆ back to top](#quick-links)**
 

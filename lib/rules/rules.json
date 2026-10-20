@@ -273,6 +273,11 @@
         "alternative": "{a, b, c, ...notOmittedValues}",
         "ES6": true
     },
+    "omitBy": {
+        "compatible": true,
+        "alternative": "Example of native implementation: https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore#_omitBy",
+        "ES6": true
+    },
     "flatten": {
         "compatible": true,
         "alternative": "Array.prototype.reduce((a,b) => a.concat(b), [])"
